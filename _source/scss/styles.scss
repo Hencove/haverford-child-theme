@@ -2,26 +2,37 @@ $button--color-1: #e0c351;
 $button--color-2: #000;
 $button--ornament-offset: -0.5em;
 
-
 html,
 body {
 	height: 100%;
 }
 #boxed-wrapper {
-    height: 100%;
-    > .fusion-wrapper {
-        height: 100%;
-        display: flex;
-        flex-flow: column nowrap;
-        > main {
-            flex: 1;
-        }
-    }
+	height: 100%;
+	> .fusion-wrapper {
+		height: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		> main {
+			flex: 1;
+		}
+	}
 }
-
 
 //
 html body {
+	//
+	//
+	.fusion-button.button-flat[data-hover="underline"] {
+		.fusion-button-text {
+			padding: 0 8px;
+			&::after {
+				bottom: -15px;
+				border-color: var(--awb-custom_color_5);
+				// border-width: 2px;
+			}
+		}
+	}
+	//
 	//
 	.fusion-button.think-custom-button {
 		//
@@ -152,7 +163,7 @@ html body {
 
 	.fusion-button.think-custom-button.has-white-bg-color {
 		$button--color-1: #ffffff;
-        box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
+		box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
 		.fusion-button-text {
 			color: black;
 		}
