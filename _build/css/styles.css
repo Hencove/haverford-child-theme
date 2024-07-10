@@ -94,7 +94,7 @@ html body .fusion-button.think-custom-button .fusion-button-text {
   display: block;
   width: 100%;
   background-color: transparent;
-  color: #e0c351;
+  color: #000;
   padding: 1.5em 2em;
   transition: color 500ms ease, background-color 500ms ease;
 }
