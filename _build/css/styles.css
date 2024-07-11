@@ -150,3 +150,12 @@ div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .co
   display: none;
   margin-bottom: 0;
 }
+div.fusion-fullwidth.cb18-form .wpforms-container-full {
+  margin: 0;
+}
+div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input,
+div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field select,
+div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field textarea,
+div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field .choices {
+  border: 1px solid var(--awb-custom_color_5);
+}
