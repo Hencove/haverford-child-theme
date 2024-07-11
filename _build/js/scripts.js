@@ -19,6 +19,18 @@
       button.insertAdjacentHTML("afterbegin", OrnamentHTML);
     });
   });
+  var hoverToggles = $(".cb13-3-column-hover .content-box-column");
+  hoverToggles.each(function () {
+    var contentContainer = $(this).find(".content-container");
+
+    // when hovering over a content box
+    $(this).hover(function () {
+      // $(this).toggleClass("visible");
+
+      // adjust the content container
+      contentContainer.slideToggle();
+    });
+  });
 
   //
   //

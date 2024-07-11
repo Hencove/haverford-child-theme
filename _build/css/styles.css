@@ -115,3 +115,38 @@ html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-bu
   color: #000;
   background-color: rgba(255, 255, 255, 0.9);
 }
+
+@media screen and (min-width: 801px) {
+  div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 32px;
+  }
+  div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes::after, div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes::before {
+    display: none;
+  }
+}
+div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column[style*="--awb-backgroundcolor:var(--awb-color7);"] {
+  --awb-title-color: var(--awb-custom_color_1);
+  --awb-body-color: var(--awb-custom_color_1);
+  --awb-hover-accent-color: var(--awb-custom_color_1);
+}
+div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column[style*="--awb-backgroundcolor:var(--awb-color8);"], div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column[style*="--awb-backgroundcolor:var(--awb-custom_color_1);"] {
+  --awb-title-color: var(--awb-color7);
+  --awb-body-color: var(--awb-color7);
+  --awb-hover-accent-color: var(--awb-color7);
+}
+div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column .content-box-heading {
+  margin-top: 72px;
+  border-top: 1px solid var(--awb-title-color);
+  padding: 1rem 0;
+}
+div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column .content-box-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column .content-box-wrapper .content-container {
+  display: none;
+  margin-bottom: 0;
+}
