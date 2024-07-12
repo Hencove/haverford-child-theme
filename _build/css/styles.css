@@ -158,3 +158,7 @@ div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .co
     transform: translateY(var(--slide-by-height));
   }
 }
+
+.fusion-tb-header .think-custom-button .fusion-button-text {
+  padding: 0.5em;
+}
