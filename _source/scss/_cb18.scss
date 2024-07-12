@@ -1,0 +1,61 @@
+// 
+//  Styled to account for forms built using WP Forms and built-in Avada
+//  tools using the Fusion classes.
+//
+html body {
+    div.fusion-fullwidth.cb18-form {
+        
+        form.fusion-form .fusion-fullwidth,
+        .wpforms-container-full {
+
+            margin: 0;
+            padding: 0;
+
+            &.wpforms-container {
+                
+                .wpforms-form {
+                    
+                    .choices__inner,
+                    .choices__list,
+                    .choices_list {
+                        border: 0;
+                    }
+                }
+            }
+
+            .fusion-form-field,
+            .wpforms-field {
+
+                input,
+                select,
+                textarea,
+                .choices, {
+                    border: 1px solid var(--awb-custom_color_5);
+                    border-radius: 0;  
+                
+                }
+
+                input[type=radio] {
+
+                    &:before,
+                    &:after {
+                        border: 1px solid var(--awb-custom_color_5);
+                        border-radius: 0;
+                        box-shadow: none;
+                    }
+
+                    &:checked,
+                    &:checked:after {
+                        border: 1px solid var(--awb-custom_color_5);
+                        border-radius: 0;
+                        background-color: var(--awb-custom_color_5);
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
