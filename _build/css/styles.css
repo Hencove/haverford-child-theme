@@ -145,8 +145,14 @@ div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .co
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
+  overflow: hidden !important;
+}
+div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column .content-box-wrapper > * {
+  transition: all 0.3s ease;
 }
 div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column .content-box-wrapper .content-container {
-  display: none;
   margin-bottom: 0;
+}
+div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column:not(.visible) .content-box-wrapper > * {
+  transform: translateY(var(--slide-by-height));
 }

@@ -44,18 +44,22 @@ div.fusion-fullwidth.cb13-3-column-hover {
 				padding: 1rem 0;
 			}
 
-            .content-box-wrapper {
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: flex-end;
-                //
-                //
-                //
-                .content-container {
-                    display: none;
-                    margin-bottom: 0;
-                }
-            }
+			.content-box-wrapper {
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-end;
+				overflow: hidden !important;
+				> * {
+					transition: all 0.3s ease;
+				}
+				//
+				//
+				//
+				.content-container {
+					// display: none;
+					margin-bottom: 0;
+				}
+			}
 
 			//
 			//
@@ -63,7 +67,10 @@ div.fusion-fullwidth.cb13-3-column-hover {
 			&.visible {
 			}
 			&:not(.visible) {
-                // 
+				.content-box-wrapper > * {
+					transform: translateY(var(--slide-by-height));
+				}
+				//
 			}
 		}
 	}

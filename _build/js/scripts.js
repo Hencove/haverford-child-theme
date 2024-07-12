@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./_source/js/scripts.js":
-/*!*******************************!*\
-  !*** ./_source/js/scripts.js ***!
-  \*******************************/
+/***/ "./_source/js/_cb13.js":
+/*!*****************************!*\
+  !*** ./_source/js/_cb13.js ***!
+  \*****************************/
 /***/ (() => {
 
 //
@@ -12,6 +12,51 @@
   //
   // 		jQuery is ready as $
 
+  //
+  //
+  //
+  var hoverToggles = $(".cb13-3-column-hover .content-box-column");
+
+  //
+  //
+  //
+  hoverToggles.each(function () {
+    //
+    var boxWrapper = $(this).find(".content-box-wrapper");
+    var contentContainer = $(this).find(".content-container");
+
+    //
+    //  ?   determine how much we need to slide the content for this content box
+    //
+    var SlideHeight = contentContainer.height() + 32 + "px";
+    boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
+
+    //
+    // when hovering over a content box
+    //
+    $(this).hover(function () {
+      //
+      // toggle the visible class
+      //
+      $(this).toggleClass("visible");
+    });
+  });
+
+  //
+  //
+})(document, window, jQuery);
+
+/***/ }),
+
+/***/ "./_source/js/_thinkco-buttons.js":
+/*!****************************************!*\
+  !*** ./_source/js/_thinkco-buttons.js ***!
+  \****************************************/
+/***/ (() => {
+
+(function (document, window, $) {
+  //
+  // 		jQuery is ready as $
   document.addEventListener("DOMContentLoaded", function () {
     var buttons = document.querySelectorAll(".think-custom-button");
     buttons.forEach(function (button) {
@@ -19,19 +64,33 @@
       button.insertAdjacentHTML("afterbegin", OrnamentHTML);
     });
   });
-  var hoverToggles = $(".cb13-3-column-hover .content-box-column");
-  hoverToggles.each(function () {
-    var contentContainer = $(this).find(".content-container");
+  //
+  //
+})(document, window, jQuery);
 
-    // when hovering over a content box
-    $(this).hover(function () {
-      // $(this).toggleClass("visible");
+/***/ }),
 
-      // adjust the content container
-      contentContainer.slideToggle();
-    });
-  });
+/***/ "./_source/js/scripts.js":
+/*!*******************************!*\
+  !*** ./_source/js/scripts.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _thinkco_buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_thinkco-buttons */ "./_source/js/_thinkco-buttons.js");
+/* harmony import */ var _thinkco_buttons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_thinkco_buttons__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
+/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_cb13__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+
+
+//
+//
+(function (document, window, $) {
+  //
+  // 		jQuery is ready as $
   //
   //
 })(document, window, jQuery);
@@ -110,6 +169,30 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	
