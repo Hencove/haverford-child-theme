@@ -80,9 +80,7 @@ html body .fusion-button.think-custom-button:hover .button__ornament-top-bottom:
 }
 html body .fusion-button.think-custom-button {
   background-color: unset;
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
-  font-size: 1em;
+  font-weight: 400;
   position: relative;
   text-decoration: none;
   padding: 0.5em;
@@ -95,7 +93,7 @@ html body .fusion-button.think-custom-button .fusion-button-text {
   width: 100%;
   background-color: transparent;
   color: #000;
-  padding: 1.5em 2em;
+  padding: 0.5rem 2rem;
   transition: color 500ms ease, background-color 500ms ease;
 }
 html body .fusion-button.think-custom-button:hover .fusion-button-text, html body .fusion-button.think-custom-button:focus .fusion-button-text {
@@ -116,6 +114,30 @@ html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-bu
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:before, .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:after,
+.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child:before,
+.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--awb-custom_color_5);
+  background: rgb(219, 180, 44);
+}
+.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child::before,
+.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child::before {
+  width: 2px;
+  height: 120%;
+  background: linear-gradient(0deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
+.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child::after,
+.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child::after {
+  background: linear-gradient(90deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 90%);
+  width: 120%;
+  height: 2px;
+}
+.cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe,
 .cb6b-interior-banner-with-two-images .fusion-image-element:nth-child(2) .fusion-imageframe {
   padding: 1rem;
 }

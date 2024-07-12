@@ -109,9 +109,10 @@ html body {
 
 	.fusion-button.think-custom-button {
 		background-color: unset;
-		text-transform: uppercase;
-		letter-spacing: 0.4em;
-		font-size: 1em;
+		font-weight: 400;
+		// text-transform: uppercase;
+		// letter-spacing: 0.4em;
+		// font-size: 1em;
 		position: relative;
 		text-decoration: none;
 		padding: $button--ornament-offset * -1;
@@ -126,7 +127,7 @@ html body {
 			width: 100%;
 			background-color: transparent;
 			color: $button--color-2;
-			padding: 1.5em 2em;
+			padding: 0.5rem 2rem;
 			transition: color 500ms ease, background-color 500ms ease;
 		}
 
