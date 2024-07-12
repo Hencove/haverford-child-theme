@@ -116,6 +116,9 @@ html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-bu
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.cb6b-interior-banner-with-two-images .fusion-image-element:nth-child(2) .fusion-imageframe {
+  padding: 1rem;
+}
 @media screen and (min-width: 801px) {
   div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes {
     display: flex;
