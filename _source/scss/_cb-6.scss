@@ -1,0 +1,27 @@
+//
+//
+//
+.cb6b-interior-banner-with-two-images {
+	// the avada image element container
+	.fusion-image-element {
+		// this wrapper has the border for the image, and handles aspect ratio if applied
+		.fusion-imageframe {
+			// the image itself
+			img {
+			}
+		}
+
+		//
+		//  the second image has special styles
+		//
+		&:nth-child(2) {
+			// this wrapper has the border for the image, and handles aspect ratio if applied
+			.fusion-imageframe {
+				padding: 1rem;
+				// the image itself
+				img {
+				}
+			}
+		}
+	}
+}
