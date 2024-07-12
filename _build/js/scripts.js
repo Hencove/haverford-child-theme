@@ -37,6 +37,12 @@
     });
   });
 
+  // CB3 Featured Stats
+
+  var container = $(".cb3-featured-stats");
+  var wrapperDivs = '<div class="cb3-H-icon"><p>H</p></div><div class="cb3-wrapper-outer"><div class="cb3-wrapper-outer-bottom"><div class="cb3-wrapper-outer-left"></div><div class="cb3-wrapper-outer-right"></div></div><div class="cb3-wrapper-inner"><div class="cb3-wrapper-inner-bottom"><div class="cb3-wrapper-inner-left"></div><div class="cb3-wrapper-inner-right"></div></div>' + $(container).html() + '</div></div>';
+  $(container).html(wrapperDivs);
+
   //
   //
 })(document, window, jQuery);
