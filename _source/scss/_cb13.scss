@@ -68,7 +68,9 @@ div.fusion-fullwidth.cb13-3-column-hover {
 			}
 			&:not(.visible) {
 				.content-box-wrapper > * {
-					transform: translateY(var(--slide-by-height));
+					@media screen and (min-width: 801px) {
+						transform: translateY(var(--slide-by-height));
+					}
 				}
 				//
 			}

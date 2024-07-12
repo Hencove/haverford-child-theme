@@ -153,6 +153,8 @@ div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .co
 div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column .content-box-wrapper .content-container {
   margin-bottom: 0;
 }
-div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column:not(.visible) .content-box-wrapper > * {
-  transform: translateY(var(--slide-by-height));
+@media screen and (min-width: 801px) {
+  div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .content-box-column:not(.visible) .content-box-wrapper > * {
+    transform: translateY(var(--slide-by-height));
+  }
 }
