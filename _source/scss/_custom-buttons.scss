@@ -143,11 +143,9 @@ html body {
 		}
 	}
 
-	div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button {
+	div.wpforms-container-full .wpforms-submit-container button[type="submit"].think-custom-button {
 		background-color: unset;
-		text-transform: uppercase;
-		letter-spacing: 0.4em;
-		font-size: 1em;
+		height: auto;
 		position: relative;
 		text-decoration: none;
 		padding: $button--ornament-offset * -1;
@@ -159,6 +157,10 @@ html body {
 		//
 
 		.fusion-button-text {
+			text-transform: uppercase;
+			font-weight: 300;
+			letter-spacing: 0.4em;
+			font-size: 1em;
 			display: block;
 			width: 100%;
 			background-color: transparent;
@@ -168,11 +170,19 @@ html body {
 		}
 
 		&:hover,
-		&:focus {
+		&:focus
+		&:active {
+
+			background: none;
+
 			.fusion-button-text {
 				color: $button--color-2;
 				background-color: rgba($button--color-1, 0.9);
 			}
+		}
+
+		&:focus:after {
+			border: none;
 		}
 	}
 

@@ -32,7 +32,6 @@ html body {
                 .choices, {
                     border: 1px solid var(--awb-custom_color_5);
                     border-radius: 0;  
-                
                 }
 
                 input[type=radio] {
@@ -53,6 +52,25 @@ html body {
 
                 }
 
+            }
+
+            .wpforms-field-radio {
+
+                @media screen and (min-width: 601px) {
+                    
+                    fieldset {
+                        display: flex;
+                        flex-flow: row nowrap;
+                    }
+
+                    legend {
+                        float: left;
+                    }
+
+                    ul {
+                        margin-left: 2rem;
+                    }
+                }
             }
 
         }
