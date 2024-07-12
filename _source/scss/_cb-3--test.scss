@@ -1,0 +1,27 @@
+//
+//
+//
+.cb3-featured-stats {
+	position: relative;
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+	&:before {
+		bottom: 40px;
+		left: 40px;
+		border: 2px solid var(--awb-custom_color_5);
+		width: calc(100% - 80px);
+		height: calc(100% - 80px);
+	}
+	&:after {
+        bottom: 24px;
+        left: 24px;
+        border: 2px solid var(--awb-custom_color_5);
+        width: calc(100% - 48px);
+        height: calc(100% - 48px);
+        opacity: 0.5;
+	}
+}

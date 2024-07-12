@@ -89,6 +89,7 @@ html body .fusion-button.think-custom-button {
   border-radius: 0;
 }
 html body .fusion-button.think-custom-button .fusion-button-text {
+  min-width: 140px;
   display: block;
   width: 100%;
   background-color: transparent;
@@ -112,6 +113,30 @@ html body .fusion-button.think-custom-button.has-white-bg-color .button__ornamen
 html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, html body .fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
   color: #000;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.cb3-featured-stats {
+  position: relative;
+}
+.cb3-featured-stats:before, .cb3-featured-stats:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.cb3-featured-stats:before {
+  bottom: 40px;
+  left: 40px;
+  border: 2px solid var(--awb-custom_color_5);
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+}
+.cb3-featured-stats:after {
+  bottom: 24px;
+  left: 24px;
+  border: 2px solid var(--awb-custom_color_5);
+  width: calc(100% - 48px);
+  height: calc(100% - 48px);
+  opacity: 0.5;
 }
 
 .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:before, .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:after,
