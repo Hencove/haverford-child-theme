@@ -143,6 +143,9 @@ html body {
 		}
 	}
 
+	//
+	//	Styling for WPForms elements
+	//
 	div.wpforms-container-full .wpforms-submit-container button[type="submit"].think-custom-button {
 		background-color: unset;
 		height: auto;
@@ -172,7 +175,6 @@ html body {
 		&:hover,
 		&:focus
 		&:active {
-
 			background: none;
 
 			.fusion-button-text {

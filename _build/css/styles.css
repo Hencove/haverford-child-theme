@@ -236,6 +236,7 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field 
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field select,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field textarea,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field .choices {
+  background-color: transparent;
   border: 1px solid var(--awb-custom_color_5);
   border-radius: 0;
 }
@@ -276,6 +277,24 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field 
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field .choices:focus {
   border: 1px solid var(--awb-custom_color_1);
   box-shadow: none;
+}
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field select .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field textarea .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field .choices .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field select .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field textarea .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field .choices .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field select .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field textarea .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field .choices .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field select .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field textarea .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field .choices .choices__inner {
+  background-color: transparent;
 }
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field .choices.is-open,
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field .choices.is-focused,
