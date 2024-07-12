@@ -22,60 +22,85 @@ html body .fusion-button.button-flat[data-hover=underline] .fusion-button-text::
   bottom: -15px;
   border-color: var(--awb-custom_color_5);
 }
+html body .wpforms-submit .button__ornament,
 html body .fusion-button.think-custom-button .button__ornament {
   position: absolute;
 }
+html body .wpforms-submit .button__ornament--vertical,
 html body .fusion-button.think-custom-button .button__ornament--vertical {
   top: -0.5em;
   bottom: -0.5em;
   left: 0;
   right: 0;
 }
+html body .wpforms-submit .button__ornament--horizontal,
 html body .fusion-button.think-custom-button .button__ornament--horizontal {
   left: -0.5em;
   right: -0.5em;
   top: 0;
   bottom: 0;
 }
-html body .fusion-button.think-custom-button .button__ornament-top-bottom, html body .fusion-button.think-custom-button .button__ornament-left-right {
+html body .wpforms-submit .button__ornament-top-bottom, html body .wpforms-submit .button__ornament-left-right,
+html body .fusion-button.think-custom-button .button__ornament-top-bottom,
+html body .fusion-button.think-custom-button .button__ornament-left-right {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:before, html body .fusion-button.think-custom-button .button__ornament-top-bottom:after, html body .fusion-button.think-custom-button .button__ornament-left-right:before, html body .fusion-button.think-custom-button .button__ornament-left-right:after {
+html body .wpforms-submit .button__ornament-top-bottom:before, html body .wpforms-submit .button__ornament-top-bottom:after, html body .wpforms-submit .button__ornament-left-right:before, html body .wpforms-submit .button__ornament-left-right:after,
+html body .fusion-button.think-custom-button .button__ornament-top-bottom:before,
+html body .fusion-button.think-custom-button .button__ornament-top-bottom:after,
+html body .fusion-button.think-custom-button .button__ornament-left-right:before,
+html body .fusion-button.think-custom-button .button__ornament-left-right:after {
   content: "";
   position: absolute;
   background-color: #e0c351;
   transition: transform 400ms cubic-bezier(0.54, 0.06, 0.39, 0.96);
 }
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:before, html body .fusion-button.think-custom-button .button__ornament-top-bottom:after {
+html body .wpforms-submit .button__ornament-top-bottom:before, html body .wpforms-submit .button__ornament-top-bottom:after,
+html body .fusion-button.think-custom-button .button__ornament-top-bottom:before,
+html body .fusion-button.think-custom-button .button__ornament-top-bottom:after {
   height: 1px;
   left: 0;
   right: 0;
 }
+html body .wpforms-submit .button__ornament-top-bottom:before,
 html body .fusion-button.think-custom-button .button__ornament-top-bottom:before {
   top: 0;
 }
+html body .wpforms-submit .button__ornament-top-bottom:after,
 html body .fusion-button.think-custom-button .button__ornament-top-bottom:after {
   bottom: 0;
 }
-html body .fusion-button.think-custom-button .button__ornament-left-right:before, html body .fusion-button.think-custom-button .button__ornament-left-right:after {
+html body .wpforms-submit .button__ornament-left-right:before, html body .wpforms-submit .button__ornament-left-right:after,
+html body .fusion-button.think-custom-button .button__ornament-left-right:before,
+html body .fusion-button.think-custom-button .button__ornament-left-right:after {
   width: 1px;
   top: 0;
   bottom: 0;
 }
+html body .wpforms-submit .button__ornament-left-right:before,
 html body .fusion-button.think-custom-button .button__ornament-left-right:before {
   left: 0;
 }
+html body .wpforms-submit .button__ornament-left-right:after,
 html body .fusion-button.think-custom-button .button__ornament-left-right:after {
   right: 0;
 }
-html body .fusion-button.think-custom-button:hover .button__ornament-left-right:before, html body .fusion-button.think-custom-button:hover .button__ornament-left-right:after, html body .fusion-button.think-custom-button:focus .button__ornament-left-right:before, html body .fusion-button.think-custom-button:focus .button__ornament-left-right:after {
+html body .wpforms-submit:hover .button__ornament-left-right:before, html body .wpforms-submit:hover .button__ornament-left-right:after, html body .wpforms-submit:focus .button__ornament-left-right:before, html body .wpforms-submit:focus .button__ornament-left-right:after,
+html body .fusion-button.think-custom-button:hover .button__ornament-left-right:before,
+html body .fusion-button.think-custom-button:hover .button__ornament-left-right:after,
+html body .fusion-button.think-custom-button:focus .button__ornament-left-right:before,
+html body .fusion-button.think-custom-button:focus .button__ornament-left-right:after {
   transform: scale(1, 0);
 }
-html body .fusion-button.think-custom-button:hover .button__ornament-top-bottom:before, html body .fusion-button.think-custom-button:hover .button__ornament-top-bottom:after, html body .fusion-button.think-custom-button:focus .button__ornament-top-bottom:before, html body .fusion-button.think-custom-button:focus .button__ornament-top-bottom:after {
+html body .wpforms-submit:hover .button__ornament-top-bottom:before, html body .wpforms-submit:hover .button__ornament-top-bottom:after, html body .wpforms-submit:focus .button__ornament-top-bottom:before, html body .wpforms-submit:focus .button__ornament-top-bottom:after,
+html body .fusion-button.think-custom-button:hover .button__ornament-top-bottom:before,
+html body .fusion-button.think-custom-button:hover .button__ornament-top-bottom:after,
+html body .fusion-button.think-custom-button:focus .button__ornament-top-bottom:before,
+html body .fusion-button.think-custom-button:focus .button__ornament-top-bottom:after {
   transform: scale(0, 1);
 }
 html body .fusion-button.think-custom-button {
@@ -99,6 +124,30 @@ html body .fusion-button.think-custom-button .fusion-button-text {
   transition: color 500ms ease, background-color 500ms ease;
 }
 html body .fusion-button.think-custom-button:hover .fusion-button-text, html body .fusion-button.think-custom-button:focus .fusion-button-text {
+  color: #000;
+  background-color: rgba(224, 195, 81, 0.9);
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button {
+  background-color: unset;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 1em;
+  position: relative;
+  text-decoration: none;
+  padding: 0.5em;
+  box-shadow: inset 0 0 0 1px #e0c351 !important;
+  text-align: center;
+  border-radius: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .fusion-button-text {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: #000;
+  padding: 1.5em 2em;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover .fusion-button-text, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus .fusion-button-text {
   color: #000;
   background-color: rgba(224, 195, 81, 0.9);
 }
@@ -150,12 +199,57 @@ div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .co
   display: none;
   margin-bottom: 0;
 }
-div.fusion-fullwidth.cb18-form .wpforms-container-full {
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full {
   margin: 0;
+  padding: 0;
 }
-div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input,
-div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field select,
-div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field textarea,
-div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field .choices {
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth.wpforms-container .wpforms-form .choices__inner,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth.wpforms-container .wpforms-form .choices__list,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth.wpforms-container .wpforms-form .choices_list,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full.wpforms-container .wpforms-form .choices__inner,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full.wpforms-container .wpforms-form .choices__list,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full.wpforms-container .wpforms-form .choices_list {
+  border: 0;
+}
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field select,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field textarea,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field .choices,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field select,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field textarea,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field .choices,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field select,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field textarea,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field .choices,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field select,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field textarea,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field .choices {
   border: 1px solid var(--awb-custom_color_5);
+  border-radius: 0;
+}
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:before, html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:after,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:before,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:after,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:before,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:after,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:before,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:after {
+  border: 1px solid var(--awb-custom_color_5);
+  border-radius: 0;
+  box-shadow: none;
+}
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:checked, html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:checked:after,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:checked,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:checked:after,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:checked,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:checked:after,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:checked,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:checked:after {
+  border: 1px solid var(--awb-custom_color_5);
+  border-radius: 0;
+  background-color: var(--awb-custom_color_5);
 }
