@@ -29,13 +29,40 @@ html body {
                 input,
                 select,
                 textarea,
-                .choices, {
+                .choices {
                     border: 1px solid var(--awb-custom_color_5);
                     border-radius: 0;  
+
+                    &:hover {
+                        border: 1px solid #5A4600;
+                        box-shadow: none;
+                    }
+
+                    &:focus {
+                        border: 1px solid var(--awb-custom_color_1);
+                        box-shadow: none;
+                    }
                 }
 
-                input[type=radio] {
+                .choices.is-open,
+                .choices.is-focused,
+                .choices__inner {
 
+                    border: none;
+                
+                    .choices__list.choices__list--dropdown,
+                    .choices__inner {
+                        border: none;
+                        box-shadow: 0 0 20px 0 rgba(0,0,0,0.25);    
+
+                        .choices__item.is-highlighted {
+                            background-color: var(--awb-custom_color_1);
+                            color: var(--awb-color1)
+                        }
+                    }
+                }
+
+                input[type="radio"] {
                     &:before,
                     &:after {
                         border: 1px solid var(--awb-custom_color_5);
@@ -50,6 +77,15 @@ html body {
                         background-color: var(--awb-custom_color_5);
                     }
 
+                }
+
+                .wpforms-error,
+                .wpforms-required-label {
+                    color: var(--awb-color8);
+
+                    &:before {
+                        background-color: var(--awb-color8);
+                    }
                 }
 
             }
