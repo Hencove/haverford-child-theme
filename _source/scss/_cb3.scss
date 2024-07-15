@@ -13,7 +13,14 @@ html body {
                 border: 1px solid var(--awb-custom_color_5);
                 border-bottom: transparent;
                 position: relative;
-                padding: 60px;
+
+                @media screen and (min-width: 641px) {
+                    padding: 60px;
+                }
+                @media screen and (max-width: 640px) {
+                    padding: 20px;
+                }
+                
 
                 .cb3-wrapper-inner-left,
                 .cb3-wrapper-inner-right {
@@ -54,7 +61,7 @@ html body {
             background-repeat: no-repeat;
             background-size: auto;
             position: absolute;
-            bottom: 10px;
+            bottom: 12px;
         }
 
         .fusion-flex-content-wrapper {
