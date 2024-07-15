@@ -1,0 +1,23 @@
+//
+//
+//
+.cb1-hero-banner {
+	.awb-gallery-wrapper {
+		.fusion-gallery-container {
+			.fusion-gallery-column {
+				&:nth-of-type(2) {
+					padding: 0 40px !important;
+					transform: translate(-20px, -40px);
+				}
+				&:nth-of-type(4) {
+					z-index: 1;
+					transform: translate(-72px, -20px);
+				}
+				&:nth-of-type(5) {
+					z-index: 1;
+					transform: translate(-75%, -40px) scale(1.5);
+				}
+			}
+		}
+	}
+}
