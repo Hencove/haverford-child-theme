@@ -15,6 +15,13 @@ body {
   flex: 1;
 }
 
+.fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
+  position: relative;
+}
+.fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
+  display: none;
+}
+
 html body .fusion-button.button-flat[data-hover=underline] .fusion-button-text {
   padding: 0 8px;
 }
