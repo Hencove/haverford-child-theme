@@ -249,6 +249,29 @@ html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(>
   float: right;
 }
 
+html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) {
+  background-color: #fafafa;
+  padding: 30px;
+}
+html body div.fusion-fullwidth .cb7-pullquote-geopattern {
+  background-image: url(../../geometric-pattern.svg);
+  position: absolute;
+  top: -5vh;
+  left: -3vw;
+  height: 70vh;
+  width: 4vw;
+}
+html body div.fusion-fullwidth .cb7-pullquote:has(+ .cb7-pullquote) {
+  border-right: 2px solid #ccc;
+}
+html body div.fusion-fullwidth .cb7-pullquote i.fa-arrow-right {
+  transition-duration: 500ms;
+}
+html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
+  margin-left: 20px;
+  transition-duration: 500ms;
+}
+
 html body .post-content:has(> .cb12-timeline) {
   background-image: url(../../H-icon-transparent.svg);
   background-size: 30%;

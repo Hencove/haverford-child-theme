@@ -1,0 +1,38 @@
+html body {
+
+        div.fusion-fullwidth {
+
+            .fusion-row:has(> .cb7-pullquote-geopattern) {
+                background-color: #fafafa;
+                padding: 30px;
+            }
+
+            .cb7-pullquote-geopattern {
+                background-image: url(../../geometric-pattern.svg);
+                position: absolute;
+                top: -5vh;
+                left: -3vw;
+                height: 70vh;
+                width: 4vw;
+            }
+        
+            .cb7-pullquote {
+
+                &:has(+ .cb7-pullquote) {
+                    border-right: 2px solid #ccc;
+                }
+
+                i.fa-arrow-right {
+                    transition-duration: 500ms;
+                }
+
+                &:hover {
+                    i.fa-arrow-right {
+                        margin-left: 20px;
+                        transition-duration: 500ms;
+                    }
+                }
+            }
+        }
+
+}
