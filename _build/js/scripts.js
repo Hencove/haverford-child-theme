@@ -89,6 +89,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./_source/js/_cb3.js":
+/*!****************************!*\
+  !*** ./_source/js/_cb3.js ***!
+  \****************************/
+/***/ (() => {
+
+(function (document, window, $) {
+  //
+  // 		jQuery is ready as $
+
+  // CB3 Featured Stats
+  var container = $(".cb3-featured-stats");
+  var wrapperDivs = '<div class="cb3-H-icon"></div><div class="cb3-wrapper-outer"><div class="cb3-wrapper-outer-bottom"><div class="cb3-wrapper-outer-left"></div><div class="cb3-wrapper-outer-right"></div></div><div class="cb3-wrapper-inner"><div class="cb3-wrapper-inner-bottom"><div class="cb3-wrapper-inner-left"></div><div class="cb3-wrapper-inner-right"></div></div>' + $(container).html() + '</div></div>';
+  $(container).html(wrapperDivs);
+
+  //
+  //
+})(document, window, jQuery);
+
+/***/ }),
+
 /***/ "./_source/js/_debounce-throttle.js":
 /*!******************************************!*\
   !*** ./_source/js/_debounce-throttle.js ***!
@@ -207,6 +228,11 @@ var mqHandler = {
   document.addEventListener("DOMContentLoaded", function () {
     var buttons = document.querySelectorAll(".think-custom-button");
     buttons.forEach(function (button) {
+      if ($(button).hasClass("wpforms-submit")) {
+        var buttonText = $(button).text();
+        var ButtonTextHTML = '<div class="fusion-button-text">' + buttonText + '</div>';
+        $(button).html(ButtonTextHTML);
+      }
       var OrnamentHTML = '<div class="button__ornament button__ornament--vertical"><div class="button__ornament-top-bottom"></div><div class="button__ornament-left-right"></div></div><div class="button__ornament button__ornament--horizontal"><div class="button__ornament-top-bottom"></div><div class="button__ornament-left-right"></div></div>';
       button.insertAdjacentHTML("afterbegin", OrnamentHTML);
     });
@@ -227,9 +253,12 @@ var mqHandler = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _thinkco_buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_thinkco-buttons */ "./_source/js/_thinkco-buttons.js");
 /* harmony import */ var _thinkco_buttons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_thinkco_buttons__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
+/* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_cb3 */ "./_source/js/_cb3.js");
+/* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_cb3__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
 //
 //
+
 
 
 //

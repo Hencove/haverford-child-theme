@@ -1,0 +1,22 @@
+html body {
+
+    .post-content:has(> .cb12-timeline) {
+        background-image: url(../../_assets/img/H-icon-transparent.svg);
+        background-size: 30%;
+        background-position: 0%;
+        background-repeat: no-repeat;
+
+        &:before {
+            opacity: 0.5;
+            position: absolute;
+        }
+    }
+
+    div.fusion-fullwidth.cb12-timeline {
+        
+        .fusion-image-element img {
+            outline: 1px solid var(--awb-custom_color_5);
+            outline-offset: -20px;
+        }
+    }
+}

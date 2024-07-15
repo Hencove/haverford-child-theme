@@ -1,0 +1,119 @@
+// 
+//  Styled to account for forms built using WP Forms and built-in Avada
+//  tools using the Fusion classes.
+//
+html body {
+    div.fusion-fullwidth.cb18-form {
+        
+        form.fusion-form .fusion-fullwidth,
+        .wpforms-container-full {
+
+            margin: 0;
+            padding: 0;
+
+            &.wpforms-container {
+                
+                .wpforms-form {
+                    
+                    .choices__inner,
+                    .choices__list,
+                    .choices_list {
+                        border: 0;
+                    }
+                }
+            }
+
+            .fusion-form-field,
+            .wpforms-field {
+
+                input,
+                select,
+                textarea,
+                .choices {
+                    background-color: transparent;
+                    border: 1px solid var(--awb-custom_color_5);
+                    border-radius: 0;  
+
+                    &:hover {
+                        border: 1px solid #5A4600;
+                        box-shadow: none;
+                    }
+
+                    &:focus {
+                        border: 1px solid var(--awb-custom_color_1);
+                        box-shadow: none;
+                    }
+
+                    .choices__inner {
+                        background-color: transparent;
+                    }
+                }
+
+                .choices.is-open,
+                .choices.is-focused,
+                .choices__inner {
+
+                    border: none;
+                
+                    .choices__list.choices__list--dropdown,
+                    .choices__inner {
+                        border: none;
+                        box-shadow: 0 0 20px 0 rgba(0,0,0,0.25);    
+
+                        .choices__item.is-highlighted {
+                            background-color: var(--awb-custom_color_1);
+                            color: var(--awb-color1)
+                        }
+                    }
+                }
+
+                input[type="radio"] {
+                    &:before,
+                    &:after {
+                        border: 1px solid var(--awb-custom_color_5);
+                        border-radius: 0;
+                        box-shadow: none;
+                    }
+
+                    &:checked,
+                    &:checked:after {
+                        border: 1px solid var(--awb-custom_color_5);
+                        border-radius: 0;
+                        background-color: var(--awb-custom_color_5);
+                    }
+
+                }
+
+                .wpforms-error,
+                .wpforms-required-label {
+                    color: var(--awb-color8);
+
+                    &:before {
+                        background-color: var(--awb-color8);
+                    }
+                }
+
+            }
+
+            .wpforms-field-radio {
+
+                @media screen and (min-width: 601px) {
+                    
+                    fieldset {
+                        display: flex;
+                        flex-flow: row nowrap;
+                    }
+
+                    legend {
+                        float: left;
+                    }
+
+                    ul {
+                        margin-left: 2rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
