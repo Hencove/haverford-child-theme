@@ -144,15 +144,14 @@ html body div.wpforms-container-full .wpforms-submit-container button[type=submi
   border-radius: 0;
 }
 html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .fusion-button-text {
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 0.4em;
+  min-width: 140px;
   font-size: 1em;
   display: block;
   width: 100%;
   background-color: transparent;
   color: #000;
   padding: 1.5em 2em;
+  padding: 0.5rem 2rem;
   transition: color 500ms ease, background-color 500ms ease;
 }
 html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:active {
