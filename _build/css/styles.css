@@ -593,3 +593,7 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field 
 html body .fusion-tb-header .fusion-builder-row .think-custom-button .fusion-button-text {
   padding: 0.5em;
 }
+html body .fusion-tb-header .fusion-builder-row .awb-menu_v-stacked .awb-menu__sub-li {
+  border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
+  margin-top: 2rem;
+}

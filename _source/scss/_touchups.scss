@@ -8,4 +8,8 @@ html body .fusion-tb-header .fusion-builder-row {
 			padding: 0.5em;
 		}
 	}
+	.awb-menu_v-stacked .awb-menu__sub-li {
+		border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
+		margin-top: 2rem;
+	}
 }
