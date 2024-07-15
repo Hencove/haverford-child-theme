@@ -239,6 +239,21 @@ html body div.fusion-fullwidth.cb3-featured-stats .fusion-flex-content-wrapper {
   flex-direction: column;
 }
 
+html body .post-content:has(> .cb12-timeline) {
+  background-image: url(../../H-icon-transparent.svg);
+  background-size: 30%;
+  background-position: 0%;
+  background-repeat: no-repeat;
+}
+html body .post-content:has(> .cb12-timeline):before {
+  opacity: 0.5;
+  position: absolute;
+}
+html body div.fusion-fullwidth.cb12-timeline .fusion-image-element img {
+  outline: 1px solid var(--awb-custom_color_5);
+  outline-offset: -20px;
+}
+
 @media screen and (min-width: 801px) {
   div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes {
     display: flex;
