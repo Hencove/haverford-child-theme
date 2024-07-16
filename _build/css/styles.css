@@ -240,6 +240,20 @@ html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-bu
   transform: translate(-75%, -40px) scale(1.5);
 }
 
+.cb2-two-column-feature {
+  position: relative;
+}
+.cb2-two-column-feature:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../../_assets/img/gold-geometric-pattern.svg);
+}
+
 html body div.fusion-fullwidth.cb3-featured-stats {
   padding: 20px;
 }
