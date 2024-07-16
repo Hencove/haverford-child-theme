@@ -195,6 +195,7 @@ html body div.fusion-fullwidth.cb3-featured-stats {
   padding: 20px;
 }
 html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer {
+  width: 100%;
   padding: 15px;
   border: 1px solid rgba(219, 181, 44, 0.2196078431);
   border-bottom: transparent;
@@ -204,6 +205,8 @@ html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrappe
   border: 1px solid var(--awb-custom_color_5);
   border-bottom: transparent;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (min-width: 641px) {
   html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner {
@@ -228,6 +231,10 @@ html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrappe
   display: flex;
   justify-content: space-between;
 }
+html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .fusion-flex-content-wrap {
+  margin-left: 0;
+  margin-right: 0;
+}
 html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-outer-left,
 html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-outer-right {
   flex: 0 1 calc(50% - 52px);
@@ -249,12 +256,6 @@ html body div.fusion-fullwidth.cb3-featured-stats .cb3-H-icon {
   background-size: auto;
   position: absolute;
   bottom: 12px;
-}
-html body div.fusion-fullwidth.cb3-featured-stats .fusion-flex-content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(> .fusion-image-element) {
