@@ -401,6 +401,21 @@ html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
 .cb8-post-grid .fusion-post-cards .fb-icon-element {
   line-height: 16px !important;
 }
+.cb8-post-grid .pagination {
+  justify-content: center;
+  color: var(--awb-color6);
+}
+.cb8-post-grid .pagination * {
+  color: inherit;
+}
+.cb8-post-grid .pagination .current {
+  background-color: unset;
+  border-color: unset;
+}
+.cb8-post-grid .pagination .pagination-prev .page-text,
+.cb8-post-grid .pagination .pagination-next .page-text {
+  display: none;
+}
 
 html body .post-content:has(> .cb12-timeline) {
   background-image: url(../../_assets/img/H-icon-transparent.svg);

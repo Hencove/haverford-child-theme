@@ -32,4 +32,23 @@
 			line-height: 16px !important;
 		}
 	}
+
+	.pagination {
+		justify-content: center;
+		color: var(--awb-color6);
+		* {
+			color: inherit;
+		}
+
+		.current {
+			background-color: unset;
+			border-color: unset;
+		}
+		.pagination-prev,
+		.pagination-next {
+			.page-text {
+				display: none;
+			}
+		}
+	}
 }
