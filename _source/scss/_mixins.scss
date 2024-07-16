@@ -19,3 +19,18 @@
 		);
 	}
 }
+
+@mixin geoPattern($dir1_attr: top, $dir1_val: 0px, $dir2_attr: left, $dir2_val: 0px, $w: 100%, $h: 100%) {
+	// Setup
+	content: "";
+	width: $w;
+	height: $h;
+	position: absolute;
+	// Positioning
+	#{$dir1_attr}: $dir1_val;
+	#{$dir2_attr}: $dir2_val;
+	// Texture
+	background-image: url(../../_assets/img/geometric-pattern.svg);
+	background-repeat: repeat;
+	background-size: cover;
+}
