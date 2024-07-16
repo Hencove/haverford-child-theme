@@ -306,15 +306,20 @@ html body div.fusion-fullwidth.cb3-featured-stats .fusion-flex-content-wrapper {
   flex-direction: column;
 }
 
-html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(> .fusion-image-element) {
-  background-image: url(../../_assets/img/geometric-pattern.svg);
-  background-position: top 200px right -20%;
-  background-repeat: no-repeat;
-  height: 60vh;
+.cb4-image-3-callouts .fusion-image-element {
+  position: relative;
 }
-html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(> .fusion-image-element) .fusion-image-element img {
-  width: 80%;
-  float: right;
+.cb4-image-3-callouts .fusion-image-element:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 180px;
+  left: -180px;
+  background-image: url(../../_assets/img/geometric-pattern.svg);
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child {
