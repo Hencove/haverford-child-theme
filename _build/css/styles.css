@@ -178,6 +178,55 @@ html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-bu
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.cb1-hero-banner {
+  position: relative;
+  position: relative;
+}
+.cb1-hero-banner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
+.cb1-hero-banner::before {
+  bottom: auto;
+  top: 0;
+  left: 30px;
+}
+.cb1-hero-banner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
+.cb1-hero-banner::after {
+  left: auto;
+  bottom: auto;
+  top: 0;
+  right: 30px;
+}
+.cb1-hero-banner > .fusion-builder-row {
+  position: relative;
+  position: static;
+}
+.cb1-hero-banner > .fusion-builder-row:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
 .cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(2) {
   padding: 0 40px !important;
   transform: translate(-20px, -40px);
@@ -269,33 +318,34 @@ html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(>
   float: right;
 }
 
-.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:before, .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:after,
-.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child:before,
-.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child:after {
+.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child {
+  position: relative;
+  position: relative;
+}
+.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:before {
   content: "";
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: var(--awb-custom_color_5);
-  background: rgb(219, 180, 44);
-}
-.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child::before,
-.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child::before {
   width: 2px;
   height: 120%;
   background: linear-gradient(0deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
 }
-.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child::after,
-.cb6b-interior-banner-with-two-images > .fusion-builder-row > .fusion-layout-column:first-child::after {
-  background: linear-gradient(90deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 90%);
+.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 120%;
   height: 2px;
+  background: linear-gradient(90deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
 }
-.cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe,
-.cb6b-interior-banner-with-two-images .fusion-image-element:nth-child(2) .fusion-imageframe {
+.cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe {
   padding: 1rem;
 }
+
 html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) {
   background-color: #fafafa;
   padding: 30px;
@@ -599,4 +649,8 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field 
 
 html body .fusion-tb-header .fusion-builder-row .think-custom-button .fusion-button-text {
   padding: 0.5em;
+}
+html body .awb-menu_v-stacked .menu-item-has-children .awb-menu__sub-ul {
+  border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
+  margin-top: 2rem;
 }

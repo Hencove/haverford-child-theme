@@ -2,10 +2,23 @@
 //
 //
 
-html body .fusion-tb-header .fusion-builder-row {
-	.think-custom-button {
-		.fusion-button-text {
-			padding: 0.5em;
+html body {
+
+	// 
+	.fusion-tb-header .fusion-builder-row {
+		.think-custom-button {
+			.fusion-button-text {
+				padding: 0.5em;
+			}
 		}
 	}
+
+	// 
+	.awb-menu_v-stacked .menu-item-has-children .awb-menu__sub-ul {
+		border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
+		margin-top: 2rem;
+	}
 }
+
+
+
