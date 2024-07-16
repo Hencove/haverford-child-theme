@@ -4,15 +4,19 @@ html body {
         padding: 20px;
 
         .cb3-wrapper-outer {
+            width: 100%;
             padding: 15px;
             border: 1px solid #dbb52c38;
             border-bottom: transparent;
             position: relative;
+    
             
             .cb3-wrapper-inner {
                 border: 1px solid var(--awb-custom_color_5);
                 border-bottom: transparent;
                 position: relative;
+                display: flex;
+                justify-content: center;
 
                 @media screen and (min-width: 641px) {
                     padding: 60px;
@@ -35,6 +39,11 @@ html body {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
+                }
+
+                .fusion-flex-content-wrap {
+                    margin-left: 0;
+                    margin-right: 0;
                 }
             }
 
@@ -62,13 +71,6 @@ html body {
             background-size: auto;
             position: absolute;
             bottom: 12px;
-        }
-
-        .fusion-flex-content-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
     }
 }
