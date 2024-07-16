@@ -1,5 +1,6 @@
 //
-//
+// 	? Hey, check it out!
+//	TODO: yada, yada
 //
 .cb6-interior-banner {
 	//
@@ -8,13 +9,13 @@
 		@include gradientBorder(after, 90deg, 120%, 2px);
 	}
 
-	// the avada image element container
+	// * the avada image element container
 	.fusion-image-element {
 		//
-		//  the second image has special styles
+		// *  the second image has special styles
 		//
 		&:nth-child(2) {
-			// this wrapper has the border for the image, and handles aspect ratio if applied
+			// * this wrapper has the border for the image, and handles aspect ratio if applied
 			.fusion-imageframe {
 				padding: 1rem;
 			}
