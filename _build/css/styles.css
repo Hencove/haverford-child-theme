@@ -388,6 +388,20 @@ html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
   transition-duration: 500ms;
 }
 
+.cb8-post-grid .fusion-post-cards {
+  border: 2px solid var(--awb-custom_color_5);
+}
+.cb8-post-grid .fusion-post-cards > div .fusion-filters {
+  margin-top: 0;
+  padding: 0 80px;
+}
+.cb8-post-grid .fusion-post-cards .fusion-grid-posts-cards {
+  padding: 20px 80px;
+}
+.cb8-post-grid .fusion-post-cards .fb-icon-element {
+  line-height: 16px !important;
+}
+
 html body .post-content:has(> .cb12-timeline) {
   background-image: url(../../_assets/img/H-icon-transparent.svg);
   background-size: 30%;
