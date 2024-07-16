@@ -1,55 +1,15 @@
 //
-
-
 //
 //
-.cb6-interior-banner,
-.cb6b-interior-banner-with-two-images {
-
-	
-	
-	
-	
+.cb6-interior-banner {
+	//
 	> .fusion-builder-row > .fusion-layout-column:first-child {
-		&:before,
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background-color: var(--awb-custom_color_5);
-			background: rgb(219, 180, 44);
-		}
-		&::before {
-            width: 2px;
-			height: 120%;
-            background: linear-gradient(
-                0deg,
-                rgba(219, 180, 44, 1) 0%,
-                rgba(255, 255, 255, 0) 95%
-            );
-		}
-		&::after {
-            background: linear-gradient(
-                90deg,
-                rgba(219, 180, 44, 1) 0%,
-                rgba(255, 255, 255, 0) 90%
-            );
-			width: 120%;
-			height: 2px;
-		}
+		@include gradientBorder();
+		@include gradientBorder(after, 90deg, 120%, 2px);
 	}
 
 	// the avada image element container
 	.fusion-image-element {
-		// this wrapper has the border for the image, and handles aspect ratio if applied
-		.fusion-imageframe {
-			// the image itself
-			img {
-			}
-		}
-
 		//
 		//  the second image has special styles
 		//
@@ -57,9 +17,6 @@
 			// this wrapper has the border for the image, and handles aspect ratio if applied
 			.fusion-imageframe {
 				padding: 1rem;
-				// the image itself
-				img {
-				}
 			}
 		}
 	}

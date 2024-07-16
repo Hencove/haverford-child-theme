@@ -2,6 +2,29 @@
 //
 //
 .cb1-hero-banner {
+	// padding-top: 180px !important;
+	// margin-top: -140px !important;
+	@include gradientBorder(before, 180deg, 2px, 100%);
+	&::before {
+		bottom: auto;
+		top: 0;
+		left: 30px;
+	}
+	@include gradientBorder(after, 180deg, 2px, 100%);
+	&::after {
+		left: auto;
+		bottom: auto;
+		top: 0;
+		right: 30px;
+	}
+	> .fusion-builder-row {
+		@include gradientBorder(before, 90deg, 100%, 2px);
+		position: static;
+	}
+
+	//
+	//
+	//
 	.awb-gallery-wrapper {
 		.fusion-gallery-container {
 			.fusion-gallery-column {
