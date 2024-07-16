@@ -4,9 +4,12 @@
 //
 .cb6-interior-banner {
 	//
-	> .fusion-builder-row > .fusion-layout-column:first-child {
-		@include gradientBorder();
-		@include gradientBorder(after, 90deg, 120%, 2px);
+	@include gradientBorder();
+	@include gradientBorder(after, 90deg, 55%, 2px);
+	&::after,
+	&::before {
+		left: 40px;
+		bottom: 180px;
 	}
 
 	// * the avada image element container
