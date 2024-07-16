@@ -411,6 +411,9 @@ html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
 .cb8-post-grid .pagination .current {
   background-color: unset;
   border-color: unset;
+  color: black;
+  border: unset;
+  font-weight: bold;
 }
 .cb8-post-grid .pagination .pagination-prev .page-text,
 .cb8-post-grid .pagination .pagination-next .page-text {
