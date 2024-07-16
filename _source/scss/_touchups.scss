@@ -3,8 +3,9 @@
 //
 
 html body {
-
-	// 
+	//
+	//
+	//
 	.fusion-tb-header .fusion-builder-row {
 		.think-custom-button {
 			.fusion-button-text {
@@ -13,12 +14,28 @@ html body {
 		}
 	}
 
-	// 
+	//
+	//
+	//
 	.awb-menu_v-stacked .menu-item-has-children .awb-menu__sub-ul {
 		border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
 		margin-top: 2rem;
 	}
+
+	//
+	//
+	//
+	.fusion-image-element .awb-imageframe-caption-container {
+		margin: 24px 0;
+		padding: 8px 0;
+		border-left: 2px solid var(--awb-custom_color_5);
+
+		.awb-imageframe-caption-title {
+			display: none;
+		}
+
+		.awb-imageframe-caption-text {
+			margin: 0 0 0 8px;
+		}
+	}
 }
-
-
-

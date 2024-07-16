@@ -673,3 +673,14 @@ html body .awb-menu_v-stacked .menu-item-has-children .awb-menu__sub-ul {
   border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
   margin-top: 2rem;
 }
+html body .fusion-image-element .awb-imageframe-caption-container {
+  margin: 24px 0;
+  padding: 8px 0;
+  border-left: 2px solid var(--awb-custom_color_5);
+}
+html body .fusion-image-element .awb-imageframe-caption-container .awb-imageframe-caption-title {
+  display: none;
+}
+html body .fusion-image-element .awb-imageframe-caption-container .awb-imageframe-caption-text {
+  margin: 0 0 0 8px;
+}
