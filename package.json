@@ -15,5 +15,8 @@
     "laravel-mix-clean": "^0.1.0",
     "sass": "^1.77.6",
     "sass-loader": "^12.6.0"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4"
   }
 }
