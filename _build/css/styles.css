@@ -338,13 +338,12 @@ html body div.fusion-fullwidth.cb3-featured-stats .cb3-H-icon {
   background-repeat: repeat;
 }
 
-.cb5-news-and-insights-post-grid p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"] {
-  padding-left: 1rem;
-}
 .cb5-news-and-insights-post-grid p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
-  content: "•";
+  content: "▪";
   display: inline-block;
   vertical-align: middle;
+  margin-right: 1rem;
+  font-size: 18px;
 }
 .cb5-news-and-insights-post-grid p:only-child {
   margin-bottom: 0;
@@ -431,6 +430,17 @@ html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
 .cb8-post-grid .pagination .pagination-prev .page-text,
 .cb8-post-grid .pagination .pagination-next .page-text {
   display: none;
+}
+
+.cb11-related-posts p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
+  content: "▪";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  font-size: 18px;
+}
+.cb11-related-posts p:only-child {
+  margin-bottom: 0;
 }
 
 html body .post-content:has(> .cb12-timeline) {
