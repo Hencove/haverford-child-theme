@@ -441,6 +441,7 @@ html body div.fusion-fullwidth .cb7-pullquote i.fa-arrow-right {
 html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
   margin-left: 20px;
   transition-duration: 500ms;
+  color: var(--awb-color8);
 }
 
 .cb8-post-grid .fusion-post-cards {
