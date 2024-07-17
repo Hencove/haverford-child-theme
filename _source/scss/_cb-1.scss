@@ -1,116 +1,118 @@
 //
 //
 //
+html body {
 
-.cb1-hero-banner {
-	// padding-top: 180px !important;
-	// margin-top: -140px !important;
-	@include gradientBorder(before, 180deg, 2px, 100%);
-	&::before {
-		bottom: auto;
-		top: 0;
-		left: 30px;
-	}
-	@include gradientBorder(after, 180deg, 2px, 100%);
-	&::after {
-		left: auto;
-		bottom: auto;
-		top: 0;
-		right: 30px;
-	}
-	> .fusion-builder-row {
-		@include gradientBorder(before, 90deg, 100%, 2px);
-		position: static;
-	}
-	
-	.awb-gallery-wrapper {
-		.fusion-gallery-container {
-			.fusion-gallery-column {
-				&:nth-of-type(2) {
-					padding: 0 40px !important;
-					transform: translate(-20px, -40px);
-				}
-				&:nth-of-type(4) {
-					z-index: 1;
-					transform: translate(-72px, -20px);
-				}
-				&:nth-of-type(5) {
-					z-index: 1;
-					transform: translate(-75%, -40px) scale(1.5);
+	.cb1-hero-banner {
+		margin-top: -260px !important;
+		padding-top: 180px !important;
+		border-top: 2px solid var(--awb-custom_color_5);
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+
+		@include gradientBorder(before, 180deg, 2px, 100%);
+		&::before {
+			bottom: auto;
+			top: 0;
+			left: 0px;
+		}
+		@include gradientBorder(after, 180deg, 2px, 100%);
+		&::after {
+			left: auto;
+			bottom: auto;
+			top: 0;
+			right: 0px;
+		}
+
+		.awb-gallery-wrapper {
+			.fusion-gallery-container {
+				.fusion-gallery-column {
+					&:nth-of-type(2) {
+						padding: 0 40px !important;
+						transform: translate(-20px, -40px);
+					}
+					&:nth-of-type(4) {
+						z-index: 1;
+						transform: translate(-72px, -20px);
+					}
+					&:nth-of-type(5) {
+						z-index: 1;
+						transform: translate(-75%, -40px) scale(1.5);
+					}
 				}
 			}
 		}
-	}
-	
-	@media screen and (min-width: 1241px) {
-			
-		.cb1-gallery {
-			margin-top: -120px;
-			.fusion-layout-column {
-
-				&:nth-of-type(1) {
-					// Top Left
-					.fusion-image-element:nth-of-type(1){
-						transform: translate(-20px, -50px);
-						
-					}
-					// Bottom Left
-					.fusion-image-element:nth-of-type(2){
-						z-index: 1;
-						transform: translate(-75%, -100px) scale(1.5);
-					}
-				}
-				&:nth-of-type(2) {
-					// Top Right
-					.fusion-image-element:nth-of-type(1){
-						transform: translate(0px, -200px) scale(0.9);
-					}
-					// Bottom Right
-					.fusion-image-element:nth-of-type(2){
-						z-index: 1;
-						transform: translate(-72px, -250px);
-					}
-				}	
-			}
-		}
-	}
-	@media screen and (max-width: 640px) {
-			
-		.cb1-gallery {
-			margin: 20px;
-			margin-top: 70px;
-			.fusion-row {
-				flex-wrap: nowrap !important;
-	
+		
+		@media screen and (min-width: 1241px) {
+				
+			.cb1-gallery {
+				margin-top: -120px;
 				.fusion-layout-column {
-
-					--awb-width-small: 50% !important;
 
 					&:nth-of-type(1) {
 						// Top Left
 						.fusion-image-element:nth-of-type(1){
-							transform: translate(0px, -50px);
+							transform: translate(-20px, -50px);
+							
 						}
 						// Bottom Left
 						.fusion-image-element:nth-of-type(2){
-							z-index: 2;
-							transform: scale(1.2);
+							z-index: 1;
+							transform: translate(-75%, -100px) scale(1.5);
 						}
 					}
 					&:nth-of-type(2) {
 						// Top Right
 						.fusion-image-element:nth-of-type(1){
-							transform: translate(0px, -100px);
+							transform: translate(0px, -200px) scale(0.9);
 						}
 						// Bottom Right
 						.fusion-image-element:nth-of-type(2){
 							z-index: 1;
-							transform: translate(-20%, -100px);
+							transform: translate(-72px, -250px);
 						}
 					}	
 				}
 			}
 		}
-	}
+		@media screen and (max-width: 640px) {
+				
+			.cb1-gallery {
+				margin: 20px;
+				margin-top: 70px;
+				.fusion-row {
+					flex-wrap: nowrap !important;
+		
+					.fusion-layout-column {
 
+						--awb-width-small: 50% !important;
+
+						&:nth-of-type(1) {
+							// Top Left
+							.fusion-image-element:nth-of-type(1){
+								transform: translate(0px, -50px);
+							}
+							// Bottom Left
+							.fusion-image-element:nth-of-type(2){
+								z-index: 2;
+								transform: scale(1.2);
+							}
+						}
+						&:nth-of-type(2) {
+							// Top Right
+							.fusion-image-element:nth-of-type(1){
+								transform: translate(0px, -100px);
+							}
+							// Bottom Right
+							.fusion-image-element:nth-of-type(2){
+								z-index: 1;
+								transform: translate(-20%, -100px);
+							}
+						}	
+					}
+				}
+			}
+		}
+
+	}
 }
