@@ -1,0 +1,19 @@
+//
+//
+//
+.cb5-news-and-insights-post-grid {
+	p.fusion-title-heading {
+		&[style*="text-transform:uppercase;--fontSize:14;"] {
+			padding-left: 1rem;
+			&:before {
+				content: "\2022";
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	p:only-child {
+		margin-bottom: 0;
+	}
+}

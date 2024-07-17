@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   height: 100%;
@@ -335,6 +336,18 @@ html body div.fusion-fullwidth.cb3-featured-stats .cb3-H-icon {
   background-image: url(../../_assets/img/geometric-pattern.svg);
   background-size: contain;
   background-repeat: repeat;
+}
+
+.cb5-news-and-insights-post-grid p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"] {
+  padding-left: 1rem;
+}
+.cb5-news-and-insights-post-grid p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
+  content: "•";
+  display: inline-block;
+  vertical-align: middle;
+}
+.cb5-news-and-insights-post-grid p:only-child {
+  margin-bottom: 0;
 }
 
 .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child {
