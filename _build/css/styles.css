@@ -475,6 +475,27 @@ html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
   display: none;
 }
 
+html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header .fusion-image-element {
+  filter: brightness(100);
+}
+html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header input.fusion-search-submit,
+html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header a.think-custom-button .fusion-button-text,
+html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header nav ul li a.awb-menu__main-a {
+  color: var(--awb-color1) !important;
+}
+@media screen and (min-width: 641px) {
+  html body #boxed-wrapper:has(.cb9-post-details) .cb9-post-details {
+    margin-top: -285px !important;
+    padding-top: 180px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  html body #boxed-wrapper:has(.cb9-post-details) .cb9-post-details {
+    margin-top: -405px !important;
+    padding-top: 200px !important;
+  }
+}
+
 .cb11-related-posts p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
   content: "▪";
   display: inline-block;
