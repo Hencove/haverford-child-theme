@@ -16,6 +16,12 @@ body {
 		}
 	}
 }
+@import './_lib/include-media';
+$breakpoints: (
+  'small' : 640px,
+  'mobile' : 800px,
+  'medium' : 1200px,
+);
 @import './mixins';
 @import './site-header';
 @import './custom-buttons';
