@@ -18,15 +18,29 @@
 		margin-bottom: 0;
 	}
 
-	i.icon-mkb-arrow-right-solid {
-		transition-duration: 500ms;
-	}
-
-	&:hover {
-		i.icon-mkb-arrow-right-solid {
-			margin-left: 20px;
+	.post-card{
+		i.icon-mkb-arrow-right-solid,
+		.fusion-image-wrapper {
 			transition-duration: 500ms;
-			color: var(--awb-color8);
+		}
+
+		div.fusion-image-wrapper {
+			outline: 1px solid var(--awb-custom_color_5);
+			outline-offset: -20px;
+		}
+
+		&:hover {
+			i.icon-mkb-arrow-right-solid {
+				margin-left: 20px;
+				transition-duration: 500ms;
+				color: var(--awb-color8);
+			}
+			.fusion-image-wrapper {
+				transform: scale(1.2);
+				transition-duration: 500ms;
+				// outline: 1px solid var(--awb-custom_color_5);
+				// outline-offset: -60px;
+			}
 		}
 	}
 }
