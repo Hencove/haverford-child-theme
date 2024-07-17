@@ -435,13 +435,18 @@ html body div.fusion-fullwidth .cb7-pullquote-geopattern {
 html body div.fusion-fullwidth .cb7-pullquote:has(+ .cb7-pullquote) {
   border-right: 2px solid #ccc;
 }
-html body div.fusion-fullwidth .cb7-pullquote i.fa-arrow-right {
+html body div.fusion-fullwidth .cb7-pullquote i.fa-arrow-right,
+html body div.fusion-fullwidth .cb7-pullquote .fusion-imageframe img {
   transition-duration: 500ms;
 }
 html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
   margin-left: 20px;
   transition-duration: 500ms;
   color: var(--awb-color8);
+}
+html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
+  transform: scale(1.2);
+  transition-duration: 500ms;
 }
 
 .cb8-post-grid .fusion-post-cards {
