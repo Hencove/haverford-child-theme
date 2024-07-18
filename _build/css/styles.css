@@ -486,13 +486,13 @@ html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
   margin-bottom: 0;
 }
 
-html body .post-content:has(> .cb12-timeline) {
+html body div.fusion-fullwidth.cb12-timeline {
   background-image: url(../../_assets/img/H-icon-transparent.svg);
   background-size: 30%;
   background-position: 0%;
   background-repeat: no-repeat;
 }
-html body .post-content:has(> .cb12-timeline):before {
+html body div.fusion-fullwidth.cb12-timeline:before {
   opacity: 0.5;
   position: absolute;
 }
