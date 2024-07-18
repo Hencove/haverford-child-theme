@@ -1,20 +1,24 @@
 //
-//
+// 	? Hey, check it out!
+//	TODO: yada, yada
 //
 .cb6-interior-banner {
 	//
-	> .fusion-builder-row > .fusion-layout-column:first-child {
-		@include gradientBorder();
-		@include gradientBorder(after, 90deg, 120%, 2px);
+	@include gradientBorder();
+	@include gradientBorder(after, 90deg, 55%, 2px);
+	&::after,
+	&::before {
+		left: 40px;
+		bottom: 180px;
 	}
 
-	// the avada image element container
+	// * the avada image element container
 	.fusion-image-element {
 		//
-		//  the second image has special styles
+		// *  the second image has special styles
 		//
 		&:nth-child(2) {
-			// this wrapper has the border for the image, and handles aspect ratio if applied
+			// * this wrapper has the border for the image, and handles aspect ratio if applied
 			.fusion-imageframe {
 				padding: 1rem;
 			}

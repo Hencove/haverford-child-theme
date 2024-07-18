@@ -392,11 +392,11 @@ html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(>
   margin-bottom: 0;
 }
 
-.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child {
+.cb6-interior-banner {
   position: relative;
   position: relative;
 }
-.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:before {
+.cb6-interior-banner:before {
   content: "";
   display: block;
   position: absolute;
@@ -406,15 +406,19 @@ html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(>
   height: 120%;
   background: linear-gradient(0deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
 }
-.cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child:after {
+.cb6-interior-banner:after {
   content: "";
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 120%;
+  width: 55%;
   height: 2px;
   background: linear-gradient(90deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
+.cb6-interior-banner::after, .cb6-interior-banner::before {
+  left: 40px;
+  bottom: 180px;
 }
 .cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe {
   padding: 1rem;
