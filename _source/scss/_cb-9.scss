@@ -1,0 +1,29 @@
+html body {
+
+    #boxed-wrapper:has(.cb9-post-details) {
+        
+        .fusion-tb-header {
+            .fusion-image-element {
+                filter: brightness(100);
+            }
+
+            input.fusion-search-submit,
+            a.think-custom-button .fusion-button-text,
+            nav ul li a.awb-menu__main-a {
+                color: var(--awb-color1) !important;
+            }
+        }
+
+        .cb9-post-details {
+            @media screen and (min-width: 641px) {
+                margin-top: -285px !important;
+                padding-top: 180px !important;
+            }
+
+            @media screen and (max-width: 640px) {
+                margin-top: -405px !important;
+                padding-top: 200px !important;
+            }
+        }
+    }
+}
