@@ -475,6 +475,14 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   transform: scale(1.2);
   transition-duration: 500ms;
 }
+@media (max-width: 799px) {
+  html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper > *:not(.fusion-image-element) {
+    order: 1;
+  }
+  html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
+    text-align: left;
+  }
+}
 
 .cb8-post-grid .fusion-post-cards {
   border: 2px solid var(--awb-custom_color_5);

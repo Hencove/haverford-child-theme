@@ -1,44 +1,54 @@
 html body {
-
-    div.fusion-fullwidth {
-
-        .fusion-row:has(> .cb7-pullquote-geopattern) {
-            background-color: #fafafa;
-            padding: 30px;
-        }
-
-        .cb7-pullquote-geopattern {
-            background-image: url(../../_assets/img/geometric-pattern.svg);
-            position: absolute;
-            top: -5vh;
-            left: -3vw;
-            height: 70vh;
-            width: 4vw;
-        }
-    
-        .cb7-pullquote {
-
-            &:has(+ .cb7-pullquote) {
-                border-right: 2px solid #ccc;
-            }
-
-            i.fa-arrow-right,
-            .fusion-imageframe img {
-                transition-duration: 500ms;
-            }
-
-            &:hover {
-                i.fa-arrow-right {
-                    margin-left: 20px;
-                    transition-duration: 500ms;
-                    color: var(--awb-color8);
-                }
-                .fusion-imageframe img {
-                    transform: scale(1.2);
-                    transition-duration: 500ms;
-
-                }
-            }
-        }
+  div.fusion-fullwidth {
+    .fusion-row:has(> .cb7-pullquote-geopattern) {
+      background-color: #fafafa;
+      padding: 30px;
     }
+
+    .cb7-pullquote-geopattern {
+      background-image: url(../../_assets/img/geometric-pattern.svg);
+      position: absolute;
+      top: -5vh;
+      left: -3vw;
+      height: 70vh;
+      width: 4vw;
+    }
+
+    .cb7-pullquote {
+      &:has(+ .cb7-pullquote) {
+        border-right: 2px solid #ccc;
+      }
+
+      i.fa-arrow-right,
+      .fusion-imageframe img {
+        transition-duration: 500ms;
+      }
+
+      &:hover {
+        i.fa-arrow-right {
+          margin-left: 20px;
+          transition-duration: 500ms;
+          color: var(--awb-color8);
+        }
+        .fusion-imageframe img {
+          transform: scale(1.2);
+          transition-duration: 500ms;
+        }
+      }
+    }
+  }
+
+  @include media("<mobile") {
+    // Pulling the CB7 Pull Quote class
+    .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper {
+      // Reversing element order on mobile
+      > *:not(.fusion-image-element) {
+        order: 1;
+      }
+      // Selecting the Quotation Mark text element and setting text alignment to the left
+      .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
+        text-align: left;
+      }
+    }
+  }
 }
