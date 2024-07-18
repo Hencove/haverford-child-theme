@@ -391,6 +391,14 @@ html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(>
 .cb5-news-and-insights-post-grid p:only-child {
   margin-bottom: 0;
 }
+.cb5-news-and-insights-post-grid .post-card i.icon-mkb-arrow-right-solid {
+  transition-duration: 500ms;
+}
+.cb5-news-and-insights-post-grid .post-card:hover i.icon-mkb-arrow-right-solid {
+  margin-left: 20px;
+  transition-duration: 500ms;
+  color: var(--awb-color8);
+}
 
 .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column:first-child {
   position: relative;
