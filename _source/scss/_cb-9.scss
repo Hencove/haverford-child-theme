@@ -14,16 +14,17 @@ html body {
             }
         }
 
-        .cb9-post-details {
-            @media screen and (min-width: 641px) {
-                margin-top: -285px !important;
-                padding-top: 180px !important;
-            }
+        // ! we appear not to need this as it is in avada lookin nice
+        // .cb9-post-details {
+        //     @media screen and (min-width: 641px) {
+        //         margin-top: -285px !important;
+        //         padding-top: 180px !important;
+        //     }
 
-            @media screen and (max-width: 640px) {
-                margin-top: -405px !important;
-                padding-top: 200px !important;
-            }
-        }
+        //     @media screen and (max-width: 640px) {
+        //         margin-top: -405px !important;
+        //         padding-top: 200px !important;
+        //     }
+        // }
     }
 }
