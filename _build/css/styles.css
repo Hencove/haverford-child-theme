@@ -516,6 +516,29 @@ html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header nav ul li a.aw
 .cb11-related-posts p:only-child {
   margin-bottom: 0;
 }
+.cb11-related-posts .post-card i.icon-mkb-arrow-right-solid,
+.cb11-related-posts .post-card .fusion-image-wrapper img {
+  transition-duration: 500ms;
+}
+.cb11-related-posts .post-card div.fusion-image-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid var(--awb-custom_color_5);
+  z-index: 2;
+}
+.cb11-related-posts .post-card:hover i.icon-mkb-arrow-right-solid {
+  margin-left: 20px;
+  transition-duration: 500ms;
+  color: var(--awb-color8);
+}
+.cb11-related-posts .post-card:hover .fusion-image-wrapper img {
+  transform: scale(1.2);
+  transition-duration: 500ms;
+}
 
 html body div.fusion-fullwidth.cb12-timeline {
   background-image: url(../../_assets/img/H-icon-transparent.svg);
