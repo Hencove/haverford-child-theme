@@ -837,6 +837,27 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field 
   }
 }
 
+div.cb19-prefooter-c2a {
+  position: relative;
+}
+div.cb19-prefooter-c2a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+  background-image: url(../../_assets/img/white-geometric-pattern.svg);
+  height: calc(100% + var(--awb-border-sizes-top) * 2);
+  top: calc(var(--awb-border-sizes-top) * -1);
+  left: calc(var(--awb-border-sizes-left) * -1);
+}
+@media (max-width: 799px) {
+  div.cb19-prefooter-c2a:before {
+    width: calc(100% + var(--awb-border-sizes-left) * 2);
+    height: 60px;
+  }
+}
+
 html body .fusion-tb-header .fusion-builder-row .think-custom-button .fusion-button-text {
   padding: 0.5em;
 }

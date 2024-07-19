@@ -1,19 +1,28 @@
 //
 //
-div.cb4-image-3-callouts {
-	.fusion-image-element {
-		position: relative;
-		&:before {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 180px;
-			left: -180px;
-			background-image: url(../../_assets/img/geometric-pattern.svg);
-			background-size: contain;
-			background-repeat: repeat;
-		}
+//	* this code block sets a "gold-geometric-pattern" the exact size of the image, and translates it D/L by 180px
+//
+//
+div.cb4-image-3-callouts .fusion-image-element {
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 180px;
+		left: -180px;
+		// ! the svg file and the contain/repeat may be subject to change
+		background-image: url(../../_assets/img/geometric-pattern.svg);
+		background-size: contain;
+		background-repeat: repeat;
 	}
 }
+
+// 
+// 
+// * this code block...
+// 
+// 
+div.cb4-image-3-callouts{}

@@ -1,0 +1,36 @@
+//
+//
+//  * this code block adds a white geometric lines svg and positions is over the content and outline/border
+//
+//
+div.cb19-prefooter-c2a {
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 1;
+		width: 80px;
+		background-image: url(../../_assets/img/white-geometric-pattern.svg);
+		// ? 100% plus 2x border width
+		height: calc(100% + calc(var(--awb-border-sizes-top) * 2));
+		// ? negative border width
+		top: calc(var(--awb-border-sizes-top) * -1);
+		left: calc(var(--awb-border-sizes-left) * -1);
+	}
+	@include media("<mobile") {
+		&:before {
+			// ? 100% plus 2x border width
+			width: calc(100% + calc(var(--awb-border-sizes-left) * 2));
+			height: 60px;
+		}
+	}
+}
+
+//
+//
+// * this code block...
+//
+//
+div.cb19-prefooter-c2a {
+}
