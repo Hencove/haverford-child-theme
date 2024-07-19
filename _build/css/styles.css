@@ -233,6 +233,9 @@ div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-galle
   transform: translate(-75%, -40px) scale(1.5);
 }
 @media (min-width: 1201px) {
+  div.cb1-hero-banner div.cb1-gallery {
+    margin-bottom: -120px;
+  }
   div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
     transform: translate(-20px, -50px);
   }
@@ -362,20 +365,20 @@ html body div.fusion-fullwidth.cb3-featured-stats .cb3-H-icon {
   bottom: 12px;
 }
 
-html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(> .fusion-image-element):before {
-  content: "";
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 100px;
-  left: -200px;
-  background-image: url(../../_assets/img/geometric-pattern.svg);
-  background-repeat: repeat;
-  background-size: cover;
+div.cb4-image-3-callouts .fusion-image-element {
+  position: relative;
 }
-html body div.fusion-fullwidth.cb4-image-3-callouts .fusion-column-wrapper:has(> .fusion-image-element) .fusion-image-element img {
-  width: 80%;
-  float: right;
+div.cb4-image-3-callouts .fusion-image-element:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 180px;
+  left: -180px;
+  background-image: url(../../_assets/img/geometric-pattern.svg);
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 .cb5-news-and-insights-post-grid p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
