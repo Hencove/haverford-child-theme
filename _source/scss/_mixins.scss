@@ -1,6 +1,7 @@
 //
 //
 //
+
 @mixin gradientBorder($el: before, $degrees: 0deg, $w: 2px, $h: 120%) {
 	position: relative;
 	&:#{$el} {

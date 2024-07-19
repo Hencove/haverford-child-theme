@@ -179,16 +179,16 @@ html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-bu
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-html body .cb1-hero-banner {
-  margin-top: -260px !important;
-  padding-top: 180px !important;
+div.cb1-hero-banner {
   border-top: 2px solid var(--awb-custom_color_5);
-  margin-left: 0px !important;
-  margin-right: 0px !important;
+  padding-top: 200px;
+  margin-top: -160px;
+  margin-left: unset !important;
+  margin-right: unset !important;
   position: relative;
   position: relative;
 }
-html body .cb1-hero-banner:before {
+div.cb1-hero-banner:before {
   content: "";
   display: block;
   position: absolute;
@@ -198,12 +198,12 @@ html body .cb1-hero-banner:before {
   height: 100%;
   background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
 }
-html body .cb1-hero-banner::before {
+div.cb1-hero-banner::before {
   bottom: auto;
   top: 0;
   left: 0px;
 }
-html body .cb1-hero-banner:after {
+div.cb1-hero-banner:after {
   content: "";
   display: block;
   position: absolute;
@@ -213,65 +213,62 @@ html body .cb1-hero-banner:after {
   height: 100%;
   background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
 }
-html body .cb1-hero-banner::after {
+div.cb1-hero-banner::after {
   left: auto;
   bottom: auto;
   top: 0;
   right: 0px;
 }
-html body .cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(2) {
+
+div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(2) {
   padding: 0 40px !important;
   transform: translate(-20px, -40px);
 }
-html body .cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(4) {
+div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(4) {
   z-index: 1;
   transform: translate(-72px, -20px);
 }
-html body .cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(5) {
+div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(5) {
   z-index: 1;
   transform: translate(-75%, -40px) scale(1.5);
 }
-@media screen and (min-width: 1241px) {
-  html body .cb1-hero-banner .cb1-gallery {
-    margin-top: -120px;
-  }
-  html body .cb1-hero-banner .cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
+@media (min-width: 1201px) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
     transform: translate(-20px, -50px);
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(2) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(2) {
     z-index: 1;
     transform: translate(-75%, -100px) scale(1.5);
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(1) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(1) {
     transform: translate(0px, -200px) scale(0.9);
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(2) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(2) {
     z-index: 1;
     transform: translate(-72px, -250px);
   }
 }
-@media screen and (max-width: 640px) {
-  html body .cb1-hero-banner .cb1-gallery {
-    margin: 20px;
-    margin-top: 70px;
+@media (max-width: 640px) {
+  div.cb1-hero-banner div.cb1-gallery {
+    margin: 120px 0 -80px 0;
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-row {
+  div.cb1-hero-banner div.cb1-gallery .fusion-row {
     flex-wrap: nowrap !important;
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-row .fusion-layout-column {
+  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column {
     --awb-width-small: 50% !important;
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
     transform: translate(0px, -50px);
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(2) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(2) {
     z-index: 2;
     transform: scale(1.2);
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(1) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(1) {
     transform: translate(0px, -100px);
   }
-  html body .cb1-hero-banner .cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(2) {
+  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(2) {
     z-index: 1;
     transform: translate(-20%, -100px);
   }

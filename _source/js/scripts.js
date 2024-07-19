@@ -1,23 +1,16 @@
-//
-//
-import LocomotiveScroll from 'locomotive-scroll';
 import "./_thinkco-buttons";
-import './_cb1';
-import './_cb3';
+// import './_cb1';
+import "./_cb3";
 import "./_cb13";
-
+//
+//	? code here will execute before the DOM has fully loaded
 //
 (function (document, window, $) {
 	//
-	// 		jQuery is ready as $
+	//	? code here will execute once the page is ready
 	//
-
-	const scroll = new LocomotiveScroll({
-		el: document.querySelector('[data-scroll-container]'),
-		smooth: true
-	});
-	scroll.update();
-
+	// ... silence is golden
+	//
 	//
 	//
 })(document, window, jQuery);
