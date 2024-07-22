@@ -1,18 +1,101 @@
-// 
-// 
-// 
-.fusion-tb-header {
-    .fusion-search-element{
-        .fusion-search-form-content {
+//
+//
+//
+html body .fusion-tb-header {
+	//
+	//
+	//
+	.fusion-search-element {
+		//
+		//
+		//
+		.fusion-search-form-content {
+			overflow: visible;
+			.fusion-search-button.search-button {
+				position: relative;
+				input[type="submit"] {
+					color: black;
+				}
+			}
 
-            .fusion-search-button.search-button {
-                position: relative;
-            }
-            
-            .fusion-search-field.search-field {
-                display: none;
-            }
-            
-        }
-    }
+			.fusion-search-field.search-field {
+				position: absolute;
+				top: 0;
+				right: 0;
+				transform: translateX(100%);
+				visibility: hidden;
+			}
+		}
+		
+		//
+		//
+		//
+		&.is-expanded-by-focus {
+			.fusion-search-field.search-field {
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+	}
+
+	//
+	//
+	//
+	//
+
+	.think-custom-button.has-white-bg-color {
+		.fusion-button-text {
+			color: white;
+		}
+		&:hover,
+		&:focus {
+			.fusion-button-text {
+				color: black;
+			}
+		}
+	}
+}
+
+html body.single.single-post {
+	.fusion-tb-header {
+		.fusion-search-element {
+			.fusion-search-button.search-button input[type="submit"] {
+				color: white;
+			}
+		}
+	}
+}
+
+//
+//
+//
+.awb-off-canvas-wrap {
+	&.is-the-mobile-main-menu {
+		.fusion-search-element {
+			.fusion-search-form-content {
+				.fusion-search-button.search-button {
+					position: relative;
+					input[type="submit"] {
+						color: white;
+					}
+				}
+
+				.fusion-search-field.search-field {
+					display: none;
+				}
+			}
+		}
+
+		.fusion-button.think-custom-button.has-white-bg-color {
+			.fusion-button-text {
+				color: white;
+			}
+			&:hover,
+			&:focus {
+				.fusion-button-text {
+					color: black;
+				}
+			}
+		}
+	}
 }

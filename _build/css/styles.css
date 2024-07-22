@@ -16,13 +16,6 @@ body {
   flex: 1;
 }
 
-.fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
-  position: relative;
-}
-.fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
-  display: none;
-}
-
 html body .fusion-button.button-flat[data-hover=underline] .fusion-button-text {
   padding: 0 8px;
 }
@@ -177,6 +170,53 @@ html body .fusion-button.think-custom-button.has-white-bg-color .button__ornamen
 html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, html body .fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
   color: #000;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content {
+  overflow: visible;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
+  position: relative;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button input[type=submit] {
+  color: black;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  visibility: hidden;
+}
+html body .fusion-tb-header .fusion-search-element.is-expanded-by-focus .fusion-search-field.search-field {
+  visibility: visible;
+  transform: translateX(0);
+}
+html body .fusion-tb-header .think-custom-button.has-white-bg-color .fusion-button-text {
+  color: white;
+}
+html body .fusion-tb-header .think-custom-button.has-white-bg-color:hover .fusion-button-text, html body .fusion-tb-header .think-custom-button.has-white-bg-color:focus .fusion-button-text {
+  color: black;
+}
+
+html body.single.single-post .fusion-tb-header .fusion-search-element .fusion-search-button.search-button input[type=submit] {
+  color: white;
+}
+
+.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
+  position: relative;
+}
+.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button input[type=submit] {
+  color: white;
+}
+.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
+  display: none;
+}
+.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .fusion-button-text {
+  color: white;
+}
+.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
+  color: black;
 }
 
 div.cb1-hero-banner {
@@ -516,15 +556,6 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   display: none;
 }
 
-html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header .fusion-image-element {
-  filter: brightness(100);
-}
-html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header input.fusion-search-submit,
-html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header a.think-custom-button .fusion-button-text,
-html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header nav ul li a.awb-menu__main-a {
-  color: var(--awb-color1) !important;
-}
-
 .cb11-related-posts p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
   content: "▪";
   display: inline-block;
@@ -557,6 +588,11 @@ html body #boxed-wrapper:has(.cb9-post-details) .fusion-tb-header nav ul li a.aw
 .cb11-related-posts .post-card:hover .fusion-image-wrapper img {
   transform: scale(1.2);
   transition-duration: 500ms;
+}
+
+body.single.single-post div.cb11-related-posts {
+  margin-left: var(--hundredp_padding-hundred_percent_negative_margin) !important;
+  margin-right: var(--hundredp_padding-hundred_percent_negative_margin) !important;
 }
 
 html body div.fusion-fullwidth.cb12-timeline {

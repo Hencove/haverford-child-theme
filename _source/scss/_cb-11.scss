@@ -51,3 +51,9 @@
 		}
 	}
 }
+body.single.single-post {
+	div.cb11-related-posts {
+		margin-left: var(--hundredp_padding-hundred_percent_negative_margin) !important;
+		margin-right: var(--hundredp_padding-hundred_percent_negative_margin) !important;
+	}
+}
