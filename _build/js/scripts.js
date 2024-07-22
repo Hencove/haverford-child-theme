@@ -235,7 +235,7 @@ var mqHandler = {
     _init: function _init() {
       var SearchElement = $(".fusion-tb-header .fusion-search-element");
       $(".search-button", SearchElement).on("click", function () {
-        SearchElement.addClass("is-expanded-by-focus");
+        SearchElement.toggleClass("is-expanded-by-focus");
       });
     }
   };

@@ -19,11 +19,23 @@ html body .fusion-tb-header {
 			}
 
 			.fusion-search-field.search-field {
+				transition: all 0.3s ease;
 				position: absolute;
 				top: 0;
 				right: 0;
 				transform: translateX(100%);
 				visibility: hidden;
+				background-color: white;
+				z-index: 99;
+				input[type="search"] {
+					font-size: 14px;
+					color: black;
+					padding: 0 4px;
+					&::placeholder {
+						font-size: inherit;
+						color: inherit;
+					}
+				}
 			}
 		}
 		
@@ -34,6 +46,9 @@ html body .fusion-tb-header {
 			.fusion-search-field.search-field {
 				visibility: visible;
 				transform: translateX(0);
+				right: 100%;
+				width: 400px;
+				
 			}
 		}
 	}
