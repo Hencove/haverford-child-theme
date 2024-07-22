@@ -110,6 +110,65 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./_source/js/_cb8.js":
+/*!****************************!*\
+  !*** ./_source/js/_cb8.js ***!
+  \****************************/
+/***/ (() => {
+
+(function (document, window, $) {
+  //
+  //	? code here will execute once the page is ready
+  //
+
+  //
+  // This is garbage, but it works for testing
+  // Currently, this file does not load when FEPro filters are used on the page. Could be a page load order issue.
+  //
+  if ($('.cb8-post-grid').length) {
+    // Add an ALL filter to the top of the filter list that will unselect all other terms
+    var filterList = $('ul.wpc-filters-ul-list');
+    var listItems = filterList.html();
+    var itemALL = '\<li class="wpc-label-item wpc-term-item">\
+                            <div class="wpc-term-item-content-wrapper">\
+                                <input class="wpc-label-input" type="checkbox">\
+                                <label>\
+                                    <span class="wpc-filter-label-wrapper">\
+                                        <a id="filterAll">All</a>&nbsp;\
+                                    </span>\
+                                </label>\
+                            </div>\
+                        ';
+    // inject the button
+    filterList.html(itemALL + listItems);
+
+    // Handle mobile dropdown styling
+    if (window.matchMedia("(max-width: 640px)").matches) {
+      var dropdown = '<div id="cb8-mobile-dropdown-container">\
+                                ' + filterList.parent().html() + '\
+                            </div>\
+                            ';
+      $('.wpc-filter-category').html(dropdown);
+      $('#cb8-mobile-dropdown-container').on('click', function () {
+        $(this).toggleClass('nav-is-visible');
+      });
+    }
+
+    // Handle the functionality
+    $('#filterAll').on("click", function () {
+      // Not sure if the checked status matters, trying it out
+      $('input:checkbox').removeAttr('checked');
+      $('label #filterAll ~ input:checkbox').attr('checked', 'checked');
+
+      // The selected item does have a specific class that should be toggled
+      $('ul.wpc-filters-ul-list li').removeClass('wpc-term-selected');
+      $('li').has('#filterAll').addClass('wpc-term-selected');
+    });
+  }
+})(document, window, jQuery);
+
+/***/ }),
+
 /***/ "./_source/js/_debounce-throttle.js":
 /*!******************************************!*\
   !*** ./_source/js/_debounce-throttle.js ***!
@@ -255,9 +314,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _thinkco_buttons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_thinkco_buttons__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_cb3 */ "./_source/js/_cb3.js");
 /* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_cb3__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
+/* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_cb8 */ "./_source/js/_cb8.js");
+/* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_cb8__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
 
 // import './_cb1';
+
 
 
 //

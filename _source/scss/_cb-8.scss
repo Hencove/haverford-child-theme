@@ -4,6 +4,169 @@
 .cb8-post-grid {
 	//
 	//
+
+	.wpc-filters-main-wrap {
+		&:not(:has(#cb8-mobile-dropdown-container)){
+			border: 2px solid var(--awb-custom_color_5);
+			border-bottom: none;
+		}
+		&:has(#cb8-mobile-dropdown-container) {
+
+			.wpc-filters-section {
+				border: 2px solid var(--awb-custom_color_5);
+			}
+
+		}
+		.wpc-edit-filter-set { display: none; }
+
+		.wpc-filters-widget-wrapper {
+			display: flex;
+			align-items: center;
+			padding: 0 80px;
+
+			&:has(#cb8-mobile-dropdown-container) {
+				display: block;
+				padding: 0;
+			}
+
+			#cb8-mobile-dropdown-container {
+				width: 100%;
+				top: 90px;
+				left: 0;
+				z-index: 3;
+				height: 45px;
+				line-height: 45px;
+				display: block;
+				padding: 0;
+				& ul { 
+					display: block;
+					height: 100%;
+					padding: 0 10px;
+					background: transparent;
+					& li {
+						display: block;
+						position: relative;
+						&:first-child:before {
+							content: ' Menu ';
+							position: relative;
+						}
+						&:first-child:after {
+							position: absolute;
+							top: 0;
+							right: 0;
+							color: #2267B9;
+							padding-right: 10px;
+							//TODO Add carrot icon
+						}
+					}
+				}
+				& a {
+					display: none;
+				}
+			}
+			/* styles for the dropdown open */
+			#cb8-mobile-dropdown-container.nav-is-visible ul {
+				display: block;
+				position: relative;
+				z-index: 5;
+				height: initial;
+				background: #F1F1F1;
+				border: none;
+                box-shadow: 0 0 20px 0 rgba(0,0,0,0.25);  
+				& li {
+					float: none;
+					&:first-child:after {
+						content: "\f00d";
+					}
+					& a {
+						display: block;						
+					}
+					&:hover {
+						background-color: var(--awb-custom_color_1);
+						a { color: var(--awb-color1); }
+					}
+					&:last-child {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		
+			.wpc-filters-section,
+			.wpc-filters-section ul {
+				margin: 0;
+				
+				ul { display: flex; }
+				
+				li {
+					margin: 0;
+					text-wrap: nowrap;
+
+					label {
+						border: none;
+
+						a {	color: var(--awb-color6); }
+
+						&:hover {
+							.wpc-filter-label-wrapper {
+								background: none;
+								
+								a {
+									color: var(--awb-custom_color_1);
+									text-decoration: none !important;
+								}
+							}
+						}
+					}
+				}
+
+				li.wpc-term-selected {
+					.wpc-filter-label-wrapper {
+						background: none !important;
+						
+						a {
+							color: var(--awb-custom_color_1);
+							font-family: var(--awb-typography5-font-family);
+							font-weight: 900 !important;
+						}
+					}
+				}
+				.wpc-filter-header { display: none; }
+
+				&:has(> form){
+					flex-basis: 100%;
+					margin: 0;
+				}		
+				.wpc-search-field-wrapper {
+					padding: 0px 80px;
+					border-left: 2px solid var(--awb-custom_color_5);
+
+					.wpc-search-icon {
+						$icon-size: 30px;
+						width: $icon-size;
+						left: 50px;
+
+						&:before {
+							background-image: url('../../_assets/img/icon_search.svg');
+							background-size: $icon-size;
+							width: $icon-size;
+							height: $icon-size;
+						}
+
+					}
+
+					input {
+						border-radius: 0;
+						background: none;
+
+						&:focus { border: none; }
+					
+					}	
+				}
+			}
+		}	
+	}
+
+	.fusion-builder-placeholder,
 	.fusion-post-cards {
 		border: 2px solid var(--awb-custom_color_5);
 		//
@@ -11,12 +174,15 @@
 		> div {
 			//
 			//
-			.fusion-filters {
+			ul.fusion-filters {
 				margin-top: 0;
-				padding: 0 80px;
+				padding-left: 80px;
+				flex-wrap: nowrap;
 				//
 				//
-				.fusion-filter {
+				li.fusion-filter {
+					text-wrap: nowrap;
+
 				}
 			}
 		}
@@ -53,5 +219,12 @@
 				display: none;
 			}
 		}
+	}
+	
+	.fusion-builder-placeholder,
+	.fusion-builder-placeholder:hover {
+		margin: 0;
+		background: none;
+		color: var(--awb-color6);
 	}
 }
