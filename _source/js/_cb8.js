@@ -13,12 +13,12 @@
         var filterList = $('ul.wpc-filters-ul-list');
         var listItems = filterList.html();
 
-        var itemALL = '\<li class="wpc-label-item wpc-term-item">\
+        var itemALL = '\<li class="wpc-label-item wpc-term-item wpc-chip-reset-all">\
                             <div class="wpc-term-item-content-wrapper">\
                                 <input class="wpc-label-input" type="checkbox">\
                                 <label>\
                                     <span class="wpc-filter-label-wrapper">\
-                                        <a id="filterAll">All</a>&nbsp;\
+                                        <a class="wpc-filters-reset-button" id="filterAll">All</a>&nbsp;\
                                     </span>\
                                 </label>\
                             </div>\
@@ -26,19 +26,16 @@
         // inject the button
         filterList.html(itemALL + listItems);
 
-        // Handle mobile dropdown styling
-        if (window.matchMedia("(max-width: 640px)").matches) {
-              
-            var dropdown = '<div id="cb8-mobile-dropdown-container">\
-                                ' + filterList.parent().html() + '\
-                            </div>\
-                            ';
-            $('.wpc-filter-category').html(dropdown);
-            $('#cb8-mobile-dropdown-container').on('click', function() {
-                $(this).toggleClass('nav-is-visible');
-            });
+        // Handle mobile dropdown styling              
+        var dropdown = '<div id="cb8-mobile-dropdown-container">\
+                            ' + filterList.parent().html() + '\
+                        </div>\
+                        ';
+        $('.wpc-filter-category').html(dropdown);
+        $('#cb8-mobile-dropdown-container').on('click', function() {
+            $(this).toggleClass('nav-is-visible');
+        });
 
-        }
         
         // Handle the functionality
         $('#filterAll').on("click", function() {
