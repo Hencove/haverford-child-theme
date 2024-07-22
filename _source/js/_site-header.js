@@ -12,7 +12,7 @@
 			let SearchElement = $(".fusion-tb-header .fusion-search-element");
 
 			$(".search-button", SearchElement).on("click", () => {
-				SearchElement.addClass("is-expanded-by-focus");
+				SearchElement.toggleClass("is-expanded-by-focus");
 			});
 		},
 	};
