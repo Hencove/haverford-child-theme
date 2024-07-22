@@ -146,6 +146,15 @@ html body .fusion-tb-header .think-custom-button.has-white-bg-color:hover .fusio
   color: black;
 }
 
+html body.single.single-post .fusion-tb-header .menu-item {
+  --awb-active-color: var(--awb-custom_color_5) !important;
+}
+html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color {
+  box-shadow: inset 0 0 0 1px #e0c351 !important;
+}
+html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:before, html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:after, html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:before, html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:after {
+  background-color: var(--awb-custom_color_5);
+}
 html body.single.single-post .fusion-tb-header .fusion-search-element .fusion-search-button.search-button input[type=submit] {
   color: white;
 }
@@ -368,16 +377,6 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   background-repeat: repeat;
 }
 
-.cb5-news-and-insights-post-grid p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
-  content: "▪";
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1rem;
-  font-size: 18px;
-}
-.cb5-news-and-insights-post-grid p:only-child {
-  margin-bottom: 0;
-}
 .cb5-news-and-insights-post-grid .post-card i.icon-mkb-arrow-right-solid,
 .cb5-news-and-insights-post-grid .post-card .fusion-imageframe img,
 .cb5-news-and-insights-post-grid .post-card .fusion-image-wrapper img {
@@ -403,6 +402,16 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   right: 20px;
   border: 1px solid var(--awb-custom_color_5);
   z-index: 2;
+}
+.cb5-news-and-insights-post-grid p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
+  content: "▪";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  font-size: 18px;
+}
+.cb5-news-and-insights-post-grid p:only-child {
+  margin-bottom: 0;
 }
 
 .cb6-interior-banner {
