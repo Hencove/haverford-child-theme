@@ -1,4 +1,15 @@
 //
+//
+//
+.cb8-post-grid {
+	.post-card {
+		@include postCardOnHover();
+		.fusion-imageframe {
+			@include insetImageFrame();
+		}
+	}
+}
+//
 //  ? this is sloppy, and it needs refactoring once we bring in filter everything pro
 //
 .cb8-post-grid {

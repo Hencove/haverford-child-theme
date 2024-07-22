@@ -1,7 +1,48 @@
 //
+@mixin insetImageFrame() {
+	&:before {
+		content: "";
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		bottom: 20px;
+		right: 20px;
+		border: 1px solid var(--awb-custom_color_5);
+		z-index: 2;
+	}
+}
 //
 //
+//
+@mixin postCardOnHover() {
+	//
+	i.icon-mkb-arrow-right-solid,
+	.fusion-imageframe img,
+	.fusion-image-wrapper img {
+		transition-duration: 500ms;
+	}
+	//
+	&:hover,
+	&:focus {
+		// arrow moves right and turns blue
+		i.icon-mkb-arrow-right-solid {
+			margin-left: 20px;
+			transition-duration: 500ms;
+			color: var(--awb-color8);
+		}
 
+		// image scales up
+		.fusion-image-wrapper img,
+		.fusion-imageframe img {
+			transform: scale(1.2);
+			transition-duration: 500ms;
+		}
+	}
+}
+
+//
+//
+//
 @mixin gradientBorder($el: before, $degrees: 0deg, $w: 2px, $h: 120%) {
 	position: relative;
 	&:#{$el} {
@@ -21,7 +62,14 @@
 	}
 }
 
-@mixin geoPattern($dir1_attr: top, $dir1_val: 0px, $dir2_attr: left, $dir2_val: 0px, $w: 100%, $h: 100%) {
+@mixin geoPattern(
+	$dir1_attr: top,
+	$dir1_val: 0px,
+	$dir2_attr: left,
+	$dir2_val: 0px,
+	$w: 100%,
+	$h: 100%
+) {
 	// Setup
 	content: "";
 	width: $w;
@@ -34,4 +82,100 @@
 	background-image: url(../../_assets/img/geometric-pattern.svg);
 	background-repeat: repeat;
 	background-size: cover;
+}
+
+//
+@mixin buttonOrnamentStyles() {
+	//
+	margin-left: 0.5em; // ? adjusts for the ornament overflowing the element
+	margin-right: 0.5em; // ? adjusts for the ornament overflowing the element
+	.button__ornament {
+		position: absolute;
+		//
+		&--vertical {
+			top: $button--ornament-offset;
+			bottom: $button--ornament-offset;
+			left: 0;
+			right: 0;
+		}
+		//
+		&--horizontal {
+			left: $button--ornament-offset;
+			right: $button--ornament-offset;
+			top: 0;
+			bottom: 0;
+		}
+		//
+		&-top-bottom,
+		&-left-right {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				background-color: $button--color-1;
+				transition: transform 400ms cubic-bezier(0.54, 0.06, 0.39, 0.96);
+			}
+		}
+		//
+		&-top-bottom {
+			&:before,
+			&:after {
+				height: 1px;
+				left: 0;
+				right: 0;
+			}
+
+			&:before {
+				top: 0;
+			}
+
+			&:after {
+				bottom: 0;
+			}
+		}
+		//
+		&-left-right {
+			&:before,
+			&:after {
+				width: 1px;
+				top: 0;
+				bottom: 0;
+			}
+
+			&:before {
+				left: 0;
+			}
+
+			&:after {
+				right: 0;
+			}
+		}
+	}
+	//
+	&:hover,
+	&:focus {
+		//
+		.button__ornament {
+			//
+			&-left-right {
+				&:before,
+				&:after {
+					transform: scale(1, 0);
+				}
+			}
+			//
+			&-top-bottom {
+				&:before,
+				&:after {
+					transform: scale(0, 1);
+				}
+			}
+		}
+	}
 }

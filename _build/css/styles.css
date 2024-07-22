@@ -1,173 +1,102 @@
 @charset "UTF-8";
-html,
-body {
-  height: 100%;
-}
-
-#boxed-wrapper {
-  height: 100%;
-}
-#boxed-wrapper > .fusion-wrapper {
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-}
-#boxed-wrapper > .fusion-wrapper > main {
-  flex: 1;
-}
-
-html body .fusion-button.button-flat[data-hover=underline] .fusion-button-text {
+a.fusion-button.button-flat[data-hover=underline] .fusion-button-text {
   padding: 0 8px;
 }
-html body .fusion-button.button-flat[data-hover=underline] .fusion-button-text::after {
-  bottom: -15px;
+a.fusion-button.button-flat[data-hover=underline] .fusion-button-text::after {
   border-color: var(--awb-custom_color_5);
+  bottom: -15px;
 }
-html body .wpforms-submit .button__ornament,
-html body .fusion-button.think-custom-button .button__ornament {
+
+a.fusion-button.think-custom-button {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  position: relative;
+  background-color: unset;
+  border-radius: 0;
+  padding: 0.5em;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1px #e0c351 !important;
+  text-align: center;
+}
+a.fusion-button.think-custom-button .button__ornament {
   position: absolute;
 }
-html body .wpforms-submit .button__ornament--vertical,
-html body .fusion-button.think-custom-button .button__ornament--vertical {
+a.fusion-button.think-custom-button .button__ornament--vertical {
   top: -0.5em;
   bottom: -0.5em;
   left: 0;
   right: 0;
 }
-html body .wpforms-submit .button__ornament--horizontal,
-html body .fusion-button.think-custom-button .button__ornament--horizontal {
+a.fusion-button.think-custom-button .button__ornament--horizontal {
   left: -0.5em;
   right: -0.5em;
   top: 0;
   bottom: 0;
 }
-html body .wpforms-submit .button__ornament-top-bottom, html body .wpforms-submit .button__ornament-left-right,
-html body .fusion-button.think-custom-button .button__ornament-top-bottom,
-html body .fusion-button.think-custom-button .button__ornament-left-right {
+a.fusion-button.think-custom-button .button__ornament-top-bottom, a.fusion-button.think-custom-button .button__ornament-left-right {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-html body .wpforms-submit .button__ornament-top-bottom:before, html body .wpforms-submit .button__ornament-top-bottom:after, html body .wpforms-submit .button__ornament-left-right:before, html body .wpforms-submit .button__ornament-left-right:after,
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:before,
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:after,
-html body .fusion-button.think-custom-button .button__ornament-left-right:before,
-html body .fusion-button.think-custom-button .button__ornament-left-right:after {
+a.fusion-button.think-custom-button .button__ornament-top-bottom:before, a.fusion-button.think-custom-button .button__ornament-top-bottom:after, a.fusion-button.think-custom-button .button__ornament-left-right:before, a.fusion-button.think-custom-button .button__ornament-left-right:after {
   content: "";
   position: absolute;
   background-color: #e0c351;
   transition: transform 400ms cubic-bezier(0.54, 0.06, 0.39, 0.96);
 }
-html body .wpforms-submit .button__ornament-top-bottom:before, html body .wpforms-submit .button__ornament-top-bottom:after,
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:before,
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:after {
+a.fusion-button.think-custom-button .button__ornament-top-bottom:before, a.fusion-button.think-custom-button .button__ornament-top-bottom:after {
   height: 1px;
   left: 0;
   right: 0;
 }
-html body .wpforms-submit .button__ornament-top-bottom:before,
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:before {
+a.fusion-button.think-custom-button .button__ornament-top-bottom:before {
   top: 0;
 }
-html body .wpforms-submit .button__ornament-top-bottom:after,
-html body .fusion-button.think-custom-button .button__ornament-top-bottom:after {
+a.fusion-button.think-custom-button .button__ornament-top-bottom:after {
   bottom: 0;
 }
-html body .wpforms-submit .button__ornament-left-right:before, html body .wpforms-submit .button__ornament-left-right:after,
-html body .fusion-button.think-custom-button .button__ornament-left-right:before,
-html body .fusion-button.think-custom-button .button__ornament-left-right:after {
+a.fusion-button.think-custom-button .button__ornament-left-right:before, a.fusion-button.think-custom-button .button__ornament-left-right:after {
   width: 1px;
   top: 0;
   bottom: 0;
 }
-html body .wpforms-submit .button__ornament-left-right:before,
-html body .fusion-button.think-custom-button .button__ornament-left-right:before {
+a.fusion-button.think-custom-button .button__ornament-left-right:before {
   left: 0;
 }
-html body .wpforms-submit .button__ornament-left-right:after,
-html body .fusion-button.think-custom-button .button__ornament-left-right:after {
+a.fusion-button.think-custom-button .button__ornament-left-right:after {
   right: 0;
 }
-html body .wpforms-submit:hover .button__ornament-left-right:before, html body .wpforms-submit:hover .button__ornament-left-right:after, html body .wpforms-submit:focus .button__ornament-left-right:before, html body .wpforms-submit:focus .button__ornament-left-right:after,
-html body .fusion-button.think-custom-button:hover .button__ornament-left-right:before,
-html body .fusion-button.think-custom-button:hover .button__ornament-left-right:after,
-html body .fusion-button.think-custom-button:focus .button__ornament-left-right:before,
-html body .fusion-button.think-custom-button:focus .button__ornament-left-right:after {
+a.fusion-button.think-custom-button:hover .button__ornament-left-right:before, a.fusion-button.think-custom-button:hover .button__ornament-left-right:after, a.fusion-button.think-custom-button:focus .button__ornament-left-right:before, a.fusion-button.think-custom-button:focus .button__ornament-left-right:after {
   transform: scale(1, 0);
 }
-html body .wpforms-submit:hover .button__ornament-top-bottom:before, html body .wpforms-submit:hover .button__ornament-top-bottom:after, html body .wpforms-submit:focus .button__ornament-top-bottom:before, html body .wpforms-submit:focus .button__ornament-top-bottom:after,
-html body .fusion-button.think-custom-button:hover .button__ornament-top-bottom:before,
-html body .fusion-button.think-custom-button:hover .button__ornament-top-bottom:after,
-html body .fusion-button.think-custom-button:focus .button__ornament-top-bottom:before,
-html body .fusion-button.think-custom-button:focus .button__ornament-top-bottom:after {
+a.fusion-button.think-custom-button:hover .button__ornament-top-bottom:before, a.fusion-button.think-custom-button:hover .button__ornament-top-bottom:after, a.fusion-button.think-custom-button:focus .button__ornament-top-bottom:before, a.fusion-button.think-custom-button:focus .button__ornament-top-bottom:after {
   transform: scale(0, 1);
 }
-html body .fusion-button.think-custom-button {
-  background-color: unset;
-  font-weight: 400;
-  position: relative;
-  text-decoration: none;
-  padding: 0.5em;
-  box-shadow: inset 0 0 0 1px #e0c351 !important;
-  text-align: center;
-  border-radius: 0;
-}
-html body .fusion-button.think-custom-button .fusion-button-text {
-  min-width: 140px;
+a.fusion-button.think-custom-button .fusion-button-text {
   display: block;
   width: 100%;
   background-color: transparent;
   color: #000;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   transition: color 500ms ease, background-color 500ms ease;
 }
-html body .fusion-button.think-custom-button:hover .fusion-button-text, html body .fusion-button.think-custom-button:focus .fusion-button-text {
+a.fusion-button.think-custom-button:hover .fusion-button-text, a.fusion-button.think-custom-button:focus .fusion-button-text {
   color: #000;
   background-color: rgba(224, 195, 81, 0.9);
 }
-html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button {
-  background-color: unset;
-  height: auto;
-  position: relative;
-  text-decoration: none;
-  padding: 0.5em;
-  box-shadow: inset 0 0 0 1px #e0c351 !important;
-  text-align: center;
-  border-radius: 0;
-}
-html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .fusion-button-text {
-  min-width: 140px;
-  font-size: 1em;
-  display: block;
-  width: 100%;
-  background-color: transparent;
-  color: #000;
-  padding: 1.5em 2em;
-  padding: 0.5rem 2rem;
-  transition: color 500ms ease, background-color 500ms ease;
-}
-html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:active {
-  background: none;
-}
-html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover .fusion-button-text, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:active .fusion-button-text {
-  color: #000;
-  background-color: rgba(224, 195, 81, 0.9);
-}
-html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus:after {
-  border: none;
-}
-html body .fusion-button.think-custom-button.has-white-bg-color {
+a.fusion-button.think-custom-button.has-white-bg-color {
   box-shadow: inset 0 0 0 1px #ffffff !important;
 }
-html body .fusion-button.think-custom-button.has-white-bg-color .fusion-button-text {
+a.fusion-button.think-custom-button.has-white-bg-color .fusion-button-text {
   color: black;
 }
-html body .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:before, html body .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:after, html body .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:before, html body .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:after {
+a.fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:before, a.fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:after, a.fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:before, a.fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:after {
   background-color: #ffffff;
 }
-html body .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, html body .fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
+a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, a.fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
   color: #000;
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -450,7 +379,19 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   margin-bottom: 0;
 }
 .cb5-news-and-insights-post-grid .post-card i.icon-mkb-arrow-right-solid,
+.cb5-news-and-insights-post-grid .post-card .fusion-imageframe img,
 .cb5-news-and-insights-post-grid .post-card .fusion-image-wrapper img {
+  transition-duration: 500ms;
+}
+.cb5-news-and-insights-post-grid .post-card:hover i.icon-mkb-arrow-right-solid, .cb5-news-and-insights-post-grid .post-card:focus i.icon-mkb-arrow-right-solid {
+  margin-left: 20px;
+  transition-duration: 500ms;
+  color: var(--awb-color8);
+}
+.cb5-news-and-insights-post-grid .post-card:hover .fusion-image-wrapper img,
+.cb5-news-and-insights-post-grid .post-card:hover .fusion-imageframe img, .cb5-news-and-insights-post-grid .post-card:focus .fusion-image-wrapper img,
+.cb5-news-and-insights-post-grid .post-card:focus .fusion-imageframe img {
+  transform: scale(1.2);
   transition-duration: 500ms;
 }
 .cb5-news-and-insights-post-grid .post-card .fusion-image-wrapper:before {
@@ -462,15 +403,6 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   right: 20px;
   border: 1px solid var(--awb-custom_color_5);
   z-index: 2;
-}
-.cb5-news-and-insights-post-grid .post-card:hover i.icon-mkb-arrow-right-solid {
-  margin-left: 20px;
-  transition-duration: 500ms;
-  color: var(--awb-color8);
-}
-.cb5-news-and-insights-post-grid .post-card:hover .fusion-image-wrapper img {
-  transform: scale(1.2);
-  transition-duration: 500ms;
 }
 
 .cb6-interior-banner {
@@ -540,6 +472,33 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
     text-align: left;
   }
+}
+
+.cb8-post-grid .post-card i.icon-mkb-arrow-right-solid,
+.cb8-post-grid .post-card .fusion-imageframe img,
+.cb8-post-grid .post-card .fusion-image-wrapper img {
+  transition-duration: 500ms;
+}
+.cb8-post-grid .post-card:hover i.icon-mkb-arrow-right-solid, .cb8-post-grid .post-card:focus i.icon-mkb-arrow-right-solid {
+  margin-left: 20px;
+  transition-duration: 500ms;
+  color: var(--awb-color8);
+}
+.cb8-post-grid .post-card:hover .fusion-image-wrapper img,
+.cb8-post-grid .post-card:hover .fusion-imageframe img, .cb8-post-grid .post-card:focus .fusion-image-wrapper img,
+.cb8-post-grid .post-card:focus .fusion-imageframe img {
+  transform: scale(1.2);
+  transition-duration: 500ms;
+}
+.cb8-post-grid .post-card .fusion-imageframe:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid var(--awb-custom_color_5);
+  z-index: 2;
 }
 
 .cb8-post-grid .fusion-post-cards {
@@ -682,6 +641,96 @@ html body div.fusion-fullwidth.cb14-about .fusion-image-element img {
     --awb-border-bottom: 1px;
   }
 }
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background: unset !important;
+  background-color: unset !important;
+  height: auto;
+  position: relative;
+  text-decoration: none;
+  padding: 0.5em;
+  box-shadow: inset 0 0 0 1px #e0c351 !important;
+  text-align: center;
+  border-radius: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament {
+  position: absolute;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament--vertical {
+  top: -0.5em;
+  bottom: -0.5em;
+  left: 0;
+  right: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament--horizontal {
+  left: -0.5em;
+  right: -0.5em;
+  top: 0;
+  bottom: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-top-bottom, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-left-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-top-bottom:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-top-bottom:after, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-left-right:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-left-right:after {
+  content: "";
+  position: absolute;
+  background-color: #e0c351;
+  transition: transform 400ms cubic-bezier(0.54, 0.06, 0.39, 0.96);
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-top-bottom:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-top-bottom:after {
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-top-bottom:before {
+  top: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-top-bottom:after {
+  bottom: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-left-right:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-left-right:after {
+  width: 1px;
+  top: 0;
+  bottom: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-left-right:before {
+  left: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .button__ornament-left-right:after {
+  right: 0;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover .button__ornament-left-right:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover .button__ornament-left-right:after, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus .button__ornament-left-right:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus .button__ornament-left-right:after {
+  transform: scale(1, 0);
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover .button__ornament-top-bottom:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover .button__ornament-top-bottom:after, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus .button__ornament-top-bottom:before, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus .button__ornament-top-bottom:after {
+  transform: scale(0, 1);
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button .fusion-button-text {
+  min-width: 140px;
+  font-size: 1em;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: #000;
+  padding: 1.5em 2em;
+  padding: 0.5rem 2rem;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:active {
+  background: none;
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:hover .fusion-button-text, html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:active .fusion-button-text {
+  color: #000;
+  background-color: rgba(224, 195, 81, 0.9);
+}
+html body div.wpforms-container-full .wpforms-submit-container button[type=submit].think-custom-button:focus:after {
+  border: none;
+}
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full {
   margin: 0;
@@ -731,7 +780,7 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field 
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field select:hover,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field textarea:hover,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field .choices:hover {
-  border: 1px solid #5A4600;
+  border: 1px solid #5a4600;
   box-shadow: none;
 }
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input:focus,
@@ -916,6 +965,23 @@ div.cb19-prefooter-c2a:before {
     width: calc(100% + var(--awb-border-sizes-left) * 2);
     height: 60px;
   }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#boxed-wrapper {
+  height: 100%;
+}
+#boxed-wrapper > .fusion-wrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+#boxed-wrapper > .fusion-wrapper > main {
+  flex: 1;
 }
 
 html body .fusion-tb-header .fusion-builder-row .think-custom-button .fusion-button-text {

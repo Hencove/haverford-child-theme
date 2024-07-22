@@ -216,38 +216,6 @@ var mqHandler = {
 
 /***/ }),
 
-/***/ "./_source/js/_site-header.js":
-/*!************************************!*\
-  !*** ./_source/js/_site-header.js ***!
-  \************************************/
-/***/ (() => {
-
-//
-//	? code here will execute before the DOM has fully loaded
-//
-(function (document, window, $) {
-  //
-  //	? code here will execute once the page is ready
-  //
-  // ... silence is golden
-
-  var siteSearchHandler = {
-    _init: function _init() {
-      var SearchElement = $(".fusion-tb-header .fusion-search-element");
-      $(".search-button", SearchElement).on("click", function () {
-        SearchElement.toggleClass("is-expanded-by-focus");
-      });
-    }
-  };
-  siteSearchHandler._init();
-
-  //
-  //
-  //
-})(document, window, jQuery);
-
-/***/ }),
-
 /***/ "./_source/js/_thinkco-buttons.js":
 /*!****************************************!*\
   !*** ./_source/js/_thinkco-buttons.js ***!
@@ -285,13 +253,11 @@ var mqHandler = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _thinkco_buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_thinkco-buttons */ "./_source/js/_thinkco-buttons.js");
 /* harmony import */ var _thinkco_buttons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_thinkco_buttons__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _site_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_site-header */ "./_source/js/_site-header.js");
-/* harmony import */ var _site_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_site_header__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_cb3 */ "./_source/js/_cb3.js");
-/* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_cb3__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
+/* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_cb3 */ "./_source/js/_cb3.js");
+/* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_cb3__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
 
-
+// import "./_site-header";
 // import './_cb1';
 
 

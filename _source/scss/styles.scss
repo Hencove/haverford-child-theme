@@ -1,27 +1,5 @@
-$button--color-1: #e0c351;
-$button--color-2: #000;
-$button--ornament-offset: -0.5em;
-html,
-body {
-  height: 100%;
-}
-#boxed-wrapper {
-  height: 100%;
-  > .fusion-wrapper {
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    > main {
-      flex: 1;
-    }
-  }
-}
 @import "./_lib/include-media";
-$breakpoints: (
-  "small": 640px,
-  "mobile": 800px,
-  "medium": 1200px,
-);
+@import "./vars";
 @import "./mixins";
 @import "./custom-buttons";
 @import "./site-header";

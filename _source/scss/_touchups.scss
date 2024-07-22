@@ -1,6 +1,21 @@
 //
 //
 //
+html,
+body {
+  height: 100%;
+}
+#boxed-wrapper {
+  height: 100%;
+  > .fusion-wrapper {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    > main {
+      flex: 1;
+    }
+  }
+}
 
 html body {
 	//
