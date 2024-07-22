@@ -1,0 +1,17 @@
+//
+//
+//
+//
+// Layouts break to mobile at 800px
+@include media("<=small") {
+  .cb16-large-stat-or-quote {
+    .col-stat {
+      > .fusion-column-wrapper {
+        --awb-border-right: 0px;
+        --awb-border-bottom: 1px;
+        //   border-right: 0px !important;
+        //   border-bottom: 1px !important;
+      }
+    }
+  }
+}
