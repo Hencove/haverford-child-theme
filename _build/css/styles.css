@@ -1,4 +1,43 @@
 @charset "UTF-8";
+:root {
+  --h1_typography-font-size: calc(0.66875rem + 15.3583333333vw) !important;
+  --h2_typography-font-size: calc(0.434375rem + 9.4208333333vw) !important;
+  --h3_typography-font-size: calc(0.359375rem + 7.5208333333vw) !important;
+  --h4_typography-font-size: calc(0.309375rem + 6.2541666667vw) !important;
+  --h5_typography-font-size: calc(0.259375rem + 4.9875vw) !important;
+  --h6_typography-font-size: calc(0.209375rem + 3.7208333333vw) !important;
+}
+@media (min-width: 1200px) {
+  :root {
+    --h1_typography-font-size: 12.1875rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --h2_typography-font-size: 7.5rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --h3_typography-font-size: 6rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --h4_typography-font-size: 5rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --h5_typography-font-size: 4rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --h6_typography-font-size: 3rem !important;
+  }
+}
+
 a.fusion-button.button-flat[data-hover=underline] .fusion-button-text {
   padding: 0 8px;
 }

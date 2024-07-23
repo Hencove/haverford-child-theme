@@ -1,0 +1,11 @@
+@import "~rfs/scss";
+$rfs-factor: 20;
+$rfs-base-value : 1;
+:root {
+	@include rfs(195px !important, --h1_typography-font-size);
+	@include rfs(120px !important, --h2_typography-font-size);
+	@include rfs(96px !important, --h3_typography-font-size);
+	@include rfs(80px !important, --h4_typography-font-size);
+	@include rfs(64px !important, --h5_typography-font-size);
+	@include rfs(48px !important, --h6_typography-font-size);
+}
