@@ -570,12 +570,12 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   html body .cb7-pullquote > .fusion-column-wrapper .fusion-row:not(:has(.fusion-separator)) .fusion-layout-column:has(.title) .title h1 {
     text-align: right;
   }
-}
-html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper > *:not(.fusion-image-element) {
-  order: 1;
-}
-html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
-  text-align: left;
+  html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper > *:not(.fusion-image-element) {
+    order: 1;
+  }
+  html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
+    text-align: left;
+  }
 }
 
 .cb8-post-grid .post-card i.icon-mkb-arrow-right-solid,
