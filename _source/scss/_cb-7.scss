@@ -38,9 +38,44 @@ html body {
     }
   }
 
-  @include media("<mobile") {
+  @include media("<=small") {
+
+    .cb7-pullquote > .fusion-column-wrapper {
+      
+      // Top Row with title & separator
+      .fusion-row:has(.fusion-separator) { 
+        display: flex;
+        flex-wrap: nowrap !important;
+
+        .fusion-layout-column {
+          width: 50%;
+        }
+      }
+
+      // Bottom Row with quote and icons
+      .fusion-row:not(:has(.fusion-separator)) { 
+        display: flex;
+        flex-wrap: nowrap !important;
+
+        // quote icon/title
+        .fusion-layout-column:has(.title) {
+          width: 10%;
+          
+          .title h1 { 
+            text-align: right;
+          }
+        }
+        // quote text/arrow
+        .fusion-layout-column:not(:has(.title)) {
+          // width: 85%;
+        }
+      }
+    }
+  }
+
     // Pulling the CB7 Pull Quote class
     .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper {
+
       // Reversing element order on mobile
       > *:not(.fusion-image-element) {
         order: 1;
@@ -51,4 +86,4 @@ html body {
       }
     }
   }
-}
+
