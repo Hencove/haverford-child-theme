@@ -4,10 +4,11 @@
 .cb8-post-grid {
 	//
 	//
-	@include media("<mobile") {
+	// @include media("<mobile") {
+	@media screen and (max-width: 1200px) {
 		
 		.fusion-grid {
-			margin-top: 50px !important;
+			margin-top: 100px !important;
 		}
 
 		div:has(> ul.fusion-filters) {
@@ -51,12 +52,16 @@
 				}
 			}
 		}
-
+		
+		.wpc-filters-section:has(form) {
+			border-bottom: 2px solid var(--awb-custom_color_5);
+			left: 10px;
+			right: 10px !important;
+			top: 70px !important;
+		}
 	}
 	.wpc-filters-main-wrap {
 
-		// border: 2px solid var(--awb-custom_color_5);
-		// border-bottom: none;
 		padding: 0;
 		
 		.wpc-edit-filter-set { display: none; }
@@ -108,7 +113,10 @@
 				&:has(> form){
 					position: absolute;
 					right: 0;
-					top: -50px;
+					// Puts search bar on top
+					// top: -50px;
+					// Puts search bar inline
+					top: 0;
 				}		
 				.wpc-search-field-wrapper {
 					padding: 0px 80px;

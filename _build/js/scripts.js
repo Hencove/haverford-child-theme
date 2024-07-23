@@ -126,6 +126,11 @@ __webpack_require__.r(__webpack_exports__);
   // Currently, this file does not load when FEPro filters are used on the page. Could be a page load order issue.
   //
 
+  // $( ".cb8-post-grid" ).on( "change", function() {
+  //     console.log('ready');
+  // });
+  // $( ".cb8-post-grid").trigger( "change" );
+
   //     $('.widget_wpc_filters_widget').hide();
   //     $('.wpc-filter-header').hide();
 
