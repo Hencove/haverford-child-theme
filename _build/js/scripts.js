@@ -191,6 +191,16 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
       end: "+=400"
     }
   });
+  $('body.home #wrapper').prepend('<div class="homepage-gradient-overlay"></div>');
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
+    yPercent: -50,
+    scrollTrigger: {
+      trigger: 'body',
+      scrub: 0.5,
+      start: "top top",
+      end: "+=300"
+    }
+  });
 
   //
   //
@@ -317,6 +327,7 @@ __webpack_require__.r(__webpack_exports__);
   //	? code here will execute once the page is ready
   //
   // ... silence is golden
+
   //
   //
   //

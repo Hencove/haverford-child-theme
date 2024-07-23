@@ -26,6 +26,18 @@ gsap.registerPlugin(ScrollTrigger);
 		},
 	});
 
+	$('body.home #wrapper').prepend('<div class="homepage-gradient-overlay"></div>');
+
+	gsap.to(".homepage-gradient-overlay", {
+		yPercent: -50,
+		scrollTrigger: {
+			trigger: 'body',
+			scrub: 0.5,
+			start: "top top",
+			end: "+=300",
+		},
+	});
+
 	//
 	//
 	//

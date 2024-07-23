@@ -2,7 +2,6 @@
 //
 //
 html body .fusion-tb-header {
-	
 	.fusion-search-element {
 		//
 		.fusion-search-form-content {
@@ -41,14 +40,12 @@ html body .fusion-tb-header {
 				transform: translateX(0);
 				right: 100%;
 				width: 400px;
-				
 			}
 		}
 	}
 
-	// 
+	//
 	.think-custom-button.has-white-bg-color {
-
 		.fusion-button-text {
 			color: white;
 		}
@@ -63,14 +60,13 @@ html body .fusion-tb-header {
 
 html body.single.single-post {
 	.fusion-tb-header {
-
 		.menu-item {
-			--awb-active-color : var(--awb-custom_color_5) !important;
+			--awb-active-color: var(--awb-custom_color_5) !important;
 		}
 
 		.fusion-button.think-custom-button.has-white-bg-color {
 			box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
-			.button__ornament{
+			.button__ornament {
 				&-top-bottom,
 				&-left-right {
 					&:before,
@@ -81,7 +77,6 @@ html body.single.single-post {
 			}
 		}
 
-		
 		.fusion-search-element {
 			.fusion-search-button.search-button input[type="submit"] {
 				color: white;
@@ -111,6 +106,19 @@ html body.single.single-post {
 		}
 
 		.fusion-button.think-custom-button.has-white-bg-color {
+			width: unset !important;
+			margin: 40px auto;
+			box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
+			.button__ornament {
+				&-top-bottom,
+				&-left-right {
+					&:before,
+					&:after {
+						background-color: var(--awb-custom_color_5);
+					}
+				}
+			}
+
 			.fusion-button-text {
 				color: white;
 			}
