@@ -60,11 +60,12 @@ html body {
         // quote icon/title
         .fusion-layout-column:has(.title) {
           width: 10%;
-          
+
           .title h1 { 
             text-align: right;
           }
         }
+        
         // quote text/arrow
         .fusion-layout-column:not(:has(.title)) {
           // width: 85%;

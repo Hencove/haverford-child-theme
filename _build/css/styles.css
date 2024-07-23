@@ -413,6 +413,19 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 .cb5-news-and-insights-post-grid p:only-child {
   margin-bottom: 0;
 }
+@media (max-width: 799px) {
+  .cb5-news-and-insights-post-grid .fusion-post-cards:nth-of-type(3) .post-card .fusion-row {
+    flex-direction: column-reverse;
+  }
+  .cb5-news-and-insights-post-grid .fusion-post-cards:nth-of-type(3) .post-card .fusion-row .fusion-layout-column {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .cb5-news-and-insights-post-grid .fusion-post-cards:nth-of-type(3) .post-card .fusion-row {
+    flex-direction: column;
+  }
+}
 
 .cb6-interior-banner {
   position: relative;
