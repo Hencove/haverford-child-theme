@@ -7,49 +7,18 @@
     // This is garbage, but it works for testing
     // Currently, this file does not load when FEPro filters are used on the page. Could be a page load order issue.
     //
-    if ( $('.cb8-post-grid').length ) {
 
-        // Add an ALL filter to the top of the filter list that will unselect all other terms
-        var filterList = $('ul.wpc-filters-ul-list');
-        var listItems = filterList.html();
+    //     $('.widget_wpc_filters_widget').hide();
+    //     $('.wpc-filter-header').hide();
 
-        var itemALL = '\<li class="wpc-label-item wpc-term-item wpc-chip-reset-all">\
-                            <div class="wpc-term-item-content-wrapper">\
-                                <input class="wpc-label-input" type="checkbox">\
-                                <label>\
-                                    <span class="wpc-filter-label-wrapper">\
-                                        <a class="wpc-filters-reset-button" id="filterAll">All</a>&nbsp;\
-                                    </span>\
-                                </label>\
-                            </div>\
-                        ';
-        // inject the button
-        filterList.html(itemALL + listItems);
+    //     // Add an ALL filter to the top of the filter list that will unselect all other terms
+    //     var searchbar = $('.wpc-filter-layout-search-field').html();
 
-        // Handle mobile dropdown styling              
-        var dropdown = '<div id="cb8-mobile-dropdown-container">\
-                            ' + filterList.parent().html() + '\
-                        </div>\
-                        ';
-        $('.wpc-filter-category').html(dropdown);
-        $('#cb8-mobile-dropdown-container').on('click', function() {
-            $(this).toggleClass('nav-is-visible');
-        });
+    //     var fusionBar = $('ul.fusion-filters');
 
-        
-        // Handle the functionality
-        $('#filterAll').on("click", function() {
+    //     var searchbarInjected = '<li role="presentation" class="fusion-filter">' + searchbar + '</li>';
+    //     fusionBar.append(searchbarInjected);
 
-            // Not sure if the checked status matters, trying it out
-            $('input:checkbox').removeAttr('checked');
-            $('label #filterAll ~ input:checkbox').attr('checked', 'checked');
-
-            // The selected item does have a specific class that should be toggled
-            $('ul.wpc-filters-ul-list li').removeClass('wpc-term-selected');
-            $('li').has('#filterAll').addClass('wpc-term-selected');
-        });
-
-
-    }
+    // $('.wpc-filter-category').hide()
 
 })(document, window, jQuery);
