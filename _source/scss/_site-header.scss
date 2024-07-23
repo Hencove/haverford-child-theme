@@ -3,6 +3,18 @@
 //
 html body .fusion-tb-header {
 	.fusion-search-element {
+		.fusion-search-button {
+			position: relative;
+			&::before {
+				cursor: pointer;
+				content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
 		//
 		.fusion-search-form-content {
 			overflow: visible;

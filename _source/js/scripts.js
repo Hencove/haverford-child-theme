@@ -15,6 +15,7 @@ import './_gsap';
 	//
 	// ... silence is golden
 
+	$('.fusion-search-button .fusion-search-submit').val('');
 	
 	//
 	//

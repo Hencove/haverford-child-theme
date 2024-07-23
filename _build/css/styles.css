@@ -140,6 +140,17 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+html body .fusion-tb-header .fusion-search-element .fusion-search-button {
+  position: relative;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-button::before {
+  cursor: pointer;
+  content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 html body .fusion-tb-header .fusion-search-element .fusion-search-form-content {
   overflow: visible;
 }
