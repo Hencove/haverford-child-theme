@@ -176,8 +176,12 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   //
   // ... silence is golden
 
-  var heroImages = $(".fusion-image-element", ".cb6-interior-banner");
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(heroImages, {
+  var standardBannerImages = $(".fusion-image-element", ".cb6-interior-banner");
+
+  //
+  //
+  //
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(standardBannerImages, {
     y: -120,
     stagger: 0.2,
     scrollTrigger: {

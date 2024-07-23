@@ -101,6 +101,44 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content {
+  overflow: visible;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
+  position: relative;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button input[type=submit] {
+  color: black;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  visibility: hidden;
+  background-color: white;
+  z-index: 99;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field input[type=search] {
+  font-size: 14px;
+  color: black;
+  padding: 0 4px;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field input[type=search]::-moz-placeholder {
+  font-size: inherit;
+  color: inherit;
+}
+html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field input[type=search]::placeholder {
+  font-size: inherit;
+  color: inherit;
+}
+html body .fusion-tb-header .fusion-search-element.is-expanded-by-focus .fusion-search-field.search-field {
+  visibility: visible;
+  transform: translateX(0);
+  right: 100%;
+  width: 400px;
+}
 html body .fusion-tb-header .think-custom-button.has-white-bg-color .fusion-button-text {
   color: white;
 }
@@ -375,7 +413,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 .cb5-news-and-insights-post-grid p:only-child {
   margin-bottom: 0;
 }
-@media (max-width: 799px) {
+@media (max-width: 1199px) {
   .cb5-news-and-insights-post-grid .fusion-post-cards:nth-of-type(3) .post-card .fusion-row {
     flex-direction: column-reverse;
   }
@@ -383,7 +421,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
     width: 100%;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .cb5-news-and-insights-post-grid .fusion-post-cards:nth-of-type(3) .post-card .fusion-row {
     flex-direction: column;
   }

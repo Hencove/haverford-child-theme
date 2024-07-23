@@ -10,11 +10,14 @@ gsap.registerPlugin(ScrollTrigger);
 	//
 	// ... silence is golden
 
-	let heroImages = $(".fusion-image-element", ".cb6-interior-banner");
+	let standardBannerImages = $(".fusion-image-element", ".cb6-interior-banner");
 
-	gsap.to(heroImages, {
+	//
+	//
+	//
+	gsap.to(standardBannerImages, {
 		y: -120,
-        stagger: 0.2,
+		stagger: 0.2,
 		scrollTrigger: {
 			trigger: ".cb6-interior-banner",
 			scrub: 1,
