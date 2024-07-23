@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 	// ... silence is golden
 
 	let standardBannerImages = $(".fusion-image-element", ".cb6-interior-banner");
+	let homepageHeroBannerImages = $(".fusion-imageframe", ".cb1-hero-banner");
 
 	//
 	//
@@ -25,14 +26,36 @@ gsap.registerPlugin(ScrollTrigger);
 			end: "+=400",
 		},
 	});
+	gsap.to(homepageHeroBannerImages, {
+		y: -120,
+		stagger: 0.1,
+		scrollTrigger: {
+			trigger: ".cb1-hero-banner",
+			scrub: 1,
+			start: "top 10%",
+			end: "100%",
+		},
+	});
 
-	$('body.home #wrapper').prepend('<div class="homepage-gradient-overlay"></div>');
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	$("body.home #wrapper").prepend(
+		'<div class="homepage-gradient-overlay"></div>'
+	);
 
 	gsap.to(".homepage-gradient-overlay", {
 		yPercent: -50,
 		scrollTrigger: {
-			trigger: 'body',
-			scrub: 0.5,
+			trigger: "body",
+			scrub: 1,
 			start: "top top",
 			end: "+=300",
 		},

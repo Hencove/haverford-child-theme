@@ -36,7 +36,7 @@ div.cb1-hero-banner {
 //
 div.cb1-hero-banner {
 	.awb-gallery-wrapper {
-		.fusion-gallery-container {
+		.fusion-gallery-container {	
 			.fusion-gallery-column {
 				&:nth-of-type(2) {
 					padding: 0 40px !important;
@@ -60,7 +60,15 @@ div.cb1-hero-banner {
 	@include media(">medium") {
 		div.cb1-gallery {
 			margin-bottom: -120px; // ? this is a hacky way to reduce the extra space on the bottom created by moving the gallery items up
+			margin-bottom: -15vw;
 			.fusion-layout-column {
+
+				.fusion-imageframe {
+					&, img {
+						width: 100%;
+					}
+				}
+				
 				&:nth-of-type(1) {
 					// Top Left
 					.fusion-image-element:nth-of-type(1) {

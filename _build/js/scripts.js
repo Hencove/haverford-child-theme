@@ -177,6 +177,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   // ... silence is golden
 
   var standardBannerImages = $(".fusion-image-element", ".cb6-interior-banner");
+  var homepageHeroBannerImages = $(".fusion-imageframe", ".cb1-hero-banner");
 
   //
   //
@@ -191,12 +192,33 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
       end: "+=400"
     }
   });
-  $('body.home #wrapper').prepend('<div class="homepage-gradient-overlay"></div>');
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
+    y: -120,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".cb1-hero-banner",
+      scrub: 1,
+      start: "top 10%",
+      end: "100%"
+    }
+  });
+
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+
+  $("body.home #wrapper").prepend('<div class="homepage-gradient-overlay"></div>');
   gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
     yPercent: -50,
     scrollTrigger: {
-      trigger: 'body',
-      scrub: 0.5,
+      trigger: "body",
+      scrub: 1,
       start: "top top",
       end: "+=300"
     }
