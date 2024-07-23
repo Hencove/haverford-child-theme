@@ -553,10 +553,22 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   margin-bottom: 0;
 }
 .cb11-related-posts .post-card i.icon-mkb-arrow-right-solid,
+.cb11-related-posts .post-card .fusion-imageframe img,
 .cb11-related-posts .post-card .fusion-image-wrapper img {
   transition-duration: 500ms;
 }
-.cb11-related-posts .post-card div.fusion-image-wrapper:before {
+.cb11-related-posts .post-card:hover i.icon-mkb-arrow-right-solid, .cb11-related-posts .post-card:focus i.icon-mkb-arrow-right-solid {
+  margin-left: 20px;
+  transition-duration: 500ms;
+  color: var(--awb-color8);
+}
+.cb11-related-posts .post-card:hover .fusion-image-wrapper img,
+.cb11-related-posts .post-card:hover .fusion-imageframe img, .cb11-related-posts .post-card:focus .fusion-image-wrapper img,
+.cb11-related-posts .post-card:focus .fusion-imageframe img {
+  transform: scale(1.2);
+  transition-duration: 500ms;
+}
+.cb11-related-posts .post-card .fusion-image-wrapper:before {
   content: "";
   position: absolute;
   top: 20px;
@@ -565,15 +577,6 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   right: 20px;
   border: 1px solid var(--awb-custom_color_5);
   z-index: 2;
-}
-.cb11-related-posts .post-card:hover i.icon-mkb-arrow-right-solid {
-  margin-left: 20px;
-  transition-duration: 500ms;
-  color: var(--awb-color8);
-}
-.cb11-related-posts .post-card:hover .fusion-image-wrapper img {
-  transform: scale(1.2);
-  transition-duration: 500ms;
 }
 
 body.single.single-post div.cb11-related-posts {

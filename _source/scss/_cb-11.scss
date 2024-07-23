@@ -19,36 +19,13 @@
 	}
 
 	.post-card{
-		i.icon-mkb-arrow-right-solid,
-		.fusion-image-wrapper img {
-			transition-duration: 500ms;
-		}
 
-		div.fusion-image-wrapper {
-			&:before {
-				content: '';
-				position: absolute;
-				top: 20px;
-				left: 20px;
-				bottom: 20px;
-				right: 20px;
-				border: 1px solid var(--awb-custom_color_5);
-				z-index: 2;
-			}
-		}
 
-		&:hover {
-			i.icon-mkb-arrow-right-solid {
-				margin-left: 20px;
-				transition-duration: 500ms;
-				color: var(--awb-color8);
-			}
-			.fusion-image-wrapper img {
-				transform: scale(1.2);
-				transition-duration: 500ms;
-
-			}
+		@include postCardOnHover();
+		.fusion-image-wrapper {
+			@include insetImageFrame();
 		}
+	
 	}
 }
 body.single.single-post {
