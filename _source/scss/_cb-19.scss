@@ -11,7 +11,11 @@ div.cb19-prefooter-c2a {
 		position: absolute;
 		z-index: 1;
 		width: 80px;
-		background-image: url(../../_assets/img/white-geometric-pattern.svg);
+		background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+		filter: brightness(100);
 		// ? 100% plus 2x border width
 		height: calc(100% + calc(var(--awb-border-sizes-top) * 2));
 		// ? negative border width

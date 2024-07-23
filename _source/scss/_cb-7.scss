@@ -6,7 +6,10 @@ html body {
     }
 
     .cb7-pullquote-geopattern {
-      background-image: url(../../_assets/img/geometric-pattern.svg);
+      background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
+      background-position: center;
+      background-repeat: repeat;
+      background-size: cover;
       position: absolute;
       top: -5vh;
       left: -3vw;
