@@ -3,6 +3,10 @@ html body {
     .fusion-row:has(> .cb7-pullquote-geopattern) {
       background-color: #fafafa;
       padding: 30px;
+
+      .fusion-imageframe {
+        display: block;
+      }
     }
 
     .cb7-pullquote-geopattern {

@@ -525,6 +525,9 @@ html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) {
   background-color: #fafafa;
   padding: 30px;
 }
+html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) .fusion-imageframe {
+  display: block;
+}
 html body div.fusion-fullwidth .cb7-pullquote-geopattern {
   background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
   background-position: center;
