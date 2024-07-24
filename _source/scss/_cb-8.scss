@@ -5,7 +5,7 @@
 	.post-card {
 		@include postCardOnHover();
 		.fusion-imageframe {
-			@include insetImageFrame();
+			// @include insetImageFrame();
 		}
 	}
 }

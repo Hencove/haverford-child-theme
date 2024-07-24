@@ -597,17 +597,6 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   transform: scale(1.2);
   transition-duration: 500ms;
 }
-.cb8-post-grid .post-card .fusion-imageframe:before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  bottom: 20px;
-  right: 20px;
-  border: 1px solid var(--awb-custom_color_5);
-  z-index: 2;
-}
-
 @media screen and (max-width: 1200px) {
   .cb8-post-grid .fusion-grid {
     margin-top: 100px !important;
