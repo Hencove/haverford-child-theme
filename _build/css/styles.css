@@ -140,6 +140,9 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+html body .fusion-tb-header .fusion-row {
+  max-width: 1800px;
+}
 html body .fusion-tb-header .fusion-search-element .fusion-search-button {
   position: relative;
 }
@@ -236,7 +239,7 @@ html body.single.single-post .fusion-tb-header .fusion-search-element .fusion-se
 div.cb1-hero-banner {
   border-top: 2px solid var(--awb-custom_color_5);
   padding-top: 200px;
-  margin-top: -160px;
+  margin-top: -150px;
   margin-left: unset !important;
   margin-right: unset !important;
   position: relative;
@@ -274,6 +277,16 @@ div.cb1-hero-banner::after {
   right: 0px;
 }
 
+@media (max-width: 1199px) {
+  div.cb1-hero-banner {
+    padding-top: 150px;
+    margin-top: -160px;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(2) {
   padding: 0 40px !important;
   transform: translate(-20px, -40px);
@@ -399,6 +412,9 @@ html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrappe
 html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .fusion-flex-content-wrap {
   margin-left: 0;
   margin-right: 0;
+}
+html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .fusion-row {
+  max-width: 1400px !important;
 }
 html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-outer-left,
 html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-outer-right {
