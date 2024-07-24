@@ -753,6 +753,30 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
 .cb8-post-grid .fusion-builder-placeholder,
 .cb8-post-grid .fusion-post-cards {
   border: 2px solid var(--awb-custom_color_5);
+  border-bottom: transparent;
+  position: relative;
+}
+.cb8-post-grid .fusion-builder-placeholder:before,
+.cb8-post-grid .fusion-post-cards:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
+.cb8-post-grid .fusion-builder-placeholder:after,
+.cb8-post-grid .fusion-post-cards:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(219, 180, 44) 95%);
 }
 .cb8-post-grid .fusion-builder-placeholder > div ul.fusion-filters,
 .cb8-post-grid .fusion-post-cards > div ul.fusion-filters {
@@ -775,6 +799,7 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
 .cb8-post-grid .pagination {
   justify-content: center;
   color: var(--awb-color6);
+  margin-bottom: -15px;
 }
 .cb8-post-grid .pagination * {
   color: inherit;
@@ -789,6 +814,26 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
 .cb8-post-grid .pagination .pagination-prev .page-text,
 .cb8-post-grid .pagination .pagination-next .page-text {
   display: none;
+}
+.cb8-post-grid .pagination .pagination-prev:before {
+  content: "";
+  width: 15px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: -5px;
+  margin-left: -15px;
+  background-image: url(../../_assets/img/arrow-black-short.svg);
+  transform: scaleX(-1);
+}
+.cb8-post-grid .pagination .pagination-next:after {
+  content: "";
+  width: 15px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: -15px;
+  background-image: url(../../_assets/img/arrow-black-short.svg);
 }
 .cb8-post-grid .fusion-builder-placeholder,
 .cb8-post-grid .fusion-builder-placeholder:hover {
