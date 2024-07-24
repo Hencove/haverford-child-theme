@@ -140,8 +140,8 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-html body .fusion-tb-header .fusion-row {
-  max-width: 1800px;
+html body .fusion-tb-header .fusion-fullwidth .fusion-row {
+  max-width: 1400px !important;
 }
 html body .fusion-tb-header .fusion-search-element .fusion-search-button {
   position: relative;
