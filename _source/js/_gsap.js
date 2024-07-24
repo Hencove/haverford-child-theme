@@ -17,23 +17,23 @@ gsap.registerPlugin(ScrollTrigger);
 	//
 	//
 	gsap.to(standardBannerImages, {
-		y: -120,
-		stagger: 0.2,
+		y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100),
+		stagger: 0,
 		scrollTrigger: {
 			trigger: ".cb6-interior-banner",
 			scrub: 1,
-			start: "top 10%",
+			start: "top 15%",
 			end: "+=400",
 		},
 	});
 	gsap.to(homepageHeroBannerImages, {
-		y: -120,
-		stagger: 0.1,
+		y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100) * -1,
+		stagger: 0,
 		scrollTrigger: {
 			trigger: ".cb1-hero-banner",
 			scrub: 1,
 			start: "top 10%",
-			end: "100%",
+			end: "+=800",
 		},
 	});
 
