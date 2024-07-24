@@ -579,6 +579,12 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
     text-align: left;
   }
+  html body div.fusion-layout-column.cb7-pullquote-geopattern {
+    top: -5vh;
+    left: -10vw;
+    height: 10vh;
+    width: 110vw;
+  }
 }
 
 .cb8-post-grid .post-card i.icon-mkb-arrow-right-solid,
