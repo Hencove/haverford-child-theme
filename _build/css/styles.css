@@ -140,6 +140,26 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+html body .off-canvas-content .fusion-search-element .fusion-search-field label input::-moz-placeholder {
+  font-family: var(--awb-typography1-font-family);
+  font-size: var(--awb-typography1-font-size) !important;
+  padding: 40px;
+}
+
+html body .off-canvas-content .fusion-search-element .fusion-search-field label input,
+html body .off-canvas-content .fusion-search-element .fusion-search-field label input::placeholder {
+  font-family: var(--awb-typography1-font-family);
+  font-size: var(--awb-typography1-font-size) !important;
+  padding: 40px;
+}
+html body .off-canvas-content .fusion-search-element .fusion-search-button::before {
+  content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
+  filter: brightness(100);
+  vertical-align: middle;
+}
+html body .fusion-tb-header {
+  z-index: 100;
+}
 html body .fusion-tb-header .fusion-fullwidth .fusion-row {
   max-width: 1400px !important;
 }
@@ -157,7 +177,6 @@ html body .fusion-tb-header .think-custom-button.has-white-bg-color .fusion-butt
 html body .fusion-tb-header .think-custom-button.has-white-bg-color:hover .fusion-button-text, html body .fusion-tb-header .think-custom-button.has-white-bg-color:focus .fusion-button-text {
   color: black;
 }
-
 html body.single.single-post .fusion-tb-header .fusion-search-button::before {
   filter: brightness(100);
 }
@@ -173,28 +192,27 @@ html body.single.single-post .fusion-tb-header .fusion-button.think-custom-butto
 html body.single.single-post .fusion-tb-header .fusion-search-element .fusion-search-button.search-button input[type=submit] {
   color: white;
 }
-
-.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
+html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
   position: relative;
 }
-.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button input[type=submit] {
+html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button input[type=submit] {
   color: white;
 }
-.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
+html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
   display: none;
 }
-.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color {
+html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color {
   width: unset !important;
   margin: 40px auto;
   box-shadow: inset 0 0 0 1px #e0c351 !important;
 }
-.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:before, .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:after, .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:before, .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:after {
+html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:before, html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:after, html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:before, html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:after {
   background-color: var(--awb-custom_color_5);
 }
-.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .fusion-button-text {
+html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color .fusion-button-text {
   color: white;
 }
-.awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
+html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
   color: black;
 }
 

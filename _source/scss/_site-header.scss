@@ -1,103 +1,47 @@
 //
 //
 //
-html body .fusion-tb-header {
-	
-	.fusion-fullwidth .fusion-row {
-		max-width: 1400px !important;
-	}
-	
-	.fusion-search-button {
-		position: relative;
-		&::before {
-			cursor: pointer;
-			content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
-			margin: 0 20px;
-		}
-	}
+html body {
 
-	//
-	.think-custom-button.has-white-bg-color {
-		.fusion-button-text {
-			color: white;
-		}
-		&:hover,
-		&:focus {
-			.fusion-button-text {
-				color: black;
+	// Off Canvas search modal
+	.off-canvas-content .fusion-search-element {
+		.fusion-search-field label {
+			input,
+			input::placeholder {
+				font-family: var(--awb-typography1-font-family);
+				font-size: var(--awb-typography1-font-size) !important;
+				padding: 40px;
 			}
 		}
-	}
-}
-
-html body.single.single-post {
-	.fusion-tb-header {
-
 		.fusion-search-button {
 			&::before {
+				content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
 				filter: brightness(100);
-			}
-		}
-
-		.menu-item {
-			--awb-active-color: var(--awb-custom_color_5) !important;
-		}
-
-		.fusion-button.think-custom-button.has-white-bg-color {
-			box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
-			.button__ornament {
-				&-top-bottom,
-				&-left-right {
-					&:before,
-					&:after {
-						background-color: var(--awb-custom_color_5);
-					}
-				}
-			}
-		}
-
-		.fusion-search-element {
-			.fusion-search-button.search-button input[type="submit"] {
-				color: white;
+				vertical-align: middle;
 			}
 		}
 	}
-}
 
-//
-//
-//
-.awb-off-canvas-wrap {
-	&.is-the-mobile-main-menu {
-		.fusion-search-element {
-			.fusion-search-form-content {
-				.fusion-search-button.search-button {
-					position: relative;
-					input[type="submit"] {
-						color: white;
-					}
-				}
+	.fusion-tb-header {
+		z-index: 100;
 
-				.fusion-search-field.search-field {
-					display: none;
-				}
+		.fusion-fullwidth .fusion-row {
+			max-width: 1400px !important;
+		}
+		
+		.fusion-search-button {
+			position: relative;
+			&::before {
+				cursor: pointer;
+				content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
+				margin: 0 20px;
 			}
 		}
 
-		.fusion-button.think-custom-button.has-white-bg-color {
-			width: unset !important;
-			margin: 40px auto;
-			box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
-			.button__ornament {
-				&-top-bottom,
-				&-left-right {
-					&:before,
-					&:after {
-						background-color: var(--awb-custom_color_5);
-					}
-				}
-			}
 
+
+		//
+		.think-custom-button.has-white-bg-color {
 			.fusion-button-text {
 				color: white;
 			}
@@ -105,6 +49,88 @@ html body.single.single-post {
 			&:focus {
 				.fusion-button-text {
 					color: black;
+				}
+			}
+		}
+	}
+
+
+	&.single.single-post {
+		.fusion-tb-header {
+
+			.fusion-search-button {
+				&::before {
+					filter: brightness(100);
+				}
+			}
+
+			.menu-item {
+				--awb-active-color: var(--awb-custom_color_5) !important;
+			}
+
+			.fusion-button.think-custom-button.has-white-bg-color {
+				box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
+				.button__ornament {
+					&-top-bottom,
+					&-left-right {
+						&:before,
+						&:after {
+							background-color: var(--awb-custom_color_5);
+						}
+					}
+				}
+			}
+
+			.fusion-search-element {
+				.fusion-search-button.search-button input[type="submit"] {
+					color: white;
+				}
+			}
+		}
+	}
+
+	//
+	//
+	//
+	.awb-off-canvas-wrap {
+		&.is-the-mobile-main-menu {
+			.fusion-search-element {
+				.fusion-search-form-content {
+					.fusion-search-button.search-button {
+						position: relative;
+						input[type="submit"] {
+							color: white;
+						}
+					}
+
+					.fusion-search-field.search-field {
+						display: none;
+					}
+				}
+			}
+
+			.fusion-button.think-custom-button.has-white-bg-color {
+				width: unset !important;
+				margin: 40px auto;
+				box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
+				.button__ornament {
+					&-top-bottom,
+					&-left-right {
+						&:before,
+						&:after {
+							background-color: var(--awb-custom_color_5);
+						}
+					}
+				}
+
+				.fusion-button-text {
+					color: white;
+				}
+				&:hover,
+				&:focus {
+					.fusion-button-text {
+						color: black;
+					}
 				}
 			}
 		}
