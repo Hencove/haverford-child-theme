@@ -112,18 +112,24 @@ html body {
 				}
 
 				input[type="radio"] {
+					border: none;
+					
+					&:before {
+						background-color: transparent;
+					}
+
 					&:before,
-					&:after {
+					&:after,
+					&:checked:before {
 						border: 1px solid var(--awb-custom_color_5);
 						border-radius: 0;
 						box-shadow: none;
 					}
-
-					&:checked,
+					
 					&:checked:after {
-						border: 1px solid var(--awb-custom_color_5);
 						border-radius: 0;
 						background-color: var(--awb-custom_color_5);
+						transform: scale(0.5);
 					}
 				}
 

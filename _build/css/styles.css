@@ -1196,27 +1196,39 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field 
   background-color: var(--awb-custom_color_1);
   color: var(--awb-color1);
 }
-html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:before, html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:after,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio],
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio],
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio],
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio] {
+  border: none;
+}
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:before,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:before,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:before,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:before {
+  background-color: transparent;
+}
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:before, html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:after, html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:checked:before,
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:before,
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:after,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:checked:before,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:before,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:after,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:checked:before,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:before,
-html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:after {
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:after,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:checked:before {
   border: 1px solid var(--awb-custom_color_5);
   border-radius: 0;
   box-shadow: none;
 }
-html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:checked, html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:checked:after,
-html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:checked,
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input[type=radio]:checked:after,
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .wpforms-field input[type=radio]:checked:after,
-html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:checked,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .fusion-form-field input[type=radio]:checked:after,
-html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:checked,
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full .wpforms-field input[type=radio]:checked:after {
-  border: 1px solid var(--awb-custom_color_5);
   border-radius: 0;
   background-color: var(--awb-custom_color_5);
+  transform: scale(0.5);
 }
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field .wpforms-error,
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field .wpforms-required-label,
