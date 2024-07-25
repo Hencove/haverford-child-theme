@@ -7,57 +7,12 @@ html body .fusion-tb-header {
 		max-width: 1400px !important;
 	}
 	
-	.fusion-search-element {
-		.fusion-search-button {
-			position: relative;
-			&::before {
-				cursor: pointer;
-				content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
-
-		//
-		.fusion-search-form-content {
-			overflow: visible;
-			.fusion-search-button.search-button {
-				position: relative;
-				input[type="submit"] {
-					color: black;
-				}
-			}
-
-			.fusion-search-field.search-field {
-				transition: all 0.3s ease;
-				position: absolute;
-				top: 0;
-				right: 0;
-				transform: translateX(100%);
-				visibility: hidden;
-				background-color: white;
-				z-index: 99;
-				input[type="search"] {
-					font-size: 14px;
-					color: black;
-					padding: 0 4px;
-					&::placeholder {
-						font-size: inherit;
-						color: inherit;
-					}
-				}
-			}
-		}
-		//
-		&.is-expanded-by-focus {
-			.fusion-search-field.search-field {
-				visibility: visible;
-				transform: translateX(0);
-				right: 100%;
-				width: 400px;
-			}
+	.fusion-search-button {
+		position: relative;
+		&::before {
+			cursor: pointer;
+			content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
+			margin: 0 20px;
 		}
 	}
 
@@ -77,6 +32,13 @@ html body .fusion-tb-header {
 
 html body.single.single-post {
 	.fusion-tb-header {
+
+		.fusion-search-button {
+			&::before {
+				filter: brightness(100);
+			}
+		}
+
 		.menu-item {
 			--awb-active-color: var(--awb-custom_color_5) !important;
 		}

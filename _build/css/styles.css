@@ -143,54 +143,13 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
 html body .fusion-tb-header .fusion-fullwidth .fusion-row {
   max-width: 1400px !important;
 }
-html body .fusion-tb-header .fusion-search-element .fusion-search-button {
+html body .fusion-tb-header .fusion-search-button {
   position: relative;
 }
-html body .fusion-tb-header .fusion-search-element .fusion-search-button::before {
+html body .fusion-tb-header .fusion-search-button::before {
   cursor: pointer;
   content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-html body .fusion-tb-header .fusion-search-element .fusion-search-form-content {
-  overflow: visible;
-}
-html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button {
-  position: relative;
-}
-html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-button.search-button input[type=submit] {
-  color: black;
-}
-html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field {
-  transition: all 0.3s ease;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(100%);
-  visibility: hidden;
-  background-color: white;
-  z-index: 99;
-}
-html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field input[type=search] {
-  font-size: 14px;
-  color: black;
-  padding: 0 4px;
-}
-html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field input[type=search]::-moz-placeholder {
-  font-size: inherit;
-  color: inherit;
-}
-html body .fusion-tb-header .fusion-search-element .fusion-search-form-content .fusion-search-field.search-field input[type=search]::placeholder {
-  font-size: inherit;
-  color: inherit;
-}
-html body .fusion-tb-header .fusion-search-element.is-expanded-by-focus .fusion-search-field.search-field {
-  visibility: visible;
-  transform: translateX(0);
-  right: 100%;
-  width: 400px;
+  margin: 0 20px;
 }
 html body .fusion-tb-header .think-custom-button.has-white-bg-color .fusion-button-text {
   color: white;
@@ -199,6 +158,9 @@ html body .fusion-tb-header .think-custom-button.has-white-bg-color:hover .fusio
   color: black;
 }
 
+html body.single.single-post .fusion-tb-header .fusion-search-button::before {
+  filter: brightness(100);
+}
 html body.single.single-post .fusion-tb-header .menu-item {
   --awb-active-color: var(--awb-custom_color_5) !important;
 }
