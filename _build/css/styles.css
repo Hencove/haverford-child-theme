@@ -454,6 +454,20 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   background-size: contain;
   background-repeat: repeat;
 }
+@media (max-width: 640px) {
+  div.cb4-image-3-callouts .fusion-image-element:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: 0px;
+    left: -140px;
+    background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
+    background-size: contain;
+    background-repeat: repeat;
+  }
+}
 
 .cb5-news-and-insights-post-grid .post-card i.icon-mkb-arrow-right-solid,
 .cb5-news-and-insights-post-grid .post-card .fusion-imageframe img,
