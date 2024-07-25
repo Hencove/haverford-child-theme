@@ -282,7 +282,7 @@ div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-galle
 @media (min-width: 1201px) {
   div.cb1-hero-banner div.cb1-gallery {
     margin-bottom: -120px;
-    margin-bottom: -15vw;
+    margin-bottom: -25%;
   }
   div.cb1-hero-banner div.cb1-gallery .fusion-layout-column .fusion-imageframe, div.cb1-hero-banner div.cb1-gallery .fusion-layout-column .fusion-imageframe img {
     width: 100%;

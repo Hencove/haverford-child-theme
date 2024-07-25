@@ -71,7 +71,7 @@ div.cb1-hero-banner {
 	@include media(">medium") {
 		div.cb1-gallery {
 			margin-bottom: -120px; // ? this is a hacky way to reduce the extra space on the bottom created by moving the gallery items up
-			margin-bottom: -15vw;
+			margin-bottom: -25%;
 			.fusion-layout-column {
 
 				.fusion-imageframe {
