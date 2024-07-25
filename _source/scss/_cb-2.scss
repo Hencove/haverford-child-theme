@@ -11,7 +11,9 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-image: url(../../_assets/img/gold-geometric-pattern.svg);
+		background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
+		background-position: center;
+		background-size: cover;
 	}
 
 	@include media("<mobile") {
