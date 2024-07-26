@@ -83,12 +83,12 @@ div.cb1-hero-banner {
 				&:nth-of-type(1) {
 					// Top Left
 					.fusion-image-element:nth-of-type(1) {
-						transform: translate(-20px, -50px);
+						transform: translate(-20px, -160px);
 					}
 					// Bottom Left
 					.fusion-image-element:nth-of-type(2) {
 						z-index: 1;
-						transform: translate(-75%, -100px) scale(1.5);
+						transform: translate(-85%, -120px) scale(1.5);
 					}
 				}
 				&:nth-of-type(2) {
@@ -107,11 +107,55 @@ div.cb1-hero-banner {
 	}
 
 	//
+	// 	*	this code block adjusts the 'gallery' for tablet
+	//
+	@include media("<=medium" and ">small") {
+		div.cb1-gallery {
+			margin-bottom: -120px; // ? this is a hacky way to reduce the extra space on the bottom created by moving the gallery items up
+			margin-bottom: -25%;
+
+			.fusion-layout-column {
+
+				.fusion-imageframe {
+					&, img {
+						width: 100%;
+					}
+				}
+				
+				&:nth-of-type(1) {
+					// Top Left
+					.fusion-image-element:nth-of-type(1) {
+						transform: translate(0px, -60px);
+					}
+					// Bottom Left
+					.fusion-image-element:nth-of-type(2) {
+						z-index: 1;
+						transform: translate(-50%, -20px) scale(1.5);
+					}
+				}
+				&:nth-of-type(2) {
+					// Top Right
+					.fusion-image-element:nth-of-type(1) {
+						transform: translate(20px, -100px) scale(0.9);
+					}
+					// Bottom Right
+					.fusion-image-element:nth-of-type(2) {
+						z-index: 1;
+						transform: translate(-20px, -150px);
+					}
+				}
+			}
+		}
+	}
+
+	//
 	// 	*	this code block adjusts the 'gallery' for mobile
 	//
 	@include media("<=small") {
 		div.cb1-gallery {
-			margin: 120px 0 -80px 0;
+			margin: 100px -15% -180px -15% !important;
+			width: 100vw;
+
 			.fusion-row {
 				flex-wrap: nowrap !important;
 
@@ -121,23 +165,23 @@ div.cb1-hero-banner {
 					&:nth-of-type(1) {
 						// Top Left
 						.fusion-image-element:nth-of-type(1) {
-							transform: translate(0px, -50px);
+							transform: translate(20px, -50px);
 						}
 						// Bottom Left
 						.fusion-image-element:nth-of-type(2) {
 							z-index: 2;
-							transform: scale(1.2);
+							transform: translate(0% 50px) scale(1.4);
 						}
 					}
 					&:nth-of-type(2) {
 						// Top Right
 						.fusion-image-element:nth-of-type(1) {
-							transform: translate(0px, -100px);
+							transform: translate(5px, -80px) scale(0.8);
 						}
 						// Bottom Right
 						.fusion-image-element:nth-of-type(2) {
 							z-index: 1;
-							transform: translate(-20%, -100px);
+							transform: translate(-15%, -80px) scale(0.8);
 						}
 					}
 				}
