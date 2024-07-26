@@ -1,12 +1,14 @@
 //
 @mixin insetImageFrame() {
 	&:before {
+		$inset: calc(0.1 * var(--awb-width-large));
+		$insetW: calc(0.05 * var(--awb-width-large));
 		content: "";
 		position: absolute;
-		top: 20px;
-		left: 20px;
-		bottom: 20px;
-		right: 20px;
+		top: $inset;
+		left: $insetW;
+		bottom: $inset;
+		right: $insetW;
 		border: 1px solid var(--awb-custom_color_5);
 		z-index: 2;
 	}
