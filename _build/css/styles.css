@@ -527,12 +527,20 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 }
 .cb6-interior-banner::after, .cb6-interior-banner::before {
   left: 40px;
-  bottom: 180px;
+  bottom: 20%;
 }
 .cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe {
   padding: 1rem;
 }
 
+@media (max-width: 1199px) {
+  .cb6-interior-banner {
+    margin-left: -60px !important;
+    margin-right: -60px !important;
+    padding-left: 60px !important;
+    padding-right: 20px !important;
+  }
+}
 html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) {
   background-color: #fafafa;
   padding: 30px;

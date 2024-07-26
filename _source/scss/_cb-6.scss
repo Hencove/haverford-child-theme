@@ -9,8 +9,10 @@
 	&::after,
 	&::before {
 		left: 40px;
-		bottom: 180px;
+		bottom: 20%;
 	}
+
+
 
 	// * the avada image element container
 	.fusion-image-element {
@@ -25,4 +27,11 @@
 		}
 	}
 }
- 
+@include media("<medium") {
+	.cb6-interior-banner {
+		margin-left: -60px !important;
+		margin-right: -60px !important;
+		padding-left: 60px !important;
+		padding-right: 20px !important;
+	}
+}
