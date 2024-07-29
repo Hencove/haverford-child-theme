@@ -270,7 +270,6 @@ html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-cust
 }
 
 div.cb1-hero-banner {
-  border-top: 2px solid var(--awb-custom_color_5);
   padding-top: 200px;
   margin-top: -150px;
   margin-left: unset !important;
@@ -291,7 +290,7 @@ div.cb1-hero-banner:before {
 div.cb1-hero-banner::before {
   bottom: auto;
   top: 0;
-  left: 0px;
+  left: -15px;
 }
 div.cb1-hero-banner:after {
   content: "";
@@ -307,7 +306,7 @@ div.cb1-hero-banner::after {
   left: auto;
   bottom: auto;
   top: 0;
-  right: 0px;
+  right: -15px;
 }
 
 div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(2) {
@@ -603,14 +602,6 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   padding: 1rem;
 }
 
-@media (max-width: 1199px) {
-  .cb6-interior-banner {
-    margin-left: -60px !important;
-    margin-right: -60px !important;
-    padding-left: 60px !important;
-    padding-right: 20px !important;
-  }
-}
 html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) {
   background-color: #fafafa;
   padding: 30px;
