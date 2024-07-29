@@ -10,15 +10,8 @@ html body {
     }
 
     .cb7-pullquote-geopattern {
-      background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
-      background-position: center;
-      background-repeat: repeat;
-      background-size: cover;
-      position: absolute;
-      top: -5vh;
-      left: -3vw;
-      height: 70vh;
-      width: 4vw;
+      @include geoPattern(top, -5vh, left, -3vw, 4vw, 70vh);
+        
     }
 
     .cb7-pullquote {
@@ -94,9 +87,9 @@ html body {
     }
 
     div.fusion-layout-column.cb7-pullquote-geopattern {
-      top: -5vh;
+      top: -2vh;
       left: -10vw;
-      height: 10vh;
+      height: 4vh;
       width: 110vw;
     }
   }

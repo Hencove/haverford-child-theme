@@ -381,15 +381,15 @@ div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-galle
 }
 .cb2-two-column-feature:before {
   content: "";
-  display: block;
-  position: absolute;
   width: 80px;
   height: 100%;
-  top: 0;
-  left: 0;
-  background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url(../../_assets/img/geo_smalltile.svg);
+  background-repeat: repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 200px;
 }
 @media (max-width: 799px) {
   .cb2-two-column-feature:before {
@@ -474,28 +474,28 @@ div.cb4-image-3-callouts .fusion-image-element {
 }
 div.cb4-image-3-callouts .fusion-image-element:before {
   content: "";
-  display: block;
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
   top: 180px;
   left: -180px;
-  background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
-  background-size: contain;
+  background-image: url(../../_assets/img/geo_smalltile.svg);
   background-repeat: repeat;
+  background-position: center;
+  background-size: 200px;
 }
 @media (max-width: 640px) {
   div.cb4-image-3-callouts .fusion-image-element:before {
     content: "";
-    display: block;
-    position: absolute;
     width: 100%;
     height: 110%;
+    position: absolute;
     top: 0px;
     left: -140px;
-    background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
-    background-size: contain;
+    background-image: url(../../_assets/img/geo_smalltile.svg);
     background-repeat: repeat;
+    background-position: center;
+    background-size: 200px;
   }
 }
 
@@ -597,15 +597,16 @@ html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) .fus
   display: block;
 }
 html body div.fusion-fullwidth .cb7-pullquote-geopattern {
-  background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
+  content: "";
+  width: 4vw;
+  height: 70vh;
   position: absolute;
   top: -5vh;
   left: -3vw;
-  height: 70vh;
-  width: 4vw;
+  background-image: url(../../_assets/img/geo_smalltile.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 200px;
 }
 html body div.fusion-fullwidth .cb7-pullquote:has(+ .cb7-pullquote) {
   border-right: 2px solid #ccc;
@@ -648,9 +649,9 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
     text-align: left;
   }
   html body div.fusion-layout-column.cb7-pullquote-geopattern {
-    top: -5vh;
+    top: -2vh;
     left: -10vw;
-    height: 10vh;
+    height: 4vh;
     width: 110vw;
   }
 }
@@ -999,6 +1000,19 @@ html body div.fusion-fullwidth.cb14-about .fusion-image-element img {
   outline-offset: -20px;
 }
 
+.cb16-large-stat-or-quote:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url(../../_assets/img/geo_smalltile.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 200px;
+}
+
 @media (max-width: 640px) {
   .cb16-large-stat-or-quote .col-stat > .fusion-column-wrapper {
     --awb-border-right: 0px;
@@ -1327,18 +1341,17 @@ div.cb19-prefooter-c2a {
 }
 div.cb19-prefooter-c2a:before {
   content: "";
-  display: block;
-  position: absolute;
-  z-index: 1;
   width: 80px;
-  background-image: url(../../_assets/img/SVG/geopattern-tile.svg);
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  filter: brightness(100);
   height: calc(100% + var(--awb-border-sizes-top) * 2);
+  position: absolute;
   top: calc(var(--awb-border-sizes-top) * -1);
   left: calc(var(--awb-border-sizes-left) * -1);
+  background-image: url(../../_assets/img/geo_smalltile.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 200px;
+  filter: brightness(100);
+  z-index: 1;
 }
 @media (max-width: 799px) {
   div.cb19-prefooter-c2a:before {

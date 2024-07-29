@@ -81,9 +81,10 @@
 	#{$dir1_attr}: $dir1_val;
 	#{$dir2_attr}: $dir2_val;
 	// Texture
-	background-image: url(../../_assets/img/geometric-pattern.svg);
+	background-image: url(../../_assets/img/geo_smalltile.svg);
 	background-repeat: repeat;
-	background-size: cover;
+	background-position: center;
+	background-size: 200px;
 }
 
 //
