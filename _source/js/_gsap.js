@@ -16,25 +16,34 @@ gsap.registerPlugin(ScrollTrigger);
 	//
 	//
 	//
-	gsap.to(standardBannerImages, {
-		y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100),
-		stagger: 0,
-		scrollTrigger: {
-			trigger: ".cb6-interior-banner",
-			scrub: 1,
-			start: "top 15%",
-			end: "+=200",
-		},
-	});
-	gsap.to(homepageHeroBannerImages, {
-		y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100) * -1,
-		stagger: 0,
-		scrollTrigger: {
-			trigger: ".cb1-hero-banner",
-			scrub: 1,
-			start: "top 10%",
-			end: "+=800",
-		},
+	// gsap.to(standardBannerImages, {
+	// 	y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100),
+	// 	stagger: 0,
+	// 	scrollTrigger: {
+	// 		trigger: ".cb6-interior-banner",
+	// 		scrub: 1,
+	// 		start: "top 15%",
+	// 		end: "+=200",
+	// 	},
+	// });
+
+	//responsive
+	let mm = gsap.matchMedia();
+	mm.add("(min-width: 640px)", () => {
+		gsap.to(homepageHeroBannerImages, {
+			y: (i, el) => {
+				let offset =
+					(2 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100);
+				return offset * -1;
+			},
+			stagger: 0,
+			scrollTrigger: {
+				trigger: ".cb1-hero-banner",
+				scrub: 1,
+				start: "top top",
+				end: "+=800",
+			},
+		});
 	});
 
 	//

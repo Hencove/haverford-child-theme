@@ -309,88 +309,89 @@ div.cb1-hero-banner::after {
   right: -15px;
 }
 
-div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(2) {
-  padding: 0 40px !important;
-  transform: translate(-20px, -40px);
+.cb1-hero-banner > .fusion-builder-row > .fusion-layout-column:not(.cb1-gallery) {
+  z-index: 2;
 }
-div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(4) {
+
+.cb1-hero-banner .cb1-gallery {
   z-index: 1;
-  transform: translate(-72px, -20px);
 }
-div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(5) {
+.cb1-hero-banner .cb1-gallery:hover {
   z-index: 1;
-  transform: translate(-75%, -40px) scale(1.5);
 }
 @media (min-width: 1201px) {
-  div.cb1-hero-banner div.cb1-gallery {
+  .cb1-hero-banner .cb1-gallery {
+    margin-top: -120px;
     margin-bottom: -120px;
-    margin-bottom: -25%;
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column .fusion-imageframe, div.cb1-hero-banner div.cb1-gallery .fusion-layout-column .fusion-imageframe img {
-    width: 100%;
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
-    transform: translate(-20px, -160px);
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(2) {
-    z-index: 1;
-    transform: translate(-85%, -120px) scale(1.5);
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(1) {
-    transform: translate(0px, -200px) scale(0.9);
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(2) {
-    z-index: 1;
-    transform: translate(-72px, -250px);
   }
 }
-@media (min-width: 641px) {
-  div.cb1-hero-banner div.cb1-gallery {
-    margin-bottom: -120px;
-    margin-bottom: -25%;
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column .fusion-imageframe, div.cb1-hero-banner div.cb1-gallery .fusion-layout-column .fusion-imageframe img {
-    width: 100%;
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
-    transform: translate(0px, -60px);
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(2) {
-    z-index: 1;
-    transform: translate(-50%, -20px) scale(1.5);
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(1) {
-    transform: translate(20px, -100px) scale(0.9);
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(2) {
-    z-index: 1;
-    transform: translate(-20px, -150px);
+@media (max-width: 1200px) {
+  .cb1-hero-banner .cb1-gallery {
+    margin-top: 60px;
+    margin-bottom: -60px;
   }
 }
 @media (max-width: 640px) {
-  div.cb1-hero-banner div.cb1-gallery {
-    margin: 100px -15% -180px -15% !important;
-    width: 100vw;
+  .cb1-hero-banner .cb1-gallery {
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
-  div.cb1-hero-banner div.cb1-gallery .fusion-row {
-    flex-wrap: nowrap !important;
+}
+.cb1-hero-banner .cb1-gallery .fusion-column-wrapper {
+  margin: 0;
+}
+.cb1-hero-banner .cb1-gallery .fusion-imageframe {
+  width: 100%;
+  max-width: unset;
+}
+.cb1-hero-banner .cb1-gallery .fusion-imageframe img {
+  width: 100%;
+}
+@media (min-width: 641px) {
+  .cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:first-child .fusion-image-element:first-child {
+    text-align: right;
   }
-  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column {
-    --awb-width-small: 50% !important;
+  .cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:first-child .fusion-image-element:first-child .fusion-imageframe {
+    width: 80%;
   }
-  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(1) {
-    transform: translate(20px, -50px);
+}
+.cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:first-child .fusion-image-element:last-child .fusion-imageframe {
+  margin-top: -10%;
+  position: relative;
+  width: 150%;
+  left: -100%;
+  z-index: 2;
+}
+@media (max-width: 640px) {
+  .cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:first-child .fusion-image-element:last-child .fusion-imageframe {
+    margin-top: 60px;
+    width: 120%;
+    left: 0;
   }
-  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(1) .fusion-image-element:nth-of-type(2) {
-    z-index: 2;
-    transform: translate(0% 50px) scale(1.4);
+}
+.cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:last-child .fusion-image-element:first-child .fusion-imageframe {
+  margin-top: -10%;
+}
+.cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:last-child .fusion-image-element:first-child .fusion-imageframe img {
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+.cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:last-child .fusion-image-element:last-child .fusion-imageframe {
+  width: 120%;
+  left: -20%;
+}
+.cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:last-child .fusion-image-element:last-child .fusion-imageframe img {
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+@media (max-width: 640px) {
+  .cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:last-child .fusion-image-element:last-child .fusion-imageframe {
+    width: 100%;
+    left: 0%;
   }
-  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(1) {
-    transform: translate(5px, -80px) scale(0.8);
-  }
-  div.cb1-hero-banner div.cb1-gallery .fusion-row .fusion-layout-column:nth-of-type(2) .fusion-image-element:nth-of-type(2) {
-    z-index: 1;
-    transform: translate(-15%, -80px) scale(0.8);
+  .cb1-hero-banner .cb1-gallery .fusion-builder-row > .fusion-layout-column:last-child .fusion-image-element:last-child .fusion-imageframe img {
+    padding-right: 10%;
+    padding-bottom: 10%;
   }
 }
 

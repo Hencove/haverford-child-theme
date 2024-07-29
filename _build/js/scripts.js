@@ -203,29 +203,33 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   //
   //
   //
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(standardBannerImages, {
-    y: function y(i, el) {
-      return (1 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
-    },
-    stagger: 0,
-    scrollTrigger: {
-      trigger: ".cb6-interior-banner",
-      scrub: 1,
-      start: "top 15%",
-      end: "+=200"
-    }
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
-    y: function y(i, el) {
-      return (1 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100) * -1;
-    },
-    stagger: 0,
-    scrollTrigger: {
-      trigger: ".cb1-hero-banner",
-      scrub: 1,
-      start: "top 10%",
-      end: "+=800"
-    }
+  // gsap.to(standardBannerImages, {
+  // 	y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100),
+  // 	stagger: 0,
+  // 	scrollTrigger: {
+  // 		trigger: ".cb6-interior-banner",
+  // 		scrub: 1,
+  // 		start: "top 15%",
+  // 		end: "+=200",
+  // 	},
+  // });
+
+  //responsive
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
+  mm.add("(min-width: 640px)", function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
+      y: function y(i, el) {
+        var offset = (2 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
+        return offset * -1;
+      },
+      stagger: 0,
+      scrollTrigger: {
+        trigger: ".cb1-hero-banner",
+        scrub: 1,
+        start: "top top",
+        end: "+=800"
+      }
+    });
   });
 
   //
