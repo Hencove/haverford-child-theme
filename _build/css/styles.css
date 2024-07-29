@@ -499,12 +499,15 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   }
 }
 
+.cb5-news-and-insights-post-grid .post-card i.think-arrow-long,
 .cb5-news-and-insights-post-grid .post-card i.icon-mkb-arrow-right-solid,
 .cb5-news-and-insights-post-grid .post-card .fusion-imageframe img,
 .cb5-news-and-insights-post-grid .post-card .fusion-image-wrapper img {
   transition-duration: 500ms;
 }
-.cb5-news-and-insights-post-grid .post-card:hover i.icon-mkb-arrow-right-solid, .cb5-news-and-insights-post-grid .post-card:focus i.icon-mkb-arrow-right-solid {
+.cb5-news-and-insights-post-grid .post-card:hover i.think-arrow-long,
+.cb5-news-and-insights-post-grid .post-card:hover i.icon-mkb-arrow-right-solid, .cb5-news-and-insights-post-grid .post-card:focus i.think-arrow-long,
+.cb5-news-and-insights-post-grid .post-card:focus i.icon-mkb-arrow-right-solid {
   margin-left: 20px;
   transition-duration: 500ms;
   color: var(--awb-color8);
@@ -656,12 +659,15 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   }
 }
 
+.cb8-post-grid .post-card i.think-arrow-long,
 .cb8-post-grid .post-card i.icon-mkb-arrow-right-solid,
 .cb8-post-grid .post-card .fusion-imageframe img,
 .cb8-post-grid .post-card .fusion-image-wrapper img {
   transition-duration: 500ms;
 }
-.cb8-post-grid .post-card:hover i.icon-mkb-arrow-right-solid, .cb8-post-grid .post-card:focus i.icon-mkb-arrow-right-solid {
+.cb8-post-grid .post-card:hover i.think-arrow-long,
+.cb8-post-grid .post-card:hover i.icon-mkb-arrow-right-solid, .cb8-post-grid .post-card:focus i.think-arrow-long,
+.cb8-post-grid .post-card:focus i.icon-mkb-arrow-right-solid {
   margin-left: 20px;
   transition-duration: 500ms;
   color: var(--awb-color8);
@@ -905,12 +911,15 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
 .cb11-related-posts p:only-child {
   margin-bottom: 0;
 }
+.cb11-related-posts .post-card i.think-arrow-long,
 .cb11-related-posts .post-card i.icon-mkb-arrow-right-solid,
 .cb11-related-posts .post-card .fusion-imageframe img,
 .cb11-related-posts .post-card .fusion-image-wrapper img {
   transition-duration: 500ms;
 }
-.cb11-related-posts .post-card:hover i.icon-mkb-arrow-right-solid, .cb11-related-posts .post-card:focus i.icon-mkb-arrow-right-solid {
+.cb11-related-posts .post-card:hover i.think-arrow-long,
+.cb11-related-posts .post-card:hover i.icon-mkb-arrow-right-solid, .cb11-related-posts .post-card:focus i.think-arrow-long,
+.cb11-related-posts .post-card:focus i.icon-mkb-arrow-right-solid {
   margin-left: 20px;
   transition-duration: 500ms;
   color: var(--awb-color8);

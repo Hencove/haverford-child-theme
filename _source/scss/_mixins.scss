@@ -18,6 +18,7 @@
 //
 @mixin postCardOnHover() {
 	//
+	i.think-arrow-long,
 	i.icon-mkb-arrow-right-solid,
 	.fusion-imageframe img,
 	.fusion-image-wrapper img {
@@ -27,6 +28,7 @@
 	&:hover,
 	&:focus {
 		// arrow moves right and turns blue
+		i.think-arrow-long,
 		i.icon-mkb-arrow-right-solid {
 			margin-left: 20px;
 			transition-duration: 500ms;
