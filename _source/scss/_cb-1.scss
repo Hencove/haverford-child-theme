@@ -29,16 +29,16 @@ div.cb1-hero-banner {
 	}
 }
 
-@include media("<medium") {
-	div.cb1-hero-banner {
-		padding-top: 150px;
-		margin-top: -160px;
-		margin-left: -20px !important;
-		margin-right: -20px !important;
-		padding-left: 40px;
-		padding-right: 40px;	
-	}
-}
+// @include media("<medium") {
+// 	div.cb1-hero-banner {
+// 		padding-top: 150px;
+// 		margin-top: -160px;
+// 		margin-left: -20px !important;
+// 		margin-right: -20px !important;
+// 		padding-left: 40px;
+// 		padding-right: 40px;	
+// 	}
+// }
 
 //
 //

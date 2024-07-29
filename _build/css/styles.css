@@ -310,16 +310,6 @@ div.cb1-hero-banner::after {
   right: 0px;
 }
 
-@media (max-width: 1199px) {
-  div.cb1-hero-banner {
-    padding-top: 150px;
-    margin-top: -160px;
-    margin-left: -20px !important;
-    margin-right: -20px !important;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
 div.cb1-hero-banner .awb-gallery-wrapper .fusion-gallery-container .fusion-gallery-column:nth-of-type(2) {
   padding: 0 40px !important;
   transform: translate(-20px, -40px);
