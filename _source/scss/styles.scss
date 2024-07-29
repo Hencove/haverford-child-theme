@@ -11,7 +11,7 @@
 @import "./cb-5";
 @import "./cb-6";
 @import "./cb-7";
-@import "./cb-8";
+@import "./cb-8/";
 @import "./cb-9";
 @import "./cb-11";
 @import "./cb-12";
@@ -21,23 +21,3 @@
 @import "./cb-18";
 @import "./cb-19";
 @import "./touchups";
-
-
-body.home {
-
-    #wrapper {
-        .homepage-gradient-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 75vh;
-            background: linear-gradient(
-			180deg,
-			rgba(255, 255, 255, 1) 0%,
-			rgba(255, 255, 255, 1) 75%,
-			rgba(255, 255, 255, 0) 100%
-		);
-        }
-    }
-}

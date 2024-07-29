@@ -1,0 +1,35 @@
+//
+//
+//
+.fusion-post-cards {
+	@include media(">medium") {
+		.fusion-grid-posts-cards {
+			padding: 20px 80px;
+		}
+	}
+	@include media("<=medium") {
+		.fusion-grid-posts-cards {
+			padding: 20px;
+		}
+	}
+}
+
+// 
+// 
+// 
+.post-card {
+	//
+	@include postCardOnHover();
+	//
+	p.fusion-title-heading {
+		&[style*="text-transform:uppercase;--fontSize:14;"] {
+			&:before {
+				content: "\25aa";
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 1rem;
+				font-size: 18px;
+			}
+		}
+	}
+}
