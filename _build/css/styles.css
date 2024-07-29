@@ -1,11 +1,11 @@
 @charset "UTF-8";
 :root {
-  --h1_typography-font-size: calc(0.66875rem + 15.3583333333vw) !important;
-  --h2_typography-font-size: calc(0.434375rem + 9.4208333333vw) !important;
-  --h3_typography-font-size: calc(0.359375rem + 7.5208333333vw) !important;
-  --h4_typography-font-size: calc(0.309375rem + 6.2541666667vw) !important;
-  --h5_typography-font-size: calc(0.259375rem + 4.9875vw) !important;
-  --h6_typography-font-size: calc(0.209375rem + 3.7208333333vw) !important;
+  --h1_typography-font-size: calc(2.34375rem + 13.125vw) !important;
+  --h2_typography-font-size: calc(1.875rem + 7.5vw) !important;
+  --h3_typography-font-size: calc(1.725rem + 5.7vw) !important;
+  --h4_typography-font-size: calc(1.625rem + 4.5vw) !important;
+  --h5_typography-font-size: calc(1.525rem + 3.3vw) !important;
+  --h6_typography-font-size: calc(1.425rem + 2.1vw) !important;
 }
 @media (min-width: 1200px) {
   :root {
