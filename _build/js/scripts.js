@@ -27,61 +27,45 @@ __webpack_require__.r(__webpack_exports__);
   //
   //
   //
-  hoverToggles.each(function () {
-    //
-    var boxWrapper = $(this).find(".content-box-wrapper");
-    var contentContainer = $(this).find(".content-container");
-    if (window.innerWidth <= 768) {
-      $(this).removeClass("visible");
-      return;
-    }
 
-    //
-    //  ?   determine how much we need to slide the content for this content box
-    //
-    var SlideHeight = contentContainer.height() + 32 + "px";
-    boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
+  $(window).on("load", function () {
+    hoverToggles.each(function () {
+      //
+      var boxWrapper = $(this).find(".content-box-wrapper");
+      var contentContainer = $(this).find(".content-container");
+      if (window.innerWidth <= 768) {
+        $(this).removeClass("visible");
+        return;
+      }
 
-    //
-    //
-    //
-
-    var throttledResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () {
-      console.log("Window Resized");
+      //
+      //  ?   determine how much we need to slide the content for this content box
+      //
       var SlideHeight = contentContainer.height() + 32 + "px";
       boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
-    }, 16);
-    window.addEventListener("resize", throttledResizeHandler);
 
-    //
-    // when hovering over a content box
-    //
-    $(this).hover(function () {
       //
-      // toggle the visible class
       //
-      $(this).toggleClass("visible");
+      //
+
+      var throttledResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () {
+        console.log("Window Resized");
+        var SlideHeight = contentContainer.height() + 32 + "px";
+        boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
+      }, 16);
+      window.addEventListener("resize", throttledResizeHandler);
+
+      //
+      // when hovering over a content box
+      //
+      $(this).hover(function () {
+        //
+        // toggle the visible class
+        //
+        $(this).toggleClass("visible");
+      });
     });
   });
-
-  //
-  //
-  //
-
-  var handleOver = {
-    _init: function _init(event, key) {
-      console.log("Crossed over " + key + " breakpoint.");
-      // Add your custom JavaScript code for crossing over the breakpoint here
-    }
-  };
-  var handleUnder = {
-    _init: function _init(event, key) {
-      console.log("Crossed under " + key + " breakpoint.");
-      // Add your custom JavaScript code for crossing under the breakpoint here
-    }
-  };
-  _media_query_handler__WEBPACK_IMPORTED_MODULE_0__["default"]._instance();
-  _media_query_handler__WEBPACK_IMPORTED_MODULE_0__["default"]._init(handleOver, handleUnder);
 
   //
   //

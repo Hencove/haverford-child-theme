@@ -15,65 +15,48 @@ import { debounce, throttle } from "./_debounce-throttle";
 	//
 	//
 	//
-	hoverToggles.each(function () {
-		//
-		let boxWrapper = $(this).find(".content-box-wrapper");
-		let contentContainer = $(this).find(".content-container");
 
-		if (window.innerWidth <= 768) {
-			$(this).removeClass("visible");
-			return;
-		}
+	$(window).on("load", () => {
+		hoverToggles.each(function () {
+			//
+			let boxWrapper = $(this).find(".content-box-wrapper");
+			let contentContainer = $(this).find(".content-container");
 
-		//
-		//  ?   determine how much we need to slide the content for this content box
-		//
-		let SlideHeight = contentContainer.height() + 32 + "px";
-		boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
+			if (window.innerWidth <= 768) {
+				$(this).removeClass("visible");
+				return;
+			}
 
-		//
-		//
-		//
-
-		const throttledResizeHandler = throttle(() => {
-			console.log("Window Resized");
+			//
+			//  ?   determine how much we need to slide the content for this content box
+			//
 			let SlideHeight = contentContainer.height() + 32 + "px";
+
 			boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
-		}, 16);
 
-		window.addEventListener("resize", throttledResizeHandler);
+			//
+			//
+			//
 
-		//
-		// when hovering over a content box
-		//
-		$(this).hover(function () {
+			const throttledResizeHandler = throttle(() => {
+				console.log("Window Resized");
+				let SlideHeight = contentContainer.height() + 32 + "px";
+				boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
+			}, 16);
+
+			window.addEventListener("resize", throttledResizeHandler);
+
 			//
-			// toggle the visible class
+			// when hovering over a content box
 			//
-			$(this).toggleClass("visible");
+			$(this).hover(function () {
+				//
+				// toggle the visible class
+				//
+				$(this).toggleClass("visible");
+			});
 		});
 	});
-
-	//
-	//
-	//
-
-	const handleOver = {
-		_init: function (event, key) {
-			console.log("Crossed over " + key + " breakpoint.");
-			// Add your custom JavaScript code for crossing over the breakpoint here
-		},
-	};
-
-	const handleUnder = {
-		_init: function (event, key) {
-			console.log("Crossed under " + key + " breakpoint.");
-			// Add your custom JavaScript code for crossing under the breakpoint here
-		},
-	};
-
-	mqHandler._instance();
-	mqHandler._init(handleOver, handleUnder);
 
 	//
 	//
