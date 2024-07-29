@@ -269,16 +269,26 @@ html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-cust
   color: black;
 }
 
-div.cb1-hero-banner {
+.hero__ornament {
+  height: 75vh;
+  position: absolute !important;
+  display: block;
   border-top: 2px solid var(--awb-custom_color_5);
-  padding-top: 200px;
-  margin-top: -150px;
-  margin-left: unset !important;
-  margin-right: unset !important;
+  z-index: 1;
+  top: var(--hundredp_padding);
+  left: var(--hundredp_padding);
+  right: var(--hundredp_padding);
   position: relative;
   position: relative;
 }
-div.cb1-hero-banner:before {
+@media (max-width: 800px) {
+  .hero__ornament {
+    top: calc(0.5 * var(--hundredp_padding));
+    left: calc(0.5 * var(--hundredp_padding));
+    right: calc(0.5 * var(--hundredp_padding));
+  }
+}
+.hero__ornament:before {
   content: "";
   display: block;
   position: absolute;
@@ -288,12 +298,12 @@ div.cb1-hero-banner:before {
   height: 100%;
   background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
 }
-div.cb1-hero-banner::before {
+.hero__ornament::before {
   bottom: auto;
   top: 0;
   left: 0px;
 }
-div.cb1-hero-banner:after {
+.hero__ornament:after {
   content: "";
   display: block;
   position: absolute;
@@ -303,11 +313,18 @@ div.cb1-hero-banner:after {
   height: 100%;
   background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
 }
-div.cb1-hero-banner::after {
+.hero__ornament::after {
   left: auto;
   bottom: auto;
   top: 0;
   right: 0px;
+}
+
+div.cb1-hero-banner {
+  padding-top: 200px;
+  margin-top: -150px;
+  margin-left: unset !important;
+  margin-right: unset !important;
 }
 
 @media (max-width: 1199px) {
