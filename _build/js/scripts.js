@@ -228,7 +228,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
       trigger: ".cb6-interior-banner",
       scrub: 1,
       start: "top 15%",
-      end: "+=400"
+      end: "+=200"
     }
   });
   gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {

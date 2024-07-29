@@ -23,7 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
 			trigger: ".cb6-interior-banner",
 			scrub: 1,
 			start: "top 15%",
-			end: "+=400",
+			end: "+=200",
 		},
 	});
 	gsap.to(homepageHeroBannerImages, {

@@ -1,6 +1,6 @@
 @import "~rfs/scss";
-$rfs-factor: 20;
-$rfs-base-value : 1;
+// $rfs-factor: 20;
+// $rfs-base-value : 1;
 :root {
 	@include rfs(195px !important, --h1_typography-font-size);
 	@include rfs(120px !important, --h2_typography-font-size);
@@ -8,4 +8,19 @@ $rfs-base-value : 1;
 	@include rfs(80px !important, --h4_typography-font-size);
 	@include rfs(64px !important, --h5_typography-font-size);
 	@include rfs(48px !important, --h6_typography-font-size);
+}
+
+
+*[style*="--h3_typography-font-size:48px;"] {
+	@include rfs(48px !important, --h3_typography-font-size);
+	line-height: 1.15 !important;
+}
+
+*[style*="--awb-font-size:24px;"] {
+	@include rfs(24px !important, --awb-font-size);
+}
+// `
+.fusion-body .fusion-accordian .panel-title {
+	@include rfs(36px !important, --awb-title-font-size);
+	line-height: 1.15 !important;
 }
