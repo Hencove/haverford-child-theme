@@ -13,9 +13,12 @@
 
   var hero = $('.cb1-hero-banner');
   var ornament = '<div class="hero__ornament"></div>';
-  if (hero.length) {
-    $('#boxed-wrapper').prepend(ornament);
+  if (hero.length > 0) {
+    if (hero.length) {
+      $('#boxed-wrapper').prepend(ornament);
+    }
   }
+
   //
   //
 })(document, window, jQuery);
@@ -38,54 +41,50 @@ __webpack_require__.r(__webpack_exports__);
   //
   // 		jQuery is ready as $
 
-  //
-  //
-  //
-  var hoverToggles = $(".cb13-3-column-hover .content-box-column");
-  if (window.innerWidth <= 768) {
-    return;
-  }
-  //
-  //
-  //
-
   $(window).on("load", function () {
-    hoverToggles.each(function () {
-      //
-      var boxWrapper = $(this).find(".content-box-wrapper");
-      var contentContainer = $(this).find(".content-container");
-      if (window.innerWidth <= 768) {
-        $(this).removeClass("visible");
-        return;
-      }
+    // 
+    var hoverToggles = $(".cb13-3-column-hover .content-box-column");
+    if (window.innerWidth <= 768) {
+      return;
+    }
+    if (hoverToggles.length > 0) {
+      hoverToggles.each(function () {
+        //
+        var boxWrapper = $(this).find(".content-box-wrapper");
+        var contentContainer = $(this).find(".content-container");
+        if (window.innerWidth <= 768) {
+          $(this).removeClass("visible");
+          return;
+        }
 
-      //
-      //  ?   determine how much we need to slide the content for this content box
-      //
-      var SlideHeight = contentContainer.height() + 32 + "px";
-      boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
-
-      //
-      //
-      //
-
-      var throttledResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () {
-        console.log("Window Resized");
+        //
+        //  ?   determine how much we need to slide the content for this content box
+        //
         var SlideHeight = contentContainer.height() + 32 + "px";
         boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
-      }, 16);
-      window.addEventListener("resize", throttledResizeHandler);
 
-      //
-      // when hovering over a content box
-      //
-      $(this).hover(function () {
         //
-        // toggle the visible class
         //
-        $(this).toggleClass("visible");
+        //
+
+        var throttledResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () {
+          console.log("Window Resized");
+          var SlideHeight = contentContainer.height() + 32 + "px";
+          boxWrapper[0].style.setProperty("--slide-by-height", SlideHeight);
+        }, 16);
+        window.addEventListener("resize", throttledResizeHandler);
+
+        //
+        // when hovering over a content box
+        //
+        $(this).hover(function () {
+          //
+          // toggle the visible class
+          //
+          $(this).toggleClass("visible");
+        });
       });
-    });
+    }
   });
 
   //
@@ -106,8 +105,10 @@ __webpack_require__.r(__webpack_exports__);
 
   // CB3 Featured Stats
   var container = $(".cb3-featured-stats");
-  var wrapperDivs = '<div class="cb3-H-icon"></div><div class="cb3-wrapper-outer"><div class="cb3-wrapper-outer-bottom"><div class="cb3-wrapper-outer-left"></div><div class="cb3-wrapper-outer-right"></div></div><div class="cb3-wrapper-inner"><div class="cb3-wrapper-inner-bottom"><div class="cb3-wrapper-inner-left"></div><div class="cb3-wrapper-inner-right"></div></div>' + $(container).html() + '</div></div>';
-  $(container).html(wrapperDivs);
+  if (container.length > 0) {
+    var wrapperDivs = '<div class="cb3-H-icon"></div><div class="cb3-wrapper-outer"><div class="cb3-wrapper-outer-bottom"><div class="cb3-wrapper-outer-left"></div><div class="cb3-wrapper-outer-right"></div></div><div class="cb3-wrapper-inner"><div class="cb3-wrapper-inner-bottom"><div class="cb3-wrapper-inner-left"></div><div class="cb3-wrapper-inner-right"></div></div>' + $(container).html() + '</div></div>';
+    $(container).html(wrapperDivs);
+  }
 
   //
   //
@@ -126,28 +127,54 @@ __webpack_require__.r(__webpack_exports__);
   //	? code here will execute once the page is ready
   //
 
-  // Move the FEPro Search bar into the fusion filters parent div
-  var searchbar = $('.wpc-filter-layout-search-field').html();
-  var fusionBar = $('ul.fusion-filters');
-  fusionBar.parent().append(searchbar);
-  $('.wpc-filter-header').hide();
-  $('.widget_wpc_filters_widget').hide();
+  var postCardsHandler = {
+    _init: function _init() {
+      postCardsHandler._moveFilters();
+      if (postCardsHandler._isFilteredUrl()) {
+        postCardsHandler._addResetClickEvent();
+      }
+    },
+    _moveFilters: function _moveFilters() {
+      var searchBar = $(".wpc-filter-layout-search-field .wpc-filter-search-form");
+      var dropDownFilters = $(".wpc-filter-content.wpc-filter-category");
+      var fusionFiltersContainer = $("ul.fusion-filters");
+      searchBar.detach();
+      dropDownFilters.detach();
+      fusionFiltersContainer.parent().addClass("is-filter-search-container");
+      fusionFiltersContainer.parent().append(searchBar);
+      fusionFiltersContainer.parent().prepend(dropDownFilters);
+    },
+    _isFilteredUrl: function _isFilteredUrl() {
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      var regexFilter = /\/filter-.*/;
+      var regexSearch = /\?srch=.*/;
+      return regexFilter.test(pathname) || regexSearch.test(search);
+    },
+    _resetFilter: function _resetFilter() {
+      // Replace this with your actual filter reset logic
+      console.log("Filter reset!");
+      // Remove "/filter-" from the pathname and "srch=" from the query string
+      var newPathname = window.location.pathname.replace(/\/filter-.*/, "");
+      var newSearch = window.location.search.replace(/\?srch=.*/, "");
+      // Redirect to the new URL
+      window.location.href = newPathname + newSearch;
+    },
+    _addResetClickEvent: function _addResetClickEvent() {
+      console.log("URL is filtered");
 
-  // Reorg filters into dropdown on mobile
-  // ! WIP - not restricted to mobile viewports
-  // !     - option selection currently doesn't trigger filtering
-  // TODO styling of dropdown
+      // Add event listener to the reset button
+      var resetButton = $(".fusion-filter-all");
+      if (resetButton) {
+        $(resetButton).on("click", postCardsHandler._resetFilter);
+      }
+    }
+  };
+  postCardsHandler._init();
 
-  // TODO if window <= 1200px
-  var items = $(fusionBar).find('li a');
-  items.each(function (index) {
-    $(this).wrap('<option>').parent().addClass('fusion-filter').attr('role', 'presentation');
-  });
-  var dropdown = '<div class="choices">\
-                        <select class="fusion-filters" role="menu"></select>\
-                    </div>';
-  fusionBar.parent().prepend(dropdown);
-  $('.choices select').append(items.parent());
+  //
+  //
+  //
 })(document, window, jQuery);
 
 /***/ }),
@@ -218,12 +245,31 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   //
   // ... silence is golden
 
-  var standardBannerImages = $(".fusion-image-element", ".cb6-interior-banner");
   var homepageHeroBannerImages = $(".fusion-imageframe", ".cb1-hero-banner");
+  if (homepageHeroBannerImages.length > 0) {
+    //responsive
+    var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
+    mm.add("(min-width: 640px)", function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
+        y: function y(i, el) {
+          var offset = (2 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
+          return offset * -1;
+        },
+        stagger: 0,
+        scrollTrigger: {
+          trigger: ".cb1-hero-banner",
+          scrub: 1,
+          start: "top top",
+          end: "+=800"
+        }
+      });
+    });
+  }
 
   //
   //
   //
+  // let standardBannerImages = $(".fusion-image-element", ".cb6-interior-banner");
   // gsap.to(standardBannerImages, {
   // 	y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100),
   // 	stagger: 0,
@@ -235,44 +281,28 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   // 	},
   // });
 
-  //responsive
-  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
-  mm.add("(min-width: 640px)", function () {
-    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
-      y: function y(i, el) {
-        var offset = (2 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
-        return offset * -1;
-      },
-      stagger: 0,
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+
+  if ($('body').hasClass('home')) {
+    $("body.home #wrapper").prepend('<div class="homepage-gradient-overlay"></div>');
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
+      yPercent: -50,
       scrollTrigger: {
-        trigger: ".cb1-hero-banner",
+        trigger: "body",
         scrub: 1,
         start: "top top",
-        end: "+=800"
+        end: "+=300"
       }
     });
-  });
-
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-
-  $("body.home #wrapper").prepend('<div class="homepage-gradient-overlay"></div>');
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
-    yPercent: -50,
-    scrollTrigger: {
-      trigger: "body",
-      scrub: 1,
-      start: "top top",
-      end: "+=300"
-    }
-  });
+  }
 
   //
   //
