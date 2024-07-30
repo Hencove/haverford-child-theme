@@ -1393,6 +1393,26 @@ body {
   flex: 1;
 }
 
+body.error404 .post-content .fusion-search-form .fusion-search-button.search-button {
+  text-align: center;
+  width: 48px;
+  justify-content: center;
+  left: 0;
+}
+body.error404 .post-content .fusion-search-form .fusion-search-button.search-button:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  content: "";
+  display: block;
+  background-image: url("../../_assets/img/icon_search.svg");
+  background-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
 html body .fusion-tb-header .fusion-builder-row .think-custom-button .fusion-button-text {
   padding: 0.5em;
 }

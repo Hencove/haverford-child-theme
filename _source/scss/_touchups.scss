@@ -3,18 +3,42 @@
 //
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 #boxed-wrapper {
-  height: 100%;
-  > .fusion-wrapper {
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    > main {
-      flex: 1;
-    }
-  }
+	height: 100%;
+	> .fusion-wrapper {
+		height: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		> main {
+			flex: 1;
+		}
+	}
+}
+
+body.error404 {
+	.post-content {
+		.fusion-search-form {
+			.fusion-search-button.search-button {
+				$icon-size: 24px;
+				text-align: center;
+				width: ($icon-size * 2);
+				justify-content: center;
+				left: 0;
+				&:before {
+					@include center_absolute();
+					z-index: -1;
+					content: "";
+					display: block;
+					background-image: url("../../_assets/img/icon_search.svg");
+					background-size: $icon-size;
+					width: $icon-size;
+					height: $icon-size;
+				}
+			}
+		}
+	}
 }
 
 html body {
@@ -55,23 +79,20 @@ html body {
 	}
 }
 
-
-
 body.home {
-
-    #wrapper {
-        .homepage-gradient-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 75vh;
-            background: linear-gradient(
-			180deg,
-			rgba(255, 255, 255, 1) 0%,
-			rgba(255, 255, 255, 1) 75%,
-			rgba(255, 255, 255, 0) 100%
-		);
-        }
-    }
+	#wrapper {
+		.homepage-gradient-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 75vh;
+			background: linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 1) 0%,
+				rgba(255, 255, 255, 1) 75%,
+				rgba(255, 255, 255, 0) 100%
+			);
+		}
+	}
 }
