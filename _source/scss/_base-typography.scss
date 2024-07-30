@@ -1,6 +1,7 @@
 @import "~rfs/scss";
 // $rfs-factor: 20;
 // $rfs-base-value : 1;
+$rfs-breakpoint : 1366px;
 :root {
 	@include rfs(195px !important, --h1_typography-font-size);
 	@include rfs(120px !important, --h2_typography-font-size);

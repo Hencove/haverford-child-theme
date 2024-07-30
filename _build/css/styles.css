@@ -1,11 +1,11 @@
 @charset "UTF-8";
 :root {
-  --h1_typography-font-size: calc(2.34375rem + 13.125vw) !important;
-  --h2_typography-font-size: calc(1.875rem + 7.5vw) !important;
-  --h3_typography-font-size: calc(1.725rem + 5.7vw) !important;
-  --h4_typography-font-size: calc(1.625rem + 4.5vw) !important;
-  --h5_typography-font-size: calc(1.525rem + 3.3vw) !important;
-  --h6_typography-font-size: calc(1.425rem + 2.1vw) !important;
+  --h1_typography-font-size: calc(2.34375rem + 11.5300146413vw) !important;
+  --h2_typography-font-size: calc(1.875rem + 6.588579795vw) !important;
+  --h3_typography-font-size: calc(1.725rem + 5.0073206442vw) !important;
+  --h4_typography-font-size: calc(1.625rem + 3.953147877vw) !important;
+  --h5_typography-font-size: calc(1.525rem + 2.8989751098vw) !important;
+  --h6_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
 }
 @media (min-width: 1200px) {
   :root {
@@ -39,7 +39,7 @@
 }
 
 *[style*="--h3_typography-font-size:48px;"] {
-  --h3_typography-font-size: calc(1.425rem + 2.1vw) !important;
+  --h3_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
   line-height: 1.15 !important;
 }
 @media (min-width: 1200px) {
@@ -49,7 +49,7 @@
 }
 
 *[style*="--awb-font-size:24px;"] {
-  --awb-font-size: calc(1.275rem + 0.3vw) !important;
+  --awb-font-size: calc(1.275rem + 0.2635431918vw) !important;
 }
 @media (min-width: 1200px) {
   *[style*="--awb-font-size:24px;"] {
@@ -58,7 +58,7 @@
 }
 
 .fusion-body .fusion-accordian .panel-title {
-  --awb-title-font-size: calc(1.35rem + 1.2vw) !important;
+  --awb-title-font-size: calc(1.35rem + 1.0541727672vw) !important;
   line-height: 1.15 !important;
 }
 @media (min-width: 1200px) {
