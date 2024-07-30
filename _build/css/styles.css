@@ -301,7 +301,7 @@ html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-cust
 .hero__ornament::before {
   bottom: auto;
   top: 0;
-  left: -15px;
+  left: 0px;
 }
 .hero__ornament:after {
   content: "";
@@ -653,10 +653,12 @@ html body div.fusion-fullwidth .cb7-pullquote-geopattern {
 html body div.fusion-fullwidth .cb7-pullquote:has(+ .cb7-pullquote) {
   border-right: 2px solid #ccc;
 }
+html body div.fusion-fullwidth .cb7-pullquote .think-icon-arrow-short,
 html body div.fusion-fullwidth .cb7-pullquote i.fa-arrow-right,
 html body div.fusion-fullwidth .cb7-pullquote .fusion-imageframe img {
   transition-duration: 500ms;
 }
+html body div.fusion-fullwidth .cb7-pullquote:hover .think-icon-arrow-short,
 html body div.fusion-fullwidth .cb7-pullquote:hover i.fa-arrow-right {
   margin-left: 20px;
   transition-duration: 500ms;

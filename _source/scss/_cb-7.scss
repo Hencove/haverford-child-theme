@@ -1,96 +1,94 @@
 html body {
-  div.fusion-fullwidth {
-    .fusion-row:has(> .cb7-pullquote-geopattern) {
-      background-color: #fafafa;
-      padding: 30px;
+	div.fusion-fullwidth {
+		.fusion-row:has(> .cb7-pullquote-geopattern) {
+			background-color: #fafafa;
+			padding: 30px;
 
-      .fusion-imageframe {
-        display: block;
-      }
-    }
+			.fusion-imageframe {
+				display: block;
+			}
+		}
 
-    .cb7-pullquote-geopattern {
-      @include geoPattern(top, -5vh, left, -3vw, 4vw, 70vh);
-        
-    }
+		.cb7-pullquote-geopattern {
+			@include geoPattern(top, -5vh, left, -3vw, 4vw, 70vh);
+		}
 
-    .cb7-pullquote {
-      &:has(+ .cb7-pullquote) {
-        border-right: 2px solid #ccc;
-      }
+		.cb7-pullquote {
+			&:has(+ .cb7-pullquote) {
+				border-right: 2px solid #ccc;
+			}
 
-      i.fa-arrow-right,
-      .fusion-imageframe img {
-        transition-duration: 500ms;
-      }
+			.think-icon-arrow-short,
+			i.fa-arrow-right,
+			.fusion-imageframe img {
+				transition-duration: 500ms;
+			}
 
-      &:hover {
-        i.fa-arrow-right {
-          margin-left: 20px;
-          transition-duration: 500ms;
-          color: var(--awb-color8);
-        }
-        .fusion-imageframe img {
-          transform: scale(1.2);
-          transition-duration: 500ms;
-        }
-      }
-    }
-  }
+			&:hover {
+				.think-icon-arrow-short,
+				i.fa-arrow-right {
+					margin-left: 20px;
+					transition-duration: 500ms;
+					color: var(--awb-color8);
+				}
+				.fusion-imageframe img {
+					transform: scale(1.2);
+					transition-duration: 500ms;
+				}
+			}
+		}
+	}
 
-  @include media("<=small") {
+	@include media("<=small") {
+		.cb7-pullquote > .fusion-column-wrapper {
+			// Top Row with title & separator
+			.fusion-row:has(.fusion-separator) {
+				display: flex;
+				flex-wrap: nowrap !important;
 
-    .cb7-pullquote > .fusion-column-wrapper {
-      
-      // Top Row with title & separator
-      .fusion-row:has(.fusion-separator) { 
-        display: flex;
-        flex-wrap: nowrap !important;
+				.fusion-layout-column {
+					width: 50%;
+				}
+			}
 
-        .fusion-layout-column {
-          width: 50%;
-        }
-      }
+			// Bottom Row with quote and icons
+			.fusion-row:not(:has(.fusion-separator)) {
+				display: flex;
+				flex-wrap: nowrap !important;
 
-      // Bottom Row with quote and icons
-      .fusion-row:not(:has(.fusion-separator)) { 
-        display: flex;
-        flex-wrap: nowrap !important;
+				// quote icon/title
+				.fusion-layout-column:has(.title) {
+					width: 10%;
 
-        // quote icon/title
-        .fusion-layout-column:has(.title) {
-          width: 10%;
+					.title h1 {
+						text-align: right;
+					}
+				}
 
-          .title h1 { 
-            text-align: right;
-          }
-        }
-        
-        // quote text/arrow
-        .fusion-layout-column:not(:has(.title)) {
-          // width: 85%;
-        }
-      }
-    }
-        
-    // Pulling the CB7 Pull Quote class
-    .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper {
+				// quote text/arrow
+				.fusion-layout-column:not(:has(.title)) {
+					// width: 85%;
+				}
+			}
+		}
 
-      // Reversing element order on mobile
-      > *:not(.fusion-image-element) {
-        order: 1;
-      }
-      // Selecting the Quotation Mark text element and setting text alignment to the left
-      .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
-        text-align: left;
-      }
-    }
+		// Pulling the CB7 Pull Quote class
+		.cb7-pullquote:nth-of-type(2) .fusion-column-wrapper {
+			// Reversing element order on mobile
+			> *:not(.fusion-image-element) {
+				order: 1;
+			}
+			// Selecting the Quotation Mark text element and setting text alignment to the left
+			.fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
+				text-align: left;
+			}
+		}
 
-    div.fusion-layout-column.cb7-pullquote-geopattern {
-      top: -2vh;
-      left: -10vw;
-      height: 4vh;
-      width: 110vw;
-    }
-  }
+		div.fusion-layout-column.cb7-pullquote-geopattern {
+			top: -2vh;
+			left: -10vw;
+			height: 4vh;
+			width: 110vw;
+		}
+	}
 }
