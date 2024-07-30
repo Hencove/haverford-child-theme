@@ -2,6 +2,17 @@
 //
 //
 html body {
+	.fusion-tb-header {
+		> .fusion-flex-container {
+			> .fusion-builder-row {
+				> .fusion-layout-column:first-child {
+					> .fusion-column-wrapper {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
 
 	// Off Canvas search modal
 	.off-canvas-content .fusion-search-element {
@@ -25,10 +36,6 @@ html body {
 	.fusion-tb-header {
 		z-index: 100;
 
-		.fusion-fullwidth .fusion-row {
-			max-width: 1400px !important;
-		}
-		
 		.fusion-search-button {
 			position: relative;
 			&::before {
@@ -37,8 +44,6 @@ html body {
 				margin: 0 20px;
 			}
 		}
-
-
 
 		//
 		.think-custom-button.has-white-bg-color {
@@ -54,10 +59,8 @@ html body {
 		}
 	}
 
-
 	&.single.single-post {
 		.fusion-tb-header {
-
 			.fusion-search-button {
 				&::before {
 					filter: brightness(100);
@@ -116,7 +119,6 @@ html body {
 
 	.awb-off-canvas-wrap {
 		&.is-the-mobile-main-menu {
-
 			.fusion-search-button {
 				position: relative;
 				&::before {
@@ -124,7 +126,6 @@ html body {
 					content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
 					margin: 0 20px;
 					filter: brightness(100);
-
 				}
 			}
 
