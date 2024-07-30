@@ -10,6 +10,11 @@
 	&::before {
 		left: 30px;
 		bottom: 20%;
+		@include media("<small"){
+			
+			bottom: 60px;
+
+		}
 	}
 
 

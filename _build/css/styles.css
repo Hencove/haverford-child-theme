@@ -633,6 +633,11 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   left: 30px;
   bottom: 20%;
 }
+@media (max-width: 639px) {
+  .cb6-interior-banner::after, .cb6-interior-banner::before {
+    bottom: 60px;
+  }
+}
 .cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe {
   max-width: 40vw;
   padding: 1rem;
