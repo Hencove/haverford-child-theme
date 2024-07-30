@@ -269,46 +269,74 @@ html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-cust
   color: black;
 }
 
+.hero__ornament {
+  height: 75vh;
+  position: absolute !important;
+  display: block;
+  border-top: 2px solid var(--awb-custom_color_5);
+  z-index: 1;
+  top: var(--hundredp_padding);
+  left: var(--hundredp_padding);
+  right: var(--hundredp_padding);
+  position: relative;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .hero__ornament {
+    top: calc(0.5 * var(--hundredp_padding));
+    left: calc(0.5 * var(--hundredp_padding));
+    right: calc(0.5 * var(--hundredp_padding));
+  }
+}
+.hero__ornament:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
+.hero__ornament::before {
+  bottom: auto;
+  top: 0;
+  left: -15px;
+}
+.hero__ornament:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
+}
+.hero__ornament::after {
+  left: auto;
+  bottom: auto;
+  top: 0;
+  right: 0px;
+}
+
 div.cb1-hero-banner {
   padding-top: 200px;
   margin-top: -150px;
   margin-left: unset !important;
   margin-right: unset !important;
-  position: relative;
-  position: relative;
-}
-div.cb1-hero-banner:before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
-}
-div.cb1-hero-banner::before {
-  bottom: auto;
-  top: 0;
-  left: -15px;
-}
-div.cb1-hero-banner:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, rgb(219, 180, 44) 0%, rgba(255, 255, 255, 0) 95%);
-}
-div.cb1-hero-banner::after {
-  left: auto;
-  bottom: auto;
-  top: 0;
-  right: -15px;
 }
 
+@media (max-width: 1199px) {
+  div.cb1-hero-banner {
+    padding-top: 150px;
+    margin-top: -160px;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 .cb1-hero-banner > .fusion-builder-row > .fusion-layout-column:not(.cb1-gallery) {
   z-index: 2;
 }

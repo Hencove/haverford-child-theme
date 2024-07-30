@@ -2,15 +2,26 @@
 //
 //	* this code block adjusts the container layout and adds in borders and ornaments
 //
-//
-div.cb1-hero-banner {
-	// border-top: 2px solid var(--awb-custom_color_5); // todo: replace this with an ornament!
-	// pad and tuck the hero 'under' the header
-	padding-top: 200px;
-	margin-top: -150px;
-	// remove negative margins that make this full width (lets borders connect at the top l/r corners)
-	margin-left: unset !important;
-	margin-right: unset !important;
+
+.hero__ornament {
+	height: 75vh;
+	position: absolute !important;
+	display: block;
+	border-top: 2px solid var(--awb-custom_color_5);
+	z-index: 1;
+	$offset: var(--hundredp_padding);
+	//
+	top: $offset;
+	left: $offset;
+	right: $offset;
+
+	@include media("<=mobile") {
+		$offset: calc(0.5 * var(--hundredp_padding));
+		//
+		top: $offset;
+		left: $offset;
+		right: $offset;
+	}
 
 	// gradient border from top left down
 	@include gradientBorder(before, 180deg, 2px, 100%);
@@ -25,7 +36,26 @@ div.cb1-hero-banner {
 		left: auto;
 		bottom: auto;
 		top: 0;
-		right: -15px;
+		right: 0px;
+	}
+}
+div.cb1-hero-banner {
+	// pad and tuck the hero 'under' the header
+	padding-top: 200px;
+	margin-top: -150px;
+	// remove negative margins that make this full width (lets borders connect at the top l/r corners)
+	margin-left: unset !important;
+	margin-right: unset !important;
+}
+
+@include media("<medium") {
+	div.cb1-hero-banner {
+		padding-top: 150px;
+		margin-top: -160px;
+		margin-left: -20px !important;
+		margin-right: -20px !important;
+		padding-left: 40px;
+		padding-right: 40px;	
 	}
 }
 //
