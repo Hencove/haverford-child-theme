@@ -12,6 +12,7 @@ function theme_enqueue_styles()
 		filemtime(get_stylesheet_directory() . '/_build/css/styles.css')
 	);
 	// 
+	wp_enqueue_style('select2-css');
 	wp_enqueue_style('child-styles');
 
 
@@ -34,3 +35,11 @@ function avada_lang_setup()
 	load_child_theme_textdomain('Avada', $lang);
 }
 add_action('after_setup_theme', 'avada_lang_setup');
+
+
+add_action('wp_head', function(){
+
+	echo '<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />';
+	echo '<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>';
+	
+}, 10, 1);

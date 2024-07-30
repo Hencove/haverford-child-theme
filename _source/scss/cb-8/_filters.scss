@@ -59,7 +59,7 @@
 }
 
 .wpc-filter-content.wpc-filter-category {
-	// display: none;
+	display: none;
 	@include media(">medium") {
 		display: none;
 	}
@@ -69,7 +69,7 @@
 	border-bottom: unset;
 	//
 	@include media("<=medium") {
-		display: none !important;
+		// display: none !important;
 	}
 	@include media(">medium") {
 		border: unset;

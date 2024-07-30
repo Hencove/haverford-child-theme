@@ -810,6 +810,9 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   width: 24px;
   height: 24px;
 }
+.cb8-post-grid .wpc-filter-content.wpc-filter-category {
+  display: none;
+}
 @media (min-width: 1367px) {
   .cb8-post-grid .wpc-filter-content.wpc-filter-category {
     display: none;
@@ -817,11 +820,6 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
 }
 .cb8-post-grid .fusion-post-cards .fusion-filters {
   border-bottom: unset;
-}
-@media (max-width: 1366px) {
-  .cb8-post-grid .fusion-post-cards .fusion-filters {
-    display: none !important;
-  }
 }
 @media (min-width: 1367px) {
   .cb8-post-grid .fusion-post-cards .fusion-filters {
