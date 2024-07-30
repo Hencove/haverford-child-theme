@@ -21,19 +21,7 @@
 	//
 	@include postCardOnHover();
 	//
-	.fusion-title {
-		&[style*="--awb-font-size:14px"] {
-			margin: 8px 0;
-			.fusion-title-heading {
-				&:before {
-					content: "\25aa";
-					display: inline-block;
-					vertical-align: middle;
-					margin-top: -3px;
-					margin-right: 1rem;
-					font-size: 18px;
-				}
-			}
-		}
+	p.fusion-title-heading[style*="text-transform:uppercase;"] {
+		@include termsTitleStyling();
 	}
 }

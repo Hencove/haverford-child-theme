@@ -2,16 +2,9 @@
 //
 //
 .cb11-related-posts {
-	p.fusion-title-heading {
-		&[style*="text-transform:uppercase;"] {
-			&:before {
-				content: "\25aa";
-				display: inline-block;
-				vertical-align: middle;
-				margin-right: 1rem;
-				font-size: 18px;
-			}
-		}
+
+	p.fusion-title-heading[style*="text-transform:uppercase;"] {
+		@include termsTitleStyling();
 	}
 
 	p:only-child {

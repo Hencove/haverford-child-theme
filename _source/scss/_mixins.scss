@@ -1,3 +1,13 @@
+@mixin termsTitleStyling() {
+	margin: 8px 0 !important;
+	&:before {
+		content: "\25aa";
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 1rem;
+		font-size: 18px;
+	}
+}
 
 // ? padding-top is used to manually proportion images that fill a specific size
 // ? <img> tags do not ever use this
