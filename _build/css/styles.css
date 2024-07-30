@@ -330,7 +330,7 @@ div.cb1-hero-banner {
   margin-right: unset !important;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1365px) {
   div.cb1-hero-banner {
     padding-top: 150px;
     margin-top: -160px;
@@ -350,13 +350,13 @@ div.cb1-hero-banner {
 .cb1-hero-banner .cb1-gallery:hover {
   z-index: 1;
 }
-@media (min-width: 1201px) {
+@media (min-width: 1367px) {
   .cb1-hero-banner .cb1-gallery {
     margin-top: -120px;
     margin-bottom: -120px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1366px) {
   .cb1-hero-banner .cb1-gallery {
     margin-top: 60px;
     margin-bottom: -60px;
@@ -588,7 +588,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 .cb5-news-and-insights-post-grid p:only-child {
   margin-bottom: 0;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1365px) {
   .cb5-news-and-insights-post-grid .fusion-post-cards:nth-of-type(3) .post-card .fusion-row {
     flex-direction: column-reverse;
   }
@@ -703,12 +703,12 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1367px) {
   .cb8-post-grid .fusion-post-cards .fusion-grid-posts-cards {
     padding: 20px 80px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1366px) {
   .cb8-post-grid .fusion-post-cards .fusion-grid-posts-cards {
     padding: 20px;
   }
@@ -764,7 +764,7 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   flex: 0 1 500px;
   margin: 0;
 }
-@media (min-width: 1201px) {
+@media (min-width: 1367px) {
   .cb8-post-grid .is-filter-search-container .wpc-filter-search-form {
     padding-right: 80px;
   }
@@ -802,7 +802,7 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   width: 24px;
   height: 24px;
 }
-@media (min-width: 1201px) {
+@media (min-width: 1367px) {
   .cb8-post-grid .wpc-filter-content.wpc-filter-category {
     display: none;
   }
@@ -810,12 +810,12 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
 .cb8-post-grid .fusion-post-cards .fusion-filters {
   border-bottom: unset;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1366px) {
   .cb8-post-grid .fusion-post-cards .fusion-filters {
     display: none !important;
   }
 }
-@media (min-width: 1201px) {
+@media (min-width: 1367px) {
   .cb8-post-grid .fusion-post-cards .fusion-filters {
     border: unset;
     margin: 0;
