@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 			gsap.to(homepageHeroBannerImages, {
 				y: (i, el) => {
 					let offset =
-						(2 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100);
+						(4 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100);
 					return offset * -1;
 				},
 				stagger: 0,

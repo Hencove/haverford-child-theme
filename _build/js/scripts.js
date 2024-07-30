@@ -252,7 +252,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
     mm.add("(min-width: 640px)", function () {
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
         y: function y(i, el) {
-          var offset = (2 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
+          var offset = (4 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
           return offset * -1;
         },
         stagger: 0,
