@@ -8,7 +8,7 @@
 	@include gradientBorder(after, 90deg, 55%, 2px);
 	&::after,
 	&::before {
-		left: 40px;
+		left: 30px;
 		bottom: 20%;
 	}
 
@@ -22,16 +22,9 @@
 		&:nth-child(2) {
 			// * this wrapper has the border for the image, and handles aspect ratio if applied
 			.fusion-imageframe {
+				max-width: 40vw;
 				padding: 1rem;
 			}
 		}
 	}
 }
-// @include media("<medium") {
-// 	.cb6-interior-banner {
-// 		margin-left: -60px !important;
-// 		margin-right: -60px !important;
-// 		padding-left: 60px !important;
-// 		padding-right: 20px !important;
-// 	}
-// }
