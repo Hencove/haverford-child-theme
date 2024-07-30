@@ -897,7 +897,7 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   color: var(--awb-color6);
 }
 
-.cb11-related-posts p.fusion-title-heading[style*="text-transform:uppercase;--fontSize:14;"]:before {
+.cb11-related-posts p.fusion-title-heading[style*="text-transform:uppercase;"]:before {
   content: "▪";
   display: inline-block;
   vertical-align: middle;

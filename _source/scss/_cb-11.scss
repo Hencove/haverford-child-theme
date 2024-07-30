@@ -1,9 +1,9 @@
-// 
-// 
-// 
+//
+//
+//
 .cb11-related-posts {
-    p.fusion-title-heading {
-		&[style*="text-transform:uppercase;--fontSize:14;"] {
+	p.fusion-title-heading {
+		&[style*="text-transform:uppercase;"] {
 			&:before {
 				content: "\25aa";
 				display: inline-block;
@@ -18,19 +18,20 @@
 		margin-bottom: 0;
 	}
 
-	.post-card{
-
-
+	.post-card {
 		@include postCardOnHover();
 		.fusion-image-wrapper {
 			@include insetImageFrame();
 		}
-	
 	}
 }
 body.single.single-post {
 	div.cb11-related-posts {
-		margin-left: var(--hundredp_padding-hundred_percent_negative_margin) !important;
-		margin-right: var(--hundredp_padding-hundred_percent_negative_margin) !important;
+		margin-left: var(
+			--hundredp_padding-hundred_percent_negative_margin
+		) !important;
+		margin-right: var(
+			--hundredp_padding-hundred_percent_negative_margin
+		) !important;
 	}
 }
