@@ -449,74 +449,69 @@ div.cb1-hero-banner {
   }
 }
 
-html body div.fusion-fullwidth.cb3-featured-stats {
-  padding: 20px;
-}
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid rgba(219, 181, 44, 0.2196078431);
-  border-bottom: transparent;
+.cb3-featured-stats {
   position: relative;
+  --ornaments--offset--value: 0;
+  --ornaments--icon--size: 48px;
 }
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner {
+@media (max-width: 640px) {
+  .cb3-featured-stats {
+    --ornaments--icon--size: 32px;
+  }
+}
+.cb3-featured-stats .block__ornament {
+  position: absolute;
   border: 1px solid var(--awb-custom_color_5);
-  border-bottom: transparent;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  border-bottom: unset;
+  top: var(--ornaments--offset--value);
+  left: var(--ornaments--offset--value);
+  width: calc(100% - var(--ornaments--offset--value) * 2);
+  height: calc(100% - var(--ornaments--offset--value) * 2);
 }
-@media screen and (min-width: 641px) {
-  html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner {
-    padding: 60px;
+.cb3-featured-stats .block__ornament.block__ornament--outer {
+  --ornaments--offset--value: 40px;
+}
+@media (max-width: 640px) {
+  .cb3-featured-stats .block__ornament.block__ornament--outer {
+    --ornaments--offset--value: 16px;
   }
 }
-@media screen and (max-width: 640px) {
-  html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner {
-    padding: 20px;
+.cb3-featured-stats .block__ornament.block__ornament--inner {
+  opacity: 0.3;
+  --ornaments--offset--value: 24px;
+}
+@media (max-width: 640px) {
+  .cb3-featured-stats .block__ornament.block__ornament--inner {
+    --ornaments--offset--value: 8px;
   }
 }
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .cb3-wrapper-inner-left,
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .cb3-wrapper-inner-right {
-  flex: 0 1 calc(50% - 52px);
-  border-bottom: 1px solid var(--awb-custom_color_5);
-}
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .cb3-wrapper-inner-bottom {
+.cb3-featured-stats .block__ornament .block__ornament-left-right,
+.cb3-featured-stats .block__ornament .block__ornament-top-bottom {
   position: absolute;
+  height: 1px;
+  background-color: var(--awb-custom_color_5);
+  width: calc(50% - var(--ornaments--icon--size));
   bottom: 0;
+}
+.cb3-featured-stats .block__ornament .block__ornament-top-bottom {
+  right: 0;
+}
+.cb3-featured-stats .block__ornament .block__ornament-left-right {
   left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .fusion-flex-content-wrap {
-  margin-left: 0;
-  margin-right: 0;
-}
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-inner .fusion-row {
-  max-width: 1400px !important;
-}
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-outer-left,
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-outer-right {
-  flex: 0 1 calc(50% - 52px);
-  border-bottom: 1px solid rgba(219, 181, 44, 0.2196078431);
-}
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-wrapper-outer .cb3-wrapper-outer-bottom {
+.cb3-featured-stats .cb3-h-icon {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-html body div.fusion-fullwidth.cb3-featured-stats .cb3-H-icon {
   background-image: url(../../_assets/img/H-icon.svg);
-  width: 52px;
-  height: 52px;
   background-repeat: no-repeat;
-  background-size: auto;
-  position: absolute;
-  bottom: 12px;
+  background-size: contain;
+  width: var(--ornaments--icon--size);
+  height: var(--ornaments--icon--size);
+  bottom: 16px;
+}
+@media (max-width: 640px) {
+  .cb3-featured-stats .cb3-h-icon {
+    bottom: 8px;
+  }
 }
 
 div.cb4-image-3-callouts .fusion-image-element {

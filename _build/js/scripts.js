@@ -103,14 +103,13 @@ __webpack_require__.r(__webpack_exports__);
   //
   // 		jQuery is ready as $
 
-  // CB3 Featured Stats
-  var container = $(".cb3-featured-stats");
-  if (container.length > 0) {
-    var wrapperDivs = '<div class="cb3-H-icon"></div><div class="cb3-wrapper-outer"><div class="cb3-wrapper-outer-bottom"><div class="cb3-wrapper-outer-left"></div><div class="cb3-wrapper-outer-right"></div></div><div class="cb3-wrapper-inner"><div class="cb3-wrapper-inner-bottom"><div class="cb3-wrapper-inner-left"></div><div class="cb3-wrapper-inner-right"></div></div>' + $(container).html() + '</div></div>';
-    $(container).html(wrapperDivs);
-  }
+  var iconLogo = '<div class="cb3-h-icon"></div>';
+  var vOrnament = '<div class="block__ornament block__ornament--outer"><div class="block__ornament-top-bottom"></div><div class="block__ornament-left-right"></div></div>';
+  var hOrnament = '<div class="block__ornament block__ornament--inner"><div class="block__ornament-top-bottom"></div><div class="block__ornament-left-right"></div></div>';
+  var ornamentHTML = vOrnament + hOrnament;
+  $(".cb3-featured-stats").prepend(ornamentHTML);
+  $(".cb3-featured-stats").append(iconLogo);
 
-  //
   //
 })(document, window, jQuery);
 
@@ -412,18 +411,26 @@ var mqHandler = {
 (function (document, window, $) {
   //
   // 		jQuery is ready as $
-  document.addEventListener("DOMContentLoaded", function () {
+  //
+
+  $(window).on("load", function () {
     var buttons = document.querySelectorAll(".think-custom-button");
+    //
+    //
+    //
     buttons.forEach(function (button) {
       if ($(button).hasClass("wpforms-submit")) {
         var buttonText = $(button).text();
-        var ButtonTextHTML = '<div class="fusion-button-text">' + buttonText + '</div>';
+        var ButtonTextHTML = '<div class="fusion-button-text">' + buttonText + "</div>";
         $(button).html(ButtonTextHTML);
       }
-      var OrnamentHTML = '<div class="button__ornament button__ornament--vertical"><div class="button__ornament-top-bottom"></div><div class="button__ornament-left-right"></div></div><div class="button__ornament button__ornament--horizontal"><div class="button__ornament-top-bottom"></div><div class="button__ornament-left-right"></div></div>';
+      var verticalOrnament = '<div class="button__ornament button__ornament--vertical"><div class="button__ornament-top-bottom"></div><div class="button__ornament-left-right"></div></div>';
+      var horizontalOrnament = '<div class="button__ornament button__ornament--horizontal"><div class="button__ornament-top-bottom"></div><div class="button__ornament-left-right"></div></div>';
+      var OrnamentHTML = verticalOrnament + horizontalOrnament;
       button.insertAdjacentHTML("afterbegin", OrnamentHTML);
     });
   });
+
   //
   //
 })(document, window, jQuery);
