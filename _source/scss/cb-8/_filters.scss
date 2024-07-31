@@ -88,18 +88,28 @@ div:has(> .fusion-filters) {
 
 	// Dropdown container located below footer
 	.select2-container {
-		.select2-results {
-			ul.select2-results__options {
-				max-height: unset;
+		.select2-dropdown {
 
-				li.select2-results__option {
-					background-color: transparent;
-					color: var(--body_typography-color);
-					padding: 10px 2em;
-				}
-				li.select2-results__option--highlighted.select2-results__option--selectable {
-					background-color: var(--awb-custom_color_1);
-					color: var(--awb-color1);
+			// TODO QA this margin
+			// this container is clickable when the selected li
+			// is the only one visible. moving it down solves that
+			// but it doesn't perfectly match the designs
+			margin-top: 46px;
+		
+			
+			.select2-results {
+				ul.select2-results__options {
+					max-height: unset;
+
+					li.select2-results__option {
+						background-color: transparent;
+						color: var(--body_typography-color);
+						padding: 10px 2em;
+					}
+					li.select2-results__option--highlighted.select2-results__option--selectable {
+						background-color: var(--awb-custom_color_1);
+						color: var(--awb-color1);
+					}
 				}
 			}
 		}

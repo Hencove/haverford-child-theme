@@ -903,15 +903,18 @@ body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(for
   }
 }
 @media (max-width: 1366px) {
-  body:has(.cb8-post-grid) .select2-container .select2-results ul.select2-results__options {
+  body:has(.cb8-post-grid) .select2-container .select2-dropdown {
+    margin-top: 46px;
+  }
+  body:has(.cb8-post-grid) .select2-container .select2-dropdown .select2-results ul.select2-results__options {
     max-height: unset;
   }
-  body:has(.cb8-post-grid) .select2-container .select2-results ul.select2-results__options li.select2-results__option {
+  body:has(.cb8-post-grid) .select2-container .select2-dropdown .select2-results ul.select2-results__options li.select2-results__option {
     background-color: transparent;
     color: var(--body_typography-color);
     padding: 10px 2em;
   }
-  body:has(.cb8-post-grid) .select2-container .select2-results ul.select2-results__options li.select2-results__option--highlighted.select2-results__option--selectable {
+  body:has(.cb8-post-grid) .select2-container .select2-dropdown .select2-results ul.select2-results__options li.select2-results__option--highlighted.select2-results__option--selectable {
     background-color: var(--awb-custom_color_1);
     color: var(--awb-color1);
   }
