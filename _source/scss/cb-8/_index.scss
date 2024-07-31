@@ -3,6 +3,8 @@
 // 
 .cb8-post-grid {
     @import './card';
-    @import './filters';
     @import './grid';
+}
+body:has(.cb8-post-grid) {
+    @import './filters';
 }

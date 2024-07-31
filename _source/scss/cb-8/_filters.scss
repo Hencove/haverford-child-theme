@@ -4,60 +4,9 @@
 .wpc-filter-header,
 .wpc-edit-filter-set,
 .widget.widget_wpc_filters_widget {
-	@include displayedInvisible();
+	@include displayedInvisible(); // this doesn't work?
+	display: none;
 }
-
-.is-filter-search-container {
-	//
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	border-bottom: 2px solid var(--awb-custom_color_5);
-	//
-	.wpc-filter-search-form {
-		display: inline-block;
-		flex: 0 1 500px;
-		margin: 0;
-		//
-		@include media(">medium") {
-			padding-right: 80px;
-		}
-		//
-		.wpc-search-field-wrapper {
-			$icon-size: 24px;
-			height: 100%;
-			//
-			input {
-				height: 100%;
-				appearance: none;
-				background-color: unset;
-				border: unset;
-				padding-left: ($icon-size * 2);
-				color: var(--body_typography-color);
-				&::placeholder {
-					color: var(--body_typography-color);
-					opacity: 0.5;
-				}
-			}
-			//
-			span.wpc-search-icon {
-				text-align: center;
-				
-				width: ($icon-size * 2);
-				justify-content: center;
-				left: 0;
-				&:before {
-					background-image: url("../../_assets/img/icon_search.svg");
-					background-size: $icon-size;
-					width: $icon-size;
-					height: $icon-size;
-				}
-			}
-			//
-		}
-	}
-}
-
 .wpc-filter-content.wpc-filter-category {
 	display: none;
 	@include media(">medium") {
@@ -65,12 +14,65 @@
 	}
 }
 
-.fusion-post-cards .fusion-filters {
-	border-bottom: unset;
-	//
-	@include media("<=medium") {
-		// display: none !important;
+
+div:has(> .fusion-filters) {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid var(--awb-custom_color_5);
+
+	.wpc-filters-section:has(form) {
+		flex-basis: 40%;
+		margin-bottom: 0;
+		padding: 13px;
+		border-left: 2px solid var(--awb-custom_color_5);
+
+		.wpc-filter-search-form {
+			display: inline-block;
+			flex: 0 1 500px;
+			margin: 0;
+			padding-right: 80px;
+			
+			//
+			.wpc-search-field-wrapper {
+				$icon-size: 24px;
+				height: 100%;
+				//
+				input {
+					height: 100%;
+					appearance: none;
+					background-color: unset;
+					border: unset;
+					padding-left: ($icon-size * 2);
+					color: var(--body_typography-color);
+					&::placeholder {
+						color: var(--body_typography-color);
+						opacity: 0.5;
+					}
+				}
+				//
+				span.wpc-search-icon {
+					text-align: center;
+					
+					width: ($icon-size * 2);
+					justify-content: center;
+					left: 0;
+					&:before {
+						background-image: url("../../_assets/img/icon_search.svg");
+						background-size: $icon-size;
+						width: $icon-size;
+						height: $icon-size;
+					}
+				}
+				//
+			}
+		}
 	}
+}
+
+
+.fusion-post-cards .fusion-filters {
+	// border-bottom: unset;
+	
 	@include media(">medium") {
 		border: unset;
 		margin: 0;
@@ -81,6 +83,97 @@
 	//
 	//
 }
+
+@include media("<=medium") {
+
+	// Dropdown container located below footer
+	.select2-container {
+		.select2-results {
+			ul.select2-results__options {
+				max-height: unset;
+
+				li.select2-results__option {
+					background-color: transparent;
+					color: var(--body_typography-color);
+					padding: 10px 2em;
+				}
+				li.select2-results__option--highlighted.select2-results__option--selectable {
+					background-color: var(--awb-custom_color_1);
+					color: var(--awb-color1);
+				}
+			}
+		}
+	}
+		
+	div:has(> .fusion-filters) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: unset;
+		margin: 1em;
+
+		ul.fusion-filters {
+			display: none !important;
+		}
+		.select2,
+		select.fusion-filters {
+			display: block !important;
+			border: 2px solid var(--awb-custom_color_5);
+
+			.select2-selection--single {
+				background-color: transparent;
+				border: none;
+				
+				.select2-selection__rendered {
+					color: var(--body_typography-color);
+				}
+			}
+
+			// TODO arrow
+			.select2-selection__arrow {
+				border: none;
+				
+				b {					
+					&:before {
+
+					}
+				}
+			}
+		}
+		.wpc-filters-section:has(form) {
+			margin-top: 1em;
+			width: 100%;
+			border: 2px solid var(--awb-custom_color_5);
+
+			.wpc-filter-search-form {
+				display: block;
+
+				.wpc-search-field-wrapper {
+					//
+					input {
+						padding-left: 2em;
+					}
+					//
+					span.wpc-search-icon {
+						display: unset;
+						width: unset;
+			
+					}
+				}
+			}
+		}
+	}
+}
+@include media(">medium") {
+	.select2,
+	select.fusion-filters {
+		display: none !important;
+	}
+	ul.fusion-filters {
+		display: flex !important;
+	}
+}
+
 
 // @media screen and (max-width: 1200px) {
 // 	.fusion-grid {
