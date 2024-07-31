@@ -125,87 +125,55 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************!*\
   !*** ./_source/js/_cb8.js ***!
   \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _debounce_throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_debounce-throttle */ "./_source/js/_debounce-throttle.js");
+/***/ (() => {
 
 (function (document, window, $) {
   //
   //	? code here will execute once the page is ready
   //
 
-  // ? throttled resize handler if needed?
-  var throttledResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_0__.throttle)(function () {
-    fusionFilterExtension._doTheFilterStuff();
-  }, 16);
   var fusionFilterExtension = {
     //
     //
     //
     _init: function _init() {
-      window.addEventListener("resize", throttledResizeHandler);
-      fusionFilterExtension._doTheFilterStuff();
+      fusionFilterExtension._moveSearchBar();
+      $(window).on("load", function (event) {
+        fusionFilterExtension._dupeFilters();
+        fusionFilterExtension._clickFunc();
+        fusionFilterExtension._makeItPretty();
+      });
     },
-    //
-    //
-    //
-    //
-    //
-    _doTheFilterStuff: function _doTheFilterStuff(e) {
-      console.log("doing filter stuff");
-      if (window.innerWidth <= 1200) {
-        console.log(window.innerWidth);
-      }
+    _moveSearchBar: function _moveSearchBar(e) {
+      var searchbar = $(".wpc-filter-layout-search-field").detach();
+      var fusionBar = $(".fusion-filters");
+      fusionBar.parent().append(searchbar);
+    },
+    _dupeFilters: function _dupeFilters() {
+      var fusionBar = $(".fusion-filters");
+      var ulClone = fusionBar.clone(true, true);
+      var items = $(ulClone).find("li a");
+      items.each(function (index, element) {
+        $(element).wrap('<option value="' + element.text + '" class="fusion-filter"></option>');
+      });
+      var dropdown = '<select style="display:block;" class="fusion-filters" role="menu"></select>';
+      fusionBar.parent().prepend(dropdown);
+      $("select").append(items.parent());
+    },
+    _clickFunc: function _clickFunc() {
+      $("select.fusion-filters").on("change", function (event) {
+        var pray = $(event.target).find('option[value="' + $(this).val() + '"] a');
+        $(pray[0]).trigger("click");
+      });
+    },
+    _makeItPretty: function _makeItPretty() {
+      $("select.fusion-filters").select2({
+        minimumResultsForSearch: Infinity,
+        width: '100%'
+      });
     }
   };
   fusionFilterExtension._init();
-
-  // 
-  // 
-  // 
-  // 
-  // 
-  // 
-  // 
-  // 
-
-  // Move the FEPro Search bar into the fusion filters parent div
-  var searchbar = $(".wpc-filter-layout-search-field").detach();
-  var fusionBar = $("ul.fusion-filters");
-  fusionBar.parent().append(searchbar);
-  $(".wpc-filter-header").hide();
-  $(".widget_wpc_filters_widget").hide();
-
-  // Reorg filters into dropdown on mobile
-  // ! WIP - not restricted to mobile viewports
-  // !     - option selection currently doesn't trigger filtering
-  // TODO styling of dropdown
-
-  //
-  // TODO if window <= 1200px
-  $(window).on("load", function (event) {
-    var searchbar = $(".wpc-filter-layout-search-field").detach();
-    var fusionBar = $("ul.fusion-filters");
-    var items = $(fusionBar).find("li a");
-    fusionBar.parent().append(searchbar);
-    items.each(function (index, element) {
-      // console.log(element);
-
-      $(element).wrap('<option value="' + element.text + '" class="fusion-filter"></option>');
-    });
-    var dropdown = '<div class="choices"><select style="display:block;" class="fusion-filters" role="menu"></select></div>';
-    fusionBar.parent().prepend(dropdown);
-    $(".choices select").append(items.parent());
-    $("select.fusion-filters").on("change", function (event) {
-      var pray = $(event.target).find('option[value="' + $(this).val() + '"] a');
-      $(pray[0]).trigger("click");
-    });
-    $("select.fusion-filters").select2({
-      minimumResultsForSearch: Infinity
-    });
-  });
 
   //
   //
@@ -458,6 +426,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_cb3 */ "./_source/js/_cb3.js");
 /* harmony import */ var _cb3__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_cb3__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_cb8 */ "./_source/js/_cb8.js");
+/* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_cb8__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
 /* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_gsap */ "./_source/js/_gsap.js");
 
