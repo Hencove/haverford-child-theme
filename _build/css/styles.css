@@ -169,6 +169,11 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+html body .fusion-tb-header > .fusion-fullwidth > .fusion-builder-row {
+  max-width: var(--site_width) !important;
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
 html body .fusion-tb-header > .fusion-flex-container > .fusion-builder-row > .fusion-layout-column {
   margin-bottom: 0;
 }
@@ -659,7 +664,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 @media (max-width: 640px) {
   .cb6-interior-banner .fusion-image-element:nth-child(2) {
     margin-left: 0;
-    margin-bottom: -60px;
+    margin-bottom: -40px;
   }
 }
 .cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe {
