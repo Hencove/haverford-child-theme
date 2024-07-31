@@ -626,11 +626,40 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 }
 .cb6-interior-banner::after, .cb6-interior-banner::before {
   left: 30px;
-  bottom: 20%;
+  bottom: 120px;
 }
 @media (max-width: 639px) {
   .cb6-interior-banner::after, .cb6-interior-banner::before {
+    left: 12px;
     bottom: 60px;
+  }
+}
+.cb6-interior-banner .think-custom-button {
+  margin-bottom: 128px;
+}
+@media (max-width: 639px) {
+  .cb6-interior-banner .think-custom-button {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .cb6-interior-banner > .fusion-builder-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+.cb6-interior-banner .fusion-image-element:nth-child(1) {
+  margin-right: -60px;
+  margin-left: 15%;
+}
+.cb6-interior-banner .fusion-image-element:nth-child(2) {
+  margin-top: -33%;
+  margin-left: -15%;
+}
+@media (max-width: 640px) {
+  .cb6-interior-banner .fusion-image-element:nth-child(2) {
+    margin-left: 0;
+    margin-bottom: -60px;
   }
 }
 .cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe {
