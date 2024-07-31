@@ -103,12 +103,18 @@ __webpack_require__.r(__webpack_exports__);
   //
   // 		jQuery is ready as $
 
-  var iconLogo = '<div class="cb3-h-icon"></div>';
-  var vOrnament = '<div class="block__ornament block__ornament--outer"><div class="block__ornament-top-bottom"></div><div class="block__ornament-left-right"></div></div>';
-  var hOrnament = '<div class="block__ornament block__ornament--inner"><div class="block__ornament-top-bottom"></div><div class="block__ornament-left-right"></div></div>';
-  var ornamentHTML = vOrnament + hOrnament;
-  $(".cb3-featured-stats").prepend(ornamentHTML);
-  $(".cb3-featured-stats").append(iconLogo);
+  $(window).on("load", function () {
+    var CB3 = $(".cb3-featured-stats");
+    if (!CB3.length) {
+      return;
+    }
+    var iconLogo = '<div class="cb3-h-icon"></div>';
+    var vOrnament = '<div class="block__ornament block__ornament--outer"><div class="block__ornament-top-bottom"></div><div class="block__ornament-left-right"></div></div>';
+    var hOrnament = '<div class="block__ornament block__ornament--inner"><div class="block__ornament-top-bottom"></div><div class="block__ornament-left-right"></div></div>';
+    var ornamentHTML = vOrnament + hOrnament;
+    CB3.prepend(ornamentHTML);
+    CB3.append(iconLogo);
+  });
 
   //
 })(document, window, jQuery);
