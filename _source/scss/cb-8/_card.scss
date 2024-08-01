@@ -25,3 +25,42 @@
 		@include termsTitleStyling();
 	}
 }
+
+.post-card {
+	.image-and-tags-container {
+		position: relative;
+		margin-bottom: 0;
+		@include media("<=small"){
+			margin-bottom: 16px;
+		}
+		.fusion-meta-tb {
+			--awb-height: auto !important;
+			padding-top: 0;
+			padding-bottom: 0;
+			border: unset;
+			border-top: unset;
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			.fusion-tb-tags {
+				padding: 8px 16px;
+				text-align: center;
+				background-color: var(--awb-color8);
+				background: linear-gradient(
+					90deg,
+					var(--awb-custom_color_1),
+					var(--awb-color8)
+				);
+			}
+			//
+			a[rel="tag"] {
+				font-weight: 400;
+				pointer-events: none;
+				text-decoration: none;
+				color: white;
+			}
+		}
+	}
+}

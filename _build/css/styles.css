@@ -780,6 +780,39 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   margin-right: 1rem;
   font-size: 18px;
 }
+.cb8-post-grid .post-card .image-and-tags-container {
+  position: relative;
+  margin-bottom: 0;
+}
+@media (max-width: 640px) {
+  .cb8-post-grid .post-card .image-and-tags-container {
+    margin-bottom: 16px;
+  }
+}
+.cb8-post-grid .post-card .image-and-tags-container .fusion-meta-tb {
+  --awb-height: auto !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: unset;
+  border-top: unset;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.cb8-post-grid .post-card .image-and-tags-container .fusion-meta-tb .fusion-tb-tags {
+  padding: 8px 16px;
+  text-align: center;
+  background-color: var(--awb-color8);
+  background: linear-gradient(90deg, var(--awb-custom_color_1), var(--awb-color8));
+}
+.cb8-post-grid .post-card .image-and-tags-container .fusion-meta-tb a[rel=tag] {
+  font-weight: 400;
+  pointer-events: none;
+  text-decoration: none;
+  color: white;
+}
 .cb8-post-grid .fusion-builder-placeholder,
 .cb8-post-grid .fusion-post-cards {
   border: 2px solid var(--awb-custom_color_5);
