@@ -247,65 +247,67 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   //	? code here will execute once the page is ready
   //
   // ... silence is golden
-
-  var homepageHeroBannerImages = $(".fusion-imageframe", ".cb1-hero-banner");
-  if (homepageHeroBannerImages.length > 0) {
-    //responsive
-    var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
-    mm.add("(min-width: 640px)", function () {
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
-        y: function y(i, el) {
-          var offset = (4 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
-          return offset * -1;
-        },
-        stagger: 0,
+  $("body.home #wrapper").prepend('<div class="homepage-gradient-overlay"></div>');
+  $(window).on("load", function () {
+    if ($("body").hasClass("home")) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
+        yPercent: -50,
         scrollTrigger: {
-          trigger: ".cb1-hero-banner",
+          trigger: "body",
           scrub: 1,
           start: "top top",
-          end: "+=800"
+          end: "+=300"
         }
       });
-    });
-  }
+    }
+    var homepageHeroBannerImages = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".cb1-hero-banner .fusion-imageframe");
+    var PostCards = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".fusion-post-cards .post-card");
+    //
+    //
+    if (PostCards.length) {
+      // set the initial state of the elements to faded-out and nudged-down
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(PostCards, {
+        opacity: 0,
+        y: 30
+      });
 
-  //
-  //
-  //
-  // let standardBannerImages = $(".fusion-image-element", ".cb6-interior-banner");
-  // gsap.to(standardBannerImages, {
-  // 	y: (i, el) => (1 + parseFloat(i)) * (ScrollTrigger.maxScroll(window) / 100),
-  // 	stagger: 0,
-  // 	scrollTrigger: {
-  // 		trigger: ".cb6-interior-banner",
-  // 		scrub: 1,
-  // 		start: "top 15%",
-  // 		end: "+=200",
-  // 	},
-  // });
+      // batch animation for all elements
+      gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.batch(PostCards, {
+        start: "top 90%",
+        end: "bottom 10%",
+        onEnter: function onEnter(batch) {
+          return gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(batch, {
+            y: 0,
+            autoAlpha: 1,
+            stagger: 0.2,
+            duration: 1
+          });
+        }
+      });
+    }
 
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-
-  if ($('body').hasClass('home')) {
-    $("body.home #wrapper").prepend('<div class="homepage-gradient-overlay"></div>');
-    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
-      yPercent: -50,
-      scrollTrigger: {
-        trigger: "body",
-        scrub: 1,
-        start: "top top",
-        end: "+=300"
-      }
-    });
-  }
+    //
+    //
+    if (homepageHeroBannerImages.length > 0) {
+      //responsive
+      var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
+      mm.add("(min-width: 640px)", function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
+          y: function y(i, el) {
+            var offset = (4 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
+            return offset * -1;
+          },
+          stagger: 0,
+          scrollTrigger: {
+            trigger: ".cb1-hero-banner",
+            scrub: 1,
+            start: "top top",
+            end: "+=800"
+          }
+        });
+      });
+    }
+  });
 
   //
   //
