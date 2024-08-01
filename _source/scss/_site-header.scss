@@ -2,6 +2,16 @@
 //
 //
 html body {
+	.fusion-tb-header {
+		// unset some calculations that avada is doing here
+		// without this the header doesn't line up with the rest of the content
+		> .fusion-fullwidth > .fusion-builder-row {
+			max-width: var(--site_width) !important;
+			margin-left: unset !important;
+			margin-right: unset !important;
+		}
+	}
+
 	//
 	.fusion-tb-header {
 		> .fusion-flex-container {
