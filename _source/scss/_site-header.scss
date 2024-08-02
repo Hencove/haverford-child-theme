@@ -10,6 +10,13 @@ html body {
 			margin-left: unset !important;
 			margin-right: unset !important;
 		}
+
+		&.fusion-sticky-container {
+			&:not(.fusion-sticky-transition){
+				padding-top: 30px;
+			}
+		}
+		
 	}
 
 	//
