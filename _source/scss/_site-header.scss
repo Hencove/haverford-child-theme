@@ -2,6 +2,16 @@
 //
 //
 html body {
+	&.home {
+		.fusion-tb-header > .fusion-fullwidth {
+			&.fusion-sticky-container {
+				&:not(.fusion-sticky-transition) {
+					padding-top: 30px;
+				}
+			}
+		}
+	}
+
 	.fusion-tb-header {
 		// unset some calculations that avada is doing here
 		// without this the header doesn't line up with the rest of the content
@@ -10,13 +20,6 @@ html body {
 			margin-left: unset !important;
 			margin-right: unset !important;
 		}
-
-		&.fusion-sticky-container {
-			&:not(.fusion-sticky-transition){
-				padding-top: 30px;
-			}
-		}
-		
 	}
 
 	//
