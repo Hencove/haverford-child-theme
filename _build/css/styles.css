@@ -170,7 +170,7 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
 }
 
 html body.home .fusion-tb-header > .fusion-fullwidth.fusion-sticky-container:not(.fusion-sticky-transition) {
-  padding-top: 30px;
+  margin-top: 60px;
 }
 html body .fusion-tb-header > .fusion-fullwidth > .fusion-builder-row {
   max-width: var(--site_width) !important;
