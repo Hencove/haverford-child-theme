@@ -1,3 +1,30 @@
+// 
+// 
+const cbSelectors = [
+	'cb1-hero-banner',
+	'cb2-two-column-feature',
+	'cb3-featured-stats',
+	'cb4-image-3-callouts',
+	'cb5-',
+	'cb6-',
+	'cb7-',
+	'cb8-',
+	'cb9-',
+	'cb10-',
+	'cb11-',
+	'cb12-',
+	'cb13-',
+	'cb14-',
+	'cb15-',
+	'cb16-',
+	'cb17-',
+	'cb18-',
+	'cb19-',
+	'cb20-',
+	'cb21-',
+];
+// 
+// 
 import "./_thinkco-buttons";
 // import "./_site-header";
 import './_cb1';
