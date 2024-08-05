@@ -5,8 +5,9 @@ html body {
 	&.home {
 		.fusion-tb-header > .fusion-fullwidth {
 			&.fusion-sticky-container {
+				transition: all 0.3s $bezier;
 				&:not(.fusion-sticky-transition) {
-					margin-top: 60px;
+					padding-top: 60px;
 				}
 			}
 		}

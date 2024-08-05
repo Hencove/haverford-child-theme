@@ -1,0 +1,27 @@
+.podcast-card-wide .fusion-builder-row-inner {
+	align-content: flex-start;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+
+.podcast-card-wide > .fusion-column-wrapper {
+	display: grid !important;
+	grid-template-columns: minmax(auto, 228px) 1.5fr 1fr;
+	grid-gap: 20px;
+}
+
+@media screen and (max-width: 970px) {
+	.podcast-card-wide > .fusion-column-wrapper {
+		grid-template-columns: minmax(auto, 228px) 1fr;
+	}
+
+	.podcast-card-wide .fusion-image-element {
+		grid-row: 1 / span 2;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.podcast-card-wide > .fusion-column-wrapper {
+		grid-template-columns: auto;
+	}
+}
