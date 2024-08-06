@@ -17,6 +17,10 @@ body {
 	}
 }
 
+.wpforms-field-label {
+	font-weight: 400 !important;
+}
+
 body.error404 {
 	.post-content {
 		.fusion-search-form {
@@ -97,6 +101,7 @@ body.home {
 	}
 }
 
+.cb11-related-posts,
 .cb5-news-and-insights-post-grid,
 .cb8-post-grid {
 	.fusion-filter {

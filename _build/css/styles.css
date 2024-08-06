@@ -67,6 +67,40 @@
   }
 }
 
+body.single .post-content {
+  --h1_typography-font-size: calc(1.525rem + 2.8989751098vw) !important;
+  --h2_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
+  --h3_typography-font-size: calc(1.375rem + 1.317715959vw) !important;
+  --h4_typography-font-size: calc(1.325rem + 0.7906295754vw) !important;
+  --h5_typography-font-size: calc(1.275rem + 0.2635431918vw) !important;
+  --h6_typography-font-size: 1.125rem !important;
+}
+@media (min-width: 1200px) {
+  body.single .post-content {
+    --h1_typography-font-size: 4rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.single .post-content {
+    --h2_typography-font-size: 3rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.single .post-content {
+    --h3_typography-font-size: 2.5rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.single .post-content {
+    --h4_typography-font-size: 2rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.single .post-content {
+    --h5_typography-font-size: 1.5rem !important;
+  }
+}
+
 a.fusion-button.button-flat[data-hover=underline] .fusion-button-text::after {
   border-color: var(--awb-custom_color_5);
   bottom: -15px;
@@ -1530,6 +1564,10 @@ body {
   flex: 1;
 }
 
+.wpforms-field-label {
+  font-weight: 400 !important;
+}
+
 body.error404 .post-content .fusion-search-form .fusion-search-button.search-button {
   text-align: center;
   width: 48px;
@@ -1578,11 +1616,19 @@ body.home #wrapper .homepage-gradient-overlay {
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0) 100%);
 }
 
-.cb5-news-and-insights-post-grid .fusion-filter a:hover, .cb5-news-and-insights-post-grid .fusion-filter a:focus,
+.cb11-related-posts .fusion-filter a:hover, .cb11-related-posts .fusion-filter a:focus,
+.cb5-news-and-insights-post-grid .fusion-filter a:hover,
+.cb5-news-and-insights-post-grid .fusion-filter a:focus,
 .cb8-post-grid .fusion-filter a:hover,
 .cb8-post-grid .fusion-filter a:focus {
   --awb-filters-hover-color: var(--awb-color8);
 }
+.cb11-related-posts .fusion-filter:has(a[data-filter*=".quality-insights-landing-page"]),
+.cb11-related-posts .fusion-filter:has(a[data-filter*=".quality-insights-homepage"]),
+.cb11-related-posts .fusion-filter:has(a[data-filter*=".events-homepage"]),
+.cb11-related-posts .fusion-filter:has(a[data-filter*=".events-landing-page"]),
+.cb11-related-posts .fusion-filter:has(a[data-filter*=".media-landing-page"]),
+.cb11-related-posts .fusion-filter:has(a[data-filter*=".media-homepage"]),
 .cb5-news-and-insights-post-grid .fusion-filter:has(a[data-filter*=".quality-insights-landing-page"]),
 .cb5-news-and-insights-post-grid .fusion-filter:has(a[data-filter*=".quality-insights-homepage"]),
 .cb5-news-and-insights-post-grid .fusion-filter:has(a[data-filter*=".events-homepage"]),
@@ -1597,11 +1643,19 @@ body.home #wrapper .homepage-gradient-overlay {
 .cb8-post-grid .fusion-filter:has(a[data-filter*=".media-homepage"]) {
   display: none;
 }
+.cb11-related-posts .fusion-title-heading a[href*="/category/"],
 .cb5-news-and-insights-post-grid .fusion-title-heading a[href*="/category/"],
 .cb8-post-grid .fusion-title-heading a[href*="/category/"] {
   text-decoration: unset;
   color: var(--body_typography-color);
 }
+.cb11-related-posts .fusion-title-heading a[href*="/category/uncategorized/"],
+.cb11-related-posts .fusion-title-heading a[href*="/category/media-landing-page/"],
+.cb11-related-posts .fusion-title-heading a[href*="/category/media-homepage"],
+.cb11-related-posts .fusion-title-heading a[href*="/category/events-landing-page/"],
+.cb11-related-posts .fusion-title-heading a[href*="/category/events-homepage"],
+.cb11-related-posts .fusion-title-heading a[href*="/category/quality-insights-landing-page/"],
+.cb11-related-posts .fusion-title-heading a[href*="/category/quality-insights-homepage"],
 .cb5-news-and-insights-post-grid .fusion-title-heading a[href*="/category/uncategorized/"],
 .cb5-news-and-insights-post-grid .fusion-title-heading a[href*="/category/media-landing-page/"],
 .cb5-news-and-insights-post-grid .fusion-title-heading a[href*="/category/media-homepage"],

@@ -25,3 +25,12 @@ $rfs-breakpoint : 1366px;
 	@include rfs(36px !important, --awb-title-font-size);
 	line-height: 1.15 !important;
 }
+
+body.single .post-content {
+	@include rfs(64px !important, --h1_typography-font-size);
+	@include rfs(48px !important, --h2_typography-font-size);
+	@include rfs(40px !important, --h3_typography-font-size);
+	@include rfs(32px !important, --h4_typography-font-size);
+	@include rfs(24px !important, --h5_typography-font-size);
+	@include rfs(18px !important, --h6_typography-font-size);
+}
