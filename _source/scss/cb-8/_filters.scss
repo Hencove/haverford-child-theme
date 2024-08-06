@@ -23,6 +23,7 @@ div:has(> .fusion-filters) {
 	.wpc-filters-section:has(form) {
 		flex-basis: 40%;
 		margin-bottom: 0;
+		margin-left: auto;
 		padding: 13px;
 		border-left: 2px solid var(--awb-custom_color_5);
 

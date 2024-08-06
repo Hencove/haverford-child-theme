@@ -1,47 +1,19 @@
 //
 //
 //
-html body {
-	&.home {
-		.fusion-tb-header > .fusion-fullwidth {
-			&.fusion-sticky-container {
-				transition: all 0.3s $bezier;
-				&:not(.fusion-sticky-transition) {
-					padding-top: 60px;
-				}
-			}
-		}
-	}
-
-	.fusion-tb-header {
-		// unset some calculations that avada is doing here
-		// without this the header doesn't line up with the rest of the content
-		> .fusion-fullwidth > .fusion-builder-row {
-			max-width: var(--site_width) !important;
-			margin-left: unset !important;
-			margin-right: unset !important;
-		}
+.awb-off-canvas {
+	//
+	//
+	//
+	.think-custom-button {
+		width: auto !important;
+		margin: 0 auto;
 	}
 
 	//
-	.fusion-tb-header {
-		> .fusion-flex-container {
-			> .fusion-builder-row {
-				> .fusion-layout-column {
-					margin-bottom: 0;
-					&:first-child {
-						> .fusion-column-wrapper {
-							margin-left: 0;
-							margin-right: 0;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	// Off Canvas search modal
-	.off-canvas-content .fusion-search-element {
+	//
+	//
+	.fusion-search-element {
 		.fusion-search-field label {
 			input,
 			input::placeholder {
@@ -58,10 +30,52 @@ html body {
 			}
 		}
 	}
+}
+//
+//
+//
+body.home {
+	.fusion-tb-header > .fusion-fullwidth {
+		&.fusion-sticky-container {
+			transition: all 0.3s $bezier;
+			&:not(.fusion-sticky-transition) {
+				padding-top: 60px;
+			}
+		}
+	}
+}
 
+html body {
+	//
 	.fusion-tb-header {
 		z-index: 100;
 
+		// unset some calculations that avada is doing here
+		// without this the header doesn't line up with the rest of the content
+		> .fusion-fullwidth > .fusion-builder-row {
+			max-width: var(--site_width) !important;
+			margin-left: unset !important;
+			margin-right: unset !important;
+		}
+
+		//
+		//
+		> .fusion-flex-container {
+			> .fusion-builder-row {
+				> .fusion-layout-column {
+					margin-bottom: 0;
+					&:first-child {
+						> .fusion-column-wrapper {
+							margin-left: 0;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		//
 		.fusion-search-button {
 			position: relative;
 			&::before {
@@ -71,6 +85,7 @@ html body {
 			}
 		}
 
+		//
 		//
 		.think-custom-button.has-white-bg-color {
 			.fusion-button-text {

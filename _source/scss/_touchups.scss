@@ -96,3 +96,53 @@ body.home {
 		}
 	}
 }
+
+.cb5-news-and-insights-post-grid,
+.cb8-post-grid {
+	.fusion-filter {
+		a {
+			&:hover,
+			&:focus {
+				--awb-filters-hover-color: var(--awb-color8);
+			}
+		}
+	}
+
+	//
+	//
+	.fusion-filter:has(a[data-filter*=".quality-insights-landing-page"]),
+	.fusion-filter:has(a[data-filter*=".quality-insights-homepage"]),
+	.fusion-filter:has(a[data-filter*=".events-homepage"]),
+	.fusion-filter:has(a[data-filter*=".events-landing-page"]),
+	.fusion-filter:has(a[data-filter*=".media-landing-page"]),
+	.fusion-filter:has(a[data-filter*=".media-homepage"]) {
+		display: none;
+	}
+
+	.fusion-title-heading {
+		a[href*="/category/"] {
+			text-decoration: unset;
+			color: var(--body_typography-color);
+		}
+		//
+		//
+		a[href*="/category/uncategorized/"],
+		a[href*="/category/media-landing-page/"],
+		a[href*="/category/media-homepage"],
+		a[href*="/category/events-landing-page/"],
+		a[href*="/category/events-homepage"],
+		a[href*="/category/quality-insights-landing-page/"],
+		a[href*="/category/quality-insights-homepage"] {
+			display: none;
+		}
+	}
+}
+
+#menu-footer {
+	.menu-item a {
+		&:hover,
+		&:focus {
+			--awb-active-color: var(--awb-custom_color_5) !important;
+		}
+	}
+}
