@@ -1372,6 +1372,11 @@ html body div.fusion-fullwidth.cb18-form .wpforms-container-full.wpforms-contain
 html body div.fusion-fullwidth.cb18-form .wpforms-container-full.wpforms-container .wpforms-form .choices_list {
   border: 0;
 }
+html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth.wpforms-container .wpforms-confirmation-container,
+html body div.fusion-fullwidth.cb18-form .wpforms-container-full.wpforms-container .wpforms-confirmation-container {
+  background: var(--awb-color7);
+  border: 1px solid var(--awb-color8);
+}
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field input,
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field select,
 html body div.fusion-fullwidth.cb18-form form.fusion-form .fusion-fullwidth .fusion-form-field textarea,
@@ -1773,6 +1778,35 @@ body.home #wrapper .homepage-gradient-overlay {
     grid-template-columns: auto;
   }
 }
+.fusion-tabs.podcast-tabs .nav {
+  border: unset;
+  border-color: var(--awb-color6) !important;
+  border-bottom: 1px solid !important;
+}
+.fusion-tabs.podcast-tabs .nav .nav-tabs li {
+  margin-right: 30px;
+}
+.fusion-tabs.podcast-tabs .nav .nav-tabs li a.tab-link {
+  padding: 0 !important;
+}
+.fusion-tabs.podcast-tabs .nav .nav-tabs li a.tab-link h3 {
+  padding: 0 15px;
+}
+.fusion-tabs.podcast-tabs .nav .nav-tabs li a.tab-link:hover {
+  background: none !important;
+}
+.fusion-tabs.podcast-tabs .nav .nav-tabs li.active {
+  margin-bottom: -2px;
+  padding-bottom: 2px;
+  border-bottom: 4px solid var(--awb-custom_color_5);
+}
+.fusion-tabs.podcast-tabs .nav .nav-tabs li.active .tab-link {
+  background-color: transparent !important;
+}
+.fusion-tabs.podcast-tabs .tab-pane {
+  padding: 0px !important;
+}
+
 .podcast-tabs .tab-link {
   padding: 5px 30px 0px 0px !important;
 }

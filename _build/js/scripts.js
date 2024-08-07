@@ -581,11 +581,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cb8__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
 /* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_gsap */ "./_source/js/_gsap.js");
-// 
-// 
-var cbSelectors = ['cb1-hero-banner', 'cb2-two-column-feature', 'cb3-featured-stats', 'cb4-image-3-callouts', 'cb5-', 'cb6-', 'cb7-', 'cb8-', 'cb9-', 'cb10-', 'cb11-', 'cb12-', 'cb13-', 'cb14-', 'cb15-', 'cb16-', 'cb17-', 'cb18-', 'cb19-', 'cb20-', 'cb21-'];
-// 
-// 
 
 
 
