@@ -821,6 +821,7 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
     top: -2vh;
     left: -10vw;
     height: 4vh;
+    height: 64px;
     width: 110vw;
   }
 }
