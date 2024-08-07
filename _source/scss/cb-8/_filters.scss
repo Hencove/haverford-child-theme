@@ -14,7 +14,6 @@
 	}
 }
 
-
 div:has(> .fusion-filters) {
 	display: flex;
 	align-items: center;
@@ -32,7 +31,7 @@ div:has(> .fusion-filters) {
 			flex: 0 1 500px;
 			margin: 0;
 			padding-right: 80px;
-			
+
 			//
 			.wpc-search-field-wrapper {
 				$icon-size: 24px;
@@ -53,7 +52,7 @@ div:has(> .fusion-filters) {
 				//
 				span.wpc-search-icon {
 					text-align: center;
-					
+
 					width: ($icon-size * 2);
 					justify-content: center;
 					left: 0;
@@ -70,10 +69,9 @@ div:has(> .fusion-filters) {
 	}
 }
 
-
 .fusion-post-cards .fusion-filters {
 	// border-bottom: unset;
-	
+
 	@include media(">medium") {
 		border: unset;
 		margin: 0;
@@ -86,18 +84,15 @@ div:has(> .fusion-filters) {
 }
 
 @include media("<=medium") {
-
 	// Dropdown container located below footer
 	.select2-container {
 		.select2-dropdown {
-
 			// TODO QA this margin
 			// this container is clickable when the selected li
 			// is the only one visible. moving it down solves that
 			// but it doesn't perfectly match the designs
-			margin-top: 46px;
-		
-			
+			// margin-top: 46px;
+
 			.select2-results {
 				ul.select2-results__options {
 					max-height: unset;
@@ -115,7 +110,7 @@ div:has(> .fusion-filters) {
 			}
 		}
 	}
-		
+
 	div:has(> .fusion-filters) {
 		display: flex;
 		flex-direction: column;
@@ -134,7 +129,7 @@ div:has(> .fusion-filters) {
 			.select2-selection--single {
 				background-color: transparent;
 				border: none;
-				
+
 				.select2-selection__rendered {
 					color: var(--body_typography-color);
 				}
@@ -143,11 +138,32 @@ div:has(> .fusion-filters) {
 			// TODO arrow
 			.select2-selection__arrow {
 				border: none;
-				
-				b {					
-					&:before {
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				justify-content: center;
+				b {
+					transition: all 0.3s $bezier;
+					border: solid black;
+					border-width: 0 3px 3px 0;
+					display: inline-block;
+					padding: 3px;
+					transform: rotate(45deg) !important;
 
-					}
+					//
+					width: unset;
+					height: unset;
+					left: unset;
+					margin-left: unset;
+					margin-top: unset;
+					top: unset;
+				}
+			}
+		}
+		.select2-container--open {
+			.select2-selection__arrow {
+				b {
+					transform: rotate(135deg) !important;
 				}
 			}
 		}
@@ -168,7 +184,6 @@ div:has(> .fusion-filters) {
 					span.wpc-search-icon {
 						display: unset;
 						width: unset;
-			
 					}
 				}
 			}
@@ -184,7 +199,6 @@ div:has(> .fusion-filters) {
 		display: flex !important;
 	}
 }
-
 
 // @media screen and (max-width: 1200px) {
 // 	.fusion-grid {

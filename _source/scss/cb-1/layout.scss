@@ -1,0 +1,23 @@
+// 
+// 
+// 
+.cb1-hero-banner {
+    
+    margin-left: unset !important;
+	margin-right: unset !important;
+	@include media("<=medium") {
+		padding-top: 24px !important;
+	}
+    
+
+    // 
+    // 
+    // 
+    > .fusion-builder-row {
+		> .fusion-layout-column {
+			&:not(.cb1-gallery) {
+				z-index: 2;
+			}
+		}
+	}
+}

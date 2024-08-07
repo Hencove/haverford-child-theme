@@ -62,7 +62,6 @@
 	}
 }
 
-
 //
 //
 //
@@ -72,6 +71,9 @@ body.home {
 			transition: all 0.3s $bezier;
 			&:not(.fusion-sticky-transition) {
 				padding-top: 60px;
+				@include media("<=medium") {
+					padding-top: 42px;
+				}
 			}
 		}
 	}
