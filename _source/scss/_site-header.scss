@@ -1,36 +1,68 @@
 //
 //
 //
-.awb-off-canvas {
+
+.awb-off-canvas-wrap .awb-off-canvas {
 	//
 	//
 	//
-	.think-custom-button {
-		width: auto !important;
-		margin: 0 auto;
+	&:has(.is-the-mobile-menu) {
+		//
+		//
+		//
+		.think-custom-button {
+			width: auto !important;
+			margin: 0 auto;
+		}
+
+		//
+		//
+		//
+		.fusion-search-element {
+			.fusion-search-field label {
+				input,
+				input::placeholder {
+					font-family: var(--awb-typography1-font-family);
+					font-size: var(--awb-typography1-font-size) !important;
+					padding: 40px;
+				}
+			}
+			.fusion-search-button {
+				&::before {
+					content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
+					filter: brightness(100);
+					vertical-align: middle;
+				}
+			}
+		}
 	}
 
 	//
 	//
 	//
-	.fusion-search-element {
-		.fusion-search-field label {
-			input,
-			input::placeholder {
-				font-family: var(--awb-typography1-font-family);
-				font-size: var(--awb-typography1-font-size) !important;
-				padding: 40px;
-			}
+	&:has(.is-the-site-search-flyout) {
+		.fusion-search-element {
+			position: relative;
 		}
-		.fusion-search-button {
-			&::before {
-				content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
-				filter: brightness(100);
-				vertical-align: middle;
-			}
+
+		.off-canvas-close {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			margin: 0;
+			margin-right: 0 !important;
 		}
 	}
 }
+
+.fusion-tb-header .fusion-sticky-container {
+	&.fusion-sticky-transition {
+		@include boxShadow(4);
+	}
+}
+
+
 //
 //
 //

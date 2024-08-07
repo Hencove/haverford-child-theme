@@ -200,25 +200,40 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.awb-off-canvas .think-custom-button {
+.awb-off-canvas-wrap .awb-off-canvas:has(.is-the-mobile-menu) .think-custom-button {
   width: auto !important;
   margin: 0 auto;
 }
-.awb-off-canvas .fusion-search-element .fusion-search-field label input::-moz-placeholder {
+.awb-off-canvas-wrap .awb-off-canvas:has(.is-the-mobile-menu) .fusion-search-element .fusion-search-field label input::-moz-placeholder {
   font-family: var(--awb-typography1-font-family);
   font-size: var(--awb-typography1-font-size) !important;
   padding: 40px;
 }
-.awb-off-canvas .fusion-search-element .fusion-search-field label input,
-.awb-off-canvas .fusion-search-element .fusion-search-field label input::placeholder {
+.awb-off-canvas-wrap .awb-off-canvas:has(.is-the-mobile-menu) .fusion-search-element .fusion-search-field label input,
+.awb-off-canvas-wrap .awb-off-canvas:has(.is-the-mobile-menu) .fusion-search-element .fusion-search-field label input::placeholder {
   font-family: var(--awb-typography1-font-family);
   font-size: var(--awb-typography1-font-size) !important;
   padding: 40px;
 }
-.awb-off-canvas .fusion-search-element .fusion-search-button::before {
+.awb-off-canvas-wrap .awb-off-canvas:has(.is-the-mobile-menu) .fusion-search-element .fusion-search-button::before {
   content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
   filter: brightness(100);
   vertical-align: middle;
+}
+.awb-off-canvas-wrap .awb-off-canvas:has(.is-the-site-search-flyout) .fusion-search-element {
+  position: relative;
+}
+.awb-off-canvas-wrap .awb-off-canvas:has(.is-the-site-search-flyout) .off-canvas-close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  margin: 0;
+  margin-right: 0 !important;
+}
+
+.fusion-tb-header .fusion-sticky-container.fusion-sticky-transition {
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 body.home .fusion-tb-header > .fusion-fullwidth.fusion-sticky-container {
@@ -1545,6 +1560,14 @@ div.cb19-prefooter-c2a:before {
     width: calc(100% + var(--awb-border-sizes-left) * 2);
     height: 60px;
   }
+}
+
+.fusion-tb-footer .is-the-site-logo a {
+  display: block;
+  padding: 16px;
+}
+.fusion-tb-footer .is-the-site-logo a:hover img, .fusion-tb-footer .is-the-site-logo a:focus img {
+  transform: scale(1.1);
 }
 
 html,
