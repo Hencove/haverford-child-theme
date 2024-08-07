@@ -2303,6 +2303,10 @@ div.asp_m.ajaxsearchpro .probox .proinput {
   background-color: transparent !important;
 }
 
+body.page-id-45277 .fusion-imageframe {
+  display: block;
+}
+
 .timeline_wrapper .item-description_text h3 {
   font-family: "Inter";
   letter-spacing: 2px;
