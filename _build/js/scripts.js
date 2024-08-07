@@ -255,19 +255,22 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
     //
     //
     //
-    var CB2_Selector = ".cb2-two-column-feature";
-    var CB2 = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
-      scrollTrigger: {
-        trigger: CB2_Selector,
-        start: "top 80%",
-        end: "+=300",
-        scrub: 1
-      }
-    });
-    CB2.addLabel("Start").from(".cb2-two-column-feature .fusion-column-wrapper", {
-      autoAlpha: 0,
-      y: 40
-    });
+    // let CB2_Selector = ".cb2-two-column-feature";
+    // var CB2 = gsap.timeline({
+    // 	scrollTrigger: {
+    // 		trigger: CB2_Selector,
+    // 		start: "top 80%",
+    // 		end: "+=300",
+    // 		scrub: 1,
+    // 	},
+    // });
+    // CB2.addLabel("Start").from(
+    // 	".cb2-two-column-feature .fusion-column-wrapper",
+    // 	{
+    // 		autoAlpha: 0,
+    // 		y: 40,
+    // 	}
+    // );
     //
     //
     //

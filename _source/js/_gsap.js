@@ -17,22 +17,22 @@ gsap.registerPlugin(ScrollTrigger);
 		//
 		//
 		//
-		let CB2_Selector = ".cb2-two-column-feature";
-		var CB2 = gsap.timeline({
-			scrollTrigger: {
-				trigger: CB2_Selector,
-				start: "top 80%",
-				end: "+=300",
-				scrub: 1,
-			},
-		});
-		CB2.addLabel("Start").from(
-			".cb2-two-column-feature .fusion-column-wrapper",
-			{
-				autoAlpha: 0,
-				y: 40,
-			}
-		);
+		// let CB2_Selector = ".cb2-two-column-feature";
+		// var CB2 = gsap.timeline({
+		// 	scrollTrigger: {
+		// 		trigger: CB2_Selector,
+		// 		start: "top 80%",
+		// 		end: "+=300",
+		// 		scrub: 1,
+		// 	},
+		// });
+		// CB2.addLabel("Start").from(
+		// 	".cb2-two-column-feature .fusion-column-wrapper",
+		// 	{
+		// 		autoAlpha: 0,
+		// 		y: 40,
+		// 	}
+		// );
 		//
 		//
 		//
