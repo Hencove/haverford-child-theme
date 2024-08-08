@@ -64,3 +64,9 @@
 		}
 	}
 }
+
+.post-card.podcasts {
+	.fusion-post-card-image + .fusion-meta-tb {
+		display: none;
+	}
+}

@@ -900,6 +900,9 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   text-decoration: none;
   color: white;
 }
+.cb8-post-grid .post-card.podcasts .fusion-post-card-image + .fusion-meta-tb {
+  display: none;
+}
 .cb8-post-grid .fusion-builder-placeholder,
 .cb8-post-grid .fusion-post-cards {
   border: 2px solid var(--awb-custom_color_5);
