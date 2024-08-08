@@ -132,6 +132,11 @@ __webpack_require__.r(__webpack_exports__);
   //	? code here will execute once the page is ready
   //
 
+  // Function to get query parameters
+  function getQueryParam(param) {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
   var fusionFilterExtension = {
     //
     //
@@ -142,7 +147,50 @@ __webpack_require__.r(__webpack_exports__);
         fusionFilterExtension._dupeFilters();
         fusionFilterExtension._clickFunc();
         fusionFilterExtension._makeItPretty();
+        fusionFilterExtension._scrollToSearchResults();
+        fusionFilterExtension._handleNoSearchResults();
+        fusionFilterExtension._handleAnchoredPaginationLink();
       });
+    },
+    _handleAnchoredPaginationLink: function _handleAnchoredPaginationLink() {
+      var defaultLinks = $(".cb8-post-grid .pagination a").attr("href");
+      $(".cb8-post-grid .pagination a").attr("href", defaultLinks + "#news-insights-feed");
+    },
+    _handleNoSearchResults: function _handleNoSearchResults() {
+      if (getQueryParam("srch")) {
+        var placeHolder = $(".fusion-builder-placeholder");
+        var resetButton = '<a class="is-search-reset-button">Reset Search</a>';
+        placeHolder.append("<div>" + resetButton + "</div>");
+        $(".is-search-reset-button").on("click", function () {
+          console.log(this);
+          fusionFilterExtension._resetSearchParam();
+        });
+      }
+    },
+    _resetSearchParam: function _resetSearchParam() {
+      // Get the current URL
+      var url = new URL(window.location);
+      var urlParams = new URLSearchParams(url.search);
+
+      // Set 'srch' query parameter to an empty string
+      urlParams.set("srch", "");
+
+      // Update the URL without reloading
+      window.history.pushState({}, "", "".concat(url.pathname, "?").concat(urlParams.toString()));
+
+      // Reload the page
+      window.location.reload();
+    },
+    _scrollToSearchResults: function _scrollToSearchResults() {
+      // Check if 'srch' query parameter exists
+      if (getQueryParam("srch")) {
+        // Scroll to the form after the page has loaded
+        setTimeout(function () {
+          document.getElementById("news-insights-feed").scrollIntoView({
+            behavior: "smooth"
+          });
+        }, 100); // Adjust the timeout if needed
+      }
     },
     _moveSearchBar: function _moveSearchBar(e) {
       var searchbar = $(".wpc-filter-layout-search-field").detach();
@@ -169,7 +217,7 @@ __webpack_require__.r(__webpack_exports__);
     _makeItPretty: function _makeItPretty() {
       $("select.fusion-filters").select2({
         minimumResultsForSearch: Infinity,
-        width: '100%'
+        width: "100%"
       });
     }
   };
@@ -598,7 +646,14 @@ __webpack_require__.r(__webpack_exports__);
   //
   // ... silence is golden
 
-  $('.fusion-search-button .fusion-search-submit').val('');
+  $(".fusion-search-button .fusion-search-submit").val("");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Your code here will run after the DOM is fully loaded
+    console.log("Document is fully loaded and parsed!");
+    document.getElementById("wt-cli-accept-btn").addEventListener("click", function (event) {
+      console.log(this);
+    });
+  });
 
   //
   //

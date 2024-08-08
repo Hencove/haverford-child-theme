@@ -452,11 +452,13 @@ html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-cust
 }
 
 .cb1-hero-banner {
+  padding-bottom: 120px !important;
   margin-left: unset !important;
   margin-right: unset !important;
 }
 @media (max-width: 1366px) {
   .cb1-hero-banner {
+    padding-bottom: 32px !important;
     padding-top: 24px !important;
   }
 }
@@ -971,6 +973,54 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   background: none;
   color: var(--awb-color6);
 }
+.cb8-post-grid .wpc-filters-section {
+  flex: 0 1 40%;
+  margin: 0 0 0 auto;
+  padding: 13px;
+  border-left: 2px solid var(--awb-custom_color_5);
+}
+@media (min-width: 1367px) {
+  .cb8-post-grid .wpc-filters-section {
+    padding-right: 80px;
+  }
+}
+.cb8-post-grid .wpc-filters-section .wpc-filter-search-form {
+  margin: 0 0 0 auto;
+}
+.cb8-post-grid .wpc-filters-section .wpc-filter-search-form .wpc-search-field-wrapper {
+  height: 100%;
+}
+.cb8-post-grid .wpc-filters-section .wpc-filter-search-form .wpc-search-field-wrapper span.wpc-search-icon {
+  text-align: center;
+  width: 48px;
+  justify-content: center;
+  left: 0;
+}
+.cb8-post-grid .wpc-filters-section .wpc-filter-search-form .wpc-search-field-wrapper span.wpc-search-icon:before {
+  background-image: url("../../_assets/img/icon_search.svg");
+  background-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.cb8-post-grid .wpc-filters-section .wpc-filter-search-form input.wpc-search-field {
+  height: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: unset;
+  border: unset;
+  padding-left: 48px;
+  color: var(--body_typography-color);
+  display: block;
+}
+.cb8-post-grid .wpc-filters-section .wpc-filter-search-form input.wpc-search-field::-moz-placeholder {
+  color: var(--body_typography-color);
+  opacity: 0.5;
+}
+.cb8-post-grid .wpc-filters-section .wpc-filter-search-form input.wpc-search-field::placeholder {
+  color: var(--body_typography-color);
+  opacity: 0.5;
+}
 
 body:has(.cb8-post-grid) .wpc-filter-header,
 body:has(.cb8-post-grid) .wpc-edit-filter-set,
@@ -981,7 +1031,6 @@ body:has(.cb8-post-grid) .widget.widget_wpc_filters_widget {
   height: 0;
   overflow: hidden;
   min-height: 0px;
-  display: none;
 }
 body:has(.cb8-post-grid) .wpc-filter-content.wpc-filter-category {
   display: none;
@@ -991,56 +1040,14 @@ body:has(.cb8-post-grid) .wpc-filter-content.wpc-filter-category {
     display: none;
   }
 }
-body:has(.cb8-post-grid) div:has(> .fusion-filters) {
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid var(--awb-custom_color_5);
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) {
-  flex-basis: 40%;
-  margin-bottom: 0;
-  margin-left: auto;
-  padding: 13px;
-  border-left: 2px solid var(--awb-custom_color_5);
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) .wpc-filter-search-form {
-  display: inline-block;
-  flex: 0 1 500px;
-  margin: 0;
-  padding-right: 80px;
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) .wpc-filter-search-form .wpc-search-field-wrapper {
-  height: 100%;
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) .wpc-filter-search-form .wpc-search-field-wrapper input {
-  height: 100%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: unset;
-  border: unset;
-  padding-left: 48px;
-  color: var(--body_typography-color);
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) .wpc-filter-search-form .wpc-search-field-wrapper input::-moz-placeholder {
-  color: var(--body_typography-color);
-  opacity: 0.5;
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) .wpc-filter-search-form .wpc-search-field-wrapper input::placeholder {
-  color: var(--body_typography-color);
-  opacity: 0.5;
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) .wpc-filter-search-form .wpc-search-field-wrapper span.wpc-search-icon {
-  text-align: center;
-  width: 48px;
-  justify-content: center;
-  left: 0;
-}
-body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(form) .wpc-filter-search-form .wpc-search-field-wrapper span.wpc-search-icon:before {
-  background-image: url("../../_assets/img/icon_search.svg");
-  background-size: 24px;
-  width: 24px;
-  height: 24px;
+@media (min-width: 1367px) {
+  body:has(.cb8-post-grid) .select2,
+  body:has(.cb8-post-grid) select.fusion-filters {
+    display: none !important;
+  }
+  body:has(.cb8-post-grid) ul.fusion-filters {
+    display: flex !important;
+  }
 }
 @media (min-width: 1367px) {
   body:has(.cb8-post-grid) .fusion-post-cards .fusion-filters {
@@ -1050,9 +1057,16 @@ body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(for
     flex-wrap: nowrap;
   }
 }
+body:has(.cb8-post-grid) div:has(> .fusion-filters) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--awb-custom_color_5);
+}
 @media (max-width: 1366px) {
   body:has(.cb8-post-grid) .select2-container .select2-dropdown .select2-results ul.select2-results__options {
-    max-height: unset;
+    max-height: 33vh;
   }
   body:has(.cb8-post-grid) .select2-container .select2-dropdown .select2-results ul.select2-results__options li.select2-results__option {
     background-color: transparent;
@@ -1129,14 +1143,9 @@ body:has(.cb8-post-grid) div:has(> .fusion-filters) .wpc-filters-section:has(for
     width: unset;
   }
 }
-@media (min-width: 1367px) {
-  body:has(.cb8-post-grid) .select2,
-  body:has(.cb8-post-grid) select.fusion-filters {
-    display: none !important;
-  }
-  body:has(.cb8-post-grid) ul.fusion-filters {
-    display: flex !important;
-  }
+
+#news-insights-feed {
+  scroll-margin-top: 48px;
 }
 
 .cb11-related-posts p.fusion-title-heading[style*="text-transform:uppercase;"] {
@@ -1613,6 +1622,10 @@ div.cb19-prefooter-c2a:before {
     width: calc(100% + var(--awb-border-sizes-left) * 2);
     height: 60px;
   }
+}
+
+html:has(body.admin-bar) {
+  margin-top: 0 !important;
 }
 
 .fusion-tb-footer .is-the-site-logo a {

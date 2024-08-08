@@ -1,0 +1,49 @@
+//
+// ?	styling for the search form
+//
+.wpc-filters-section {
+	flex: 0 1 40%;
+	margin: 0 0 0 auto;
+	padding: 13px;
+	border-left: 2px solid var(--awb-custom_color_5);
+	@include media(">medium") {
+		padding-right: 80px;
+	}
+	//
+	//
+	.wpc-filter-search-form {
+		$icon-size: 24px;
+		margin: 0 0 0 auto;
+		.wpc-search-field-wrapper {
+			height: 100%;
+			//
+			span.wpc-search-icon {
+				text-align: center;
+
+				width: ($icon-size * 2);
+				justify-content: center;
+				left: 0;
+				&:before {
+					background-image: url("../../_assets/img/icon_search.svg");
+					background-size: $icon-size;
+					width: $icon-size;
+					height: $icon-size;
+				}
+			}
+			//
+		}
+		input.wpc-search-field {
+			height: 100%;
+			appearance: none;
+			background-color: unset;
+			border: unset;
+			padding-left: ($icon-size * 2);
+			color: var(--body_typography-color);
+			display: block;
+			&::placeholder {
+				color: var(--body_typography-color);
+				opacity: 0.5;
+			}
+		}
+	}
+}

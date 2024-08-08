@@ -1,195 +1,23 @@
 //
-//
+//	?	hide some annoying things FilterEverythingPro adds into the screen
 //
 .wpc-filter-header,
 .wpc-edit-filter-set,
 .widget.widget_wpc_filters_widget {
-	@include displayedInvisible(); // this doesn't work?
-	display: none;
+	@include displayedInvisible();
 }
+//
+// ?	here we toggle between our select2 dropdown and the standard avada filters based on screen size
+//
 .wpc-filter-content.wpc-filter-category {
 	display: none;
 	@include media(">medium") {
 		display: none;
 	}
 }
-
-div:has(> .fusion-filters) {
-	display: flex;
-	align-items: center;
-	border-bottom: 2px solid var(--awb-custom_color_5);
-
-	.wpc-filters-section:has(form) {
-		flex-basis: 40%;
-		margin-bottom: 0;
-		margin-left: auto;
-		padding: 13px;
-		border-left: 2px solid var(--awb-custom_color_5);
-
-		.wpc-filter-search-form {
-			display: inline-block;
-			flex: 0 1 500px;
-			margin: 0;
-			padding-right: 80px;
-
-			//
-			.wpc-search-field-wrapper {
-				$icon-size: 24px;
-				height: 100%;
-				//
-				input {
-					height: 100%;
-					appearance: none;
-					background-color: unset;
-					border: unset;
-					padding-left: ($icon-size * 2);
-					color: var(--body_typography-color);
-					&::placeholder {
-						color: var(--body_typography-color);
-						opacity: 0.5;
-					}
-				}
-				//
-				span.wpc-search-icon {
-					text-align: center;
-
-					width: ($icon-size * 2);
-					justify-content: center;
-					left: 0;
-					&:before {
-						background-image: url("../../_assets/img/icon_search.svg");
-						background-size: $icon-size;
-						width: $icon-size;
-						height: $icon-size;
-					}
-				}
-				//
-			}
-		}
-	}
-}
-
-.fusion-post-cards .fusion-filters {
-	// border-bottom: unset;
-
-	@include media(">medium") {
-		border: unset;
-		margin: 0;
-		padding-left: 80px;
-		flex-wrap: nowrap;
-	}
-	//
-	//
-	//
-}
-
-@include media("<=medium") {
-	// Dropdown container located below footer
-	.select2-container {
-		.select2-dropdown {
-			// TODO QA this margin
-			// this container is clickable when the selected li
-			// is the only one visible. moving it down solves that
-			// but it doesn't perfectly match the designs
-			// margin-top: 46px;
-
-			.select2-results {
-				ul.select2-results__options {
-					max-height: unset;
-
-					li.select2-results__option {
-						background-color: transparent;
-						color: var(--body_typography-color);
-						padding: 10px 2em;
-					}
-					li.select2-results__option--highlighted.select2-results__option--selectable {
-						background-color: var(--awb-custom_color_1);
-						color: var(--awb-color1);
-					}
-				}
-			}
-		}
-	}
-
-	div:has(> .fusion-filters) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border: unset;
-		margin: 1em;
-
-		ul.fusion-filters {
-			display: none !important;
-		}
-		.select2,
-		select.fusion-filters {
-			display: block !important;
-			border: 2px solid var(--awb-custom_color_5);
-
-			.select2-selection--single {
-				background-color: transparent;
-				border: none;
-
-				.select2-selection__rendered {
-					color: var(--body_typography-color);
-				}
-			}
-
-			// TODO arrow
-			.select2-selection__arrow {
-				border: none;
-				display: flex;
-				flex-flow: column nowrap;
-				align-items: center;
-				justify-content: center;
-				b {
-					transition: all 0.3s $bezier;
-					border: solid black;
-					border-width: 0 3px 3px 0;
-					display: inline-block;
-					padding: 3px;
-					transform: rotate(45deg) !important;
-
-					//
-					width: unset;
-					height: unset;
-					left: unset;
-					margin-left: unset;
-					margin-top: unset;
-					top: unset;
-				}
-			}
-		}
-		.select2-container--open {
-			.select2-selection__arrow {
-				b {
-					transform: rotate(135deg) !important;
-				}
-			}
-		}
-		.wpc-filters-section:has(form) {
-			margin-top: 1em;
-			width: 100%;
-			border: 2px solid var(--awb-custom_color_5);
-
-			.wpc-filter-search-form {
-				display: block;
-
-				.wpc-search-field-wrapper {
-					//
-					input {
-						padding-left: 2em;
-					}
-					//
-					span.wpc-search-icon {
-						display: unset;
-						width: unset;
-					}
-				}
-			}
-		}
-	}
-}
+//
+// ?	here we toggle between our select2 dropdown and the standard avada filters based on screen size
+//
 @include media(">medium") {
 	.select2,
 	select.fusion-filters {
@@ -200,84 +28,25 @@ div:has(> .fusion-filters) {
 	}
 }
 
-// @media screen and (max-width: 1200px) {
-// 	.fusion-grid {
-// 		margin-top: 100px !important;
-// 	}
+//
+// ?	styling for the native avada filters
+//
+@include media(">medium") {
+	.fusion-post-cards .fusion-filters {
+		border: unset;
+		margin: 0;
+		padding-left: 80px;
+		flex-wrap: nowrap;
+	}
+}
 
-// 	div:has(> ul.fusion-filters) {
-// 		display: block;
-// 		position: absolute;
-// 		top: 10px;
-// 		left: 20px;
-// 		right: 20px;
-// 		z-index: 4;
-
-// 		form.wpc-filter-search-form {
-// 			left: 10px;
-// 			right: 10px !important;
-// 			top: 70px !important;
-
-// 			.wpc-search-field-wrapper {
-// 				border: 2px solid var(--awb-custom_color_5);
-// 			}
-// 		}
-// 	}
-// }
-
-// .fusion-post-cards {
-// 	> div:has(> ul.fusion-filters) {
-// 		display: flex;
-// 		border-bottom: 2px solid var(--awb-custom_color_5);
-
-// 		ul.fusion-filters {
-// 			border: none;
-// 			margin: 0;
-// 			padding-left: 80px;
-// 			flex-wrap: nowrap;
-// 			//
-// 			//
-// 			li.fusion-filter {
-// 				text-wrap: nowrap;
-// 			}
-// 		}
-
-// 		.wpc-edit-filter-set,
-// 		.wpc-filter-header {
-// 			display: none;
-// 		}
-
-// 		form.wpc-filter-search-form {
-// 			position: absolute;
-// 			right: 0;
-// 			top: 0;
-// 		}
-
-// 		.wpc-search-field-wrapper {
-// 			padding: 0px 80px;
-// 			border-left: 2px solid var(--awb-custom_color_5);
-
-// 			.wpc-search-icon {
-// 				$icon-size: 25px;
-// 				width: $icon-size;
-// 				left: 50px;
-
-// 				&:before {
-// 					background-image: url("../../_assets/img/icon_search.svg");
-// 					background-size: $icon-size;
-// 					width: $icon-size;
-// 					height: $icon-size;
-// 				}
-// 			}
-
-// 			input {
-// 				border: none;
-// 				border-radius: 0;
-// 				background: none;
-// 				&:focus {
-// 					border: none;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+//
+// ?	we need to select the fusion filters parent element to flex it
+//
+div:has(> .fusion-filters) {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid var(--awb-custom_color_5);
+}
