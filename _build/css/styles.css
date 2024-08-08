@@ -1624,10 +1624,6 @@ div.cb19-prefooter-c2a:before {
   }
 }
 
-html:has(body.admin-bar) {
-  margin-top: 0 !important;
-}
-
 .fusion-tb-footer .is-the-site-logo a {
   display: block;
   padding: 16px;

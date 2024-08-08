@@ -153,8 +153,10 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     _handleAnchoredPaginationLink: function _handleAnchoredPaginationLink() {
-      var defaultLinks = $(".cb8-post-grid .pagination a").attr("href");
-      $(".cb8-post-grid .pagination a").attr("href", defaultLinks + "#news-insights-feed");
+      $(".cb8-post-grid .pagination a").each(function (index, element) {
+        var defaultLink = $(element).attr("href");
+        $(element).attr("href", defaultLink + "#news-insights-feed");
+      });
     },
     _handleNoSearchResults: function _handleNoSearchResults() {
       if (getQueryParam("srch")) {
