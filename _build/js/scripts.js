@@ -611,6 +611,88 @@ var mqHandler = {
 
 /***/ }),
 
+/***/ "./_source/js/pages/ss4w.js":
+/*!**********************************!*\
+  !*** ./_source/js/pages/ss4w.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+(function (document, window, $) {
+  //
+  // 		jQuery is ready as $
+
+  if (!$(body).hasClass("page-id-45277")) {
+    return;
+  }
+  window.addEventListener("DOMContentLoaded", function () {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var id = entry.target.getAttribute("id");
+        if (entry.intersectionRatio > 0) {
+          document.querySelector(".sticky-timeline_container a[href=\"#".concat(id, "\"]")).classList.add("active");
+        } else {
+          document.querySelector(".sticky-timeline_container a[href=\"#".concat(id, "\"]")).classList.remove("active");
+        }
+      });
+    });
+
+    // Track all sections that have an `id` applied
+    document.querySelectorAll(".timeline_year[id]").forEach(function (section) {
+      observer.observe(section);
+    });
+  });
+
+  //
+  //
+  //
+  //
+  //
+
+  // create
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
+
+  // add a media query. When it matches, the associated function will run
+  mm.add("(min-width: 800px)", function () {
+    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.create({
+      start: 0,
+      end: "max",
+      onUpdate: updateValues
+    });
+    var timelineItems = document.querySelectorAll(".timeline_item");
+    function updateValues() {
+      timelineItems.forEach(function (timelineItem) {
+        if (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.isInViewport(timelineItem)) {
+          if (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem, "center") < 0.4) {
+            timelineItem.style.opacity = (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem) - 0) / (0.4 - 0);
+            timelineItem.style.transform = "scale(" + (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem) * (1 / 0.4) * 0.1 + 0.9) + ")";
+          } else if (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem, "center") > 0.4 && gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem, "center") < 0.6) {
+            timelineItem.style.opacity = 1;
+            timelineItem.style.transform = "scale(1)";
+          } else if (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem, "center") > 0.6) {
+            timelineItem.style.opacity = 1 - (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem) - 0.6) / (1 - 0.6);
+            timelineItem.style.transform = "scale(" + (1 - (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.positionInViewport(timelineItem) - 0.6) / 0.4 * 0.1) + ")";
+          }
+        }
+      });
+
+      //viewport.innerText = ScrollTrigger.isInViewport(box);
+      //position.innerText = ScrollTrigger.positionInViewport(box, "center").toFixed(2);
+    }
+    updateValues();
+  });
+
+  //
+})(document, window, jQuery);
+
+/***/ }),
+
 /***/ "./_source/js/scripts.js":
 /*!*******************************!*\
   !*** ./_source/js/scripts.js ***!
@@ -631,6 +713,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cb8__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
 /* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_gsap */ "./_source/js/_gsap.js");
+/* harmony import */ var _pages_ss4w__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/ss4w */ "./_source/js/pages/ss4w.js");
 
 
 
@@ -649,13 +732,6 @@ __webpack_require__.r(__webpack_exports__);
   // ... silence is golden
 
   $(".fusion-search-button .fusion-search-submit").val("");
-  document.addEventListener("DOMContentLoaded", function () {
-    // Your code here will run after the DOM is fully loaded
-    console.log("Document is fully loaded and parsed!");
-    document.getElementById("wt-cli-accept-btn").addEventListener("click", function (event) {
-      console.log(this);
-    });
-  });
 
   //
   //
