@@ -628,7 +628,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   //
   // 		jQuery is ready as $
 
-  if (!$(body).hasClass("page-id-45277")) {
+  if (!$('body').hasClass("page-id-45277")) {
     return;
   }
   window.addEventListener("DOMContentLoaded", function () {
