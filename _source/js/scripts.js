@@ -1,10 +1,10 @@
+import "./gsap";
 import "./_thinkco-buttons";
 import "./_site-header";
 import "./_cb1";
 import "./_cb3";
 import "./_cb8";
 import "./_cb13";
-import "./gsap";
 
 import "./pages/ss4w";
 //

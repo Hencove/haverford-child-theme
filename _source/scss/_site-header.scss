@@ -7,7 +7,7 @@
 		@include boxShadow(6);
 	}
 	// ? constrain logo size including container
-	div:has(.is-the-site-logo) {
+	div:has(>.is-the-site-logo) {
 		width: 220px;
 	}
 	//
