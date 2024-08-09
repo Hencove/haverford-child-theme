@@ -1,4 +1,25 @@
 //
+//	?	here we adjust the sticky header
+//
+.fusion-tb-header .fusion-sticky-container {
+	//
+	&.fusion-sticky-transition {
+		@include boxShadow(4);
+	}
+	// ? constrain logo size including container
+	div:has(.is-the-site-logo) {
+		width: 220px;
+	}
+	//
+	.awb-menu__main-ul {
+		min-height: unset !important;
+	}
+}
+
+//
+//
+//
+//
 //
 //
 
@@ -56,12 +77,6 @@
 	}
 }
 
-.fusion-tb-header .fusion-sticky-container {
-	&.fusion-sticky-transition {
-		@include boxShadow(4);
-	}
-}
-
 //
 //
 //
@@ -70,7 +85,7 @@ body.home {
 		&.fusion-sticky-container {
 			transition: all 0.3s $bezier;
 			&:not(.fusion-sticky-transition) {
-				padding-top: 60px;
+				padding-top: 48px;
 				@include media("<=medium") {
 					padding-top: 42px;
 				}
@@ -121,14 +136,20 @@ html body {
 
 		//
 		//
-		.think-custom-button.has-white-bg-color {
+		.think-custom-button {
 			.fusion-button-text {
-				color: white;
+				font-size: 14px;
 			}
-			&:hover,
-			&:focus {
+
+			.has-white-bg-color {
 				.fusion-button-text {
-					color: black;
+					color: white;
+				}
+				&:hover,
+				&:focus {
+					.fusion-button-text {
+						color: black;
+					}
 				}
 			}
 		}

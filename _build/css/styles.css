@@ -226,6 +226,16 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.fusion-tb-header .fusion-sticky-container.fusion-sticky-transition {
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.fusion-tb-header .fusion-sticky-container div:has(.is-the-site-logo) {
+  width: 220px;
+}
+.fusion-tb-header .fusion-sticky-container .awb-menu__main-ul {
+  min-height: unset !important;
+}
+
 .awb-off-canvas-wrap .awb-off-canvas:has(.is-the-mobile-menu) .think-custom-button {
   width: auto !important;
   margin: 0 auto;
@@ -258,15 +268,11 @@ a.fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text
   margin-right: 0 !important;
 }
 
-.fusion-tb-header .fusion-sticky-container.fusion-sticky-transition {
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
 body.home .fusion-tb-header > .fusion-fullwidth.fusion-sticky-container {
   transition: all 0.3s cubic-bezier(0.31, 0.11, 0.12, 0.99);
 }
 body.home .fusion-tb-header > .fusion-fullwidth.fusion-sticky-container:not(.fusion-sticky-transition) {
-  padding-top: 60px;
+  padding-top: 48px;
 }
 @media (max-width: 1366px) {
   body.home .fusion-tb-header > .fusion-fullwidth.fusion-sticky-container:not(.fusion-sticky-transition) {
@@ -297,10 +303,13 @@ html body .fusion-tb-header .fusion-search-button::before {
   content: url("/wp-content/themes/HavThinkChild/_assets/img/thin-search-icon.svg");
   margin: 0 20px;
 }
-html body .fusion-tb-header .think-custom-button.has-white-bg-color .fusion-button-text {
+html body .fusion-tb-header .think-custom-button .fusion-button-text {
+  font-size: 14px;
+}
+html body .fusion-tb-header .think-custom-button .has-white-bg-color .fusion-button-text {
   color: white;
 }
-html body .fusion-tb-header .think-custom-button.has-white-bg-color:hover .fusion-button-text, html body .fusion-tb-header .think-custom-button.has-white-bg-color:focus .fusion-button-text {
+html body .fusion-tb-header .think-custom-button .has-white-bg-color:hover .fusion-button-text, html body .fusion-tb-header .think-custom-button .has-white-bg-color:focus .fusion-button-text {
   color: black;
 }
 html body.single.single-post .fusion-tb-header .fusion-search-button::before {
