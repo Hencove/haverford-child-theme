@@ -331,6 +331,12 @@ html body.single.single-post .fusion-tb-header .fusion-button.think-custom-butto
 html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:before, html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-top-bottom:after, html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:before, html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .button__ornament-left-right:after {
   background-color: var(--awb-custom_color_5);
 }
+html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color .fusion-button-text {
+  color: white;
+}
+html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color:hover .fusion-button-text, html body.single.single-post .fusion-tb-header .fusion-button.think-custom-button.has-white-bg-color:focus .fusion-button-text {
+  color: black;
+}
 html body.single.single-post .fusion-tb-header .fusion-search-element .fusion-search-button.search-button input[type=submit] {
   color: white;
 }

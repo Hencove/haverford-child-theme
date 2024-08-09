@@ -7,7 +7,7 @@
 		@include boxShadow(6);
 	}
 	// ? constrain logo size including container
-	div:has(>.is-the-site-logo) {
+	div:has(> .is-the-site-logo) {
 		width: 220px;
 	}
 	//
@@ -183,6 +183,15 @@ html body {
 						&:after {
 							background-color: var(--awb-custom_color_5);
 						}
+					}
+				}
+				.fusion-button-text {
+					color: white;
+				}
+				&:hover,
+				&:focus {
+					.fusion-button-text {
+						color: black;
 					}
 				}
 			}
