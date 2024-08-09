@@ -868,40 +868,22 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   font-size: 18px;
 }
 .cb8-post-grid .post-card .image-and-tags-container {
-  position: relative;
-  margin-bottom: 0;
+  margin: 0;
 }
-@media (max-width: 640px) {
-  .cb8-post-grid .post-card .image-and-tags-container {
-    margin-bottom: 16px;
-  }
-}
-.cb8-post-grid .post-card .image-and-tags-container .fusion-meta-tb {
-  --awb-height: auto !important;
-  padding-top: 0;
-  padding-bottom: 0;
-  border: unset;
-  border-top: unset;
+.cb8-post-grid .post-card .is-the-highlighted-tag {
   position: absolute;
-  z-index: 1;
   bottom: 0;
   left: 0;
-  width: 100%;
+  z-index: 1;
 }
-.cb8-post-grid .post-card .image-and-tags-container .fusion-meta-tb .fusion-tb-tags {
-  padding: 8px 16px;
+.cb8-post-grid .post-card .is-the-highlighted-tag p {
+  display: inline-block;
+  color: white;
   text-align: center;
+  padding: 8px 16px;
+  margin-bottom: 0;
   background-color: var(--awb-color8);
   background: linear-gradient(90deg, var(--awb-custom_color_1), var(--awb-color8));
-}
-.cb8-post-grid .post-card .image-and-tags-container .fusion-meta-tb a[rel=tag] {
-  font-weight: 400;
-  pointer-events: none;
-  text-decoration: none;
-  color: white;
-}
-.cb8-post-grid .post-card.podcasts .fusion-post-card-image + .fusion-meta-tb {
-  display: none;
 }
 .cb8-post-grid .fusion-builder-placeholder,
 .cb8-post-grid .fusion-post-cards {
@@ -975,6 +957,9 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   margin: 0;
   background: none;
   color: var(--awb-color6);
+}
+.cb8-post-grid .is-search-reset-button {
+  cursor: pointer;
 }
 .cb8-post-grid .wpc-filters-section {
   flex: 0 1 40%;

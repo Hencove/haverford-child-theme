@@ -26,16 +26,13 @@
 	}
 }
 
-
 .fusion-tabs.podcast-tabs {
-
 	.nav {
 		border: unset;
 		border-color: var(--awb-color6) !important;
 		border-bottom: 1px solid !important;
 
 		.nav-tabs {
-
 			li {
 				margin-right: 30px;
 
@@ -47,6 +44,7 @@
 					}
 
 					&:hover {
+						
 						background: none !important;
 					}
 				}
@@ -55,7 +53,7 @@
 					padding-bottom: 2px;
 					border-bottom: 4px solid var(--awb-custom_color_5);
 
-					// ? In case we want to set the bottom border to match the hero color 
+					// ? In case we want to set the bottom border to match the hero color
 					// ?  Must set the background image in the frontend code snippet
 					// &:after {
 					// 	content: "";
@@ -66,18 +64,16 @@
 					// 	height: 4px;
 					// 	width: 100%;
 					// }
-					
+
 					.tab-link {
 						background-color: transparent !important;
 					}
 				}
-			}		
+			}
 		}
 	}
-	
+
 	.tab-pane {
 		padding: 0px !important;
 	}
-
 }
-
