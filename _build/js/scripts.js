@@ -276,196 +276,6 @@ var throttle = function throttle(func, limit) {
 
 /***/ }),
 
-/***/ "./_source/js/_gsap.js":
-/*!*****************************!*\
-  !*** ./_source/js/_gsap.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-
-
-gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
-//
-//	? code here will execute before the DOM has fully loaded
-//
-(function (document, window, $) {
-  //
-  //	? code here will execute once the page is ready
-  //
-  // ... silence is golden
-
-  $(window).on("load", function () {
-    //
-    //
-    //
-    //
-    //
-    //
-    // let CB2_Selector = ".cb2-two-column-feature";
-    // var CB2 = gsap.timeline({
-    // 	scrollTrigger: {
-    // 		trigger: CB2_Selector,
-    // 		start: "top 80%",
-    // 		end: "+=300",
-    // 		scrub: 1,
-    // 	},
-    // });
-    // CB2.addLabel("Start").from(
-    // 	".cb2-two-column-feature .fusion-column-wrapper",
-    // 	{
-    // 		autoAlpha: 0,
-    // 		y: 40,
-    // 	}
-    // );
-    //
-    //
-    //
-    //
-    // let CB3_Selector = ".cb3-featured-stats";
-    // var CB3 = gsap.timeline({
-    // 	scrollTrigger: {
-    // 		trigger: CB3_Selector,
-    // 		start: "top 80%",
-    // 		end: "+=300",
-    // 		scrub: 1,
-    // 	},
-    // });
-    // CB3.addLabel("Start").from(".cb3-featured-stats .fusion-column-wrapper", {
-    // 	autoAlpha: 0,
-    // 	y: 40,
-    // });
-
-    // const CB4_Selectors = [
-    // 	".cb4-image-3-callouts",
-    // 	".cb4-image-3-callouts > .fusion-builder-row > .fusion-layout-column:first-child",
-    // 	".cb4-image-3-callouts > .fusion-builder-row > .fusion-layout-column:not(:first-child) > .fusion-column-wrapper > .fusion-builder-row",
-    // ];
-
-    // gsap.from(CB4_Selectors[1], {
-    // 	autoAlpha: 0,
-    // 	y: 40,
-    // 	scrollTrigger: {
-    // 		trigger: CB4_Selectors[0],
-    // 		start: "top 80%",
-    // 		end: "+=300",
-    // 		scrub: 1,
-    // 	},
-    // });
-
-    // gsap.from(
-    // 	".cb4-image-3-callouts > .fusion-builder-row > .fusion-layout-column:not(:first-child) > .fusion-column-wrapper > .fusion-builder-row > *",
-    // 	{
-    // 		autoAlpha: 0,
-    // 		y: 40,
-    // 		scrollTrigger: {
-    // 			trigger:
-    // 				".cb4-image-3-callouts > .fusion-builder-row > .fusion-layout-column:not(:first-child) > .fusion-column-wrapper > .fusion-builder-row",
-    // 			start: "top 80%",
-    // 			end: "+=300",
-    // 			scrub: 1,
-    // 		},
-    // 	}
-    // );
-
-    // var CB4_Timeline = gsap.timeline({
-    // 	scrollTrigger: {
-    // 		trigger: ".fusion-layout-column",
-    // 		start: "top 80%",
-    // 		end: "+=300",
-    // 		scrub: 1,
-    // 	},
-    // });
-
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-  });
-
-  //
-  //
-  //
-  //
-  //
-  $("body.home #wrapper").prepend('<div class="homepage-gradient-overlay"></div>');
-  $(window).on("load", function () {
-    if ($("body").hasClass("home")) {
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
-        yPercent: -50,
-        scrollTrigger: {
-          trigger: "body",
-          scrub: 1,
-          start: "top top",
-          end: "+=300"
-        }
-      });
-    }
-    var homepageHeroBannerImages = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".cb1-hero-banner .fusion-imageframe");
-    var PostCards = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".fusion-post-cards .post-card");
-    //
-    //
-    if (PostCards.length) {
-      // set the initial state of the elements to faded-out and nudged-down
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(PostCards, {
-        opacity: 0,
-        y: 30
-      });
-
-      // batch animation for all elements
-      gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.batch(PostCards, {
-        start: "top 90%",
-        end: "bottom 10%",
-        onEnter: function onEnter(batch) {
-          return gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(batch, {
-            y: 0,
-            autoAlpha: 1,
-            stagger: 0.2,
-            duration: 1
-          });
-        }
-      });
-    }
-
-    //
-    //
-    if (homepageHeroBannerImages.length > 0) {
-      //responsive
-      var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
-      mm.add("(min-width: 640px)", function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
-          y: function y(i, el) {
-            var offset = (4 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
-            return offset * -1;
-          },
-          stagger: 0,
-          scrollTrigger: {
-            trigger: ".cb1-hero-banner",
-            scrub: 1,
-            start: "top top",
-            end: "+=800"
-          }
-        });
-      });
-    }
-  });
-
-  //
-  //
-  //
-})(document, window, jQuery);
-
-/***/ }),
-
 /***/ "./_source/js/_media-query-handler.js":
 /*!********************************************!*\
   !*** ./_source/js/_media-query-handler.js ***!
@@ -611,6 +421,139 @@ var mqHandler = {
 
 /***/ }),
 
+/***/ "./_source/js/gsap/_cb1-motion.js":
+/*!****************************************!*\
+  !*** ./_source/js/gsap/_cb1-motion.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+//
+(function (document, window, $) {
+  // ?	append our markup once the dom is constructed
+  $("body.home #wrapper").prepend('<div class="homepage-gradient-overlay"></div>');
+  //
+  //	? 	delay animation stuff until window is fully loaded
+  //
+  $(window).on("load", function () {
+    //
+    // ?	homepage has a gradient motion effect
+    //
+    if ($("body").hasClass("home")) {
+      //
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".homepage-gradient-overlay", {
+        yPercent: -50,
+        scrollTrigger: {
+          trigger: "body",
+          scrub: 1,
+          start: "top top",
+          end: "+=300"
+        }
+      });
+    }
+
+    //
+    //
+    var homepageHeroBannerImages = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".cb1-hero-banner .fusion-imageframe");
+    //
+    //
+    if (homepageHeroBannerImages.length > 0) {
+      //responsive
+      var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
+      mm.add("(min-width: 640px)", function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(homepageHeroBannerImages, {
+          y: function y(i, el) {
+            var offset = (4 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
+            return offset * -1;
+          },
+          stagger: 0,
+          scrollTrigger: {
+            trigger: ".cb1-hero-banner",
+            scrub: 1,
+            start: "top top",
+            end: "+=800"
+          }
+        });
+      });
+    }
+  });
+
+  //
+})(document, window, jQuery);
+
+/***/ }),
+
+/***/ "./_source/js/gsap/_site-motion.js":
+/*!*****************************************!*\
+  !*** ./_source/js/gsap/_site-motion.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+//
+(function (document, window, $) {
+  //
+  //	? 	delay animation stuff until window is fully loaded
+  //
+  $(window).on("load", function () {
+    //
+    var PostCards = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".fusion-post-cards .post-card");
+    //
+    if (PostCards.length) {
+      // set the initial state of the elements to faded-out and nudged-down
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(PostCards, {
+        opacity: 0,
+        y: 30
+      });
+
+      // batch animation for all elements
+      gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.batch(PostCards, {
+        start: "top 90%",
+        end: "bottom 10%",
+        onEnter: function onEnter(batch) {
+          return gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(batch, {
+            y: 0,
+            autoAlpha: 1,
+            stagger: 0.2,
+            duration: 1
+          });
+        }
+      });
+    }
+  });
+
+  //
+})(document, window, jQuery);
+
+/***/ }),
+
+/***/ "./_source/js/gsap/index.js":
+/*!**********************************!*\
+  !*** ./_source/js/gsap/index.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cb1_motion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_cb1-motion */ "./_source/js/gsap/_cb1-motion.js");
+/* harmony import */ var _site_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_site-motion */ "./_source/js/gsap/_site-motion.js");
+
+
+
+/***/ }),
+
 /***/ "./_source/js/pages/ss4w.js":
 /*!**********************************!*\
   !*** ./_source/js/pages/ss4w.js ***!
@@ -712,7 +655,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_cb8 */ "./_source/js/_cb8.js");
 /* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cb8__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
-/* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_gsap */ "./_source/js/_gsap.js");
+/* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./gsap */ "./_source/js/gsap/index.js");
 /* harmony import */ var _pages_ss4w__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/ss4w */ "./_source/js/pages/ss4w.js");
 
 
