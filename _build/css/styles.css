@@ -1650,6 +1650,13 @@ div.cb19-prefooter-c2a:before {
   }
 }
 
+@media (max-width: 640px) {
+  .width-100 .fusion-fullwidth {
+    --container_padding_100_right: 20px;
+    --container_padding_100_left: 20px;
+  }
+}
+
 .fusion-tb-footer .is-the-site-logo a {
   display: block;
   padding: 16px;
