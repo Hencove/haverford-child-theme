@@ -4,15 +4,22 @@
 .fusion-tb-header .fusion-sticky-container {
 	//
 	&.fusion-sticky-transition {
-		@include boxShadow(4);
+		@include boxShadow(6);
 	}
 	// ? constrain logo size including container
 	div:has(.is-the-site-logo) {
 		width: 220px;
 	}
 	//
-	.awb-menu__main-ul {
-		min-height: unset !important;
+	@include media(">medium") {
+		.awb-menu__main-ul {
+			min-height: 42px !important;
+			min-height: unset !important;
+		}
+		.awb-menu__sub-ul_main {
+			padding-top: 16px;
+			z-index: 1;
+		}
 	}
 }
 
