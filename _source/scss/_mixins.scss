@@ -86,28 +86,28 @@
 //
 @mixin postCardOnHover() {
 	//
+	i.think-icon-arrow-short,
 	i.think-icon-arrow-long,
 	i.icon-mkb-arrow-right-solid,
 	.fusion-imageframe img,
 	.fusion-image-wrapper img {
-		transition-duration: 500ms;
+		transition: all 0.5s $bezier;
 	}
 	//
 	&:hover,
 	&:focus {
 		// arrow moves right and turns blue
+		i.think-icon-arrow-short,
 		i.think-icon-arrow-long,
 		i.icon-mkb-arrow-right-solid {
-			margin-left: 20px;
-			transition-duration: 500ms;
+			transform: translateX(20px);
 			color: var(--awb-color8) !important;
 		}
 
 		// image scales up
 		.fusion-image-wrapper img,
 		.fusion-imageframe img {
-			transform: scale(1.2);
-			transition-duration: 500ms;
+			transform: scale(1.1);
 		}
 	}
 }

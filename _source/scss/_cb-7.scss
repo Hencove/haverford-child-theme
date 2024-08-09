@@ -1,95 +1,53 @@
-html body {
-	div.fusion-fullwidth {
-		// .fusion-row:has(> .cb7-pullquote-geopattern) {
-		// 	background-color: #fafafa;
-		// 	padding: 30px;
-
-		// 	.fusion-imageframe {
-		// 		display: block;
-		// 	}
-		// }
-
-		.cb7-pullquote-geopattern {
-			@include geoPattern(top, -5vh, left, -3vw, 4vw, 70vh);
-		}
-
-		.cb7-pullquote {
-			&:has(+ .cb7-pullquote) {
-				border-right: 2px solid #ccc;
-			}
-
-			.think-icon-arrow-short,
-			i.fa-arrow-right,
-			.fusion-imageframe img {
-				transition-duration: 500ms;
-			}
-
-			&:hover {
-				.think-icon-arrow-short,
-				i.fa-arrow-right {
-					margin-left: 20px;
-					transition-duration: 500ms;
-					color: var(--awb-color8);
-				}
-				.fusion-imageframe img {
-					transform: scale(1.2);
-					transition-duration: 500ms;
-				}
-			}
+//	? here we select the container to add and position the geolines
+.is-two-cb7-pathways > .fusion-builder-row > .fusion-layout-column:first-child {
+	&:before {
+		@include geoPattern(top, -48px, left, -32px, 64px, 100%);
+		z-index: 1;
+		//
+		@include media("<=small") {
+			top: -48px;
+			left: 0;
+			height: 64px;
+			width: 100%;
 		}
 	}
-
-	@include media("<=small") {
-		// .cb7-pullquote > .fusion-column-wrapper {
-		// 	// Top Row with title & separator
-		// 	.fusion-row:has(.fusion-separator) {
-		// 		display: flex;
-		// 		flex-wrap: nowrap !important;
-
-		// 		.fusion-layout-column {
-		// 			width: 50%;
-		// 		}
-		// 	}
-
-		// 	// Bottom Row with quote and icons
-		// 	.fusion-row:not(:has(.fusion-separator)) {
-		// 		display: flex;
-		// 		flex-wrap: nowrap !important;
-
-		// 		// quote icon/title
-		// 		.fusion-layout-column:has(.title) {
-		// 			width: 10%;
-
-		// 			.title h1 {
-		// 				text-align: right;
-		// 			}
-		// 		}
-
-		// 		// quote text/arrow
-		// 		.fusion-layout-column:not(:has(.title)) {
-		// 			// width: 85%;
-		// 		}
-		// 	}
-		// }
-
-		// // Pulling the CB7 Pull Quote class
-		// .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper {
-		// 	// Reversing element order on mobile
-		// 	> *:not(.fusion-image-element) {
-		// 		order: 1;
-		// 	}
-		// 	// Selecting the Quotation Mark text element and setting text alignment to the left
-		// 	.fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
-		// 		text-align: left;
-		// 	}
-		// }
-
-		div.fusion-layout-column.cb7-pullquote-geopattern {
-			top: -2vh;
-			left: -10vw;
-			height: 4vh;
-			height: 64px;
-			width: 110vw;
+}
+//	?	overall styling for the pattern here
+.cb7-pullquote {
+	//	?	include standard "post card" hover
+	&:has(> .fusion-column-inner-bg > .fusion-column-anchor) {
+		@include postCardOnHover();
+	}
+	//	?	here we select the second pattern in the container, which is flipped to be image on the bottom on desktop
+	+ .cb7-pullquote {
+		> .fusion-column-wrapper > .fusion-builder-row {
+			// ? un-flip the second pattern here, bringing the image to the top
+			@include media("<=small") {
+				> .fusion-layout-column:not(:last-child) {
+					order: 1;
+				}
+				> .fusion-layout-column:last-child {
+					order: 0;
+				}
+			}
+		}
+		//
+		//	?	here we draw a line centered between the two patterns
+		.fusion-column-wrapper > .fusion-builder-row {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: -20px;
+				height: 100%;
+				width: 1px;
+				background-color: #ccc;
+				@include media("<=small") {
+					display: none;
+				}
+			}
 		}
 	}
 }
