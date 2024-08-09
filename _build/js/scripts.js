@@ -524,6 +524,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
 
+
+
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
 //
 (function (document, window, $) {
@@ -531,6 +533,54 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   //	? 	delay animation stuff until window is fully loaded
   //
   $(window).on("load", function () {
+    //
+    var cb2Elements = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb2-two-column-feature .fusion-column-wrapper"]);
+    cb2Elements.forEach(function (element) {
+      //
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.from(element, {
+        y: 30,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "+=500",
+          scrub: 1
+        }
+      });
+    });
+
+    //
+    var cb3Elements = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb3-featured-stats .fusion-column-wrapper"]);
+    cb3Elements.forEach(function (element) {
+      //
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.from(element, {
+        y: 30,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "+=500",
+          scrub: 1
+        }
+      });
+    });
+
+    //
+    var cb4Elements = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb4-image-3-callouts .fusion-column-wrapper"]);
+    cb4Elements.forEach(function (element) {
+      //
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.from(element, {
+        y: 30,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "+=500",
+          scrub: 1
+        }
+      });
+    });
+
     //
     var PostCards = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".fusion-post-cards .post-card");
     //

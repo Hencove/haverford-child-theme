@@ -1,3 +1,4 @@
+"use strict";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -7,6 +8,60 @@ gsap.registerPlugin(ScrollTrigger);
 	//	? 	delay animation stuff until window is fully loaded
 	//
 	$(window).on("load", function () {
+		//
+		const cb2Elements = gsap.utils.toArray([
+			".cb2-two-column-feature .fusion-column-wrapper",
+		]);
+		cb2Elements.forEach((element) => {
+			//
+			gsap.from(element, {
+				y: 30,
+				autoAlpha: 0,
+				scrollTrigger: {
+					trigger: element,
+					start: "top 90%",
+					end: "+=500",
+					scrub: 1,
+				},
+			});
+		});
+
+		//
+		const cb3Elements = gsap.utils.toArray([
+			".cb3-featured-stats .fusion-column-wrapper",
+		]);
+		cb3Elements.forEach((element) => {
+			//
+			gsap.from(element, {
+				y: 30,
+				autoAlpha: 0,
+				scrollTrigger: {
+					trigger: element,
+					start: "top 90%",
+					end: "+=500",
+					scrub: 1,
+				},
+			});
+		});
+
+		//
+		const cb4Elements = gsap.utils.toArray([
+			".cb4-image-3-callouts .fusion-column-wrapper",
+		]);
+		cb4Elements.forEach((element) => {
+			//
+			gsap.from(element, {
+				y: 30,
+				autoAlpha: 0,
+				scrollTrigger: {
+					trigger: element,
+					start: "top 90%",
+					end: "+=500",
+					scrub: 1,
+				},
+			});
+		});
+
 		//
 		const PostCards = gsap.utils.toArray(".fusion-post-cards .post-card");
 		//
