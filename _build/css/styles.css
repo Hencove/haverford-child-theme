@@ -758,13 +758,6 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   padding: 1rem;
 }
 
-html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) {
-  background-color: #fafafa;
-  padding: 30px;
-}
-html body div.fusion-fullwidth .fusion-row:has(> .cb7-pullquote-geopattern) .fusion-imageframe {
-  display: block;
-}
 html body div.fusion-fullwidth .cb7-pullquote-geopattern {
   content: "";
   width: 4vw;
@@ -796,29 +789,6 @@ html body div.fusion-fullwidth .cb7-pullquote:hover .fusion-imageframe img {
   transition-duration: 500ms;
 }
 @media (max-width: 640px) {
-  html body .cb7-pullquote > .fusion-column-wrapper .fusion-row:has(.fusion-separator) {
-    display: flex;
-    flex-wrap: nowrap !important;
-  }
-  html body .cb7-pullquote > .fusion-column-wrapper .fusion-row:has(.fusion-separator) .fusion-layout-column {
-    width: 50%;
-  }
-  html body .cb7-pullquote > .fusion-column-wrapper .fusion-row:not(:has(.fusion-separator)) {
-    display: flex;
-    flex-wrap: nowrap !important;
-  }
-  html body .cb7-pullquote > .fusion-column-wrapper .fusion-row:not(:has(.fusion-separator)) .fusion-layout-column:has(.title) {
-    width: 10%;
-  }
-  html body .cb7-pullquote > .fusion-column-wrapper .fusion-row:not(:has(.fusion-separator)) .fusion-layout-column:has(.title) .title h1 {
-    text-align: right;
-  }
-  html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper > *:not(.fusion-image-element) {
-    order: 1;
-  }
-  html body .cb7-pullquote:nth-of-type(2) .fusion-column-wrapper .fusion-title[style*="--awb-text-color:var(--awb-custom_color_5);"] h1 {
-    text-align: left;
-  }
   html body div.fusion-layout-column.cb7-pullquote-geopattern {
     top: -2vh;
     left: -10vw;
