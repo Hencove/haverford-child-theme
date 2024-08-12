@@ -1,3 +1,19 @@
+%h7_small_caps {
+	color: var(--awb-color8);
+	font-family: "Inter";
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-style: normal;
+}
+%separator_underline {
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--awb-color5);
+}
+
+
 @mixin boxShadow($depth) {
 	@if ($depth==0) {
 		box-shadow: 0px 1px 2px transparent;

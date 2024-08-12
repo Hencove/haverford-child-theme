@@ -1,0 +1,108 @@
+//
+//
+//
+body.single.avada_portfolio-template-default #content {
+	// ? "finras brokercheck" button
+	.fusion-button {
+		padding: 8px 16px;
+		border-radius: 0;
+	}
+}
+body.single.avada_portfolio-template-default #content {
+	//
+	//
+	.accordian.email-toggle .wpcf7 {
+		--button_gradient_top_color: var(--awb-color8);
+		--button_gradient_top_color_hover: var(--awb-custom_color_1);
+		--button_border_hover_color: var(--awb-custom_color_1);
+		--form_border_radius: 0;
+		--form_bg_color: var(--awb-color-3);
+		--form_border_color: var(--awb-color5);
+		//
+		.wpcf7-submit {
+			width: 100%;
+			padding: 8px 16px;
+			border-radius: 0;
+			color: var(--awb-color1);
+			@extend %h7_small_caps;
+		}
+	}
+	//
+	.accordian.email-toggle {
+		border: 1px solid var(--awb-color5);
+
+		//
+		//
+		.fusion-panel {
+			--awb-content-color: var(--awb-color6);
+			--form_text_color: var(--awb-color6);
+			--awb-toggle-hover-accent-color: var(--awb-custom_color_5);
+			--awb-toggle-active-accent-color: var(--awb-custom_color_5);
+			//
+			.panel-heading {
+				padding: 8px 16px;
+				//
+				.panel-title {
+					a {
+						@extend %h7_small_caps;
+						padding: 0px;
+						&:hover {
+							color: var(--awb-custom_color_5);
+						}
+					}
+				}
+			}
+		}
+
+		.panel-body.toggle-content.fusion-clearfix {
+			padding: 15px 25px;
+		}
+
+		.fusion-panel {
+			border-bottom: 0px !important;
+		}
+	}
+
+	//
+	//
+	//
+	.fusion-title {
+		--awb-sep-color: var(--awb-color5);
+		h1 {
+			font-size: 42px;
+			color: var(--awb-color8);
+		}
+		h2 {
+			font-size: 32px;
+			color: var(--awb-color8);
+		}
+		h3 {
+			@extend %h7_small_caps;
+			@extend %separator_underline;
+			color: var(--awb-color8);
+		}
+	}
+
+	//
+	//
+	//
+	.fusion-text {
+		h4 {
+			font-size: 16px;
+			font-family: "Inter";
+			font-weight: 300;
+		}
+		//
+		//
+		h2 {
+			font-size: 24px;
+		}
+
+		.leadrcont {
+			font-family: var(--body_typography-font-family);
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 1.5;
+		}
+	}
+}

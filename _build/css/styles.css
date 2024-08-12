@@ -1,4 +1,20 @@
 @charset "UTF-8";
+body.single.avada_portfolio-template-default #content .fusion-title h3, body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel .panel-heading .panel-title a, body.single.avada_portfolio-template-default #content .accordian.email-toggle .wpcf7 .wpcf7-submit {
+  color: var(--awb-color8);
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+body.single.avada_portfolio-template-default #content .fusion-title h3 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--awb-color5);
+}
+
 @media (min-width: 641px) {
   :root {
     --h1_typography-font-size: calc(2.34375rem + 11.5300146413vw) !important;
@@ -2379,4 +2395,76 @@ body.page-id-45277 .timeline_wrapper .item-description_text h3 {
   color: var(--awb-color8);
   line-height: 1.5;
   font-weight: 600;
+}
+
+body.single.avada_portfolio-template-default #content .fusion-button {
+  padding: 8px 16px;
+  border-radius: 0;
+}
+
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .wpcf7 {
+  --button_gradient_top_color: var(--awb-color8);
+  --button_gradient_top_color_hover: var(--awb-custom_color_1);
+  --button_border_hover_color: var(--awb-custom_color_1);
+  --form_border_radius: 0;
+  --form_bg_color: var(--awb-color-3);
+  --form_border_color: var(--awb-color5);
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .wpcf7 .wpcf7-submit {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 0;
+  color: var(--awb-color1);
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle {
+  border: 1px solid var(--awb-color5);
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel {
+  --awb-content-color: var(--awb-color6);
+  --form_text_color: var(--awb-color6);
+  --awb-toggle-hover-accent-color: var(--awb-custom_color_5);
+  --awb-toggle-active-accent-color: var(--awb-custom_color_5);
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel .panel-heading {
+  padding: 8px 16px;
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel .panel-heading .panel-title a {
+  padding: 0px;
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel .panel-heading .panel-title a:hover {
+  color: var(--awb-custom_color_5);
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .panel-body.toggle-content.fusion-clearfix {
+  padding: 15px 25px;
+}
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel {
+  border-bottom: 0px !important;
+}
+body.single.avada_portfolio-template-default #content .fusion-title {
+  --awb-sep-color: var(--awb-color5);
+}
+body.single.avada_portfolio-template-default #content .fusion-title h1 {
+  font-size: 42px;
+  color: var(--awb-color8);
+}
+body.single.avada_portfolio-template-default #content .fusion-title h2 {
+  font-size: 32px;
+  color: var(--awb-color8);
+}
+body.single.avada_portfolio-template-default #content .fusion-title h3 {
+  color: var(--awb-color8);
+}
+body.single.avada_portfolio-template-default #content .fusion-text h4 {
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 300;
+}
+body.single.avada_portfolio-template-default #content .fusion-text h2 {
+  font-size: 24px;
+}
+body.single.avada_portfolio-template-default #content .fusion-text .leadrcont {
+  font-family: var(--body_typography-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
 }
