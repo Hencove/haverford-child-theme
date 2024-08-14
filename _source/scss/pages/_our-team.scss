@@ -1,53 +1,52 @@
-.tfs-slider .slide-content-container {
-	top: auto;
-	bottom: 0;
-	transform: translateY(0%);
-	margin-bottom: 30px;
-}
-
-.tfs-slider .slide-content-container h1 {
-	color: #fff;
-}
-
-#manual-fullwidth {
-	margin-left: -50px !important;
-	margin-right: -50px !important;
-}
-/*
-  .fusion-testimonials.clean .testimonial-thumbnail {
-      margin: 0 auto 0px!important;
-  }
-  
-  .fusion-testimonials.clean .author {
-      margin-top: 0px!important;
-  }*/
-
-.fusion-testimonials.clean blockquote q {
-	display: block;
-	padding: 25px;
-	line-height: 32px;
-	font-size: 18px;
-	text-align: center;
-	letter-spacing: 0px;
-	font-style: normal;
-}
-
-.fusion-testimonials.clean .author {
-	margin-top: 25px;
-	font-size: 18px;
-	text-align: center;
-	letter-spacing: 0px;
-}
+//
+//
+//
+//
 
 .fusion-counters-box .fusion-counter-box {
 	padding: 0px;
 	margin-bottom: 14px;
 	text-align: left !important;
-	font-family: "Cormorant Garamond" !important;
+	//
+	//
+	//
+	.unit,
+	.display-counter {
+		font-family: var(--awb-typography1-font-family) !important;
+		font-size: 42px;
+	}
+	//
+	//
+	//
+	.counter-box-container {
+		padding-left: 5px !important;
+		padding-bottom: 0px !important;
+		padding-top: 0px !important;
+	}
 }
-
-.fusion-counters-box .fusion-counter-box .counter-box-container {
-	padding-left: 5px !important;
-	padding-bottom: 0px !important;
-	padding-top: 0px !important;
+//
+// ? Ajax Search Pro section...
+//
+.searchrow {
+	border: 1px solid #dcdcdc;
+	padding: 50px;
+	.title-heading-left {
+		color: var(--awb-color8);
+		font-family: var(--awb-custom_typography_1-font-family);
+		font-weight: var(--awb-custom_typography_1-font-weight);
+		letter-spacing: var(--awb-custom_typography_1-letter-spacing);
+		text-transform: var(--awb-custom_typography_1-text-transform);
+		line-height: var(--awb-custom_typography_1-line-height);
+		font-size: 14px;
+	}
+	//
+	//
+	.ajaxsearchpro.asp_main_container {
+		.probox,
+		& {
+			background: unset !important;
+			background-image: unset !important;
+			background-color: unset !important;
+		}
+	}
 }
