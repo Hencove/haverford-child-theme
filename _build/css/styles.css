@@ -2384,9 +2384,6 @@ body.page-id-45277 .speaker-search_scroll-icon > div {
 body.page-id-45277 .fusion-body .fusion-title.sep-underline {
   padding-bottom: 0px !important;
 }
-body.page-id-45277 .fusion-imageframe {
-  display: block;
-}
 body.page-id-45277 .timeline_wrapper .item-description_text h3 {
   font-family: "Inter";
   letter-spacing: 2px;
@@ -2395,6 +2392,60 @@ body.page-id-45277 .timeline_wrapper .item-description_text h3 {
   color: var(--awb-color8);
   line-height: 1.5;
   font-weight: 600;
+}
+
+.tfs-slider .slide-content-container {
+  top: auto;
+  bottom: 0;
+  transform: translateY(0%);
+  margin-bottom: 30px;
+}
+
+.tfs-slider .slide-content-container h1 {
+  color: #fff;
+}
+
+#manual-fullwidth {
+  margin-left: -50px !important;
+  margin-right: -50px !important;
+}
+
+/*
+  .fusion-testimonials.clean .testimonial-thumbnail {
+      margin: 0 auto 0px!important;
+  }
+
+  .fusion-testimonials.clean .author {
+      margin-top: 0px!important;
+  }*/
+.fusion-testimonials.clean blockquote q {
+  display: block;
+  padding: 25px;
+  line-height: 32px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0px;
+  font-style: normal;
+}
+
+.fusion-testimonials.clean .author {
+  margin-top: 25px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.fusion-counters-box .fusion-counter-box {
+  padding: 0px;
+  margin-bottom: 14px;
+  text-align: left !important;
+  font-family: "Cormorant Garamond" !important;
+}
+
+.fusion-counters-box .fusion-counter-box .counter-box-container {
+  padding-left: 5px !important;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
 }
 
 body.single.avada_portfolio-template-default #content .fusion-button {
