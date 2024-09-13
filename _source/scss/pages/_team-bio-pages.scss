@@ -78,7 +78,7 @@ body.single.avada_portfolio-template-default #content {
 		}
 		h3 {
 			@extend %h7_small_caps;
-			@extend %separator_underline;
+			// @extend %separator_underline;
 			color: var(--awb-color8);
 		}
 	}
@@ -103,6 +103,32 @@ body.single.avada_portfolio-template-default #content {
 			font-size: 20px;
 			font-weight: 300;
 			line-height: 1.5;
+		}
+	}
+}
+
+body.single.avada_portfolio-template-default #content {
+	.services-provided {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 8px;
+		.service-provided {
+			padding: 6px 4px;
+			background-color: var(--wp--preset--color--awb-color-4);
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 0;
+		}
+	}
+
+	.team-member-more-info {
+		.fusion-checklist {
+			.icon-wrapper {
+				display: none;
+			}
+			.fusion-li-item-content {
+				margin-inline-start: unset;
+			}
 		}
 	}
 }
