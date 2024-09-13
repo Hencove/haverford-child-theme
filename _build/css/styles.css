@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body.single.avada_portfolio-template-default #content .fusion-title h3, body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel .panel-heading .panel-title a, body.single.avada_portfolio-template-default #content .accordian.email-toggle .wpcf7 .wpcf7-submit {
+body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel .panel-heading .panel-title a, body.single.avada_portfolio-template-default #content .accordian.email-toggle .wpcf7 .wpcf7-submit {
   color: var(--awb-color8);
   font-family: "Inter";
   font-size: 14px;
@@ -2466,34 +2466,6 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .p
 }
 body.single.avada_portfolio-template-default #content .accordian.email-toggle .fusion-panel {
   border-bottom: 0px !important;
-}
-body.single.avada_portfolio-template-default #content .fusion-title {
-  --awb-sep-color: var(--awb-color5);
-}
-body.single.avada_portfolio-template-default #content .fusion-title h1 {
-  font-size: 42px;
-  color: var(--awb-color8);
-}
-body.single.avada_portfolio-template-default #content .fusion-title h2 {
-  font-size: 32px;
-  color: var(--awb-color8);
-}
-body.single.avada_portfolio-template-default #content .fusion-title h3 {
-  color: var(--awb-color8);
-}
-body.single.avada_portfolio-template-default #content .fusion-text h4 {
-  font-size: 16px;
-  font-family: "Inter";
-  font-weight: 300;
-}
-body.single.avada_portfolio-template-default #content .fusion-text h2 {
-  font-size: 24px;
-}
-body.single.avada_portfolio-template-default #content .fusion-text .leadrcont {
-  font-family: var(--body_typography-font-family);
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.5;
 }
 
 body.single.avada_portfolio-template-default #content .services-provided {

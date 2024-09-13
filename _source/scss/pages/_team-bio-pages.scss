@@ -66,45 +66,45 @@ body.single.avada_portfolio-template-default #content {
 	//
 	//
 	//
-	.fusion-title {
-		--awb-sep-color: var(--awb-color5);
-		h1 {
-			font-size: 42px;
-			color: var(--awb-color8);
-		}
-		h2 {
-			font-size: 32px;
-			color: var(--awb-color8);
-		}
-		h3 {
-			@extend %h7_small_caps;
-			// @extend %separator_underline;
-			color: var(--awb-color8);
-		}
-	}
+	// .fusion-title {
+	// 	--awb-sep-color: var(--awb-color5);
+	// 	h1 {
+	// 		font-size: 42px;
+	// 		color: var(--awb-color8);
+	// 	}
+	// 	h2 {
+	// 		font-size: 32px;
+	// 		color: var(--awb-color8);
+	// 	}
+	// 	h3 {
+	// 		@extend %h7_small_caps;
+	// 		// @extend %separator_underline;
+	// 		color: var(--awb-color8);
+	// 	}
+	// }
 
 	//
 	//
 	//
-	.fusion-text {
-		h4 {
-			font-size: 16px;
-			font-family: "Inter";
-			font-weight: 300;
-		}
-		//
-		//
-		h2 {
-			font-size: 24px;
-		}
+	// .fusion-text {
+	// 	h4 {
+	// 		font-size: 16px;
+	// 		font-family: "Inter";
+	// 		font-weight: 300;
+	// 	}
+	// 	//
+	// 	//
+	// 	h2 {
+	// 		font-size: 24px;
+	// 	}
 
-		.leadrcont {
-			font-family: var(--body_typography-font-family);
-			font-size: 20px;
-			font-weight: 300;
-			line-height: 1.5;
-		}
-	}
+	// 	.leadrcont {
+	// 		font-family: var(--body_typography-font-family);
+	// 		font-size: 20px;
+	// 		font-weight: 300;
+	// 		line-height: 1.5;
+	// 	}
+	// }
 }
 
 body.single.avada_portfolio-template-default #content {
