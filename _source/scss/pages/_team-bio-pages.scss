@@ -1,6 +1,15 @@
 //
 //
 //
+body.single.avada_portfolio-template-default {
+	.fusion-page-title-bar .fusion-image-element {
+		position: relative;
+		&:before {
+			@include geoPattern(top, 60px, left, -60px, 100%, 100%);
+		}
+	}
+}
+
 body.single.avada_portfolio-template-default #content {
 	// ? "finras brokercheck" button
 	.fusion-button {

@@ -578,6 +578,7 @@ html body .awb-off-canvas-wrap.is-the-mobile-main-menu .fusion-button.think-cust
   background-repeat: repeat;
   background-position: center;
   background-size: 200px;
+  background-size: contain;
 }
 @media (max-width: 799px) {
   .cb2-two-column-feature:before {
@@ -666,6 +667,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   background-repeat: repeat;
   background-position: center;
   background-size: 200px;
+  background-size: contain;
 }
 @media (max-width: 640px) {
   div.cb4-image-3-callouts .fusion-image-element:before {
@@ -679,6 +681,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
     background-repeat: repeat;
     background-position: center;
     background-size: 200px;
+    background-size: contain;
   }
 }
 
@@ -817,6 +820,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   background-repeat: repeat;
   background-position: center;
   background-size: 200px;
+  background-size: contain;
   z-index: 1;
 }
 @media (max-width: 640px) {
@@ -1307,6 +1311,7 @@ html body div.fusion-fullwidth.cb14-about .fusion-image-element img {
   background-repeat: repeat;
   background-position: center;
   background-size: 200px;
+  background-size: contain;
 }
 
 @media (max-width: 640px) {
@@ -1651,6 +1656,7 @@ div.cb19-prefooter-c2a:before {
   background-repeat: repeat;
   background-position: center;
   background-size: 200px;
+  background-size: contain;
   filter: brightness(100);
   z-index: 1;
 }
@@ -2422,6 +2428,23 @@ body.page-id-45277 .timeline_wrapper .item-description_text h3 {
   background: unset !important;
   background-image: unset !important;
   background-color: unset !important;
+}
+
+body.single.avada_portfolio-template-default .fusion-page-title-bar .fusion-image-element {
+  position: relative;
+}
+body.single.avada_portfolio-template-default .fusion-page-title-bar .fusion-image-element:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 60px;
+  left: -60px;
+  background-image: url(../../_assets/img/geo_smalltile.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 200px;
+  background-size: contain;
 }
 
 body.single.avada_portfolio-template-default #content .fusion-button {
