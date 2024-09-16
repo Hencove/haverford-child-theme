@@ -2491,21 +2491,32 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
   border-bottom: 0px !important;
 }
 
+.fusion-post-cards .service-provided .service-provided a {
+  color: var(--body_typography-color);
+}
+
+.fusion-post-cards .services-provided,
 body.single.avada_portfolio-template-default #content .services-provided {
   display: flex;
   flex-flow: row wrap;
   gap: 8px;
 }
-body.single.avada_portfolio-template-default #content .services-provided .service-provided {
+.fusion-post-cards .services-provided .service-provided a,
+body.single.avada_portfolio-template-default #content .services-provided .service-provided a {
   padding: 6px 4px;
   background-color: var(--wp--preset--color--awb-color-4);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0;
+  pointer-events: unset;
+  text-decoration: none;
+  color: var(--body_typography-color);
 }
+.fusion-post-cards .team-member-more-info .fusion-checklist .icon-wrapper,
 body.single.avada_portfolio-template-default #content .team-member-more-info .fusion-checklist .icon-wrapper {
   display: none;
 }
+.fusion-post-cards .team-member-more-info .fusion-checklist .fusion-li-item-content,
 body.single.avada_portfolio-template-default #content .team-member-more-info .fusion-checklist .fusion-li-item-content {
   margin-inline-start: unset;
 }

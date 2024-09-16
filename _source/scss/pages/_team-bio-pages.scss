@@ -116,17 +116,33 @@ body.single.avada_portfolio-template-default #content {
 	// }
 }
 
+.fusion-post-cards {
+	.service-provided {
+		.service-provided {
+			a {
+				color: var(--body_typography-color);
+			}
+		}
+	}
+}
+
+.fusion-post-cards,
 body.single.avada_portfolio-template-default #content {
 	.services-provided {
 		display: flex;
 		flex-flow: row wrap;
 		gap: 8px;
 		.service-provided {
-			padding: 6px 4px;
-			background-color: var(--wp--preset--color--awb-color-4);
-			font-size: 14px;
-			font-weight: 600;
-			letter-spacing: 0;
+			a {
+				padding: 6px 4px;
+				background-color: var(--wp--preset--color--awb-color-4);
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0;
+				pointer-events: unset;
+				text-decoration: none;
+				color: var(--body_typography-color);
+			}
 		}
 	}
 
