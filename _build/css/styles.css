@@ -882,6 +882,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 @media (min-width: 1367px) {
   .cb8-post-grid .fusion-post-cards .fusion-grid-posts-cards {
     padding: 20px 80px;
+    padding: 80px;
   }
 }
 @media (max-width: 1366px) {

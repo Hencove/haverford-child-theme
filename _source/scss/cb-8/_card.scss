@@ -5,6 +5,7 @@
 	@include media(">medium") {
 		.fusion-grid-posts-cards {
 			padding: 20px 80px;
+			padding: 80px;
 		}
 	}
 	@include media("<=medium") {
