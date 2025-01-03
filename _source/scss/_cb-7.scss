@@ -1,14 +1,16 @@
 //	? here we select the container to add and position the geolines
 .is-two-cb7-pathways > .fusion-builder-row > .fusion-layout-column:first-child {
 	&:before {
-		@include geoPattern(top, -48px, left, -32px, 64px, 100%);
+		@include geoPattern(top, -48px, left, 0, 140px, 100%);
 		z-index: 1;
+		transform: translateX(-75%);
 		//
 		@include media("<=small") {
 			top: -48px;
 			left: 0;
 			height: 64px;
-			width: 100%;
+			transform: translateX(-8%);
+			width: 119% !important;
 		}
 	}
 }
