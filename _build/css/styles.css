@@ -1805,6 +1805,29 @@ body.home #wrapper .homepage-gradient-overlay {
   display: none;
 }
 
+.cb-17.touchup--align-titles .fusion-layout-column.fusion_builder_column_inner {
+  height: 100%;
+}
+.cb-17.touchup--align-titles .fusion-layout-column.fusion_builder_column_inner .fusion-column-wrapper > .fusion-title.sep-underline {
+  display: flex;
+  min-height: 120px;
+  align-items: flex-end;
+}
+@media (max-width: 640px) {
+  .cb-17.touchup--align-titles .fusion-layout-column.fusion_builder_column_inner .fusion-column-wrapper > .fusion-title.sep-underline {
+    min-height: unset;
+  }
+}
+@media (max-width: 640px) {
+  .cb-17.touchup--align-titles .fusion-layout-column.fusion_builder_column_inner {
+    height: unset;
+  }
+}
+.cb-17.touchup--align-titles .fusion-layout-column.fusion_builder_column_inner div > :has(a.fusion-button) {
+  margin: auto 0;
+  margin-bottom: 0;
+}
+
 #menu-footer .menu-item a:hover, #menu-footer .menu-item a:focus {
   --awb-active-color: var(--awb-custom_color_5) !important;
 }

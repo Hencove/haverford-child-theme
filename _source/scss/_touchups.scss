@@ -4,7 +4,7 @@
 // }
 
 .width-100 .fusion-fullwidth {
-	@include media("<=small"){
+	@include media("<=small") {
 		--container_padding_100_right: 20px;
 		--container_padding_100_left: 20px;
 	}
@@ -164,6 +164,30 @@ body.home {
 		a[href*="/category/quality-insights-landing-page/"],
 		a[href*="/category/quality-insights-homepage"] {
 			display: none;
+		}
+	}
+}
+
+.cb-17 {
+	&.touchup--align-titles {
+		.fusion-layout-column.fusion_builder_column_inner {
+			height: 100%;
+			.fusion-column-wrapper > .fusion-title.sep-underline {
+				display: flex;
+				min-height: 120px;
+				align-items: flex-end;
+				@include media("<=small") {
+					min-height: unset;
+				}
+			}
+			@include media("<=small") {
+				height: unset;
+			}
+			//? align buttons to the bottom
+			div > :has(a.fusion-button) {
+				margin: auto 0;
+				margin-bottom: 0;
+			}
 		}
 	}
 }
