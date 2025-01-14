@@ -1739,6 +1739,9 @@ html body .fusion-image-element .awb-imageframe-caption-container .awb-imagefram
   margin: 0 0 0 8px;
 }
 
+body.home {
+  border: 5px solid red !important;
+}
 body.home #wrapper .homepage-gradient-overlay {
   position: absolute;
   top: 0;

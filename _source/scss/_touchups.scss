@@ -109,6 +109,7 @@ html body {
 }
 
 body.home {
+	border: 5px solid red !important;
 	#wrapper {
 		.homepage-gradient-overlay {
 			position: absolute;
