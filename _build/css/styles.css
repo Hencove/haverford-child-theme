@@ -2539,3 +2539,7 @@ body.single.avada_portfolio-template-default #content .team-member-more-info .fu
 body.single.avada_portfolio-template-default #content .team-member-more-info .fusion-checklist .fusion-li-item-content {
   margin-inline-start: unset;
 }
+
+body.page-id-445 .cb5-news-and-insights-post-grid .fusion-post-cards .title-heading-tag :not(a[title="Wealth Planning Insights"]) {
+  display: none;
+}
