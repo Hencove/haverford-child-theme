@@ -748,7 +748,8 @@ __webpack_require__.r(__webpack_exports__);
   // ... silence is golden
 
   $(".fusion-search-button .fusion-search-submit").val("");
-
+  $("img").attr("srcset", "");
+  $("img").attr("sizes", "");
   //
   //
   //

@@ -17,7 +17,8 @@ import "./pages/ss4w";
 	// ... silence is golden
 
 	$(".fusion-search-button .fusion-search-submit").val("");
-
+	$("img").attr("srcset", "");
+	$("img").attr("sizes", "");
 	//
 	//
 	//
