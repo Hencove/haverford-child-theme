@@ -42,8 +42,9 @@ $rfs-breakpoint: 1366px;
 }
 //	custom font value
 //
-*[style*="--awb-font-size:24px;"] {
-	@include rfs(24px !important, --awb-font-size);
+*[style*="--awb-font-size: 24px;"] {
+	// @include rfs(24px !important, --awb-font-size);
+	@include rfs(20px !important, --awb-font-size);
 	@include media("<=small") {
 		--awb-font-size: 16px !important;
 	}

@@ -71,16 +71,11 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
   }
 }
 
-*[style*="--awb-font-size:24px;"] {
-  --awb-font-size: calc(1.275rem + 0.2635431918vw) !important;
-}
-@media (min-width: 1200px) {
-  *[style*="--awb-font-size:24px;"] {
-    --awb-font-size: 1.5rem !important;
-  }
+*[style*="--awb-font-size: 24px;"] {
+  --awb-font-size: 1.25rem !important;
 }
 @media (max-width: 640px) {
-  *[style*="--awb-font-size:24px;"] {
+  *[style*="--awb-font-size: 24px;"] {
     --awb-font-size: 16px !important;
   }
 }
