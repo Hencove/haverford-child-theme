@@ -719,7 +719,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   content: "▪";
   display: inline-block;
   vertical-align: middle;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   font-size: 18px;
 }
 .cb5-news-and-insights-post-grid p:only-child {
@@ -915,7 +915,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   content: "▪";
   display: inline-block;
   vertical-align: middle;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   font-size: 18px;
 }
 .cb8-post-grid .post-card .image-and-tags-container {
@@ -1194,7 +1194,7 @@ body:has(.cb8-post-grid) div:has(> .fusion-filters) {
   content: "▪";
   display: inline-block;
   vertical-align: middle;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   font-size: 18px;
 }
 .cb11-related-posts p:only-child {
