@@ -12,17 +12,17 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
 
 @media (min-width: 641px) {
   :root {
-    --h1_typography-font-size: calc(2.34375rem + 11.5300146413vw) !important;
+    --h1_typography-font-size: calc(1.875rem + 6.588579795vw) !important;
     --h2_typography-font-size: calc(1.875rem + 6.588579795vw) !important;
-    --h3_typography-font-size: calc(1.725rem + 5.0073206442vw) !important;
+    --h3_typography-font-size: calc(1.575rem + 3.4260614934vw) !important;
     --h4_typography-font-size: calc(1.625rem + 3.953147877vw) !important;
-    --h5_typography-font-size: calc(1.525rem + 2.8989751098vw) !important;
+    --h5_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
     --h6_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
   }
 }
 @media (min-width: 641px) and (min-width: 1200px) {
   :root {
-    --h1_typography-font-size: 12.1875rem !important;
+    --h1_typography-font-size: 7.5rem !important;
   }
 }
 @media (min-width: 641px) and (min-width: 1200px) {
@@ -32,7 +32,7 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
 }
 @media (min-width: 641px) and (min-width: 1200px) {
   :root {
-    --h3_typography-font-size: 6rem !important;
+    --h3_typography-font-size: 4.5rem !important;
   }
 }
 @media (min-width: 641px) and (min-width: 1200px) {
@@ -42,7 +42,7 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
 }
 @media (min-width: 641px) and (min-width: 1200px) {
   :root {
-    --h5_typography-font-size: 4rem !important;
+    --h5_typography-font-size: 3rem !important;
   }
 }
 @media (min-width: 641px) and (min-width: 1200px) {
@@ -52,7 +52,7 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
 }
 @media (max-width: 640px) {
   :root {
-    --h1_typography-font-size: 64px !important;
+    --h1_typography-font-size: 56px !important;
     --h2_typography-font-size: 48px !important;
     --h3_typography-font-size: 40px !important;
     --h4_typography-font-size: 32px !important;

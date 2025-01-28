@@ -5,11 +5,14 @@ $rfs-breakpoint: 1366px;
 	//	?	for tablet/desktop we are using RFS scaling for font sizes
 	//
 	@include media(">small") {
-		@include rfs(195px !important, --h1_typography-font-size);
+		// @include rfs(195px !important, --h1_typography-font-size);
+		@include rfs(120px !important, --h1_typography-font-size);
 		@include rfs(120px !important, --h2_typography-font-size);
-		@include rfs(96px !important, --h3_typography-font-size);
+		// @include rfs(96px !important, --h3_typography-font-size);
+		@include rfs(72px !important, --h3_typography-font-size);
 		@include rfs(80px !important, --h4_typography-font-size);
-		@include rfs(64px !important, --h5_typography-font-size);
+		// @include rfs(64px !important, --h5_typography-font-size);
+		@include rfs(48px !important, --h5_typography-font-size);
 		@include rfs(48px !important, --h6_typography-font-size);
 	}
 
@@ -17,7 +20,8 @@ $rfs-breakpoint: 1366px;
 	// 	?	for mobile, we are using a strict font size for each heading
 	//
 	@include media("<=small") {
-		--h1_typography-font-size: 64px !important;
+		// --h1_typography-font-size: 64px !important;
+		--h1_typography-font-size: 56px !important;
 		--h2_typography-font-size: 48px !important;
 		--h3_typography-font-size: 40px !important;
 		--h4_typography-font-size: 32px !important;
@@ -59,10 +63,10 @@ $rfs-breakpoint: 1366px;
 	line-height: 1.15 !important;
 }
 
-// 
+//
 // ?	here we adjust things for posts because they imported with all kinds of heading sizes that are way too big.
 // ?	we'll just drop everything to the mobile values, but also RFS scale them.
-// 
+//
 body.single .post-content {
 	@include rfs(64px !important, --h1_typography-font-size);
 	@include rfs(48px !important, --h2_typography-font-size);
