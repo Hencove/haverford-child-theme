@@ -180,7 +180,7 @@ body.home {
 					min-height: unset;
 				}
 			}
-			@include media("<=small") {
+			@include media("<=medium") {
 				height: unset;
 			}
 			//? align buttons to the bottom

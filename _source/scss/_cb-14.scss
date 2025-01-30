@@ -1,10 +1,14 @@
 html body {
+	div.fusion-fullwidth.cb14-about {
+		.fusion-image-element img {
+			outline: 1px solid var(--awb-custom_color_5);
+			outline-offset: -20px;
+			max-width: 480px; //* adding within Avada CMS actually adds "width", not "max-width"
 
-    div.fusion-fullwidth.cb14-about {
-        
-        .fusion-image-element img {
-            outline: 1px solid var(--awb-custom_color_5);
-            outline-offset: -20px;
-        }
-    }
+			@include media("<=medium") {
+				max-height: 380px;
+				max-width: unset;
+			}
+		}
+	}
 }

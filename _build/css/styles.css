@@ -1292,6 +1292,13 @@ div.fusion-fullwidth.cb13-3-column-hover .fusion-content-boxes.content-boxes .co
 html body div.fusion-fullwidth.cb14-about .fusion-image-element img {
   outline: 1px solid var(--awb-custom_color_5);
   outline-offset: -20px;
+  max-width: 480px;
+}
+@media (max-width: 1366px) {
+  html body div.fusion-fullwidth.cb14-about .fusion-image-element img {
+    max-height: 380px;
+    max-width: unset;
+  }
 }
 
 .cb16-large-stat-or-quote:before {
@@ -1813,7 +1820,7 @@ body.home #wrapper .homepage-gradient-overlay {
     min-height: unset;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 1366px) {
   .cb-17.touchup--align-titles .fusion-layout-column.fusion_builder_column_inner {
     height: unset;
   }
@@ -2537,4 +2544,11 @@ body.single.avada_portfolio-template-default #content .team-member-more-info .fu
 
 body.page-id-445 .cb5-news-and-insights-post-grid .fusion-post-cards .title-heading-tag :not(a[title="Wealth Planning Insights"]) {
   display: none;
+}
+
+@media (max-width: 1366px) {
+  body.page-id-443 .cb16-large-stat-or-quote .col-stat > .fusion-column-wrapper {
+    --awb-border-right: 0px;
+    --awb-border-bottom: 1px;
+  }
 }

@@ -4,23 +4,21 @@
 //
 
 .cb16-large-stat-or-quote {
-
-  &:before { 
-    @include geoPattern(top, 0px, left, 0px, 100%, 100%);
-  }
+	&:before {
+		@include geoPattern(top, 0px, left, 0px, 100%, 100%);
+	}
 }
 
 // Layouts break to mobile at 800px
 @include media("<=small") {
-  .cb16-large-stat-or-quote {
-
-    .col-stat {
-      > .fusion-column-wrapper {
-        --awb-border-right: 0px;
-        --awb-border-bottom: 1px;
-        //   border-right: 0px !important;
-        //   border-bottom: 1px !important;
-      }
-    }
-  }
+	.cb16-large-stat-or-quote {
+		.col-stat {
+			> .fusion-column-wrapper {
+				--awb-border-right: 0px;
+				--awb-border-bottom: 1px;
+				//   border-right: 0px !important;
+				//   border-bottom: 1px !important;
+			}
+		}
+	}
 }
