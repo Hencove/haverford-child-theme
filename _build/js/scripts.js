@@ -447,7 +447,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(cb1Elements, {
 //
 var cb1Gallery = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb1-hero-banner .fusion-imageframe"]);
 
-// 
+//
 //
 (function (document, window, $) {
   // ?	append our markup once the dom is constructed
@@ -488,20 +488,57 @@ var cb1Gallery = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb1-her
     });
     //
     if (cb1Gallery.length > 0) {
-      //responsive
+      //
       var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
+      mm.add("(min-width: 1366px)", function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(cb1Gallery, {
+          y: 100
+        });
+      });
+
+      //responsive
       mm.add("(min-width: 640px)", function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(cb1Gallery, {
-          y: function y(i, el) {
-            var offset = (4 + parseFloat(i)) * (gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.maxScroll(window) / 100);
-            return offset * -1;
-          },
-          scrollTrigger: {
-            trigger: ".cb1-hero-banner",
-            scrub: 1,
-            start: "top top",
-            end: "+=800"
-          }
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(cb1Gallery, {
+          y: 100
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(cb1Gallery).forEach(function (el, i) {
+          gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(el, {
+            y: -60,
+            // y: () => {
+            // 	let offset = (4 + i) * (ScrollTrigger.maxScroll(window) / 100);
+            // 	return offset * -1;
+            // },
+            scrollTrigger: {
+              trigger: ".cb1-hero-banner",
+              scrub: 1,
+              start: "top+=".concat(i * 50, " top"),
+              // Each image starts a little earlier/later
+              end: "+=600",
+              markers: true
+            }
+          });
+        });
+      });
+      mm.add("(max-width: 639px)", function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(cb1Gallery, {
+          y: 60
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(cb1Gallery).forEach(function (el, i) {
+          gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(el, {
+            y: -60,
+            // y: () => {
+            // 	let offset = (4 + i) * (ScrollTrigger.maxScroll(window) / 100);
+            // 	return offset * -1;
+            // },
+            scrollTrigger: {
+              trigger: ".cb1-hero-banner",
+              scrub: 1,
+              start: "top+=".concat(i * 50, " top"),
+              // Each image starts a little earlier/later
+              end: "+=600",
+              markers: true
+            }
+          });
         });
       });
     }
