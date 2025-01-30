@@ -10,64 +10,61 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
   font-style: normal;
 }
 
-@media (min-width: 641px) {
-  :root {
-    --h1_typography-font-size: calc(1.875rem + 6.588579795vw) !important;
-    --h2_typography-font-size: calc(1.875rem + 6.588579795vw) !important;
-    --h3_typography-font-size: calc(1.575rem + 3.4260614934vw) !important;
-    --h4_typography-font-size: calc(1.625rem + 3.953147877vw) !important;
-    --h5_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
-    --h6_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
-  }
+:root {
+  --h1_typography-font-size: calc(1.328125rem + 7.229136164vw) !important;
+  --h2_typography-font-size: calc(1.309375rem + 5.4941434846vw) !important;
+  --h3_typography-font-size: calc(1.290625rem + 3.7591508053vw) !important;
+  --h4_typography-font-size: calc(1.284375rem + 3.1808199122vw) !important;
+  --h5_typography-font-size: calc(1.271875rem + 2.0241581259vw) !important;
+  --h6_typography-font-size: calc(1.2625rem + 1.1566617862vw) !important;
 }
-@media (min-width: 641px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   :root {
     --h1_typography-font-size: 7.5rem !important;
   }
 }
-@media (min-width: 641px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   :root {
-    --h2_typography-font-size: 7.5rem !important;
+    --h2_typography-font-size: 6rem !important;
   }
 }
-@media (min-width: 641px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   :root {
     --h3_typography-font-size: 4.5rem !important;
   }
 }
-@media (min-width: 641px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   :root {
-    --h4_typography-font-size: 5rem !important;
+    --h4_typography-font-size: 4rem !important;
   }
 }
-@media (min-width: 641px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   :root {
     --h5_typography-font-size: 3rem !important;
   }
 }
-@media (min-width: 641px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   :root {
-    --h6_typography-font-size: 3rem !important;
-  }
-}
-@media (max-width: 640px) {
-  :root {
-    --h1_typography-font-size: 56px !important;
-    --h2_typography-font-size: 48px !important;
-    --h3_typography-font-size: 40px !important;
-    --h4_typography-font-size: 32px !important;
-    --h5_typography-font-size: 24px !important;
-    --h6_typography-font-size: 18px !important;
+    --h6_typography-font-size: 2.25rem !important;
   }
 }
 
 *[style*="--h3_typography-font-size:48px;"] {
-  --h3_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
+  --h3_typography-font-size: calc(1.271875rem + 2.0241581259vw) !important;
   line-height: 1.15 !important;
 }
 @media (min-width: 1200px) {
   *[style*="--h3_typography-font-size:48px;"] {
     --h3_typography-font-size: 3rem !important;
+  }
+}
+
+*[style*="--awb-font-size:32px;"] {
+  --h6_typography-font-size: calc(1.259375rem + 0.8674963397vw) !important;
+}
+@media (min-width: 1200px) {
+  *[style*="--awb-font-size:32px;"] {
+    --h6_typography-font-size: 2rem !important;
   }
 }
 
@@ -90,7 +87,7 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
 }
 
 .fusion-body .fusion-accordian .panel-title {
-  --awb-title-font-size: calc(1.35rem + 1.0541727672vw) !important;
+  --awb-title-font-size: calc(1.2625rem + 1.1566617862vw) !important;
   line-height: 1.15 !important;
 }
 @media (min-width: 1200px) {
@@ -100,11 +97,11 @@ body.single.avada_portfolio-template-default #content .accordian.email-toggle .f
 }
 
 body.single .post-content {
-  --h1_typography-font-size: calc(1.525rem + 2.8989751098vw) !important;
-  --h2_typography-font-size: calc(1.425rem + 1.8448023426vw) !important;
-  --h3_typography-font-size: calc(1.375rem + 1.317715959vw) !important;
-  --h4_typography-font-size: calc(1.325rem + 0.7906295754vw) !important;
-  --h5_typography-font-size: calc(1.275rem + 0.2635431918vw) !important;
+  --h1_typography-font-size: calc(1.284375rem + 3.1808199122vw) !important;
+  --h2_typography-font-size: calc(1.271875rem + 2.0241581259vw) !important;
+  --h3_typography-font-size: calc(1.265625rem + 1.4458272328vw) !important;
+  --h4_typography-font-size: calc(1.259375rem + 0.8674963397vw) !important;
+  --h5_typography-font-size: calc(1.253125rem + 0.2891654466vw) !important;
   --h6_typography-font-size: 1.125rem !important;
 }
 @media (min-width: 1200px) {
@@ -799,6 +796,11 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 .cb6-interior-banner .fusion-image-element:nth-child(2) .fusion-imageframe {
   max-width: 40vw;
   padding: 1rem;
+}
+@media (min-width: 641px) {
+  .cb6-interior-banner > .fusion-builder-row > .fusion-layout-column .fusion-title + .fusion-text p {
+    padding-right: 60px;
+  }
 }
 
 .is-two-cb7-pathways > .fusion-builder-row > .fusion-layout-column:first-child:before {

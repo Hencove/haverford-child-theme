@@ -52,4 +52,17 @@
 			}
 		}
 	}
+
+	//? Add padding to column text
+
+	@include media(">small") {
+		> .fusion-builder-row {
+			//
+			> .fusion-layout-column {
+				.fusion-title + .fusion-text p {
+					padding-right: 60px;
+				}
+			}
+		}
+	}
 }
