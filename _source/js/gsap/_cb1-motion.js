@@ -70,7 +70,7 @@ const cb1Gallery = gsap.utils.toArray([".cb1-hero-banner .fusion-imageframe"]);
 							scrub: 2,
 							start: `top+=${i * 60} 10%`, // Now starts with the last element first
 							end: `+=600`,
-							markers: true,
+							// markers: true,
 						},
 					});
 				});
@@ -91,7 +91,7 @@ const cb1Gallery = gsap.utils.toArray([".cb1-hero-banner .fusion-imageframe"]);
 							scrub: 2,
 							start: `top-=${i * 60} center`, // Again, reversed order
 							end: `+=400`,
-							markers: true,
+							// markers: true,
 						},
 					});
 				});

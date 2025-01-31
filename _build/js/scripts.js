@@ -506,8 +506,8 @@ var cb1Gallery = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb1-her
               scrub: 2,
               start: "top+=".concat(i * 60, " 10%"),
               // Now starts with the last element first
-              end: "+=600",
-              markers: true
+              end: "+=600"
+              // markers: true,
             }
           });
         });
@@ -528,8 +528,8 @@ var cb1Gallery = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb1-her
               scrub: 2,
               start: "top-=".concat(i * 60, " center"),
               // Again, reversed order
-              end: "+=400",
-              markers: true
+              end: "+=400"
+              // markers: true,
             }
           });
         });
