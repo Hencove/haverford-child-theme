@@ -73,7 +73,7 @@ const cb1Gallery = gsap.utils.toArray([".cb1-hero-banner .fusion-imageframe"]);
 							scrub: 1,
 							start: `top+=${i * 50} top`, // Each image starts a little earlier/later
 							end: `+=600`,
-							markers: true,
+							// markers: true,
 						},
 					});
 				});

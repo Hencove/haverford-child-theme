@@ -1,8 +1,8 @@
 //
 //
 .cb3-featured-stats {
-    position: relative;
-    // 
+	position: relative;
+	//
 	--ornaments--offset--value: 0;
 	--ornaments--icon--size: 48px;
 	@include media("<=small") {
@@ -60,6 +60,31 @@
 		bottom: 16px;
 		@include media("<=small") {
 			bottom: 8px;
+		}
+	}
+}
+
+//
+// 		an adjustment for the homepage is needed
+//
+body.home {
+	ion
+
+	// this is "the haverford difference" sect
+	.cb3-featured-stats {
+		//
+		> .fusion-builder-row {
+			// these are the two columns that represent the main block content
+			> .fusion-layout-column {
+				// this is the whole column of 4 stat blocks
+				&:last-child {
+					> .fusion-builder-row {
+						// this is a single one of the stat blocks
+						> .fusion-layout-column {
+						}
+					}
+				}
+			}
 		}
 	}
 }
