@@ -535,8 +535,8 @@ var cb1Gallery = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb1-her
               scrub: 1,
               start: "top+=".concat(i * 50, " top"),
               // Each image starts a little earlier/later
-              end: "+=600",
-              markers: true
+              end: "+=600"
+              // markers: true,
             }
           });
         });
