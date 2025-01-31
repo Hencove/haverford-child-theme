@@ -55,44 +55,43 @@ const cb1Gallery = gsap.utils.toArray([".cb1-hero-banner .fusion-imageframe"]);
 			//
 			let mm = gsap.matchMedia();
 			mm.add("(min-width: 1366px)", () => {
-				gsap.set(cb1Gallery, { y: 100 });
+				// gsap.set(cb1Gallery, { y: 100 });
 			});
 
 			//responsive
-			mm.add("(min-width: 640px)", () => {
-				gsap.set(cb1Gallery, { y: 100 });
-				gsap.utils.toArray(cb1Gallery).forEach((el, i) => {
+			mm.add("(min-width: 961px)", () => {
+				const galleryItems = gsap.utils.toArray(cb1Gallery).reverse(); // Reverse the order
+
+				galleryItems.forEach((el, i) => {
 					gsap.to(el, {
-						y: -60,
-						// y: () => {
-						// 	let offset = (4 + i) * (ScrollTrigger.maxScroll(window) / 100);
-						// 	return offset * -1;
-						// },
+						y: -120,
 						scrollTrigger: {
 							trigger: ".cb1-hero-banner",
-							scrub: 1,
-							start: `top+=${i * 50} top`, // Each image starts a little earlier/later
+							scrub: 2,
+							start: `top+=${i * 60} 10%`, // Now starts with the last element first
 							end: `+=600`,
-							// markers: true,
+							markers: true,
 						},
 					});
 				});
 			});
-			mm.add("(max-width: 639px)", () => {
+
+			mm.add("(max-width: 960px)", () => {
+				// Push down 60
 				gsap.set(cb1Gallery, { y: 60 });
-				gsap.utils.toArray(cb1Gallery).forEach((el, i) => {
+
+				const galleryItems = gsap.utils.toArray(cb1Gallery).reverse(); // Reverse for this case too
+
+				// Move back to initial 0
+				galleryItems.forEach((el, i) => {
 					gsap.to(el, {
-						y: -60,
-						// y: () => {
-						// 	let offset = (4 + i) * (ScrollTrigger.maxScroll(window) / 100);
-						// 	return offset * -1;
-						// },
+						y: 0,
 						scrollTrigger: {
-							trigger: ".cb1-hero-banner",
-							scrub: 1,
-							start: `top+=${i * 50} top`, // Each image starts a little earlier/later
-							end: `+=600`,
-							// markers: true,
+							trigger: ".cb1-gallery",
+							scrub: 2,
+							start: `top-=${i * 60} center`, // Again, reversed order
+							end: `+=400`,
+							markers: true,
 						},
 					});
 				});

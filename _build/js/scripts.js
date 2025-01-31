@@ -491,52 +491,45 @@ var cb1Gallery = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb1-her
       //
       var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
       mm.add("(min-width: 1366px)", function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(cb1Gallery, {
-          y: 100
-        });
+        // gsap.set(cb1Gallery, { y: 100 });
       });
 
       //responsive
-      mm.add("(min-width: 640px)", function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(cb1Gallery, {
-          y: 100
-        });
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(cb1Gallery).forEach(function (el, i) {
+      mm.add("(min-width: 961px)", function () {
+        var galleryItems = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(cb1Gallery).reverse(); // Reverse the order
+
+        galleryItems.forEach(function (el, i) {
           gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(el, {
-            y: -60,
-            // y: () => {
-            // 	let offset = (4 + i) * (ScrollTrigger.maxScroll(window) / 100);
-            // 	return offset * -1;
-            // },
+            y: -120,
             scrollTrigger: {
               trigger: ".cb1-hero-banner",
-              scrub: 1,
-              start: "top+=".concat(i * 50, " top"),
-              // Each image starts a little earlier/later
-              end: "+=600"
-              // markers: true,
+              scrub: 2,
+              start: "top+=".concat(i * 60, " 10%"),
+              // Now starts with the last element first
+              end: "+=600",
+              markers: true
             }
           });
         });
       });
-      mm.add("(max-width: 639px)", function () {
+      mm.add("(max-width: 960px)", function () {
+        // Push down 60
         gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(cb1Gallery, {
           y: 60
         });
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(cb1Gallery).forEach(function (el, i) {
+        var galleryItems = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(cb1Gallery).reverse(); // Reverse for this case too
+
+        // Move back to initial 0
+        galleryItems.forEach(function (el, i) {
           gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(el, {
-            y: -60,
-            // y: () => {
-            // 	let offset = (4 + i) * (ScrollTrigger.maxScroll(window) / 100);
-            // 	return offset * -1;
-            // },
+            y: 0,
             scrollTrigger: {
-              trigger: ".cb1-hero-banner",
-              scrub: 1,
-              start: "top+=".concat(i * 50, " top"),
-              // Each image starts a little earlier/later
-              end: "+=600"
-              // markers: true,
+              trigger: ".cb1-gallery",
+              scrub: 2,
+              start: "top-=".concat(i * 60, " center"),
+              // Again, reversed order
+              end: "+=400",
+              markers: true
             }
           });
         });
