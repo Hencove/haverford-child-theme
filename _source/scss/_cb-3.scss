@@ -68,12 +68,15 @@
 // 		an adjustment for the homepage is needed
 //
 body.home {
-	ion
-
 	// this is "the haverford difference" sect
 	.cb3-featured-stats {
 		//
 		> .fusion-builder-row {
+			@include media("<=960px") {
+				display: flex;
+				flex-flow: row nowrap !important;
+			}
+
 			// these are the two columns that represent the main block content
 			> .fusion-layout-column {
 				// this is the whole column of 4 stat blocks

@@ -1836,8 +1836,11 @@ body.home #wrapper .homepage-gradient-overlay {
   margin-bottom: 0;
 }
 
-#menu-footer .menu-item a:hover, #menu-footer .menu-item a:focus {
+.fusion-footer #menu-footer .menu-item a:hover, .fusion-footer #menu-footer .menu-item a:focus {
   --awb-active-color: var(--awb-custom_color_5) !important;
+}
+.fusion-footer a:focus, .fusion-footer a:hover {
+  text-decoration: none !important;
 }
 
 .podcast-card-wide .fusion-builder-row-inner {

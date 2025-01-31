@@ -192,11 +192,21 @@ body.home {
 	}
 }
 
-#menu-footer {
-	.menu-item a {
-		&:hover,
-		&:focus {
-			--awb-active-color: var(--awb-custom_color_5) !important;
+.fusion-footer {
+	//? Menu block
+	#menu-footer {
+		.menu-item a {
+			&:hover,
+			&:focus {
+				--awb-active-color: var(--awb-custom_color_5) !important;
+			}
+		}
+	}
+	//? Text-links
+	a {
+		&:focus,
+		&:hover {
+			text-decoration: none !important;
 		}
 	}
 }
