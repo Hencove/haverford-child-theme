@@ -692,6 +692,14 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   }
 }
 
+@media (min-width: 640px) {
+  div.cb4-image-3-callouts > .fusion-builder-row > .fusion-layout-column:nth-child(3) .fusion-builder-row > .fusion-layout-column .fusion-text p {
+    max-width: 400px;
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
 .cb5-news-and-insights-post-grid .post-card i.think-icon-arrow-short,
 .cb5-news-and-insights-post-grid .post-card i.think-icon-arrow-long,
 .cb5-news-and-insights-post-grid .post-card i.icon-mkb-arrow-right-solid,

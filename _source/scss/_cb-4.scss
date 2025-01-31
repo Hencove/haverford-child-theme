@@ -7,19 +7,36 @@ div.cb4-image-3-callouts .fusion-image-element {
 	position: relative;
 	&:before {
 		@include geoPattern(top, 180px, left, -180px, 100%, 100%);
-
 	}
 
 	@include media("<=small") {
 		&:before {
 			@include geoPattern(top, 0px, left, -140px, 100%, 110%);
-
 		}
 	}
 }
-// 
-// 
+//
+//
 // * this code block...
-// 
-// 
-div.cb4-image-3-callouts{}
+//
+//
+div.cb4-image-3-callouts {
+	//
+	@include media(">=small") {
+		> .fusion-builder-row {
+			> .fusion-layout-column {
+				&:nth-child(3) {
+					.fusion-builder-row {
+						> .fusion-layout-column {
+							.fusion-text p {
+								max-width: 400px;
+								display: inline-block;
+								margin: 0 auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
