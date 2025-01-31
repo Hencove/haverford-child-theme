@@ -72,9 +72,19 @@ body.home {
 	.cb3-featured-stats {
 		//
 		> .fusion-builder-row {
-			@include media("<=960px") {
+			@include media(">=960px") {
 				display: flex;
 				flex-flow: row nowrap !important;
+				gap: 40px;
+				> .fusion-layout-column {
+					flex: 1 1 45%;
+					width: auto;
+					&:first-child {
+						> .fusion-column-wrapper {
+							justify-content: flex-start;
+						}
+					}
+				}
 			}
 
 			// these are the two columns that represent the main block content
