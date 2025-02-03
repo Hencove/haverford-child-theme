@@ -717,10 +717,10 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 .cb5-news-and-insights-post-grid .post-card .fusion-image-wrapper:before {
   content: "";
   position: absolute;
-  top: calc(0.1 * var(--awb-width-large));
-  left: calc(0.05 * var(--awb-width-large));
-  bottom: calc(0.1 * var(--awb-width-large));
-  right: calc(0.05 * var(--awb-width-large));
+  top: clamp(15px, 0.15 * var(--awb-width-large), 24px);
+  left: clamp(15px, 0.08 * var(--awb-width-large), 24px);
+  bottom: clamp(15px, 0.15 * var(--awb-width-large), 24px);
+  right: clamp(15px, 0.08 * var(--awb-width-large), 24px);
   border: 1px solid var(--awb-custom_color_5);
   z-index: 2;
 }
@@ -1240,10 +1240,10 @@ body:has(.cb8-post-grid) div:has(> .fusion-filters) {
 .cb11-related-posts .post-card .fusion-image-wrapper:before {
   content: "";
   position: absolute;
-  top: calc(0.1 * var(--awb-width-large));
-  left: calc(0.05 * var(--awb-width-large));
-  bottom: calc(0.1 * var(--awb-width-large));
-  right: calc(0.05 * var(--awb-width-large));
+  top: clamp(15px, 0.15 * var(--awb-width-large), 24px);
+  left: clamp(15px, 0.08 * var(--awb-width-large), 24px);
+  bottom: clamp(15px, 0.15 * var(--awb-width-large), 24px);
+  right: clamp(15px, 0.08 * var(--awb-width-large), 24px);
   border: 1px solid var(--awb-custom_color_5);
   z-index: 2;
 }

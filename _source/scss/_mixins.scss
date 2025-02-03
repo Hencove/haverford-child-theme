@@ -82,10 +82,37 @@
 	min-height: 0px;
 }
 //
+
+// @mixin insetImageFrame() {
+// 	&:before {
+// 		$inset: calc(0.1 * var(--awb-width-large));
+// 		$insetW: calc(0.05 * var(--awb-width-large));
+// 		content: "";
+// 		position: absolute;
+// 		top: $inset;
+// 		left: $insetW;
+// 		bottom: $inset;
+// 		right: $insetW;
+// 		border: 1px solid var(--awb-custom_color_5);
+// 		z-index: 2;
+// 	}
+// }
+
+//
+
 @mixin insetImageFrame() {
 	&:before {
-		$inset: calc(0.1 * var(--awb-width-large));
-		$insetW: calc(0.05 * var(--awb-width-large));
+		$inset: clamp(
+			15px,
+			calc(0.15 * var(--awb-width-large)),
+			24px
+		); // Top & Bottom: min 13px, max 24px
+		$insetW: clamp(
+			15px,
+			calc(0.08 * var(--awb-width-large)),
+			24px
+		); // Left & Right: min 11px, max 24px
+
 		content: "";
 		position: absolute;
 		top: $inset;
@@ -96,7 +123,6 @@
 		z-index: 2;
 	}
 }
-//
 //
 //
 @mixin postCardOnHover() {
