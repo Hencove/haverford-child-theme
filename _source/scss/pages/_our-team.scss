@@ -2,53 +2,65 @@
 //
 //
 //
-
-.fusion-counters-box .fusion-counter-box {
-	padding: 0px;
-	margin-bottom: 14px;
-	text-align: left !important;
+body.page-id-515 {
 	//
-	//
-	//
-	.unit,
-	.display-counter {
-		font-family: var(--awb-typography1-font-family) !important;
-		font-size: 42px;
+	.fusion-counters-box .fusion-counter-box {
+		padding: 0px;
+		margin-bottom: 14px;
+		text-align: left !important;
+		//
+		//
+		//
+		.unit,
+		.display-counter {
+			font-family: var(--awb-typography1-font-family) !important;
+			font-size: 42px;
+		}
+		//
+		//
+		//
+		.counter-box-container {
+			padding-left: 5px !important;
+			padding-bottom: 0px !important;
+			padding-top: 0px !important;
+		}
 	}
 	//
+	// ? Ajax Search Pro section...
 	//
-	//
-	.counter-box-container {
-		padding-left: 5px !important;
-		padding-bottom: 0px !important;
-		padding-top: 0px !important;
+	.searchrow {
+		border: 1px solid #dcdcdc;
+		padding: 50px;
+		.title-heading-left {
+			color: var(--awb-color8);
+			font-family: var(--awb-custom_typography_1-font-family);
+			font-weight: var(--awb-custom_typography_1-font-weight);
+			letter-spacing: var(--awb-custom_typography_1-letter-spacing);
+			text-transform: var(--awb-custom_typography_1-text-transform);
+			line-height: var(--awb-custom_typography_1-line-height);
+			font-size: 14px;
+		}
+		//
+		//
+		.ajaxsearchpro.asp_main_container {
+			.probox,
+			& {
+				background: unset !important;
+				background-image: unset !important;
+				background-color: unset !important;
+			}
+		}
 	}
-}
-//
-// ? Ajax Search Pro section...
-//
-.searchrow {
-	border: 1px solid #dcdcdc;
-	padding: 50px;
-	.title-heading-left {
-		color: var(--awb-color8);
-		font-family: var(--awb-custom_typography_1-font-family);
-		font-weight: var(--awb-custom_typography_1-font-weight);
-		letter-spacing: var(--awb-custom_typography_1-letter-spacing);
-		text-transform: var(--awb-custom_typography_1-text-transform);
-		line-height: var(--awb-custom_typography_1-line-height);
-		font-size: 14px;
-	}
-	//
-	//
-	.ajaxsearchpro.asp_main_container {
-		.probox,
-		& {
-			background: unset !important;
-			background-image: unset !important;
-			background-color: unset !important;
+	.cb6-interior-banner {
+		> .fusion-builder-row {
+			//? visually center the text content
+			.fusion-layout-column:first-of-type {
+				//
+				@include media(">=1080px") {
+					transform: translateY(-25%);
+					align-self: center;
+				}
+			}
 		}
 	}
 }
-
-

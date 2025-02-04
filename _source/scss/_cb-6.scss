@@ -11,7 +11,8 @@
 		bottom: 120px;
 		@include media("<small") {
 			left: 12px;
-			bottom: 60px;
+			bottom: 140px;
+			// bottom: 60px;
 		}
 	}
 
@@ -21,7 +22,35 @@
 			margin-bottom: 16px;
 		}
 	}
+	//
+	> .fusion-builder-row {
+		//? enforce vertical stacking
+		@include media("<=1080px") {
+			//? Add breathing room for section below
+			margin-bottom: 12vw;
+			.fusion-layout-column {
+				width: 100%;
+				.fusion-column-wrapper {
+					// margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+		//? visually center the text content
+		.fusion-layout-column:first-of-type {
+			//
+			// @include media(">=1080px") {
+			// 	transform: translateY(-25%);
+			// 	align-self: center;
+			// }
 
+			//
+			.fusion-text {
+				max-width: 650px;
+			}
+		}
+	}
+	//
 	@include media("<=small") {
 		> .fusion-builder-row {
 			margin-left: 0 !important;
@@ -35,29 +64,65 @@
 		// *  the second image has special styles
 		//
 		&:nth-child(1) {
-			// margin-right: -60px;
-			// margin-left: 15%;
-			width: calc(120% + 40px);
-			height: calc(100% + 60px);
-			top: -60px;
-			position: relative;
-			left: -40px;
-		}
-		&:nth-child(2) {
-			// margin-top: -33%;
-			// margin-left: -15%;
-			position: relative;
-			top: -30%;
-			left: -55%;
-			@include media("<=small") {
-				// margin-left: 0;
-				// margin-bottom: -40px;
-				left: 0;
+			//? push image to the right edge of container
+			@include media(">=1080px") {
+				// margin-right: -60px;
+				// margin-left: 15%;
+				width: calc(120% + 40px);
+				height: calc(100% + 60px);
+				top: -60px;
+				position: relative;
+				left: -40px;
 			}
+			//
+			@include media("<1080px") {
+				// max-height: 300px;
+				text-align: right;
+				//
+				.fusion-imageframe {
+					//
+					width: 55%;
+					height: 100%;
+					left: 40px;
+
+					img {
+						height: 100%;
+					}
+				}
+			}
+		}
+		//
+		&:nth-child(2) {
+			//? absolute reduces the section height
+			position: absolute;
+			@include media(">=1080px") {
+				// margin-top: -33%;
+				// margin-left: -15%;
+				// position: relative;
+				// top: -30%;
+				// left: -55%;
+				bottom: 0;
+				left: -33%;
+			}
+			@include media("<1080px") {
+				bottom: -25%;
+				left: 25%;
+				.fusion-imageframe {
+					max-width: 35vw;
+				}
+			}
+			// @include media("<=small") {
+			// 	// margin-left: 0;
+			// 	// margin-bottom: -40px;
+			// 	left: 0;
+			// }
 			// * this wrapper has the border for the image, and handles aspect ratio if applied
 			.fusion-imageframe {
 				max-width: 40vw;
-				padding: 1rem;
+				padding: 1em;
+				@include media("<1080px") {
+					padding: 0.5em;
+				}
 			}
 		}
 	}
