@@ -35,15 +35,24 @@
 		// *  the second image has special styles
 		//
 		&:nth-child(1) {
-			margin-right: -60px;
-			margin-left: 15%;
+			// margin-right: -60px;
+			// margin-left: 15%;
+			width: calc(120% + 40px);
+			height: calc(100% + 60px);
+			top: -60px;
+			position: relative;
+			left: -40px;
 		}
 		&:nth-child(2) {
-			margin-top: -33%;
-			margin-left: -15%;
+			// margin-top: -33%;
+			// margin-left: -15%;
+			position: relative;
+			top: -30%;
+			left: -55%;
 			@include media("<=small") {
-				margin-left: 0;
-				margin-bottom: -40px;
+				// margin-left: 0;
+				// margin-bottom: -40px;
+				left: 0;
 			}
 			// * this wrapper has the border for the image, and handles aspect ratio if applied
 			.fusion-imageframe {
