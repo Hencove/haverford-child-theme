@@ -16,67 +16,86 @@
 		}
 	}
 
-	.think-custom-button {
-		margin-bottom: 128px;
-		@include media("<small") {
-			margin-bottom: 16px;
+	// .think-custom-button {
+	// 	margin-bottom: 128px;
+	// 	@include media("<1080px") {
+	// 		margin-bottom: 16px;
+	// 	}
+	// }
+
+	//* First column adjustments
+	> .fusion-builder-row {
+		//
+		//
+		.fusion-layout-column:first-of-type {
+			//? Add padding to column text on desktop
+			@include media(">=1080px") {
+				//
+				.fusion-title + .fusion-text p {
+					padding-right: 60px;
+				}
+			}
+			//? Constrain body copy width
+			.fusion-text {
+				max-width: 560px;
+				@include media("<=1080px") {
+					max-width: unset;
+				}
+			}
+			// //? Add margin bottom to last direct child inside the first column
+			// //? This will solve for the event where we dont keep the button el, which pushes down the ornament lines
+			> *:last-child {
+				margin-bottom: 128px;
+				//
+				@include media("<=1080px") {
+					margin-bottom: 16px;
+				}
+			}
 		}
 	}
-	//
+	//*
+	//*
+	//* Tablet/Mobile stacking
 	> .fusion-builder-row {
-		//? enforce vertical stacking
+		//? Enforce vertical stacking
 		@include media("<=1080px") {
 			//? Add breathing room for section below
 			margin-bottom: 12vw;
 			.fusion-layout-column {
 				width: 100%;
 				.fusion-column-wrapper {
-					// margin-left: 0;
+					//? Pushes main image flush against the edge
 					margin-right: 0;
 				}
 			}
 		}
-		//? visually center the text content
-		.fusion-layout-column:first-of-type {
-			//
-			// @include media(">=1080px") {
-			// 	transform: translateY(-25%);
-			// 	align-self: center;
-			// }
-
-			//
-			.fusion-text {
-				max-width: 650px;
-			}
-		}
-	}
-	//
-	@include media("<=small") {
-		> .fusion-builder-row {
+		//
+		@include media("<=small") {
 			margin-left: 0 !important;
 			margin-right: 0 !important;
 		}
 	}
+	//*
 
+	//*
 	// * the avada image element container
 	.fusion-image-element {
 		//
 		// *  the second image has special styles
 		//
 		&:nth-child(1) {
+			//
 			//? push image to the right edge of container
 			@include media(">=1080px") {
-				// margin-right: -60px;
-				// margin-left: 15%;
+				//
 				width: calc(120% + 40px);
 				height: calc(100% + 60px);
-				top: -60px;
+				top: -40px;
 				position: relative;
 				left: -40px;
 			}
 			//
 			@include media("<1080px") {
-				// max-height: 300px;
 				text-align: right;
 				//
 				.fusion-imageframe {
@@ -84,7 +103,7 @@
 					width: 55%;
 					height: 100%;
 					left: 40px;
-
+					//
 					img {
 						height: 100%;
 					}
@@ -93,16 +112,12 @@
 		}
 		//
 		&:nth-child(2) {
-			//? absolute reduces the section height
+			//? pos. absolute reduces the section height
 			position: absolute;
+			//
 			@include media(">=1080px") {
-				// margin-top: -33%;
-				// margin-left: -15%;
-				// position: relative;
-				// top: -30%;
-				// left: -55%;
-				bottom: 0;
-				left: -33%;
+				bottom: -10%;
+				left: -40%;
 			}
 			@include media("<1080px") {
 				bottom: -25%;
@@ -111,30 +126,33 @@
 					max-width: 35vw;
 				}
 			}
-			// @include media("<=small") {
-			// 	// margin-left: 0;
-			// 	// margin-bottom: -40px;
-			// 	left: 0;
-			// }
-			// * this wrapper has the border for the image, and handles aspect ratio if applied
+
+			//* this wrapper has the border for the image, and handles aspect ratio if applied
 			.fusion-imageframe {
 				max-width: 40vw;
 				padding: 1em;
-				@include media("<1080px") {
+				@include media("<=1080px") {
 					padding: 0.5em;
 				}
 			}
 		}
 	}
 
-	//? Add padding to column text
-
-	@include media(">small") {
-		> .fusion-builder-row {
-			//
-			> .fusion-layout-column {
+	&.no-image {
+		//*
+		//* For pages without the images column, unset the body copy max-width
+		.fusion-builder-row {
+			// If there's only one column, adjust the fusion-text
+			> .fusion-layout-column:only-child {
+				// width: 100%;
 				.fusion-title + .fusion-text p {
-					padding-right: 60px;
+					padding-right: unset;
+				}
+				.fusion-text {
+					max-width: 75%;
+					@include media("<small") {
+						max-width: unset;
+					}
 				}
 			}
 		}
