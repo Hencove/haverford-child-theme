@@ -11,6 +11,7 @@ const debounce = function (func, delay) {
 		}, delay);
 	};
 };
+
 // Throttling: Throttling is suitable for scenarios where you want to limit the frequency of function calls, like handling scroll events or resizing events.
 const throttle = (func, limit) => {
 	let inThrottle;

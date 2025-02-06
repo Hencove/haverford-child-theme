@@ -8,6 +8,14 @@
 	@include media("<=small") {
 		--ornaments--icon--size: 32px;
 	}
+
+	& > .fusion-builder-row {
+		@include media(">=medium") {
+			margin-left: unset !important;
+			margin-right: unset !important;
+		}
+	}
+
 	//
 	.block__ornament {
 		position: absolute;
@@ -73,6 +81,8 @@ body.home {
 		//
 		> .fusion-builder-row {
 			@include media(">=960px") {
+				margin-left: unset !important;
+				margin-right: unset !important;
 				display: flex;
 				flex-flow: row nowrap !important;
 				gap: 40px;

@@ -93,6 +93,88 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./_source/js/_cb17.js":
+/*!*****************************!*\
+  !*** ./_source/js/_cb17.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _debounce_throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_debounce-throttle */ "./_source/js/_debounce-throttle.js");
+
+(function (document, window, $) {
+  //
+  // 		jQuery is ready as $
+
+  $(window).on("load", function () {
+    var cb17Container = $('.cb-17');
+    var cb2Container = $('.cb2-two-column-feature');
+    function adjustRowHeights(container) {
+      if (!container.length) {
+        return;
+      }
+      var columnsContainer = container.find('.fusion-builder-row .fusion-layout-column .fusion-builder-row').children('.fusion-layout-column');
+      var rows = [[]];
+
+      // Reset all heading heights before recalculating
+      columnsContainer.find('.title').css('min-height', 'auto');
+      columnsContainer.each(function (i, col) {
+        var heading = $(col).find('.title');
+        if (heading.length === 0 || !heading.is(':visible')) return; // Ensure title exists and is visible
+
+        if (i !== 0) {
+          var prevColRowIndex = columnsContainer.eq(i - 1).find('.title').offset().top;
+          var rowIndex = heading.offset().top;
+          var newRow = rowIndex > prevColRowIndex;
+          if (newRow) {
+            rows.push([]); // Start a new row array
+          }
+        }
+
+        // Push current column into the latest row array
+        rows[rows.length - 1].push(col);
+      });
+
+      // Loop through each row, find max height, and apply it to all items in that row
+      rows.forEach(function (row) {
+        var maxHeight = 0;
+
+        // Determine the max height in the row
+        row.forEach(function (col) {
+          var heading = $(col).find('.title');
+          var headingHeight = heading.outerHeight();
+          maxHeight = Math.max(maxHeight, headingHeight);
+        });
+
+        // Apply max height to all elements in the row
+        row.forEach(function (col) {
+          $(col).find('.title').css('min-height', maxHeight + 'px');
+        });
+      });
+    }
+
+    //
+    //
+    //
+
+    adjustRowHeights(cb17Container);
+    adjustRowHeights(cb2Container);
+    var debouncedResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_0__.debounce)(function () {
+      adjustRowHeights(cb17Container);
+      adjustRowHeights(cb2Container);
+    }, 0);
+
+    // Handle window resize
+    window.addEventListener("resize", debouncedResizeHandler);
+  });
+
+  //
+  //
+})(document, window, jQuery);
+
+/***/ }),
+
 /***/ "./_source/js/_cb3.js":
 /*!****************************!*\
   !*** ./_source/js/_cb3.js ***!
@@ -257,6 +339,7 @@ var debounce = function debounce(func, delay) {
     }, delay);
   };
 };
+
 // Throttling: Throttling is suitable for scenarios where you want to limit the frequency of function calls, like handling scroll events or resizing events.
 var throttle = function throttle(func, limit) {
   var inThrottle;
@@ -759,7 +842,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_cb8 */ "./_source/js/_cb8.js");
 /* harmony import */ var _cb8__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_cb8__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _cb13__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_cb13 */ "./_source/js/_cb13.js");
-/* harmony import */ var _pages_ss4w__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/ss4w */ "./_source/js/pages/ss4w.js");
+/* harmony import */ var _cb17__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_cb17 */ "./_source/js/_cb17.js");
+/* harmony import */ var _pages_ss4w__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/ss4w */ "./_source/js/pages/ss4w.js");
+
 
 
 
