@@ -1376,13 +1376,13 @@ html body div.fusion-fullwidth.cb14-about .fusion-image-element img {
   outline: 1px solid var(--awb-custom_color_5);
   outline-offset: -20px;
 }
-html body:not(.page-id-505) .fusion-image-element img {
+html body:not(.page-id-505) div.fusion-fullwidth.cb14-about .fusion-image-element img {
   outline: 1px solid var(--awb-custom_color_5);
   outline-offset: -20px;
   max-width: 480px;
 }
 @media (max-width: 1366px) {
-  html body:not(.page-id-505) .fusion-image-element img {
+  html body:not(.page-id-505) div.fusion-fullwidth.cb14-about .fusion-image-element img {
     max-height: 380px;
     max-width: unset;
   }
