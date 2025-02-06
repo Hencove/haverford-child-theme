@@ -169,6 +169,12 @@ body.home {
 }
 // row layout alignments
 .cb-17 {
+	.title {
+		
+		display: flex !important;
+		align-items: flex-end !important;
+	}
+
 	&.touchup--align-titles {
 		.fusion-layout-column.fusion_builder_column_inner {
 			// height: 100%;
