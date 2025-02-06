@@ -15,4 +15,10 @@
 			transform: translateY(-50%);
 		}
 	}
+
+	.title {
+		display: flex !important;
+		align-items: flex-end !important;
+	}
+
 }

@@ -108,19 +108,13 @@ __webpack_require__.r(__webpack_exports__);
   // 		jQuery is ready as $
 
   $(window).on("load", function () {
-    // 
-
-    // !other containers to note:
-    // .cb2-two-column-feature
-
-    var container = $('.cb-17');
-    // const container = $('.cb2-two-column-feature');
-
-    if (!container.length) {
-      return;
-    }
-    function adjustRowHeights() {
-      var columnsContainer = container.find('.fusion-builder-row').children('.fusion-layout-column:has(.fusion-builder-row)').find('.fusion-builder-row').children('.fusion-layout-column');
+    var cb17Container = $('.cb-17');
+    var cb2Container = $('.cb2-two-column-feature');
+    function adjustRowHeights(container) {
+      if (!container.length) {
+        return;
+      }
+      var columnsContainer = container.find('.fusion-builder-row .fusion-layout-column .fusion-builder-row').children('.fusion-layout-column');
       var rows = [[]];
 
       // Reset all heading heights before recalculating
@@ -164,9 +158,11 @@ __webpack_require__.r(__webpack_exports__);
     //
     //
 
-    adjustRowHeights();
+    adjustRowHeights(cb17Container);
+    adjustRowHeights(cb2Container);
     var debouncedResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_0__.debounce)(function () {
-      adjustRowHeights();
+      adjustRowHeights(cb17Container);
+      adjustRowHeights(cb2Container);
     }, 0);
 
     // Handle window resize

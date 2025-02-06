@@ -6,25 +6,18 @@ import { debounce, throttle } from "./_debounce-throttle";
 
 	$(window).on("load", () => {
 
-		// 
+        const cb17Container = $('.cb-17');
+        const cb2Container = $('.cb2-two-column-feature');
 
-        // !other containers to note:
-        // .cb2-two-column-feature
+        function adjustRowHeights(container) {
 
-        const container = $('.cb-17');
-        // const container = $('.cb2-two-column-feature');
+            if (!container.length) {
+                return;
+            }
 
-        if (!container.length) {
-            return;
-        }
-
-        function adjustRowHeights() {
-
-            const columnsContainer = container.find('.fusion-builder-row')
-                .children('.fusion-layout-column:has(.fusion-builder-row)')
-                .find('.fusion-builder-row')
-                .children('.fusion-layout-column');
-
+            const columnsContainer = container.find('.fusion-builder-row .fusion-layout-column .fusion-builder-row')
+                                                .children('.fusion-layout-column');
+    
             let rows = [[]];
 
             // Reset all heading heights before recalculating
@@ -71,11 +64,13 @@ import { debounce, throttle } from "./_debounce-throttle";
         //
         //
 
-        adjustRowHeights();
+        adjustRowHeights(cb17Container);
+        adjustRowHeights(cb2Container);
 
         const debouncedResizeHandler = debounce(() => {
-            adjustRowHeights();
-        }, 0); 
+            adjustRowHeights(cb17Container);
+            adjustRowHeights(cb2Container);
+            }, 0); 
 
         // Handle window resize
         window.addEventListener("resize", debouncedResizeHandler);
