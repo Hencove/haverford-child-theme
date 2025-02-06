@@ -955,6 +955,10 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   }
 }
 
+.cb8-post-grid {
+  /* Between >small and <=970px - Switch to 2 columns (50% each) */
+  /* Mobile - Full width */
+}
 @media (min-width: 1367px) {
   .cb8-post-grid .fusion-post-cards .fusion-grid-posts-cards {
     padding: 20px 80px;
@@ -963,7 +967,7 @@ div.cb4-image-3-callouts .fusion-image-element:before {
 }
 @media (max-width: 1366px) {
   .cb8-post-grid .fusion-post-cards .fusion-grid-posts-cards {
-    padding: 20px;
+    padding: 50px;
   }
 }
 .cb8-post-grid .post-card i.think-icon-arrow-short,
@@ -1041,6 +1045,24 @@ div.cb4-image-3-callouts .fusion-image-element:before {
   width: 45%;
   height: 2px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(219, 180, 44) 95%);
+}
+@media (max-width: 1366px) {
+  .cb8-post-grid .fusion-grid-column {
+    flex: 1 1 25%; /* Ensures 4 columns on large screens */
+    max-width: 25%;
+  }
+}
+@media (min-width: 641px) and (max-width: 970px) {
+  .cb8-post-grid .fusion-grid-column {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  .cb8-post-grid .fusion-grid-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 .cb8-post-grid .pagination {
   justify-content: center;
@@ -2545,6 +2567,9 @@ body.page-id-515 .searchrow .ajaxsearchpro.asp_main_container .probox, body.page
   background: unset !important;
   background-image: unset !important;
   background-color: unset !important;
+}
+body.page-id-515 .searchrow .ajaxsearchpro.asp_main_container .probox button.promagnifier {
+  box-shadow: none !important;
 }
 @media (min-width: 1080px) {
   body.page-id-515 .cb6-interior-banner > .fusion-builder-row .fusion-layout-column:first-of-type {

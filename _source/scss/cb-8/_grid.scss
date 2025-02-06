@@ -23,6 +23,27 @@
 	}
 }
 
+@include media("<=medium") {
+	.fusion-grid-column {
+		flex: 1 1 25%; /* Ensures 4 columns on large screens */
+		max-width: 25%;
+	}
+}
+
+/* Between >small and <=970px - Switch to 2 columns (50% each) */
+@include media(">small", "<=970px") {
+	.fusion-grid-column {
+		flex: 1 1 50%;
+		max-width: 50%;
+	}
+}
+/* Mobile - Full width */
+@include media("<=small") {
+	.fusion-grid-column {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+}
 //
 //
 //
