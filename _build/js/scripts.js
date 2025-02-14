@@ -108,23 +108,23 @@ __webpack_require__.r(__webpack_exports__);
   // 		jQuery is ready as $
 
   $(window).on("load", function () {
-    var cb17Container = $('.cb-17');
-    var cb2Container = $('.cb2-two-column-feature');
+    var cb17Container = $(".cb-17");
+    var cb2Container = $(".cb2-two-column-feature");
     function adjustRowHeights(container) {
       if (!container.length) {
         return;
       }
-      var columnsContainer = container.find('.fusion-builder-row .fusion-layout-column .fusion-builder-row').children('.fusion-layout-column');
+      var columnsContainer = container.find(".fusion-builder-row .fusion-layout-column .fusion-builder-row").children(".fusion-layout-column");
       var rows = [[]];
 
       // Reset all heading heights before recalculating
-      columnsContainer.find('.title').css('min-height', 'auto');
+      columnsContainer.find(".title").css("min-height", "auto");
       columnsContainer.each(function (i, col) {
-        var heading = $(col).find('.title');
-        if (heading.length === 0 || !heading.is(':visible')) return; // Ensure title exists and is visible
+        var heading = $(col).find(".title");
+        if (heading.length === 0 || !heading.is(":visible")) return; // Ensure title exists and is visible
 
         if (i !== 0) {
-          var prevColRowIndex = columnsContainer.eq(i - 1).find('.title').offset().top;
+          var prevColRowIndex = columnsContainer.eq(i - 1).find(".title").offset().top;
           var rowIndex = heading.offset().top;
           var newRow = rowIndex > prevColRowIndex;
           if (newRow) {
@@ -142,14 +142,14 @@ __webpack_require__.r(__webpack_exports__);
 
         // Determine the max height in the row
         row.forEach(function (col) {
-          var heading = $(col).find('.title');
+          var heading = $(col).find(".title");
           var headingHeight = heading.outerHeight();
           maxHeight = Math.max(maxHeight, headingHeight);
         });
 
         // Apply max height to all elements in the row
         row.forEach(function (col) {
-          $(col).find('.title').css('min-height', maxHeight + 'px');
+          $(col).find(".title").css("min-height", maxHeight + "px");
         });
       });
     }
@@ -158,12 +158,12 @@ __webpack_require__.r(__webpack_exports__);
     //
     //
 
-    if ($('body').hasClass('page-id-507')) {
+    if (!$("body").hasClass("page-id-507")) {
       adjustRowHeights(cb17Container);
       adjustRowHeights(cb2Container);
     }
     var debouncedResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_0__.debounce)(function () {
-      if ($('body').hasClass('page-id-507')) {
+      if (!$("body").hasClass("page-id-507")) {
         adjustRowHeights(cb17Container);
         adjustRowHeights(cb2Container);
       }

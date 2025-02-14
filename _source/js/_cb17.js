@@ -5,80 +5,83 @@ import { debounce, throttle } from "./_debounce-throttle";
 	// 		jQuery is ready as $
 
 	$(window).on("load", () => {
+		const cb17Container = $(".cb-17");
+		const cb2Container = $(".cb2-two-column-feature");
 
-        const cb17Container = $('.cb-17');
-        const cb2Container = $('.cb2-two-column-feature');
+		function adjustRowHeights(container) {
+			if (!container.length) {
+				return;
+			}
 
-        function adjustRowHeights(container) {
+			const columnsContainer = container
+				.find(".fusion-builder-row .fusion-layout-column .fusion-builder-row")
+				.children(".fusion-layout-column");
 
-            if (!container.length) {
-                return;
-            }
+			let rows = [[]];
 
-            const columnsContainer = container.find('.fusion-builder-row .fusion-layout-column .fusion-builder-row')
-                                                .children('.fusion-layout-column');
-    
-            let rows = [[]];
+			// Reset all heading heights before recalculating
+			columnsContainer.find(".title").css("min-height", "auto");
 
-            // Reset all heading heights before recalculating
-            columnsContainer.find('.title').css('min-height', 'auto');
+			columnsContainer.each(function (i, col) {
+				const heading = $(col).find(".title");
 
-            columnsContainer.each(function (i, col) {
-                const heading = $(col).find('.title');
-            
-                if (heading.length === 0 || !heading.is(':visible')) return; // Ensure title exists and is visible
-            
-                if (i !== 0) {
-                    const prevColRowIndex = columnsContainer.eq(i - 1).find('.title').offset().top;
-                    const rowIndex = heading.offset().top;
-                    const newRow = rowIndex > prevColRowIndex;
-            
-                    if (newRow) {
-                        rows.push([]); // Start a new row array
-                    }
-                }
-            
-                // Push current column into the latest row array
-                rows[rows.length - 1].push(col);
-            });
-            
-            // Loop through each row, find max height, and apply it to all items in that row
-            rows.forEach(row => {
-                let maxHeight = 0;
-            
-                // Determine the max height in the row
-                row.forEach(col => {
-                    const heading = $(col).find('.title');
-                    const headingHeight = heading.outerHeight();
-                    maxHeight = Math.max(maxHeight, headingHeight);
-                });
-            
-                // Apply max height to all elements in the row
-                row.forEach(col => {
-                    $(col).find('.title').css('min-height', maxHeight + 'px');
-                });
-            });
-        }
-        
-        //
-        //
-        //
+				if (heading.length === 0 || !heading.is(":visible")) return; // Ensure title exists and is visible
 
-        if ($('body').hasClass('page-id-507')) {
-            adjustRowHeights(cb17Container);
-            adjustRowHeights(cb2Container);
-        }
+				if (i !== 0) {
+					const prevColRowIndex = columnsContainer
+						.eq(i - 1)
+						.find(".title")
+						.offset().top;
+					const rowIndex = heading.offset().top;
+					const newRow = rowIndex > prevColRowIndex;
 
-        const debouncedResizeHandler = debounce(() => {
+					if (newRow) {
+						rows.push([]); // Start a new row array
+					}
+				}
 
-            if ($('body').hasClass('page-id-507')) {
-                adjustRowHeights(cb17Container);
-                adjustRowHeights(cb2Container);
-            }
-            }, 0); 
+				// Push current column into the latest row array
+				rows[rows.length - 1].push(col);
+			});
 
-        // Handle window resize
-        window.addEventListener("resize", debouncedResizeHandler);
+			// Loop through each row, find max height, and apply it to all items in that row
+			rows.forEach((row) => {
+				let maxHeight = 0;
+
+				// Determine the max height in the row
+				row.forEach((col) => {
+					const heading = $(col).find(".title");
+					const headingHeight = heading.outerHeight();
+					maxHeight = Math.max(maxHeight, headingHeight);
+				});
+
+				// Apply max height to all elements in the row
+				row.forEach((col) => {
+					$(col)
+						.find(".title")
+						.css("min-height", maxHeight + "px");
+				});
+			});
+		}
+
+		//
+		//
+		//
+
+		if (!$("body").hasClass("page-id-507")) {
+			adjustRowHeights(cb17Container);
+			adjustRowHeights(cb2Container);
+		}
+
+		const debouncedResizeHandler = debounce(() => {
+			if (!$("body").hasClass("page-id-507")) {
+				adjustRowHeights(cb17Container);
+				adjustRowHeights(cb2Container);
+			}
+		}, 0);
+
+		// Handle window resize
+		window.addEventListener("resize", debouncedResizeHandler);
 	});
 
 	//
