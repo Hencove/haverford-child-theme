@@ -12,19 +12,21 @@ gsap.registerPlugin(ScrollTrigger);
 		const cb2Elements = gsap.utils.toArray([
 			".cb2-two-column-feature .fusion-column-wrapper",
 		]);
-		cb2Elements.forEach((element) => {
-			//
-			gsap.from(element, {
-				y: 30,
-				autoAlpha: 0,
-				scrollTrigger: {
-					trigger: element,
-					start: "top 90%",
-					end: "+=500",
-					scrub: 1,
-				},
+		if (!document.body.classList.contains("page-id-507")) {
+			cb2Elements.forEach((element) => {
+				//
+				gsap.from(element, {
+					y: 30,
+					autoAlpha: 0,
+					scrollTrigger: {
+						trigger: element,
+						start: "top 90%",
+						end: "+=500",
+						scrub: 1,
+					},
+				});
 			});
-		});
+		}
 
 		//
 		const cb3Elements = gsap.utils.toArray([

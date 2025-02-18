@@ -652,19 +652,21 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   $(window).on("load", function () {
     //
     var cb2Elements = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb2-two-column-feature .fusion-column-wrapper"]);
-    cb2Elements.forEach(function (element) {
-      //
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.from(element, {
-        y: 30,
-        autoAlpha: 0,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 90%",
-          end: "+=500",
-          scrub: 1
-        }
+    if (!document.body.classList.contains("page-id-507")) {
+      cb2Elements.forEach(function (element) {
+        //
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.from(element, {
+          y: 30,
+          autoAlpha: 0,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 90%",
+            end: "+=500",
+            scrub: 1
+          }
+        });
       });
-    });
+    }
 
     //
     var cb3Elements = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray([".cb3-featured-stats .fusion-column-wrapper"]);
