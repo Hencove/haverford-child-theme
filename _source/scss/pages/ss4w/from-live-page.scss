@@ -93,18 +93,11 @@
 	height: 100vh;
 }
 
-/* Commented out to disable header hiding on ss4w page
 .fusion-tb-header,
 header.fusion-header-wrapper {
-	display: block;
-	position: fixed;
-	top: 0px;
-	left: 0;
-	right: 0;
-	transform: translateY(-100%);
-	transition: transform 0.3s ease-in-out;
+	background-color: var(--awb-color3) !important
 }
-*/
+
 
 .fusion-is-sticky
 	.fusion-sticky-menu-only:not(.fusion-header-v6)
@@ -118,7 +111,7 @@ header.fusion-header-wrapper {
 
 .speaker-search_open-button {
 	position: absolute;
-	top: -55px;
+	top: -20px;
 	right: 0px;
 }
 
