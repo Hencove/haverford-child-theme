@@ -1,0 +1,18 @@
+//
+//
+//? Add comma to cards that do have multiple categories. 
+//? Needed here since elsewhere we don't want the comma, and when the comma is inserted via Avada, it is a #text node, which CSS cannot target (yet)
+body.page-id-343 {
+	.cb5-news-and-insights-post-grid, .cb8-post-grid {
+		.fusion-post-cards, .fusion-grid-posts-cards {
+			.title-heading-tag {
+				a:not(:first-of-type) {
+					&:before {
+						content: ', ';
+						color: #000000;
+					}
+				}
+			}
+		}
+	}
+}
