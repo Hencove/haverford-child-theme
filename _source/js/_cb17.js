@@ -68,16 +68,16 @@ import { debounce, throttle } from "./_debounce-throttle";
 		//
 		//
 
-		if (!$("body").hasClass("page-id-507")) {
+		// if (!$("body").hasClass("page-id-507")) {
 			adjustRowHeights(cb17Container);
 			adjustRowHeights(cb2Container);
-		}
+		// }
 
 		const debouncedResizeHandler = debounce(() => {
-			if (!$("body").hasClass("page-id-507")) {
+			// if (!$("body").hasClass("page-id-507")) {
 				adjustRowHeights(cb17Container);
 				adjustRowHeights(cb2Container);
-			}
+			// }
 		}, 0);
 
 		// Handle window resize

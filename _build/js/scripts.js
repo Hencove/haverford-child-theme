@@ -158,15 +158,16 @@ __webpack_require__.r(__webpack_exports__);
     //
     //
 
-    if (!$("body").hasClass("page-id-507")) {
+    // if (!$("body").hasClass("page-id-507")) {
+    adjustRowHeights(cb17Container);
+    adjustRowHeights(cb2Container);
+    // }
+
+    var debouncedResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_0__.debounce)(function () {
+      // if (!$("body").hasClass("page-id-507")) {
       adjustRowHeights(cb17Container);
       adjustRowHeights(cb2Container);
-    }
-    var debouncedResizeHandler = (0,_debounce_throttle__WEBPACK_IMPORTED_MODULE_0__.debounce)(function () {
-      if (!$("body").hasClass("page-id-507")) {
-        adjustRowHeights(cb17Container);
-        adjustRowHeights(cb2Container);
-      }
+      // }
     }, 0);
 
     // Handle window resize
