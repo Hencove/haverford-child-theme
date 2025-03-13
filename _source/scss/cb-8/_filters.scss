@@ -1,52 +1,109 @@
 //
 //	?	hide some annoying things FilterEverythingPro adds into the screen
 //
-.wpc-filter-header,
-.wpc-edit-filter-set,
-.widget.widget_wpc_filters_widget {
-	@include displayedInvisible();
-}
+
+// .wpc-filter-header,
+// .wpc-edit-filter-set,
+// .widget.widget_wpc_filters_widget {
+// 	@include displayedInvisible();
+// }
+
 //
 // ?	here we toggle between our select2 dropdown and the standard avada filters based on screen size
 //
-.wpc-filter-content.wpc-filter-category {
-	display: none;
-	@include media(">medium") {
-		display: none;
-	}
-}
+
+// .wpc-filter-content.wpc-filter-category {
+// 	display: none;
+// 	@include media(">medium") {
+// 		display: none;
+// 	}
+// }
+
 //
 // ?	here we toggle between our select2 dropdown and the standard avada filters based on screen size
 //
-@include media(">medium") {
-	.select2,
-	select.fusion-filters {
-		display: none !important;
-	}
-	ul.fusion-filters {
-		display: flex !important;
-	}
-}
+
+// @include media(">medium") {
+// 	.select2,
+// 	select.fusion-filters {
+// 		display: none !important;
+// 	}
+// 	ul.fusion-filters {
+// 		display: flex !important;
+// 	}
+// }
 
 //
 // ?	styling for the native avada filters
 //
-@include media(">medium") {
-	.fusion-post-cards .fusion-filters {
-		border: unset;
-		margin: 0;
-		padding-left: 80px;
-		flex-wrap: nowrap;
-	}
-}
+
+// @include media(">medium") {
+// 	.fusion-post-cards .fusion-filters {
+// 		border: unset;
+// 		margin: 0;
+// 		padding-left: 80px;
+// 		flex-wrap: nowrap;
+// 	}
+// }
 
 //
 // ?	we need to select the fusion filters parent element to flex it
 //
-div:has(> .fusion-filters) {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 2px solid var(--awb-custom_color_5);
+
+// div:has(> .fusion-filters) {
+// 	display: flex;
+// 	flex-flow: row nowrap;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	border-bottom: 2px solid var(--awb-custom_color_5);
+// }
+.wpc-filters-scroll-container {
+	//
+	.wpc-filters-widget-wrapper {
+		display: flex;
+		@include media("<medium") {
+			flex-direction: column;
+		}
+		border: 2px solid var(--awb-custom_color_5);
+		border-left: unset;
+		border-bottom: unset;
+		.wpc-filters-section {
+			margin-bottom: unset;
+			@include media("<medium") {
+				&.wpc-filter-layout-search-field {
+					padding-bottom: 32px;
+				}
+			}
+		}
+	}
+}
+.wpc-filters-main-wrap {
+	//
+	input.wpc-label-input:checked,
+	input.wpc-label-input:hover {
+		+ label span.wpc-filter-label-wrapper {
+			background-color: unset;
+			a {
+				color: var(--awb-color8);
+				text-decoration: none !important;
+			}
+		}
+	}
+	.wpc-filters-labels {
+		li.wpc-term-item {
+			label {
+				border: none;
+				a {
+					color: var(--awb-filters-color);
+					font-size: var(--awb-filters-font-size);
+					font-family: var(--awb-filters-font-family);
+					font-style: var(--awb-filters-font-style);
+					font-weight: var(--awb-filters-font-weight);
+					line-height: var(--awb-filters-line-height);
+					letter-spacing: var(--awb-filters-letter-spacing);
+					text-transform: var(--awb-filters-text-transform);
+				}
+			}
+		}
+	}
 }

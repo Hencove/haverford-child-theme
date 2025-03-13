@@ -228,12 +228,14 @@ __webpack_require__.r(__webpack_exports__);
     //
     //
     _init: function _init() {
-      fusionFilterExtension._moveSearchBar();
+      // fusionFilterExtension._moveSearchBar();
+
       $(window).on("load", function (event) {
-        fusionFilterExtension._dupeFilters();
-        fusionFilterExtension._clickFunc();
-        fusionFilterExtension._makeItPretty();
+        // fusionFilterExtension._dupeFilters();
+        // fusionFilterExtension._clickFunc();
+        // fusionFilterExtension._makeItPretty();
         fusionFilterExtension._scrollToSearchResults();
+        fusionFilterExtension._scrollToFilteredPostGrid();
         fusionFilterExtension._handleNoSearchResults();
         fusionFilterExtension._handleAnchoredPaginationLink();
       });
@@ -280,34 +282,60 @@ __webpack_require__.r(__webpack_exports__);
         }, 100); // Adjust the timeout if needed
       }
     },
-    _moveSearchBar: function _moveSearchBar(e) {
-      var searchbar = $(".wpc-filter-layout-search-field").detach();
-      var fusionBar = $(".fusion-filters");
-      fusionBar.parent().append(searchbar);
-    },
-    _dupeFilters: function _dupeFilters() {
-      var fusionBar = $(".fusion-filters");
-      var ulClone = fusionBar.clone(true, true);
-      var items = $(ulClone).find("li a");
-      items.each(function (index, element) {
-        $(element).wrap('<option value="' + element.text + '" class="fusion-filter"></option>');
-      });
-      var dropdown = '<select style="display:block;" class="fusion-filters" role="menu"></select>';
-      fusionBar.parent().prepend(dropdown);
-      $("select").append(items.parent());
-    },
-    _clickFunc: function _clickFunc() {
-      $("select.fusion-filters").on("change", function (event) {
-        var pray = $(event.target).find('option[value="' + $(this).val() + '"] a');
-        $(pray[0]).trigger("click");
-      });
-    },
-    _makeItPretty: function _makeItPretty() {
-      $("select.fusion-filters").select2({
-        minimumResultsForSearch: Infinity,
-        width: "100%"
-      });
+    _scrollToFilteredPostGrid: function _scrollToFilteredPostGrid() {
+      // Check if 'srch' query parameter exists
+      if (window.location.pathname.includes("/filters-")) {
+        console.log("matches the path");
+
+        // Scroll to the form after the page has loaded
+        setTimeout(function () {
+          document.getElementById("news-insights-feed").scrollIntoView({
+            behavior: "smooth"
+          });
+        }, 100); // Adjust the timeout if needed
+      }
     }
+
+    // _moveSearchBar: function (e) {
+    // 	var searchbar = $(".wpc-filter-layout-search-field").detach();
+    // 	var fusionBar = $(".fusion-filters");
+    // 	fusionBar.parent().append(searchbar);
+    // },
+
+    // _dupeFilters: function () {
+    // 	var fusionBar = $(".fusion-filters");
+    // 	var ulClone = fusionBar.clone(true, true);
+    // 	var items = $(ulClone).find("li a");
+
+    // 	items.each(function (index, element) {
+    // 		$(element).wrap(
+    // 			'<option value="' + element.text + '" class="fusion-filter"></option>'
+    // 		);
+    // 	});
+
+    // 	var dropdown =
+    // 		'<select style="display:block;" class="fusion-filters" role="menu"></select>';
+
+    // 	fusionBar.parent().prepend(dropdown);
+
+    // 	$("select").append(items.parent());
+    // },
+
+    // _clickFunc: function () {
+    // 	$("select.fusion-filters").on("change", function (event) {
+    // 		let pray = $(event.target).find(
+    // 			'option[value="' + $(this).val() + '"] a'
+    // 		);
+    // 		$(pray[0]).trigger("click");
+    // 	});
+    // },
+
+    // _makeItPretty: function () {
+    // 	$("select.fusion-filters").select2({
+    // 		minimumResultsForSearch: Infinity,
+    // 		width: "100%",
+    // 	});
+    // },
   };
   fusionFilterExtension._init();
 

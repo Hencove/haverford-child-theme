@@ -14,13 +14,14 @@
 		//
 		//
 		_init: function () {
-			fusionFilterExtension._moveSearchBar();
+			// fusionFilterExtension._moveSearchBar();
 
 			$(window).on("load", function (event) {
-				fusionFilterExtension._dupeFilters();
-				fusionFilterExtension._clickFunc();
-				fusionFilterExtension._makeItPretty();
+				// fusionFilterExtension._dupeFilters();
+				// fusionFilterExtension._clickFunc();
+				// fusionFilterExtension._makeItPretty();
 				fusionFilterExtension._scrollToSearchResults();
+				fusionFilterExtension._scrollToFilteredPostGrid();
 				fusionFilterExtension._handleNoSearchResults();
 				fusionFilterExtension._handleAnchoredPaginationLink();
 			});
@@ -76,47 +77,60 @@
 				}, 100); // Adjust the timeout if needed
 			}
 		},
+		_scrollToFilteredPostGrid: function () {
+			// Check if 'srch' query parameter exists
+			if (window.location.pathname.includes("/filters-")) {
+				console.log("matches the path");
 
-		_moveSearchBar: function (e) {
-			var searchbar = $(".wpc-filter-layout-search-field").detach();
-			var fusionBar = $(".fusion-filters");
-			fusionBar.parent().append(searchbar);
+				// Scroll to the form after the page has loaded
+				setTimeout(function () {
+					document
+						.getElementById("news-insights-feed")
+						.scrollIntoView({ behavior: "smooth" });
+				}, 100); // Adjust the timeout if needed
+			}
 		},
 
-		_dupeFilters: function () {
-			var fusionBar = $(".fusion-filters");
-			var ulClone = fusionBar.clone(true, true);
-			var items = $(ulClone).find("li a");
+		// _moveSearchBar: function (e) {
+		// 	var searchbar = $(".wpc-filter-layout-search-field").detach();
+		// 	var fusionBar = $(".fusion-filters");
+		// 	fusionBar.parent().append(searchbar);
+		// },
 
-			items.each(function (index, element) {
-				$(element).wrap(
-					'<option value="' + element.text + '" class="fusion-filter"></option>'
-				);
-			});
+		// _dupeFilters: function () {
+		// 	var fusionBar = $(".fusion-filters");
+		// 	var ulClone = fusionBar.clone(true, true);
+		// 	var items = $(ulClone).find("li a");
 
-			var dropdown =
-				'<select style="display:block;" class="fusion-filters" role="menu"></select>';
+		// 	items.each(function (index, element) {
+		// 		$(element).wrap(
+		// 			'<option value="' + element.text + '" class="fusion-filter"></option>'
+		// 		);
+		// 	});
 
-			fusionBar.parent().prepend(dropdown);
+		// 	var dropdown =
+		// 		'<select style="display:block;" class="fusion-filters" role="menu"></select>';
 
-			$("select").append(items.parent());
-		},
+		// 	fusionBar.parent().prepend(dropdown);
 
-		_clickFunc: function () {
-			$("select.fusion-filters").on("change", function (event) {
-				let pray = $(event.target).find(
-					'option[value="' + $(this).val() + '"] a'
-				);
-				$(pray[0]).trigger("click");
-			});
-		},
+		// 	$("select").append(items.parent());
+		// },
 
-		_makeItPretty: function () {
-			$("select.fusion-filters").select2({
-				minimumResultsForSearch: Infinity,
-				width: "100%",
-			});
-		},
+		// _clickFunc: function () {
+		// 	$("select.fusion-filters").on("change", function (event) {
+		// 		let pray = $(event.target).find(
+		// 			'option[value="' + $(this).val() + '"] a'
+		// 		);
+		// 		$(pray[0]).trigger("click");
+		// 	});
+		// },
+
+		// _makeItPretty: function () {
+		// 	$("select.fusion-filters").select2({
+		// 		minimumResultsForSearch: Infinity,
+		// 		width: "100%",
+		// 	});
+		// },
 	};
 
 	fusionFilterExtension._init();

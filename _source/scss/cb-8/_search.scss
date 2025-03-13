@@ -7,8 +7,12 @@
 }
 
 .wpc-filters-section {
-	flex: 0 1 40%;
-	margin: 0 0 0 auto;
+	display: flex;
+	flex: 0 1 50%;
+	// margin: 0 0 0 auto;
+	&:first-child {
+		padding-left: 80px;
+	}
 	padding: 13px;
 	border-left: 2px solid var(--awb-custom_color_5);
 	@include media(">medium") {
@@ -18,7 +22,8 @@
 	//
 	.wpc-filter-search-form {
 		$icon-size: 24px;
-		margin: 0 0 0 auto;
+		// margin: 0 0 0 auto;
+		width: 100%;
 		.wpc-search-field-wrapper {
 			height: 100%;
 			//
@@ -41,8 +46,12 @@
 			height: 100%;
 			appearance: none;
 			background-color: unset;
-			border: unset;
+			border-radius: unset;
 			padding-left: ($icon-size * 2);
+			@include media("<=medium") {
+				border: 2px solid var(--awb-custom_color_5);
+				padding: 18px 18px 18px ($icon-size * 2);
+			}
 			color: var(--body_typography-color);
 			display: block;
 			&::placeholder {
