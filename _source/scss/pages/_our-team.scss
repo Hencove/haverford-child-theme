@@ -25,6 +25,17 @@ body.page-id-515 {
 			padding-top: 0px !important;
 		}
 	}
+
+	// ? Our Team Post Grid
+	.wpc-filters-section {
+		display: flex;
+		flex: unset;
+		// margin: 0 0 0 auto;
+		&:first-child {
+			padding-left: 80px;
+		}
+		padding: 13px;
+	}
 	//
 	// ? Ajax Search Pro section...
 	//

@@ -2501,6 +2501,14 @@ body.page-id-515 .fusion-counters-box .fusion-counter-box .counter-box-container
   padding-bottom: 0px !important;
   padding-top: 0px !important;
 }
+body.page-id-515 .wpc-filters-section {
+  display: flex;
+  flex: unset;
+  padding: 13px;
+}
+body.page-id-515 .wpc-filters-section:first-child {
+  padding-left: 80px;
+}
 body.page-id-515 .searchrow {
   border: 1px solid #dcdcdc;
   padding: 50px;
