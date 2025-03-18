@@ -1234,7 +1234,7 @@ body:has(.cb8-post-grid) .wpc-filters-main-wrap .wpc-filters-labels li.wpc-term-
   text-transform: var(--awb-filters-text-transform);
 }
 
-#news-insights-feed {
+#paginate {
   scroll-margin-top: 48px;
 }
 

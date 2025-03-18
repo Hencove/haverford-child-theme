@@ -244,7 +244,7 @@ __webpack_require__.r(__webpack_exports__);
     _handleAnchoredPaginationLink: function _handleAnchoredPaginationLink() {
       $(".cb8-post-grid .pagination a").each(function (index, element) {
         var defaultLink = $(element).attr("href");
-        $(element).attr("href", defaultLink + "#news-insights-feed");
+        $(element).attr("href", defaultLink + "#paginate");
       });
     },
     _handleNoSearchResults: function _handleNoSearchResults() {
@@ -277,20 +277,24 @@ __webpack_require__.r(__webpack_exports__);
       if (getQueryParam("srch")) {
         // Scroll to the form after the page has loaded
         setTimeout(function () {
-          document.getElementById("news-insights-feed").scrollIntoView({
+          document.getElementById("paginate").scrollIntoView({
             behavior: "smooth"
           });
         }, 100); // Adjust the timeout if needed
       }
     },
     _scrollToFilteredPostGrid: function _scrollToFilteredPostGrid() {
-      // Check if 'srch' query parameter exists
-      if (window.location.pathname.includes("/filters-")) {
+      var pathsToMatch = ["/filters-", "/team-"];
+      //
+      // Check if the current path includes any of the specified segments
+      if (pathsToMatch.some(function (path) {
+        return window.location.pathname.includes(path);
+      })) {
         console.log("matches the path");
 
         // Scroll to the form after the page has loaded
         setTimeout(function () {
-          document.getElementById("news-insights-feed").scrollIntoView({
+          document.getElementById("paginate").scrollIntoView({
             behavior: "smooth"
           });
         }, 100); // Adjust the timeout if needed
