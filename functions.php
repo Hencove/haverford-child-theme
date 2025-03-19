@@ -3,28 +3,28 @@
 include get_theme_file_path('/functions/experimental.php');
 
 
-add_action('fusion_post_cards_shortcode_query_args', function ($args) {
+// add_action('fusion_post_cards_shortcode_query_args', function ($args) {
 
-	// only fire this on a team member bio page
-	if (is_singular('avada_portfolio')) {
+// 	// only fire this on a team member bio page
+// 	if (is_singular('avada_portfolio')) {
 
-		// determine the current team member's team
-		// returns just the IDs of any teams that this team member is assigned to
-		global $post;
-		// get just the term IDs
-		$terms = wp_get_object_terms($post->ID, 'team', array('fields' => 'ids'));
-		// exclude the current team member from showing in their own team
-		$args['post__not_in'] = [$post->ID];
-		// search thru teams
-		$args['tax_query'][0]['taxonomy'] = 'team';
-		// include this team
-		$args['tax_query'][0]['terms'] = $terms;
+// 		// determine the current team member's team
+// 		// returns just the IDs of any teams that this team member is assigned to
+// 		global $post;
+// 		// get just the term IDs
+// 		$terms = wp_get_object_terms($post->ID, 'team', array('fields' => 'ids'));
+// 		// exclude the current team member from showing in their own team
+// 		$args['post__not_in'] = [$post->ID];
+// 		// search thru teams
+// 		$args['tax_query'][0]['taxonomy'] = 'team';
+// 		// include this team
+// 		$args['tax_query'][0]['terms'] = $terms;
 
-	}
+// 	}
 
 
-	return $args;
-}, 10, 1);
+// 	return $args;
+// }, 10, 1);
 
 function theme_enqueue_styles()
 {
