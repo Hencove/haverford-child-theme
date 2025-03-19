@@ -78,7 +78,7 @@
 			}
 		},
 		_scrollToFilteredPostGrid: function () {
-			const pathsToMatch = ["/filters-", "/team-"];
+			const pathsToMatch = ["/filters-", "/team-filter-"];
 			//
 			// Check if the current path includes any of the specified segments
 			if (
