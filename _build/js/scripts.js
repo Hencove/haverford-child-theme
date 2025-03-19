@@ -284,7 +284,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     _scrollToFilteredPostGrid: function _scrollToFilteredPostGrid() {
-      var pathsToMatch = ["/filters-", "/team-"];
+      var pathsToMatch = ["/filters-", "/team-filter-"];
       //
       // Check if the current path includes any of the specified segments
       if (pathsToMatch.some(function (path) {
