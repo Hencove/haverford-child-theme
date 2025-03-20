@@ -6,7 +6,7 @@ on:
     branches:
       - dev
 jobs:
-  Deploy-to-WP-Engine-Production:
+  Deploy-to-WP-Engine-Dev:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Preparing to deploy to WP Engine dev"
