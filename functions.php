@@ -2,6 +2,7 @@
 
 include get_theme_file_path('/functions/experimental.php');
 
+//* No longer need to query the team members for the PM/IO grid on bio pages
 
 // add_action('fusion_post_cards_shortcode_query_args', function ($args) {
 
