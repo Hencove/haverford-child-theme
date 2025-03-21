@@ -21,7 +21,7 @@
         </div>\
       </li>"
     );
-
+  });
 
   //
 })(document, window, jQuery);
