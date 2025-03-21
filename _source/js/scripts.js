@@ -6,6 +6,7 @@ import "./_cb3";
 import "./_cb8";
 import "./_cb13";
 import "./_cb17";
+import "./_filter-adjustments.js"
 
 import "./pages/ss4w";
 //
