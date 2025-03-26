@@ -1,129 +1,129 @@
 /* Sets the timeline columns and adjusts the side of the image based on the timeline-image-side-**** class */
 .timeline_year {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-auto-flow: dense;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-flow: dense;
 
-	/* Needed to ensure absolutely positioned items, such as the year number, position correctly */
-	position: relative;
+  /* Needed to ensure absolutely positioned items, such as the year number, position correctly */
+  position: relative;
 }
 
 .timeline_year.timeline-image-side-left .year_image-section {
-	grid-column-start: 1;
+  grid-column-start: 1;
 }
 
 .timeline_year.timeline-image-side-left .year_post-section {
-	grid-column-start: 2;
+  grid-column-start: 2;
 }
 
 .timeline_year.timeline-image-side-right .year_image-section {
-	grid-column-start: 2;
+  grid-column-start: 2;
 }
 
 .timeline_year.timeline-image-side-right .year_post-section {
-	grid-column-start: 1;
+  grid-column-start: 1;
 }
 
 .timeline_year.timeline-image-side-right {
-	grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 /* Set styling for year number */
 .year_number h2 {
-	font-size: 10rem;
-	font-family: adobe-garamond-pro;
-	line-height: 1 !important;
-	color: #152b75;
+  font-size: 10rem;
+  font-family: adobe-garamond-pro;
+  line-height: 1 !important;
+  color: #152b75;
 }
 
 .year_number {
-	padding-left: 30px;
-	padding-top: 160px;
+  padding-left: 30px;
+  padding-top: 160px;
 }
 
 .image-section_sticky-container {
-	height: 100vh;
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 
-	position: sticky;
-	top: 30px;
+  position: sticky;
+  top: 30px;
 }
 
 .timeline_year.timeline-image-side-left .image-section_sticky-container-frame {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background-image: url("https://haverfordquality.com/wp-content/uploads/2023/03/watercolor1.jpg");
-	mix-blend-mode: multiply;
-	background-repeat: no-repeat;
-	background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("https://haverfordquality.com/wp-content/uploads/2023/03/watercolor1.jpg");
+  mix-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .timeline_year.timeline-image-side-right .image-section_sticky-container-frame {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background-image: url("https://haverfordquality.com/wp-content/uploads/2023/03/watercolor2.jpg");
-	mix-blend-mode: multiply;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("https://haverfordquality.com/wp-content/uploads/2023/03/watercolor2.jpg");
+  mix-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
 /* Layout mobile adjustments */
 
 @media screen and (max-width: 1000px) {
-	.year_number h2 {
-		font-size: 5rem !important;
-	}
+  .year_number h2 {
+    font-size: 5rem !important;
+  }
 
-	.timeline_year {
-		grid-template-columns: 1fr 4fr;
-		grid-gap: 15px;
-	}
+  .timeline_year {
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 15px;
+  }
 
-	.timeline_year.timeline-image-side-right {
-		grid-template-columns: 4fr 1fr;
-	}
+  .timeline_year.timeline-image-side-right {
+    grid-template-columns: 4fr 1fr;
+  }
 }
 
 @media screen and (max-width: 750px) {
-	.year_number h2 {
-		font-size: 2rem !important;
-	}
+  .year_number h2 {
+    font-size: 2rem !important;
+  }
 
-	.year_number {
-		padding-left: 15px;
-		padding-top: 60px;
-	}
+  .year_number {
+    padding-left: 15px;
+    padding-top: 60px;
+  }
 
-	.timeline-image-side-right .year_number {
-		padding-left: 0px;
-		padding-right: 15px;
-	}
+  .timeline-image-side-right .year_number {
+    padding-left: 0px;
+    padding-right: 15px;
+  }
 
-	.timeline_year {
-		grid-template-columns: 1fr auto;
-	}
+  .timeline_year {
+    grid-template-columns: 1fr auto;
+  }
 
-	.timeline_year.timeline-image-side-right {
-		grid-template-columns: auto 1fr;
-	}
+  .timeline_year.timeline-image-side-right {
+    grid-template-columns: auto 1fr;
+  }
 
-	.image-section_sticky-container {
-		justify-content: flex-start;
-	}
+  .image-section_sticky-container {
+    justify-content: flex-start;
+  }
 
-	.timeline_year.timeline-image-side-right
-		.image-section_sticky-container-frame {
-		background-position: top right;
-	}
+  .timeline_year.timeline-image-side-right
+    .image-section_sticky-container-frame {
+    background-position: top right;
+  }
 }
 
 /* Temporarily Undoing image section css for fixes 
@@ -150,165 +150,165 @@
 	*/
 
 .timeline_shape {
-	position: absolute;
-	top: 5px;
-	left: 0;
-	right: 0;
-	transform: translateY(-100%);
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
 }
 
 .year_post-section {
-	padding-bottom: 120px;
-	padding-top: 120px;
+  padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 .timeline_item {
-	display: grid;
-	grid-template-columns: minmax(0px, 1.5fr) minmax(0px, 1fr);
-	grid-auto-flow: dense;
-	grid-column-gap: 50px;
-	margin-top: 50px;
-	margin: 50px 50px 50px 0;
-	align-items: center;
-	position: relative;
+  display: grid;
+  grid-template-columns: minmax(0px, 1.5fr) minmax(0px, 1fr);
+  grid-auto-flow: dense;
+  grid-column-gap: 50px;
+  margin-top: 50px;
+  margin: 50px 50px 50px 0;
+  align-items: center;
+  position: relative;
 }
 
 .timeline-item_anchor {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50vh);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50vh);
 }
 
 /* Reverse the side of the content and descripton for image-side-right sections */
 .timeline-image-side-right .timeline_item .item_content {
-	grid-column-start: 1;
+  grid-column-start: 1;
 }
 
 .timeline-image-side-right .timeline_item .item_description {
-	grid-column-start: 2;
+  grid-column-start: 2;
 }
 
 .timeline-image-side-right .timeline_item {
-	margin: 50px 0 50px 50px;
-	grid-template-columns: minmax(0px, 1fr) minmax(0px, 1.5fr);
+  margin: 50px 0 50px 50px;
+  grid-template-columns: minmax(0px, 1fr) minmax(0px, 1.5fr);
 }
 
 .item_description {
-	display: grid;
-	grid-template-columns: 1fr 5fr;
-	grid-column-gap: 30px;
-	align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-column-gap: 30px;
+  align-items: center;
 }
 
 .item-description_image-frame {
-	overflow: hidden;
-	height: 0px;
-	padding-bottom: 100%;
-	border-radius: 50%;
-	margin: 5px 0 5px 0;
-	background-size: cover;
-	background-position: top center;
+  overflow: hidden;
+  height: 0px;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  margin: 5px 0 5px 0;
+  background-size: cover;
+  background-position: top center;
 }
 
 .item-description_image-frame img {
-	width: 100%;
+  width: 100%;
 }
 
 .item-description_text {
-	padding: 25px 10px 5px 30px;
-	border-left: 2px solid #3041aa;
+  padding: 25px 10px 5px 30px;
+  border-left: 2px solid #3041aa;
 }
 
 .speaker_list {
-	list-style-type: none;
-	padding-left: 0;
-	font-weight: bold;
-	font-size: 0.8rem;
+  list-style-type: none;
+  padding-left: 0;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .content_card {
-	overflow: hidden;
-	border-radius: 5px;
-	padding-bottom: 56.25%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-	transition: box-shadow 0.2s ease;
-	position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  padding-bottom: 56.25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 0.2s ease;
+  position: relative;
 }
 
 a:hover .content_card {
-	box-shadow: 0 3px 14px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.16);
 }
 
 .content_card.content_card-video {
-	height: 0;
-	position: relative;
-	background-color: #162b75;
+  height: 0;
+  position: relative;
+  background-color: #162b75;
 }
 
 .content_card.content_card-video iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .content_overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgba(21, 43, 117, 0.6);
-	opacity: 0;
-	transition: opacity 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(21, 43, 117, 0.6);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .content_card:hover .content_overlay {
-	opacity: 1;
+  opacity: 1;
 }
 
 .content_overlay-text {
-	color: white;
-	font-weight: bold;
-	font-size: 1.2rem;
-	text-align: center;
-	line-height: 1;
-	padding: 0;
-	margin: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 650px) {
-	.timeline_item {
-		grid-template-columns: 1fr;
-		grid-row-gap: 30px;
-	}
+  .timeline_item {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
 
-	.timeline-image-side-right .timeline_item {
-		grid-template-columns: 1fr;
-		grid-row-gap: 30px;
-	}
+  .timeline-image-side-right .timeline_item {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
 
-	.timeline-image-side-right .timeline_item .item_description {
-		grid-column-start: 1;
-	}
+  .timeline-image-side-right .timeline_item .item_description {
+    grid-column-start: 1;
+  }
 }
 
 @media screen and (max-width: 500px) {
-	.item_description {
-		grid-template-columns: 1fr;
-		grid-row-gap: 30px;
-	}
+  .item_description {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
 
-	.item-description_image {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 15px;
-	}
+  .item-description_image {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
 }

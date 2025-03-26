@@ -39,4 +39,3 @@ jobs:
           REMOTE_PATH: "wp-content/themes/HavThinkChild/"
           # Optional flags for the deployment
           FLAGS: -azvr --inplace --delete --include-from=.deployinclude --exclude=.* --exclude-from=.deployignore
-

@@ -2,14 +2,14 @@
 //
 //
 .cb8-post-grid {
-	@import "./card";
-	@import "./grid";
-	@import "./search";
+  @import "./card";
+  @import "./grid";
+  @import "./search";
 }
 body:has(.cb8-post-grid) {
-	@import "./filters";
-	// @import './select2';
+  @import "./filters";
+  // @import './select2';
 }
 #paginate {
-	scroll-margin-top: 48px;
+  scroll-margin-top: 48px;
 }

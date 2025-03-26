@@ -1,40 +1,40 @@
-// 
-// 
-// 
+//
+//
+//
 .hero__ornament {
-	height: 75vh;
-	position: absolute !important;
-	display: block;
-	border-top: 2px solid var(--awb-custom_color_5);
-	z-index: 1;
-	$offset: var(--hundredp_padding);
-	$offset: calc(0.5 * var(--hundredp_padding));
-	//
-	top: $offset;
-	left: $offset;
-	right: $offset;
+  height: 75vh;
+  position: absolute !important;
+  display: block;
+  border-top: 2px solid var(--awb-custom_color_5);
+  z-index: 1;
+  $offset: var(--hundredp_padding);
+  $offset: calc(0.5 * var(--hundredp_padding));
+  //
+  top: $offset;
+  left: $offset;
+  right: $offset;
 
-	@include media("<=medium") {
-		$offset: calc(0.5 * var(--hundredp_padding));
-		//
-		top: $offset;
-		left: $offset;
-		right: $offset;
-	}
+  @include media("<=medium") {
+    $offset: calc(0.5 * var(--hundredp_padding));
+    //
+    top: $offset;
+    left: $offset;
+    right: $offset;
+  }
 
-	// gradient border from top left down
-	@include gradientBorder(before, 180deg, 2px, 100%);
-	&::before {
-		bottom: auto;
-		top: 0;
-		left: 0px;
-	}
-	// gradient border from top right down
-	@include gradientBorder(after, 180deg, 2px, 100%);
-	&::after {
-		left: auto;
-		bottom: auto;
-		top: 0;
-		right: 0px;
-	}
+  // gradient border from top left down
+  @include gradientBorder(before, 180deg, 2px, 100%);
+  &::before {
+    bottom: auto;
+    top: 0;
+    left: 0px;
+  }
+  // gradient border from top right down
+  @include gradientBorder(after, 180deg, 2px, 100%);
+  &::after {
+    left: auto;
+    bottom: auto;
+    top: 0;
+    right: 0px;
+  }
 }

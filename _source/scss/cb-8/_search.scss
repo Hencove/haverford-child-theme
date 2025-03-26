@@ -3,61 +3,61 @@
 //
 
 .is-search-reset-button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .wpc-filters-section {
-	display: flex;
-	flex: 0 1 50%;
-	// margin: 0 0 0 auto;
-	&:first-child {
-		padding-left: 80px;
-	}
-	padding: 13px;
-	border-left: 2px solid var(--awb-custom_color_5);
-	@include media(">medium") {
-		padding-right: 80px;
-	}
-	//
-	//
-	.wpc-filter-search-form {
-		$icon-size: 24px;
-		// margin: 0 0 0 auto;
-		width: 100%;
-		.wpc-search-field-wrapper {
-			height: 100%;
-			//
-			span.wpc-search-icon {
-				text-align: center;
+  display: flex;
+  flex: 0 1 50%;
+  // margin: 0 0 0 auto;
+  &:first-child {
+    padding-left: 80px;
+  }
+  padding: 13px;
+  border-left: 2px solid var(--awb-custom_color_5);
+  @include media(">medium") {
+    padding-right: 80px;
+  }
+  //
+  //
+  .wpc-filter-search-form {
+    $icon-size: 24px;
+    // margin: 0 0 0 auto;
+    width: 100%;
+    .wpc-search-field-wrapper {
+      height: 100%;
+      //
+      span.wpc-search-icon {
+        text-align: center;
 
-				width: ($icon-size * 2);
-				justify-content: center;
-				left: 0;
-				&:before {
-					background-image: url("../../_assets/img/icon_search.svg");
-					background-size: $icon-size;
-					width: $icon-size;
-					height: $icon-size;
-				}
-			}
-			//
-		}
-		input.wpc-search-field {
-			height: 100%;
-			appearance: none;
-			background-color: unset;
-			border-radius: unset;
-			padding-left: ($icon-size * 2);
-			@include media("<=medium") {
-				border: 2px solid var(--awb-custom_color_5);
-				padding: 18px 18px 18px ($icon-size * 2);
-			}
-			color: var(--body_typography-color);
-			display: block;
-			&::placeholder {
-				color: var(--body_typography-color);
-				opacity: 0.5;
-			}
-		}
-	}
+        width: ($icon-size * 2);
+        justify-content: center;
+        left: 0;
+        &:before {
+          background-image: url("../../_assets/img/icon_search.svg");
+          background-size: $icon-size;
+          width: $icon-size;
+          height: $icon-size;
+        }
+      }
+      //
+    }
+    input.wpc-search-field {
+      height: 100%;
+      appearance: none;
+      background-color: unset;
+      border-radius: unset;
+      padding-left: ($icon-size * 2);
+      @include media("<=medium") {
+        border: 2px solid var(--awb-custom_color_5);
+        padding: 18px 18px 18px ($icon-size * 2);
+      }
+      color: var(--body_typography-color);
+      display: block;
+      &::placeholder {
+        color: var(--body_typography-color);
+        opacity: 0.5;
+      }
+    }
+  }
 }

@@ -2,29 +2,29 @@
 //
 //
 .cb1-hero-banner {
-	// padding-bottom: 120px !important;
-	margin-left: unset !important;
-	margin-right: unset !important;
-	@include media("<=medium") {
-		padding-bottom: 32px !important;
-		padding-top: 24px !important;
-	}
+  // padding-bottom: 120px !important;
+  margin-left: unset !important;
+  margin-right: unset !important;
+  @include media("<=medium") {
+    padding-bottom: 32px !important;
+    padding-top: 24px !important;
+  }
 
-	//
-	//
-	// this is the container that holds the THREE columns (1/1, and the two 1/2s)
-	> .fusion-builder-row {
-		> .fusion-layout-column {
-			&:not(.cb1-gallery) {
-				z-index: 2;
-			}
-		}
+  //
+  //
+  // this is the container that holds the THREE columns (1/1, and the two 1/2s)
+  > .fusion-builder-row {
+    > .fusion-layout-column {
+      &:not(.cb1-gallery) {
+        z-index: 2;
+      }
+    }
 
-		@include media("<=960px") {
-			> .fusion-layout-column:not(:first-child) {
-				width: 100%;
-				flex-basis: 100%;
-			}
-		}
-	}
+    @include media("<=960px") {
+      > .fusion-layout-column:not(:first-child) {
+        width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
 }

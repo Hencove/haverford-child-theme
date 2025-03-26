@@ -4,217 +4,217 @@
 // }
 
 .width-100 .fusion-fullwidth {
-	@include media("<=small") {
-		--container_padding_100_right: 20px;
-		--container_padding_100_left: 20px;
-	}
+  @include media("<=small") {
+    --container_padding_100_right: 20px;
+    --container_padding_100_left: 20px;
+  }
 }
 
 //
 
 .fusion-tb-footer {
-	.is-the-site-logo a {
-		display: block;
-		padding: 16px;
-		&:hover,
-		&:focus {
-			img {
-				transform: scale(1.1);
-			}
-		}
-	}
+  .is-the-site-logo a {
+    display: block;
+    padding: 16px;
+    &:hover,
+    &:focus {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
 
 //
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 #boxed-wrapper {
-	height: 100%;
-	> .fusion-wrapper {
-		height: 100%;
-		display: flex;
-		flex-flow: column nowrap;
-		> main {
-			flex: 1;
-		}
-	}
+  height: 100%;
+  > .fusion-wrapper {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    > main {
+      flex: 1;
+    }
+  }
 }
 
 .wpforms-field-label {
-	font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 
 body.error404 {
-	.post-content {
-		.fusion-search-form {
-			.fusion-search-button.search-button {
-				$icon-size: 24px;
-				text-align: center;
-				width: ($icon-size * 2);
-				justify-content: center;
-				left: 0;
-				&:before {
-					@include center_absolute();
-					z-index: -1;
-					content: "";
-					display: block;
-					background-image: url("../../_assets/img/icon_search.svg");
-					background-size: $icon-size;
-					width: $icon-size;
-					height: $icon-size;
-				}
-			}
-		}
-	}
+  .post-content {
+    .fusion-search-form {
+      .fusion-search-button.search-button {
+        $icon-size: 24px;
+        text-align: center;
+        width: ($icon-size * 2);
+        justify-content: center;
+        left: 0;
+        &:before {
+          @include center_absolute();
+          z-index: -1;
+          content: "";
+          display: block;
+          background-image: url("../../_assets/img/icon_search.svg");
+          background-size: $icon-size;
+          width: $icon-size;
+          height: $icon-size;
+        }
+      }
+    }
+  }
 }
 
 html body {
-	//
-	//
-	//
-	.fusion-tb-header .fusion-builder-row {
-		.think-custom-button {
-			.fusion-button-text {
-				padding: 0.5em;
-			}
-		}
-	}
+  //
+  //
+  //
+  .fusion-tb-header .fusion-builder-row {
+    .think-custom-button {
+      .fusion-button-text {
+        padding: 0.5em;
+      }
+    }
+  }
 
-	//
-	//
-	//
-	.awb-menu_v-stacked .menu-item-has-children .awb-menu__sub-ul {
-		border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
-		margin-top: 2rem;
-	}
+  //
+  //
+  //
+  .awb-menu_v-stacked .menu-item-has-children .awb-menu__sub-ul {
+    border-left: 1px solid var(--wp--preset--color--awb-color-custom-5);
+    margin-top: 2rem;
+  }
 
-	//
-	//
-	//
-	.fusion-image-element .awb-imageframe-caption-container {
-		margin: 24px 0;
-		padding: 8px 0;
-		border-left: 2px solid var(--awb-custom_color_5);
+  //
+  //
+  //
+  .fusion-image-element .awb-imageframe-caption-container {
+    margin: 24px 0;
+    padding: 8px 0;
+    border-left: 2px solid var(--awb-custom_color_5);
 
-		.awb-imageframe-caption-title {
-			display: none;
-		}
+    .awb-imageframe-caption-title {
+      display: none;
+    }
 
-		.awb-imageframe-caption-text {
-			margin: 0 0 0 8px;
-		}
-	}
+    .awb-imageframe-caption-text {
+      margin: 0 0 0 8px;
+    }
+  }
 }
 
 body.home {
-	#wrapper {
-		.homepage-gradient-overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 75vh;
-			background: linear-gradient(
-				180deg,
-				rgba(255, 255, 255, 1) 0%,
-				rgba(255, 255, 255, 1) 75%,
-				rgba(255, 255, 255, 0) 100%
-			);
-		}
-	}
+  #wrapper {
+    .homepage-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75vh;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 75%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
 }
 
 .cb11-related-posts,
 .cb5-news-and-insights-post-grid,
 .cb8-post-grid {
-	.fusion-filter {
-		a {
-			&:hover,
-			&:focus {
-				--awb-filters-hover-color: var(--awb-color8);
-			}
-		}
-	}
+  .fusion-filter {
+    a {
+      &:hover,
+      &:focus {
+        --awb-filters-hover-color: var(--awb-color8);
+      }
+    }
+  }
 
-	//
-	//
-	.fusion-filter:has(a[data-filter*=".quality-insights-landing-page"]),
-	.fusion-filter:has(a[data-filter*=".quality-insights-homepage"]),
-	.fusion-filter:has(a[data-filter*=".events-homepage"]),
-	.fusion-filter:has(a[data-filter*=".events-landing-page"]),
-	.fusion-filter:has(a[data-filter*=".media-landing-page"]),
-	.fusion-filter:has(a[data-filter*=".media-homepage"]) {
-		display: none;
-	}
+  //
+  //
+  .fusion-filter:has(a[data-filter*=".quality-insights-landing-page"]),
+  .fusion-filter:has(a[data-filter*=".quality-insights-homepage"]),
+  .fusion-filter:has(a[data-filter*=".events-homepage"]),
+  .fusion-filter:has(a[data-filter*=".events-landing-page"]),
+  .fusion-filter:has(a[data-filter*=".media-landing-page"]),
+  .fusion-filter:has(a[data-filter*=".media-homepage"]) {
+    display: none;
+  }
 
-	.fusion-title-heading {
-		a[href*="/category/"] {
-			text-decoration: unset;
-			color: var(--body_typography-color);
-		}
-		//
-		//
-		a[href*="/category/uncategorized/"],
-		a[href*="/category/media-landing-page/"],
-		a[href*="/category/media-homepage"],
-		a[href*="/category/events-landing-page/"],
-		a[href*="/category/events-homepage"],
-		a[href*="/category/quality-insights-landing-page/"],
-		a[href*="/category/quality-insights-homepage"] {
-			display: none;
-		}
-	}
+  .fusion-title-heading {
+    a[href*="/category/"] {
+      text-decoration: unset;
+      color: var(--body_typography-color);
+    }
+    //
+    //
+    a[href*="/category/uncategorized/"],
+    a[href*="/category/media-landing-page/"],
+    a[href*="/category/media-homepage"],
+    a[href*="/category/events-landing-page/"],
+    a[href*="/category/events-homepage"],
+    a[href*="/category/quality-insights-landing-page/"],
+    a[href*="/category/quality-insights-homepage"] {
+      display: none;
+    }
+  }
 }
 // row layout alignments
 .cb-17 {
-	.title {
-		display: flex !important;
-		align-items: flex-end !important;
-	}
+  .title {
+    display: flex !important;
+    align-items: flex-end !important;
+  }
 
-	&.touchup--align-titles {
-		.fusion-layout-column.fusion_builder_column_inner {
-			// height: 100%;
-			.fusion-column-wrapper > .fusion-title.sep-underline {
-				display: flex;
-				min-height: 120px;
-				align-items: flex-end;
-				@include media("<=medium") {
-					min-height: 80px;
-				}
-				@include media("<=small") {
-					min-height: unset;
-				}
-			}
-			@include media("<=medium") {
-				height: unset;
-			}
-			//? align buttons to the bottom
-			div > :has(a.fusion-button) {
-				margin: auto 0;
-				margin-bottom: 0;
-			}
-		}
-	}
+  &.touchup--align-titles {
+    .fusion-layout-column.fusion_builder_column_inner {
+      // height: 100%;
+      .fusion-column-wrapper > .fusion-title.sep-underline {
+        display: flex;
+        min-height: 120px;
+        align-items: flex-end;
+        @include media("<=medium") {
+          min-height: 80px;
+        }
+        @include media("<=small") {
+          min-height: unset;
+        }
+      }
+      @include media("<=medium") {
+        height: unset;
+      }
+      //? align buttons to the bottom
+      div > :has(a.fusion-button) {
+        margin: auto 0;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .fusion-footer {
-	//? Menu block
-	#menu-footer {
-		.menu-item a {
-			&:hover,
-			&:focus {
-				--awb-active-color: var(--awb-custom_color_5) !important;
-			}
-		}
-	}
-	//? Text-links
-	a {
-		&:focus,
-		&:hover {
-			text-decoration: none !important;
-		}
-	}
+  //? Menu block
+  #menu-footer {
+    .menu-item a {
+      &:hover,
+      &:focus {
+        --awb-active-color: var(--awb-custom_color_5) !important;
+      }
+    }
+  }
+  //? Text-links
+  a {
+    &:focus,
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
 }

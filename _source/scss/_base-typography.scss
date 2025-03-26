@@ -2,42 +2,42 @@
 $rfs-breakpoint: 1366px;
 $rfs-factor: 80;
 :root {
-	//
-	//	?	for tablet/desktop we are using RFS scaling for font sizes
-	//
-	// @include media(">small") {
-	//
-	@include rfs(120px !important, --h1_typography-font-size);
-	// @include rfs(195px !important, --h1_typography-font-size);
-	//
-	@include rfs(96px !important, --h2_typography-font-size);
-	// @include rfs(120px !important, --h2_typography-font-size);
-	//
-	@include rfs(72px !important, --h3_typography-font-size);
-	// @include rfs(96px !important, --h3_typography-font-size);
-	//
-	@include rfs(64px !important, --h4_typography-font-size);
-	// @include rfs(80px !important, --h4_typography-font-size);
-	//
-	@include rfs(48px !important, --h5_typography-font-size);
-	// @include rfs(64px !important, --h5_typography-font-size);
-	//
-	@include rfs(36px !important, --h6_typography-font-size);
-	// @include rfs(48px !important, --h6_typography-font-size);
-	// }
+  //
+  //	?	for tablet/desktop we are using RFS scaling for font sizes
+  //
+  // @include media(">small") {
+  //
+  @include rfs(120px !important, --h1_typography-font-size);
+  // @include rfs(195px !important, --h1_typography-font-size);
+  //
+  @include rfs(96px !important, --h2_typography-font-size);
+  // @include rfs(120px !important, --h2_typography-font-size);
+  //
+  @include rfs(72px !important, --h3_typography-font-size);
+  // @include rfs(96px !important, --h3_typography-font-size);
+  //
+  @include rfs(64px !important, --h4_typography-font-size);
+  // @include rfs(80px !important, --h4_typography-font-size);
+  //
+  @include rfs(48px !important, --h5_typography-font-size);
+  // @include rfs(64px !important, --h5_typography-font-size);
+  //
+  @include rfs(36px !important, --h6_typography-font-size);
+  // @include rfs(48px !important, --h6_typography-font-size);
+  // }
 
-	//
-	// 	?	for mobile, we are using a strict font size for each heading
-	//
-	// @include media("<=small") {
-	// 	// --h1_typography-font-size: 64px !important;
-	// 	--h1_typography-font-size: 56px !important;
-	// 	--h2_typography-font-size: 48px !important;
-	// 	--h3_typography-font-size: 40px !important;
-	// 	--h4_typography-font-size: 32px !important;
-	// 	--h5_typography-font-size: 24px !important;
-	// 	--h6_typography-font-size: 18px !important;
-	// }
+  //
+  // 	?	for mobile, we are using a strict font size for each heading
+  //
+  // @include media("<=small") {
+  // 	// --h1_typography-font-size: 64px !important;
+  // 	--h1_typography-font-size: 56px !important;
+  // 	--h2_typography-font-size: 48px !important;
+  // 	--h3_typography-font-size: 40px !important;
+  // 	--h4_typography-font-size: 32px !important;
+  // 	--h5_typography-font-size: 24px !important;
+  // 	--h6_typography-font-size: 18px !important;
+  // }
 }
 //
 // ?	when an element has a custom font size applied it won't scale.
@@ -47,37 +47,37 @@ $rfs-factor: 80;
 //	custom font value
 //
 *[style*="--h3_typography-font-size:48px;"] {
-	@include rfs(48px !important, --h3_typography-font-size);
-	line-height: 1.15 !important;
+  @include rfs(48px !important, --h3_typography-font-size);
+  line-height: 1.15 !important;
 }
 //	custom font value
 //
 *[style*="--awb-font-size:32px;"] {
-	@include rfs(32px !important, --h6_typography-font-size);
-	// @include media("<=small") {
-	// 	--awb-font-size: 16px !important;
-	// }
+  @include rfs(32px !important, --h6_typography-font-size);
+  // @include media("<=small") {
+  // 	--awb-font-size: 16px !important;
+  // }
 }
 *[style*="--awb-font-size: 24px;"] {
-	// @include rfs(24px !important, --awb-font-size);
-	@include rfs(20px !important, --awb-font-size);
-	@include media("<=small") {
-		--awb-font-size: 16px !important;
-	}
+  // @include rfs(24px !important, --awb-font-size);
+  @include rfs(20px !important, --awb-font-size);
+  @include media("<=small") {
+    --awb-font-size: 16px !important;
+  }
 }
 //	custom font value
 //
 *[style*="--awb-font-size:20px;"] {
-	@include rfs(20px !important, --awb-font-size);
-	@include media("<=small") {
-		--awb-font-size: 16px !important;
-	}
+  @include rfs(20px !important, --awb-font-size);
+  @include media("<=small") {
+    --awb-font-size: 16px !important;
+  }
 }
 //	avada accordion element `
 // `
 .fusion-body .fusion-accordian .panel-title {
-	@include rfs(36px !important, --awb-title-font-size);
-	line-height: 1.15 !important;
+  @include rfs(36px !important, --awb-title-font-size);
+  line-height: 1.15 !important;
 }
 
 //
@@ -85,10 +85,10 @@ $rfs-factor: 80;
 // ?	we'll just drop everything to the mobile values, but also RFS scale them.
 //
 body.single .post-content {
-	@include rfs(64px !important, --h1_typography-font-size);
-	@include rfs(48px !important, --h2_typography-font-size);
-	@include rfs(40px !important, --h3_typography-font-size);
-	@include rfs(32px !important, --h4_typography-font-size);
-	@include rfs(24px !important, --h5_typography-font-size);
-	@include rfs(18px !important, --h6_typography-font-size);
+  @include rfs(64px !important, --h1_typography-font-size);
+  @include rfs(48px !important, --h2_typography-font-size);
+  @include rfs(40px !important, --h3_typography-font-size);
+  @include rfs(32px !important, --h4_typography-font-size);
+  @include rfs(24px !important, --h5_typography-font-size);
+  @include rfs(18px !important, --h6_typography-font-size);
 }

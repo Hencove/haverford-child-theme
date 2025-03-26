@@ -2,103 +2,103 @@
 // ? styling for our select2 dropdown
 //
 @include media("<=medium") {
-	// Dropdown container located below footer
-	.select2-container {
-		.select2-dropdown {
-			.select2-results {
-				ul.select2-results__options {
-					max-height: 33vh;
+  // Dropdown container located below footer
+  .select2-container {
+    .select2-dropdown {
+      .select2-results {
+        ul.select2-results__options {
+          max-height: 33vh;
 
-					li.select2-results__option {
-						background-color: transparent;
-						color: var(--body_typography-color);
-						padding: 10px 2em;
-					}
-					li.select2-results__option--highlighted.select2-results__option--selectable {
-						background-color: var(--awb-custom_color_1);
-						color: var(--awb-color1);
-					}
-				}
-			}
-		}
-	}
+          li.select2-results__option {
+            background-color: transparent;
+            color: var(--body_typography-color);
+            padding: 10px 2em;
+          }
+          li.select2-results__option--highlighted.select2-results__option--selectable {
+            background-color: var(--awb-custom_color_1);
+            color: var(--awb-color1);
+          }
+        }
+      }
+    }
+  }
 
-	// div:has(> .fusion-filters) {
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	border: unset;
-	// 	margin: 1em;
+  // div:has(> .fusion-filters) {
+  // 	display: flex;
+  // 	flex-direction: column;
+  // 	align-items: center;
+  // 	border: unset;
+  // 	margin: 1em;
 
-	// 	// ul.fusion-filters {
-	// 	// 	display: none !important;
-	// 	// }
-	// 	// .select2,
-	// 	// select.fusion-filters {
-	// 	// 	display: block !important;
-	// 	// 	border: 2px solid var(--awb-custom_color_5);
+  // 	// ul.fusion-filters {
+  // 	// 	display: none !important;
+  // 	// }
+  // 	// .select2,
+  // 	// select.fusion-filters {
+  // 	// 	display: block !important;
+  // 	// 	border: 2px solid var(--awb-custom_color_5);
 
-	// 	// 	.select2-selection--single {
-	// 	// 		background-color: transparent;
-	// 	// 		border: none;
+  // 	// 	.select2-selection--single {
+  // 	// 		background-color: transparent;
+  // 	// 		border: none;
 
-	// 	// 		.select2-selection__rendered {
-	// 	// 			color: var(--body_typography-color);
-	// 	// 		}
-	// 	// 	}
+  // 	// 		.select2-selection__rendered {
+  // 	// 			color: var(--body_typography-color);
+  // 	// 		}
+  // 	// 	}
 
-	// 	// 	// TODO arrow
-	// 	// 	.select2-selection__arrow {
-	// 	// 		border: none;
-	// 	// 		display: flex;
-	// 	// 		flex-flow: column nowrap;
-	// 	// 		align-items: center;
-	// 	// 		justify-content: center;
-	// 	// 		b {
-	// 	// 			transition: all 0.3s $bezier;
-	// 	// 			border: solid black;
-	// 	// 			border-width: 0 3px 3px 0;
-	// 	// 			display: inline-block;
-	// 	// 			padding: 3px;
-	// 	// 			transform: rotate(45deg) !important;
+  // 	// 	// TODO arrow
+  // 	// 	.select2-selection__arrow {
+  // 	// 		border: none;
+  // 	// 		display: flex;
+  // 	// 		flex-flow: column nowrap;
+  // 	// 		align-items: center;
+  // 	// 		justify-content: center;
+  // 	// 		b {
+  // 	// 			transition: all 0.3s $bezier;
+  // 	// 			border: solid black;
+  // 	// 			border-width: 0 3px 3px 0;
+  // 	// 			display: inline-block;
+  // 	// 			padding: 3px;
+  // 	// 			transform: rotate(45deg) !important;
 
-	// 	// 			//
-	// 	// 			width: unset;
-	// 	// 			height: unset;
-	// 	// 			left: unset;
-	// 	// 			margin-left: unset;
-	// 	// 			margin-top: unset;
-	// 	// 			top: unset;
-	// 	// 		}
-	// 	// 	}
-	// 	// }
-	// 	// .select2-container--open {
-	// 	// 	.select2-selection__arrow {
-	// 	// 		b {
-	// 	// 			transform: rotate(135deg) !important;
-	// 	// 		}
-	// 	// 	}
-	// 	// }
-	// 	.wpc-filters-section:has(form) {
-	// 		margin-top: 1em;
-	// 		width: 100%;
-	// 		border: 2px solid var(--awb-custom_color_5);
+  // 	// 			//
+  // 	// 			width: unset;
+  // 	// 			height: unset;
+  // 	// 			left: unset;
+  // 	// 			margin-left: unset;
+  // 	// 			margin-top: unset;
+  // 	// 			top: unset;
+  // 	// 		}
+  // 	// 	}
+  // 	// }
+  // 	// .select2-container--open {
+  // 	// 	.select2-selection__arrow {
+  // 	// 		b {
+  // 	// 			transform: rotate(135deg) !important;
+  // 	// 		}
+  // 	// 	}
+  // 	// }
+  // 	.wpc-filters-section:has(form) {
+  // 		margin-top: 1em;
+  // 		width: 100%;
+  // 		border: 2px solid var(--awb-custom_color_5);
 
-	// 		.wpc-filter-search-form {
-	// 			display: block;
+  // 		.wpc-filter-search-form {
+  // 			display: block;
 
-	// 			.wpc-search-field-wrapper {
-	// 				//
-	// 				input {
-	// 					padding-left: 2em;
-	// 				}
-	// 				//
-	// 				span.wpc-search-icon {
-	// 					display: unset;
-	// 					width: unset;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
+  // 			.wpc-search-field-wrapper {
+  // 				//
+  // 				input {
+  // 					padding-left: 2em;
+  // 				}
+  // 				//
+  // 				span.wpc-search-icon {
+  // 					display: unset;
+  // 					width: unset;
+  // 				}
+  // 			}
+  // 		}
+  // 	}
+  // }
 }

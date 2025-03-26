@@ -2,17 +2,17 @@
 //
 //? Trust Estate Management Page
 body.page-id-443 {
-	// Layout override for large stat block
-	@include media("<=medium") {
-		.cb16-large-stat-or-quote {
-			.col-stat {
-				> .fusion-column-wrapper {
-					--awb-border-right: 0px;
-					--awb-border-bottom: 1px;
-					//   border-right: 0px !important;
-					//   border-bottom: 1px !important;
-				}
-			}
-		}
-	}
+  // Layout override for large stat block
+  @include media("<=medium") {
+    .cb16-large-stat-or-quote {
+      .col-stat {
+        > .fusion-column-wrapper {
+          --awb-border-right: 0px;
+          --awb-border-bottom: 1px;
+          //   border-right: 0px !important;
+          //   border-bottom: 1px !important;
+        }
+      }
+    }
+  }
 }

@@ -2,159 +2,159 @@
 //
 //
 .cb6-interior-banner {
-	//
-	@include gradientBorder();
-	@include gradientBorder(after, 90deg, 55%, 2px);
-	&::after,
-	&::before {
-		left: 30px;
-		bottom: 120px;
-		@include media("<small") {
-			left: 12px;
-			bottom: 140px;
-			// bottom: 60px;
-		}
-	}
+  //
+  @include gradientBorder();
+  @include gradientBorder(after, 90deg, 55%, 2px);
+  &::after,
+  &::before {
+    left: 30px;
+    bottom: 120px;
+    @include media("<small") {
+      left: 12px;
+      bottom: 140px;
+      // bottom: 60px;
+    }
+  }
 
-	// .think-custom-button {
-	// 	margin-bottom: 128px;
-	// 	@include media("<1080px") {
-	// 		margin-bottom: 16px;
-	// 	}
-	// }
+  // .think-custom-button {
+  // 	margin-bottom: 128px;
+  // 	@include media("<1080px") {
+  // 		margin-bottom: 16px;
+  // 	}
+  // }
 
-	//* First column adjustments
-	> .fusion-builder-row {
-		//
-		//
-		.fusion-layout-column:first-of-type {
-			//? Add padding to column text on desktop
-			@include media(">=1080px") {
-				//
-				.fusion-title + .fusion-text p {
-					padding-right: 60px;
-				}
-			}
-			//? Constrain body copy width
-			.fusion-text {
-				max-width: 560px;
-				@include media("<=1080px") {
-					max-width: unset;
-				}
-			}
-			// //? Add margin bottom to last direct child inside the first column
-			// //? This will solve for the event where we dont keep the button el, which pushes down the ornament lines
-			> *:last-child {
-				margin-bottom: 128px;
-				//
-				@include media("<=1080px") {
-					margin-bottom: 16px;
-				}
-			}
-		}
-	}
-	//*
-	//*
-	//* Tablet/Mobile stacking
-	> .fusion-builder-row {
-		//? Enforce vertical stacking
-		@include media("<=1080px") {
-			//? Add breathing room for section below
-			margin-bottom: 12vw;
-			.fusion-layout-column {
-				width: 100%;
-				.fusion-column-wrapper {
-					//? Pushes main image flush against the edge
-					margin-right: 0;
-				}
-			}
-		}
-		//
-		@include media("<=small") {
-			margin-left: 0 !important;
-			margin-right: 0 !important;
-		}
-	}
-	//*
+  //* First column adjustments
+  > .fusion-builder-row {
+    //
+    //
+    .fusion-layout-column:first-of-type {
+      //? Add padding to column text on desktop
+      @include media(">=1080px") {
+        //
+        .fusion-title + .fusion-text p {
+          padding-right: 60px;
+        }
+      }
+      //? Constrain body copy width
+      .fusion-text {
+        max-width: 560px;
+        @include media("<=1080px") {
+          max-width: unset;
+        }
+      }
+      // //? Add margin bottom to last direct child inside the first column
+      // //? This will solve for the event where we dont keep the button el, which pushes down the ornament lines
+      > *:last-child {
+        margin-bottom: 128px;
+        //
+        @include media("<=1080px") {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  //*
+  //*
+  //* Tablet/Mobile stacking
+  > .fusion-builder-row {
+    //? Enforce vertical stacking
+    @include media("<=1080px") {
+      //? Add breathing room for section below
+      margin-bottom: 12vw;
+      .fusion-layout-column {
+        width: 100%;
+        .fusion-column-wrapper {
+          //? Pushes main image flush against the edge
+          margin-right: 0;
+        }
+      }
+    }
+    //
+    @include media("<=small") {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+  //*
 
-	//*
-	// * the avada image element container
-	.fusion-image-element {
-		//
-		// *  the second image has special styles
-		//
-		&:nth-child(1) {
-			//
-			//? push image to the right edge of container
-			@include media(">=1080px") {
-				//
-				width: calc(120% + 40px);
-				height: calc(100% + 60px);
-				top: -40px;
-				position: relative;
-				left: -40px;
-			}
-			//
-			@include media("<1080px") {
-				text-align: right;
-				//
-				.fusion-imageframe {
-					//
-					width: 55%;
-					height: 100%;
-					left: 40px;
-					//
-					img {
-						height: 100%;
-					}
-				}
-			}
-		}
-		//
-		&:nth-child(2) {
-			//? pos. absolute reduces the section height
-			position: absolute;
-			//
-			@include media(">=1080px") {
-				bottom: -10%;
-				left: -40%;
-			}
-			@include media("<1080px") {
-				bottom: -25%;
-				left: 25%;
-				.fusion-imageframe {
-					max-width: 35vw;
-				}
-			}
+  //*
+  // * the avada image element container
+  .fusion-image-element {
+    //
+    // *  the second image has special styles
+    //
+    &:nth-child(1) {
+      //
+      //? push image to the right edge of container
+      @include media(">=1080px") {
+        //
+        width: calc(120% + 40px);
+        height: calc(100% + 60px);
+        top: -40px;
+        position: relative;
+        left: -40px;
+      }
+      //
+      @include media("<1080px") {
+        text-align: right;
+        //
+        .fusion-imageframe {
+          //
+          width: 55%;
+          height: 100%;
+          left: 40px;
+          //
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+    //
+    &:nth-child(2) {
+      //? pos. absolute reduces the section height
+      position: absolute;
+      //
+      @include media(">=1080px") {
+        bottom: -10%;
+        left: -40%;
+      }
+      @include media("<1080px") {
+        bottom: -25%;
+        left: 25%;
+        .fusion-imageframe {
+          max-width: 35vw;
+        }
+      }
 
-			//* this wrapper has the border for the image, and handles aspect ratio if applied
-			.fusion-imageframe {
-				max-width: 40vw;
-				padding: 1em;
-				@include media("<=1080px") {
-					padding: 0.5em;
-				}
-			}
-		}
-	}
+      //* this wrapper has the border for the image, and handles aspect ratio if applied
+      .fusion-imageframe {
+        max-width: 40vw;
+        padding: 1em;
+        @include media("<=1080px") {
+          padding: 0.5em;
+        }
+      }
+    }
+  }
 
-	&.no-image {
-		//*
-		//* For pages without the images column, unset the body copy max-width
-		.fusion-builder-row {
-			// If there's only one column, adjust the fusion-text
-			> .fusion-layout-column:only-child {
-				// width: 100%;
-				.fusion-title + .fusion-text p {
-					padding-right: unset;
-				}
-				.fusion-text {
-					max-width: 75%;
-					@include media("<small") {
-						max-width: unset;
-					}
-				}
-			}
-		}
-	}
+  &.no-image {
+    //*
+    //* For pages without the images column, unset the body copy max-width
+    .fusion-builder-row {
+      // If there's only one column, adjust the fusion-text
+      > .fusion-layout-column:only-child {
+        // width: 100%;
+        .fusion-title + .fusion-text p {
+          padding-right: unset;
+        }
+        .fusion-text {
+          max-width: 75%;
+          @include media("<small") {
+            max-width: unset;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,95 +1,95 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .sticky-timeline_container {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	transform: translateY(-43%);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-43%);
 
-	padding-left: 25px;
-	padding-right: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .sticky-timeline_item {
-	flex: 2 0 auto;
+  flex: 2 0 auto;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p.sticky-timeline_text {
-	font-family: gotham;
-	color: #3041aa;
-	margin-bottom: 5px;
+  font-family: gotham;
+  color: #3041aa;
+  margin-bottom: 5px;
 }
 
 .sticky-timeline_line {
-	align-self: stretch;
-	background: linear-gradient(
-		0deg,
-		rgba(255, 255, 255, 0) 45%,
-		rgba(48, 65, 170, 1) 45%,
-		rgba(48, 65, 170, 1) 55%,
-		rgba(255, 255, 255, 0) 55%
-	);
+  align-self: stretch;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 45%,
+    rgba(48, 65, 170, 1) 45%,
+    rgba(48, 65, 170, 1) 55%,
+    rgba(255, 255, 255, 0) 55%
+  );
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sticky-timeline_item:first-of-type {
-	align-items: flex-start;
-	flex: 1 0 auto;
+  align-items: flex-start;
+  flex: 1 0 auto;
 }
 
 .sticky-timeline_item:last-of-type {
-	align-items: flex-end;
-	flex: 1 0 auto;
+  align-items: flex-end;
+  flex: 1 0 auto;
 }
 
 .sticky-timeline_item:first-of-type p.sticky-timeline_text {
-	padding-left: 20px;
-	transform: translateX(-50%);
+  padding-left: 20px;
+  transform: translateX(-50%);
 }
 
 .sticky-timeline_item:last-of-type p.sticky-timeline_text {
-	padding-right: 20px;
-	transform: translateX(50%);
+  padding-right: 20px;
+  transform: translateX(50%);
 }
 
 .sticky-timeline_item:first-of-type .sticky-timeline_line {
-	justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .sticky-timeline_item:last-of-type .sticky-timeline_line {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .sticky-timeline_dot {
-	background-color: #fff;
-	border: 2px solid #3041aa;
-	border-radius: 50%;
-	width: 20px;
-	height: 20px;
+  background-color: #fff;
+  border: 2px solid #3041aa;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 
-	transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .sticky-timeline_item.active .sticky-timeline_dot {
-	background-color: #3041aa;
+  background-color: #3041aa;
 }
 
 .sticky-timeline_search {
-	max-width: 28px;
-	flex: 2 0 28px;
-	margin-left: 30px;
-	display: flex;
-	align-items: flex-end;
+  max-width: 28px;
+  flex: 2 0 28px;
+  margin-left: 30px;
+  display: flex;
+  align-items: flex-end;
 }

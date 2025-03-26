@@ -1,113 +1,113 @@
 //
 //
 .cb3-featured-stats {
-	position: relative;
-	//
-	--ornaments--offset--value: 0;
-	--ornaments--icon--size: 48px;
-	@include media("<=small") {
-		--ornaments--icon--size: 32px;
-	}
+  position: relative;
+  //
+  --ornaments--offset--value: 0;
+  --ornaments--icon--size: 48px;
+  @include media("<=small") {
+    --ornaments--icon--size: 32px;
+  }
 
-	& > .fusion-builder-row {
-		@include media(">=medium") {
-			margin-left: unset !important;
-			margin-right: unset !important;
-		}
-	}
+  & > .fusion-builder-row {
+    @include media(">=medium") {
+      margin-left: unset !important;
+      margin-right: unset !important;
+    }
+  }
 
-	//
-	.block__ornament {
-		position: absolute;
-		border: 1px solid var(--awb-custom_color_5);
-		border-bottom: unset;
-		top: var(--ornaments--offset--value);
-		left: var(--ornaments--offset--value);
-		width: calc(100% - (var(--ornaments--offset--value) * 2));
-		height: calc(100% - (var(--ornaments--offset--value) * 2));
-		//
-		&.block__ornament--outer {
-			--ornaments--offset--value: 40px;
-			@include media("<=small") {
-				--ornaments--offset--value: 16px;
-			}
-		}
-		//
-		&.block__ornament--inner {
-			opacity: 0.3;
-			--ornaments--offset--value: 24px;
-			@include media("<=small") {
-				--ornaments--offset--value: 8px;
-			}
-		}
-		//
-		.block__ornament-left-right,
-		.block__ornament-top-bottom {
-			position: absolute;
-			height: 1px;
-			background-color: var(--awb-custom_color_5);
-			width: calc(50% - var(--ornaments--icon--size));
-			bottom: 0;
-		}
-		.block__ornament-top-bottom {
-			right: 0;
-		}
-		.block__ornament-left-right {
-			left: 0;
-		}
-	}
-	//
-	//
-	.cb3-h-icon {
-		position: absolute;
-		background-image: url(../../_assets/img/H-icon.svg);
-		background-repeat: no-repeat;
-		background-size: contain;
-		width: var(--ornaments--icon--size);
-		height: var(--ornaments--icon--size);
-		bottom: 16px;
-		@include media("<=small") {
-			bottom: 8px;
-		}
-	}
+  //
+  .block__ornament {
+    position: absolute;
+    border: 1px solid var(--awb-custom_color_5);
+    border-bottom: unset;
+    top: var(--ornaments--offset--value);
+    left: var(--ornaments--offset--value);
+    width: calc(100% - (var(--ornaments--offset--value) * 2));
+    height: calc(100% - (var(--ornaments--offset--value) * 2));
+    //
+    &.block__ornament--outer {
+      --ornaments--offset--value: 40px;
+      @include media("<=small") {
+        --ornaments--offset--value: 16px;
+      }
+    }
+    //
+    &.block__ornament--inner {
+      opacity: 0.3;
+      --ornaments--offset--value: 24px;
+      @include media("<=small") {
+        --ornaments--offset--value: 8px;
+      }
+    }
+    //
+    .block__ornament-left-right,
+    .block__ornament-top-bottom {
+      position: absolute;
+      height: 1px;
+      background-color: var(--awb-custom_color_5);
+      width: calc(50% - var(--ornaments--icon--size));
+      bottom: 0;
+    }
+    .block__ornament-top-bottom {
+      right: 0;
+    }
+    .block__ornament-left-right {
+      left: 0;
+    }
+  }
+  //
+  //
+  .cb3-h-icon {
+    position: absolute;
+    background-image: url(../../_assets/img/H-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: var(--ornaments--icon--size);
+    height: var(--ornaments--icon--size);
+    bottom: 16px;
+    @include media("<=small") {
+      bottom: 8px;
+    }
+  }
 }
 
 //
 // 		an adjustment for the homepage is needed
 //
 body.home {
-	// this is "the haverford difference" sect
-	.cb3-featured-stats {
-		//
-		> .fusion-builder-row {
-			@include media(">=960px") {
-				margin-left: unset !important;
-				margin-right: unset !important;
-				display: flex;
-				flex-flow: row nowrap !important;
-				gap: 40px;
-				> .fusion-layout-column {
-					flex: 1 1 45%;
-					width: auto;
-					&:first-child {
-						> .fusion-column-wrapper {
-							justify-content: flex-start;
-						}
-					}
-				}
-			}
+  // this is "the haverford difference" sect
+  .cb3-featured-stats {
+    //
+    > .fusion-builder-row {
+      @include media(">=960px") {
+        margin-left: unset !important;
+        margin-right: unset !important;
+        display: flex;
+        flex-flow: row nowrap !important;
+        gap: 40px;
+        > .fusion-layout-column {
+          flex: 1 1 45%;
+          width: auto;
+          &:first-child {
+            > .fusion-column-wrapper {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
 
-			// these are the two columns that represent the main block content
-			> .fusion-layout-column {
-				// this is the whole column of 4 stat blocks
-				&:last-child {
-					> .fusion-builder-row {
-						// this is a single one of the stat blocks
-						> .fusion-layout-column {
-						}
-					}
-				}
-			}
-		}
-	}
+      // these are the two columns that represent the main block content
+      > .fusion-layout-column {
+        // this is the whole column of 4 stat blocks
+        &:last-child {
+          > .fusion-builder-row {
+            // this is a single one of the stat blocks
+            > .fusion-layout-column {
+            }
+          }
+        }
+      }
+    }
+  }
 }
