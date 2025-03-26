@@ -2,13 +2,13 @@
 //
 //? Hide any additional tags on posts that are not Wealth Planning Insights
 body.page-id-445 {
-	.cb5-news-and-insights-post-grid {
-		.fusion-post-cards {
-			.title-heading-tag {
-				:not(a[title="Wealth Planning Insights"]) {
-					display: none;
-				}
-			}
-		}
-	}
+  .cb5-news-and-insights-post-grid {
+    .fusion-post-cards {
+      .title-heading-tag {
+        :not(a[title="Wealth Planning Insights"]) {
+          display: none;
+        }
+      }
+    }
+  }
 }

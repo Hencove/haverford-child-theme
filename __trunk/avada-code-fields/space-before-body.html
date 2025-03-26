@@ -1,81 +1,81 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript
-	><iframe
-		src="https://www.googletagmanager.com/ns.html?id=GTM-M7R2C5J"
-		height="0"
-		width="0"
-		style="display: none; visibility: hidden"
-	></iframe
+  ><iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-M7R2C5J"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe
 ></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <script>
-	// navItemPopups
-	// This constant holds an array of arrays.
-	// Each inner array holds a menu item id and the popup class that should be used for that menu item
-	//
-	// 	['menu-item-####', 'popmake-####'],
-	//  ['menu-item-####', 'popmake-####']
-	//
-	// More can be added as needed - just make sure all items end in "," besides the final item.
-	//
-	const navItemPopups = [
-		["mobile-menu-item-17659", "18366"],
-		["mobile-menu-item-25576", "25575"],
-	];
+  // navItemPopups
+  // This constant holds an array of arrays.
+  // Each inner array holds a menu item id and the popup class that should be used for that menu item
+  //
+  // 	['menu-item-####', 'popmake-####'],
+  //  ['menu-item-####', 'popmake-####']
+  //
+  // More can be added as needed - just make sure all items end in "," besides the final item.
+  //
+  const navItemPopups = [
+    ["mobile-menu-item-17659", "18366"],
+    ["mobile-menu-item-25576", "25575"],
+  ];
 
-	function insertNavItemPopups() {
-		try {
-			if (!navItemPopups) throw "navItemPopups array empty or not defined";
+  function insertNavItemPopups() {
+    try {
+      if (!navItemPopups) throw "navItemPopups array empty or not defined";
 
-			for (const navItemPopup of navItemPopups) {
-				if (navItemPopup.constructor !== Array)
-					throw "Not all navItemPopups items are Arrays";
+      for (const navItemPopup of navItemPopups) {
+        if (navItemPopup.constructor !== Array)
+          throw "Not all navItemPopups items are Arrays";
 
-				if (navItemPopup.length !== 2)
-					throw "Not all navItemPopups items are formatted correctly";
+        if (navItemPopup.length !== 2)
+          throw "Not all navItemPopups items are formatted correctly";
 
-				waitForElm("#" + navItemPopup[0] + " a").then((elm) => {
-					let menuItemPopup = navItemPopup[1];
-					elm.setAttribute("data-popup-num", menuItemPopup);
+        waitForElm("#" + navItemPopup[0] + " a").then((elm) => {
+          let menuItemPopup = navItemPopup[1];
+          elm.setAttribute("data-popup-num", menuItemPopup);
 
-					elm.addEventListener("click", openPUM, false);
-				});
-			}
-		} catch (error) {
-			console.error("Nav Item Popups Script: " + error);
-		}
-	}
+          elm.addEventListener("click", openPUM, false);
+        });
+      }
+    } catch (error) {
+      console.error("Nav Item Popups Script: " + error);
+    }
+  }
 
-	// Check if page DOM has already loaded or not, and either run (if loaded) or wait until page DOM load is complete.
-	if (document.readyState === "complete") {
-		// already fired, so run logic right away
-		insertNavItemPopups();
-	} else {
-		// not fired yet, so let's listen for the event
-		window.addEventListener("DOMContentLoaded", insertNavItemPopups);
-	}
+  // Check if page DOM has already loaded or not, and either run (if loaded) or wait until page DOM load is complete.
+  if (document.readyState === "complete") {
+    // already fired, so run logic right away
+    insertNavItemPopups();
+  } else {
+    // not fired yet, so let's listen for the event
+    window.addEventListener("DOMContentLoaded", insertNavItemPopups);
+  }
 
-	function openPUM() {
-		PUM.open(this.dataset.popupNum);
-	}
+  function openPUM() {
+    PUM.open(this.dataset.popupNum);
+  }
 
-	function waitForElm(selector) {
-		return new Promise((resolve) => {
-			if (document.querySelector(selector)) {
-				return resolve(document.querySelector(selector));
-			}
+  function waitForElm(selector) {
+    return new Promise((resolve) => {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
 
-			const observer = new MutationObserver((mutations) => {
-				if (document.querySelector(selector)) {
-					resolve(document.querySelector(selector));
-					observer.disconnect();
-				}
-			});
+      const observer = new MutationObserver((mutations) => {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
 
-			observer.observe(document.body, {
-				childList: true,
-				subtree: true,
-			});
-		});
-	}
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+    });
+  }
 </script>

@@ -1,148 +1,148 @@
 //
 @keyframes cb1GalleryFadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 //
 // ? scope selector
 .cb1-hero-banner .cb1-gallery {
-	// you can declare SCSS variables like this
-	// they only exist in the code - (these are not CSS Properties)
-	// i.e., declaring $gap here doesn't compile and create a gap variable in the built CSS
-	$gap: 24px;
+  // you can declare SCSS variables like this
+  // they only exist in the code - (these are not CSS Properties)
+  // i.e., declaring $gap here doesn't compile and create a gap variable in the built CSS
+  $gap: 24px;
 
-	// idk what this is for...
-	z-index: 1;
-	&:hover {
-		z-index: 1;
-	}
+  // idk what this is for...
+  z-index: 1;
+  &:hover {
+    z-index: 1;
+  }
 
-	// start w/ generic stuff
+  // start w/ generic stuff
 
-	// on initial load, fade in the gallery
-	.fusion-image-element {
-		position: relative;
-		.fusion-imageframe {
-			opacity: 0;
-			animation-name: cb1GalleryFadeIn;
-			animation-fill-mode: forwards;
-			animation-duration: 2s;
-			animation-delay: 0.5s;
-			animation-timing-function: $bezier;
-			// unset some of the avada inherits
-			max-width: unset;
-			filter: unset;
-		}
-	}
+  // on initial load, fade in the gallery
+  .fusion-image-element {
+    position: relative;
+    .fusion-imageframe {
+      opacity: 0;
+      animation-name: cb1GalleryFadeIn;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+      animation-delay: 0.5s;
+      animation-timing-function: $bezier;
+      // unset some of the avada inherits
+      max-width: unset;
+      filter: unset;
+    }
+  }
 
-	// remove initial column gaps - we need to control hz/vt using flex gap or something else that is consistent
-	.fusion-column-wrapper {
-		margin-left: 0;
-		margin-right: 0;
-		gap: $gap;
-	}
+  // remove initial column gaps - we need to control hz/vt using flex gap or something else that is consistent
+  .fusion-column-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    gap: $gap;
+  }
 
-	// rebuild the 'even-ness' of the two columns
-	> .fusion-column-wrapper > .fusion-builder-row {
-		flex-flow: row nowrap;
-		gap: $gap;
-		> .fusion-layout-column {
-			flex: 1 1 45%;
-		}
-	}
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//  we need to manually constrain sizing for the images
-	//  so we need to traverse to them carefully
-	//  ?   this is the first column
+  // rebuild the 'even-ness' of the two columns
+  > .fusion-column-wrapper > .fusion-builder-row {
+    flex-flow: row nowrap;
+    gap: $gap;
+    > .fusion-layout-column {
+      flex: 1 1 45%;
+    }
+  }
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //  we need to manually constrain sizing for the images
+  //  so we need to traverse to them carefully
+  //  ?   this is the first column
 
-	@include media(">960px") {
-		.fusion-builder-row > .fusion-layout-column:first-child {
-			// 1st image
-			.fusion-image-element:first-child {
-				max-width: 340px;
-				img {
-					padding-top: $gap * 2;
-					padding-left: $gap;
-				}
-			}
-			// 2nd image
-			.fusion-image-element:last-child {
-				width: 150%;
-				max-width: 540px;
-				z-index: 2;
-				left: -85%;
-				margin-top: -$gap * 2;
-			}
-		}
-		//  ?   this is the second column
-		.fusion-builder-row > .fusion-layout-column:last-child {
-			// 1st image
-			.fusion-image-element:first-child {
-				max-width: 240px;
-			}
-			// 2nd image
-			.fusion-image-element:last-child {
-				max-width: 300px;
-				left: -20%;
-				width: 120%;
-				img {
-					padding-right: $gap;
-					padding-bottom: $gap;
-				}
-			}
-		}
-	}
-	@include media("<=960px") {
-		.fusion-builder-row > .fusion-layout-column:first-child {
-			// 1st image
-			.fusion-image-element:first-child {
-				max-width: 340px;
-				align-self: flex-end;
-				top: 15%;
-				img {
-					// padding-top: $gap * 2;
-					// padding-left: $gap;
-				}
-			}
-			// 2nd image
-			.fusion-image-element:last-child {
-				max-width: 540px;
-				width: 200%;
-				// z-index: 2;
-				left: -75%;
-				margin-top: $gap * 2;
-				z-index: 3;
-			}
-		}
-		//  ?   this is the second column
-		.fusion-builder-row > .fusion-layout-column:last-child {
-			// 3rd image overall, 1st in the column
-			.fusion-image-element:first-child {
-				max-width: 240px;
-				align-self: center;
-			}
-			// 4th image overall, 2nd in the column
-			.fusion-image-element:last-child {
-				max-width: 300px;
-				left: -20%;
-				width: 120%;
-				margin-top: -$gap;
-				img {
-					// padding-right: $gap;
-					// padding-bottom: $gap;
-				}
-			}
-		}
-	}
+  @include media(">960px") {
+    .fusion-builder-row > .fusion-layout-column:first-child {
+      // 1st image
+      .fusion-image-element:first-child {
+        max-width: 340px;
+        img {
+          padding-top: $gap * 2;
+          padding-left: $gap;
+        }
+      }
+      // 2nd image
+      .fusion-image-element:last-child {
+        width: 150%;
+        max-width: 540px;
+        z-index: 2;
+        left: -85%;
+        margin-top: -$gap * 2;
+      }
+    }
+    //  ?   this is the second column
+    .fusion-builder-row > .fusion-layout-column:last-child {
+      // 1st image
+      .fusion-image-element:first-child {
+        max-width: 240px;
+      }
+      // 2nd image
+      .fusion-image-element:last-child {
+        max-width: 300px;
+        left: -20%;
+        width: 120%;
+        img {
+          padding-right: $gap;
+          padding-bottom: $gap;
+        }
+      }
+    }
+  }
+  @include media("<=960px") {
+    .fusion-builder-row > .fusion-layout-column:first-child {
+      // 1st image
+      .fusion-image-element:first-child {
+        max-width: 340px;
+        align-self: flex-end;
+        top: 15%;
+        img {
+          // padding-top: $gap * 2;
+          // padding-left: $gap;
+        }
+      }
+      // 2nd image
+      .fusion-image-element:last-child {
+        max-width: 540px;
+        width: 200%;
+        // z-index: 2;
+        left: -75%;
+        margin-top: $gap * 2;
+        z-index: 3;
+      }
+    }
+    //  ?   this is the second column
+    .fusion-builder-row > .fusion-layout-column:last-child {
+      // 3rd image overall, 1st in the column
+      .fusion-image-element:first-child {
+        max-width: 240px;
+        align-self: center;
+      }
+      // 4th image overall, 2nd in the column
+      .fusion-image-element:last-child {
+        max-width: 300px;
+        left: -20%;
+        width: 120%;
+        margin-top: -$gap;
+        img {
+          // padding-right: $gap;
+          // padding-bottom: $gap;
+        }
+      }
+    }
+  }
 }

@@ -2,42 +2,42 @@
 //
 //
 .cb5-news-and-insights-post-grid {
-	.post-card {
-		@include postCardOnHover();
-		.fusion-image-wrapper {
-			@include insetImageFrame();
-		}
-	}
+  .post-card {
+    @include postCardOnHover();
+    .fusion-image-wrapper {
+      @include insetImageFrame();
+    }
+  }
 
-	p.fusion-title-heading[style*="text-transform:uppercase;"] {
-		@include termsTitleStyling();
-	}
+  p.fusion-title-heading[style*="text-transform:uppercase;"] {
+    @include termsTitleStyling();
+  }
 
-	p:only-child {
-		margin-bottom: 0;
-	}
+  p:only-child {
+    margin-bottom: 0;
+  }
 
-	// Target the 2-column post card container and stack them responsively
-	@include media("<medium") {
-		.fusion-post-cards:nth-of-type(3) {
-			.post-card {
-				.fusion-row {
-					flex-direction: column-reverse;
+  // Target the 2-column post card container and stack them responsively
+  @include media("<medium") {
+    .fusion-post-cards:nth-of-type(3) {
+      .post-card {
+        .fusion-row {
+          flex-direction: column-reverse;
 
-					.fusion-layout-column {
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
-	@include media("<=mobile") {
-		.fusion-post-cards:nth-of-type(3) {
-			.post-card {
-				.fusion-row {
-					flex-direction: column;
-				}
-			}
-		}
-	}
+          .fusion-layout-column {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @include media("<=mobile") {
+    .fusion-post-cards:nth-of-type(3) {
+      .post-card {
+        .fusion-row {
+          flex-direction: column;
+        }
+      }
+    }
+  }
 }

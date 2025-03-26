@@ -1,151 +1,151 @@
 //
 //
 @keyframes cb1GalleryFadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 //
 //
 .cb1-hero-banner .cb1-gallery {
-	z-index: 1;
-	&:hover {
-		z-index: 1;
-	}
-	//
-	@include media(">medium") {
-		margin-top: -120px;
-		margin-bottom: -120px;
-	}
-	@include media("<=medium") {
-		margin-top: 60px;
-		margin-bottom: -60px;
-	}
-	@include media("<=small") {
-		margin-top: 40px;
-		margin-bottom: 20px;
-		margin-left: -30px !important;
-		margin-right: -30px !important;
-		width: calc(100% + 60px);
-	}
+  z-index: 1;
+  &:hover {
+    z-index: 1;
+  }
+  //
+  @include media(">medium") {
+    margin-top: -120px;
+    margin-bottom: -120px;
+  }
+  @include media("<=medium") {
+    margin-top: 60px;
+    margin-bottom: -60px;
+  }
+  @include media("<=small") {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+    width: calc(100% + 60px);
+  }
 
-	.fusion-column-wrapper {
-		margin: 0;
-	}
+  .fusion-column-wrapper {
+    margin: 0;
+  }
 
-	.fusion-imageframe {
-		opacity: 0;
-		animation-name: cb1GalleryFadeIn;
-		animation-fill-mode: forwards;
-		animation-duration: 2s;
-		animation-delay: 0.5s;
-		animation-timing-function: $bezier;
+  .fusion-imageframe {
+    opacity: 0;
+    animation-name: cb1GalleryFadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-timing-function: $bezier;
 
-		width: 100%;
-		max-width: unset;
-		img {
-			width: 100%;
-		}
-	}
+    width: 100%;
+    max-width: unset;
+    img {
+      width: 100%;
+    }
+  }
 
-	//
-	// ? 1st column of images
-	//
-	.fusion-builder-row > .fusion-layout-column:first-child {
-		// 1st image
-		.fusion-image-element:first-child {
-			text-align: right;
-			.fusion-imageframe {
-				width: 100%;
-			}
+  //
+  // ? 1st column of images
+  //
+  .fusion-builder-row > .fusion-layout-column:first-child {
+    // 1st image
+    .fusion-image-element:first-child {
+      text-align: right;
+      .fusion-imageframe {
+        width: 100%;
+      }
 
-			@include media(">medium") {
-				.fusion-imageframe {
-					margin-top: unset;
-					max-width: 340px;
-				}
-			}
-			@include media("<medium") {
-				.fusion-imageframe {
-					margin-top: 15%;
-					max-width: 340px;
-				}
-			}
-			@include media("<=small") {
-				.fusion-imageframe {
-					margin-top: 5%;
-					max-width: 175px;
-				}
-			}
-		}
-		// 2nd image
-		.fusion-image-element:last-child {
-			.fusion-imageframe {
-				margin-top: -10%;
-				position: relative;
-				width: 150%;
-				max-width: 540px;
-				left: -85%; // could be replaced w gsap.set
-				z-index: 2;
-			}
-			@include media(">=640px", "<=900px") {
-				.fusion-imageframe {
-					margin-top: 10%;
-					left: -25%;
-				}
-			}
-			@include media("<=small") {
-				.fusion-imageframe {
-					margin-top: 60px;
-					max-width: 257px;
-					left: 0;
-				}
-			}
-		}
-	}
-	//
-	// ? 2nd column of images
-	//
-	.fusion-builder-row > .fusion-layout-column:last-child {
-		// 1st image
-		.fusion-image-element:first-child {
-			.fusion-imageframe {
-				margin-top: -20%; // could be replaced w gsap.set
-				max-width: 240px;
-				img {
-					padding-left: 10%;
-					padding-bottom: 10%;
-				}
-				@include media("<=small") {
-					max-width: 152px;
-				}
-			}
-		}
-		// 2nd image
-		.fusion-image-element:last-child {
-			.fusion-imageframe {
-				width: calc(100% + 20%);
-				max-width: 302px;
-				left: -20%; // could be replaced w gsap.set
-				img {
-					padding-right: 10%;
-					padding-bottom: 10%;
-				}
-			}
-			@include media("<=small") {
-				.fusion-imageframe {
-					width: 100%;
-					max-width: 159px;
-					left: 0%;
-					img {
-						padding-right: 10%;
-						padding-bottom: 10%;
-					}
-				}
-			}
-		}
-	}
+      @include media(">medium") {
+        .fusion-imageframe {
+          margin-top: unset;
+          max-width: 340px;
+        }
+      }
+      @include media("<medium") {
+        .fusion-imageframe {
+          margin-top: 15%;
+          max-width: 340px;
+        }
+      }
+      @include media("<=small") {
+        .fusion-imageframe {
+          margin-top: 5%;
+          max-width: 175px;
+        }
+      }
+    }
+    // 2nd image
+    .fusion-image-element:last-child {
+      .fusion-imageframe {
+        margin-top: -10%;
+        position: relative;
+        width: 150%;
+        max-width: 540px;
+        left: -85%; // could be replaced w gsap.set
+        z-index: 2;
+      }
+      @include media(">=640px", "<=900px") {
+        .fusion-imageframe {
+          margin-top: 10%;
+          left: -25%;
+        }
+      }
+      @include media("<=small") {
+        .fusion-imageframe {
+          margin-top: 60px;
+          max-width: 257px;
+          left: 0;
+        }
+      }
+    }
+  }
+  //
+  // ? 2nd column of images
+  //
+  .fusion-builder-row > .fusion-layout-column:last-child {
+    // 1st image
+    .fusion-image-element:first-child {
+      .fusion-imageframe {
+        margin-top: -20%; // could be replaced w gsap.set
+        max-width: 240px;
+        img {
+          padding-left: 10%;
+          padding-bottom: 10%;
+        }
+        @include media("<=small") {
+          max-width: 152px;
+        }
+      }
+    }
+    // 2nd image
+    .fusion-image-element:last-child {
+      .fusion-imageframe {
+        width: calc(100% + 20%);
+        max-width: 302px;
+        left: -20%; // could be replaced w gsap.set
+        img {
+          padding-right: 10%;
+          padding-bottom: 10%;
+        }
+      }
+      @include media("<=small") {
+        .fusion-imageframe {
+          width: 100%;
+          max-width: 159px;
+          left: 0%;
+          img {
+            padding-right: 10%;
+            padding-bottom: 10%;
+          }
+        }
+      }
+    }
+  }
 }

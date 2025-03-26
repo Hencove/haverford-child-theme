@@ -1,55 +1,55 @@
 //	? here we select the container to add and position the geolines
 .is-two-cb7-pathways > .fusion-builder-row > .fusion-layout-column:first-child {
-	&:before {
-		@include geoPattern(top, -48px, left, 0, 140px, 100%);
-		z-index: 1;
-		transform: translateX(-75%);
-		//
-		@include media("<=small") {
-			top: -48px;
-			left: 0;
-			height: 64px;
-			transform: translateX(-8%);
-			width: 119% !important;
-		}
-	}
+  &:before {
+    @include geoPattern(top, -48px, left, 0, 140px, 100%);
+    z-index: 1;
+    transform: translateX(-75%);
+    //
+    @include media("<=small") {
+      top: -48px;
+      left: 0;
+      height: 64px;
+      transform: translateX(-8%);
+      width: 119% !important;
+    }
+  }
 }
 //	?	overall styling for the pattern here
 .cb7-pullquote {
-	//	?	include standard "post card" hover
-	&:has(> .fusion-column-inner-bg > .fusion-column-anchor) {
-		@include postCardOnHover();
-	}
-	//	?	here we select the second pattern in the container, which is flipped to be image on the bottom on desktop
-	+ .cb7-pullquote {
-		> .fusion-column-wrapper > .fusion-builder-row {
-			// ? un-flip the second pattern here, bringing the image to the top
-			@include media("<=small") {
-				> .fusion-layout-column:not(:last-child) {
-					order: 1;
-				}
-				> .fusion-layout-column:last-child {
-					order: 0;
-				}
-			}
-		}
-		//
-		//	?	here we draw a line centered between the two patterns
-		.fusion-column-wrapper > .fusion-builder-row {
-			position: relative;
-			&::before {
-				content: "";
-				position: absolute;
-				z-index: 1;
-				top: 0;
-				left: -20px;
-				height: 100%;
-				width: 1px;
-				background-color: #ccc;
-				@include media("<=small") {
-					display: none;
-				}
-			}
-		}
-	}
+  //	?	include standard "post card" hover
+  &:has(> .fusion-column-inner-bg > .fusion-column-anchor) {
+    @include postCardOnHover();
+  }
+  //	?	here we select the second pattern in the container, which is flipped to be image on the bottom on desktop
+  + .cb7-pullquote {
+    > .fusion-column-wrapper > .fusion-builder-row {
+      // ? un-flip the second pattern here, bringing the image to the top
+      @include media("<=small") {
+        > .fusion-layout-column:not(:last-child) {
+          order: 1;
+        }
+        > .fusion-layout-column:last-child {
+          order: 0;
+        }
+      }
+    }
+    //
+    //	?	here we draw a line centered between the two patterns
+    .fusion-column-wrapper > .fusion-builder-row {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: -20px;
+        height: 100%;
+        width: 1px;
+        background-color: #ccc;
+        @include media("<=small") {
+          display: none;
+        }
+      }
+    }
+  }
 }

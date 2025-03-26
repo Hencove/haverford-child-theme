@@ -4,20 +4,26 @@
 //
 //
 div.cb19-prefooter-c2a {
-	position: relative;
-	&:before {
-		@include geoPattern(top, calc(var(--awb-border-sizes-top) * -1), left, calc(var(--awb-border-sizes-left) * -1), 80px, calc(100% + calc(var(--awb-border-sizes-top) * 2)));
-		filter: brightness(100);
-		z-index: 1;
-
-	}
-	@include media("<mobile") {
-		&:before {
-			// ? 100% plus 2x border width
-			width: calc(100% + calc(var(--awb-border-sizes-left) * 2));
-			height: 60px;
-		}
-	}
+  position: relative;
+  &:before {
+    @include geoPattern(
+      top,
+      calc(var(--awb-border-sizes-top) * -1),
+      left,
+      calc(var(--awb-border-sizes-left) * -1),
+      80px,
+      calc(100% + calc(var(--awb-border-sizes-top) * 2))
+    );
+    filter: brightness(100);
+    z-index: 1;
+  }
+  @include media("<mobile") {
+    &:before {
+      // ? 100% plus 2x border width
+      width: calc(100% + calc(var(--awb-border-sizes-left) * 2));
+      height: 60px;
+    }
+  }
 }
 
 //
@@ -27,4 +33,3 @@ div.cb19-prefooter-c2a {
 //
 div.cb19-prefooter-c2a {
 }
-

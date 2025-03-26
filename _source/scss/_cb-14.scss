@@ -1,29 +1,29 @@
 html body {
-	div.fusion-fullwidth.cb14-about {
-		//
-		.fusion-image-element .has-inset-border img {
-			outline: 1px solid var(--awb-custom_color_5);
-			outline-offset: -20px;
-		}
-	}
-	//? for all CB14's except the Our Leadership page
-	&:not(.page-id-505) {
-		div.fusion-fullwidth.cb14-about {
-			.fusion-image-element {
-				img {
-					max-width: 480px; //* adding within Avada CMS actually adds "width", not "max-width"
-					@include media("<=medium") {
-						max-height: 380px;
-						max-width: unset;
-					}
-				}
-				.has-inset-border {
-					img {
-						outline: 1px solid var(--awb-custom_color_5);
-						outline-offset: -20px;
-					}
-				}
-			}
-		}
-	}
+  div.fusion-fullwidth.cb14-about {
+    //
+    .fusion-image-element .has-inset-border img {
+      outline: 1px solid var(--awb-custom_color_5);
+      outline-offset: -20px;
+    }
+  }
+  //? for all CB14's except the Our Leadership page
+  &:not(.page-id-505) {
+    div.fusion-fullwidth.cb14-about {
+      .fusion-image-element {
+        img {
+          max-width: 480px; //* adding within Avada CMS actually adds "width", not "max-width"
+          @include media("<=medium") {
+            max-height: 380px;
+            max-width: unset;
+          }
+        }
+        .has-inset-border {
+          img {
+            outline: 1px solid var(--awb-custom_color_5);
+            outline-offset: -20px;
+          }
+        }
+      }
+    }
+  }
 }

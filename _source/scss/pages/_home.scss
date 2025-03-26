@@ -2,13 +2,13 @@
 //
 //? Only show the first tag
 body.home {
-	.cb5-news-and-insights-post-grid {
-		.fusion-post-cards {
-			.title-heading-tag {
-				*:not(:first-child) {
-					display: none;
-				}
-			}
-		}
-	}
+  .cb5-news-and-insights-post-grid {
+    .fusion-post-cards {
+      .title-heading-tag {
+        *:not(:first-child) {
+          display: none;
+        }
+      }
+    }
+  }
 }
