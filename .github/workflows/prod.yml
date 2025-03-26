@@ -18,6 +18,8 @@ jobs:
           node-version: latest
       - name: Install theme dependencies
         run: npm ci
+      - name: Check code formatting with Prettier
+        run: npx prettier . --check
       - name: Mix theme
         run: npx mix -p
       - name: GitHub Action Deploy to WP Engine
