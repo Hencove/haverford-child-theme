@@ -3,6 +3,8 @@ _build
 coverage
 node_modules
 
+mix-manifest.json
+
 .deployignore
 .deployinclude
 
