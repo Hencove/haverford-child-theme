@@ -1,26 +1,88 @@
-//
-//
-//
-body.single.avada_portfolio-template-default {
-  .fusion-page-title-bar .fusion-image-element {
-    position: relative;
-    &:before {
-      @include geoPattern(top, 60px, left, -60px, 100%, 100%);
+body.single.avada_portfolio-template-default #content {
+  //
+  //* BIO CONTACT FORM - ACCORDION //*
+  .accordian.email-toggle {
+    .panel-title {
+      font-size: 24px;
     }
-  }
-}
 
-body.single.avada_portfolio-template-default #content {
-  // ? "finras brokercheck" button
-  .fusion-button {
-    padding: 8px 16px;
-    border-radius: 0;
+    .fusion-panel {
+      --awb-content-color: var(--awb-color6);
+      --form_text_color: var(--awb-color6);
+      --awb-toggle-hover-accent-color: var(--awb-custom_color_5);
+      --awb-toggle-active-accent-color: var(--awb-custom_color_5);
+      //
+    }
+
+    // .panel-body.toggle-content.fusion-clearfix {
+    //   padding: 15px 25px;
+    // }
   }
-}
-body.single.avada_portfolio-template-default #content {
+  //*
   //
-  //
+  //* BIO CONTACT FORM - FORM STYLING//*
   .accordian.email-toggle .wpcf7 {
+    //? NET NEW STYLING //?
+    //? Refer to _cb18 for submit button styling
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      background-color: transparent;
+      border: 1px solid var(--awb-custom_color_5);
+      border-radius: 0;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-family: inherit;
+
+      &::placeholder {
+        color: var(--wpforms-field-text-color);
+        opacity: 0.7;
+      }
+      &:hover {
+        border-color: #5a4600;
+        box-shadow: none;
+      }
+
+      &:focus {
+        border-color: var(--awb-custom_color_1);
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .wpcf7-form-control-wrap {
+      display: block;
+      margin-bottom: 1.5rem;
+      margin-top: 1em;
+    }
+
+    .wpcf7-response-output {
+      background: var(--awb-color7);
+      border: 1px solid var(--awb-color8);
+      padding: 1em;
+      font-size: 0.9rem;
+    }
+
+    .wpcf7-not-valid-tip,
+    .wpcf7-form-control.wpcf7-acceptance .wpcf7-list-item-label {
+      color: var(--awb-color8);
+    }
+
+    label {
+      font-weight: 400;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .disclaimer {
+      font-size: 0.8rem;
+    }
+    //?
+
     --button_gradient_top_color: var(--awb-color8);
     --button_gradient_top_color_hover: var(--awb-custom_color_1);
     --button_border_hover_color: var(--awb-custom_color_1);
@@ -36,84 +98,8 @@ body.single.avada_portfolio-template-default #content {
       @extend %h7_small_caps;
     }
   }
+  //*
   //
-  .accordian.email-toggle {
-    border: 1px solid var(--awb-color5);
-
-    //
-    //
-    .fusion-panel {
-      --awb-content-color: var(--awb-color6);
-      --form_text_color: var(--awb-color6);
-      --awb-toggle-hover-accent-color: var(--awb-custom_color_5);
-      --awb-toggle-active-accent-color: var(--awb-custom_color_5);
-      //
-      .panel-heading {
-        padding: 8px 16px;
-        //
-        .panel-title {
-          a {
-            @extend %h7_small_caps;
-            padding: 0px;
-            &:hover {
-              color: var(--awb-custom_color_5);
-            }
-          }
-        }
-      }
-    }
-
-    .panel-body.toggle-content.fusion-clearfix {
-      padding: 15px 25px;
-    }
-
-    .fusion-panel {
-      border-bottom: 0px !important;
-    }
-  }
-
-  //
-  //
-  //
-  // .fusion-title {
-  // 	--awb-sep-color: var(--awb-color5);
-  // 	h1 {
-  // 		font-size: 42px;
-  // 		color: var(--awb-color8);
-  // 	}
-  // 	h2 {
-  // 		font-size: 32px;
-  // 		color: var(--awb-color8);
-  // 	}
-  // 	h3 {
-  // 		@extend %h7_small_caps;
-  // 		// @extend %separator_underline;
-  // 		color: var(--awb-color8);
-  // 	}
-  // }
-
-  //
-  //
-  //
-  // .fusion-text {
-  // 	h4 {
-  // 		font-size: 16px;
-  // 		font-family: "Inter";
-  // 		font-weight: 300;
-  // 	}
-  // 	//
-  // 	//
-  // 	h2 {
-  // 		font-size: 24px;
-  // 	}
-
-  // 	.leadrcont {
-  // 		font-family: var(--body_typography-font-family);
-  // 		font-size: 20px;
-  // 		font-weight: 300;
-  // 		line-height: 1.5;
-  // 	}
-  // }
 }
 
 .fusion-post-cards {
