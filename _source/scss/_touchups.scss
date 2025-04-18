@@ -218,3 +218,32 @@ body.home {
     }
   }
 }
+
+// Fixes to Leaving Haverford Website Popup Styling
+
+.pum-theme-lightbox .pum-container {
+  border: 1px solid var(--awb-custom_color_5);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.pum-theme-lightbox .pum-title {
+  font-family: var(--h5_typography-font-family);
+  font-weight: var(--h5_typography-font-weight);
+  line-height: var(--h5_typography-line-height);
+  letter-spacing: var(--h5_typography-letter-spacing);
+  text-transform: var(--h5_typography-text-transform);
+  font-style: var(--h5_typography-font-style, normal);
+  color: var(--awb-color8);
+}
+
+.pum-theme-lightbox .pum-content a {
+  display: inline-block;
+  color: black;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--awb-custom_color_5);
+}
+
+.pum-theme-lightbox .pum-container {
+  padding: 30px;
+}
