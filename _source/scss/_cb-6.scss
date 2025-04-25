@@ -79,7 +79,23 @@
 
   //*
   // * the avada image element container
+
   .fusion-image-element {
+    //? Adding geopattern to top right of single image
+    .has-geo-pattern {
+      position: relative;
+      overflow: visible;
+      &:before {
+        z-index: -1;
+        @include geoPattern(top, -10%, right, -50%, 100%, 100%);
+      }
+      @include media("<=1080px") {
+        &:before {
+          @include geoPattern(top, -10%, right, -30%, 100%, 110%);
+        }
+      }
+    }
+
     //
     // *  the second image has special styles
     //

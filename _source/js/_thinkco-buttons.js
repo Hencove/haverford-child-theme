@@ -16,6 +16,21 @@
         $(button).html(ButtonTextHTML);
       }
 
+      //! THIS WORKS FOR STYLING BUT NOT FOR SUBMITTING THE FORM
+      ////! WE NEED THE INPUT VALUE FOR SENDING, OR ANOTHER APPROACH
+      if ($(button).hasClass("wpcf7-submit")) {
+        //? Replace CF7 input[type="submit"] with a <button>
+        const buttonText = button.value;
+        const classes = button.className;
+        const $newButton = $(`
+        <button type="submit" class="${classes}">
+          <div class="fusion-button-text">${buttonText}</div>
+        </button>
+      `);
+        $(button).replaceWith($newButton);
+        button = $newButton[0]; // update reference for ornament injection
+      }
+
       let verticalOrnament =
         '<div class="button__ornament button__ornament--vertical"><div class="button__ornament-top-bottom"></div><div class="button__ornament-left-right"></div></div>';
       let horizontalOrnament =

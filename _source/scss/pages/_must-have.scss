@@ -1,0 +1,188 @@
+//
+//
+//
+//? PAGE ID TARGETING FOR LOCAL AND DEV
+//* Manual overrides for Must Have LP //*
+body.page-id-70329,
+body.page-id-70346 {
+  //* ************
+  //* HERO SECTION
+  //* ************
+  .cb6-interior-banner {
+    //*
+    // * the avada image element container
+
+    .fusion-image-element {
+      //
+      // *  the second image has special styles
+      //
+      &:nth-child(1) {
+        //
+        @include media("<1080px") {
+          text-align: right;
+          //
+          .fusion-imageframe {
+            //
+            width: 85%;
+            height: 100%;
+            left: 40px;
+            //
+            img {
+              height: 100%;
+            }
+          }
+        }
+        @include media("<=small") {
+          text-align: right;
+          //
+          .fusion-imageframe {
+            //
+            width: 95%;
+          }
+        }
+      }
+      //
+    }
+  }
+
+  //* ****************
+  //* WP FORMS STYLING
+  //* ****************
+  div.wpforms-container-full
+    .wpforms-submit-container
+    button[type="submit"].think-custom-button {
+    @include buttonOrnamentStyles();
+    background: unset !important;
+    background-color: unset !important;
+    height: auto;
+    position: relative;
+    text-decoration: none;
+    padding: $button--ornament-offset * -1;
+    box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
+    // min-width: 340px;
+    text-align: center;
+    border-radius: 0;
+    //
+    //
+
+    .fusion-button-text {
+      min-width: 140px;
+      // text-transform: uppercase;
+      // font-weight: 300;
+      // letter-spacing: 0.4em;
+      font-size: 1em;
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      color: $button--color-2;
+      padding: 1.5em 2em;
+      padding: 0.5rem 2rem;
+      transition:
+        color 500ms ease,
+        background-color 500ms ease;
+    }
+
+    &:hover,
+    &:focus &:active {
+      background: none;
+
+      .fusion-button-text {
+        color: $button--color-2;
+        background-color: rgba($button--color-1, 0.9);
+      }
+    }
+
+    &:focus:after {
+      border: none;
+    }
+  }
+  div.fusion-fullwidth {
+    form.fusion-form .fusion-fullwidth,
+    .wpforms-container-full {
+      margin: 0;
+      padding: 0;
+
+      &.wpforms-container {
+        .wpforms-form {
+          .choices__inner,
+          .choices__list,
+          .choices_list {
+            border: 0;
+          }
+        }
+        .wpforms-confirmation-container {
+          background: var(--awb-color7);
+          border: 1px solid var(--awb-color8);
+        }
+      }
+
+      .fusion-form-field,
+      .wpforms-field {
+        input,
+        select,
+        textarea {
+          background-color: transparent;
+          border: 1px solid var(--awb-custom_color_5);
+          border-radius: 0;
+
+          &:hover {
+            border: 1px solid #5a4600;
+            box-shadow: none;
+          }
+
+          &:focus {
+            border: 1px solid var(--awb-custom_color_1);
+            box-shadow: none;
+          }
+        }
+
+        .wpforms-error,
+        .wpforms-required-label {
+          color: var(--awb-color8);
+
+          &:before {
+            background-color: var(--awb-color8);
+          }
+        }
+      }
+    }
+  }
+
+  //* ****************
+  //* SCROLL-JACK SECTION
+  //* ****************
+  .cb4-image-3-callouts {
+    @media screen and (max-width: 1024px) {
+      .fusion-imageframe {
+        img {
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+  }
+
+  //* ***************
+  //* FORM CTA
+  //* ***************
+  div.form-cta {
+    @include media("<=1024px") {
+      > .fusion-builder-row {
+        > .fusion-layout-column {
+          width: 100%;
+        }
+      }
+    }
+    @include media("<=medium") {
+      .fusion-image-element {
+        div {
+          width: unset !important;
+          max-width: 250px;
+          .fusion-imageframe {
+            width: unset !important;
+            max-width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
