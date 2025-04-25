@@ -1,6 +1,7 @@
 body.single.avada_portfolio-template-default #content {
   //
-  //* BIO CONTACT FORM - ACCORDION //*
+  //? BIO CONTACT FORM - ACCORDION //?
+
   .accordian.email-toggle {
     .panel-title {
       font-size: 24px;
@@ -13,17 +14,13 @@ body.single.avada_portfolio-template-default #content {
       --awb-toggle-active-accent-color: var(--awb-custom_color_5);
       //
     }
-
-    // .panel-body.toggle-content.fusion-clearfix {
-    //   padding: 15px 25px;
-    // }
   }
-  //*
-  //
-  //* BIO CONTACT FORM - FORM STYLING//*
+  //? BIO CONTACT FORM - FORM STYLING //?
+  //******
+  //* CONTACT FORM 7
+  //******
   .accordian.email-toggle .wpcf7 {
     //? NET NEW STYLING //?
-    //? Refer to _cb18 for submit button styling
 
     button[type="submit"].think-custom-button {
       @include buttonOrnamentStyles();
@@ -148,7 +145,109 @@ body.single.avada_portfolio-template-default #content {
     // }
   }
   //*
-  //
+  //******
+  //* WPFORMS
+  //******
+  div.wpforms-container-full
+    .wpforms-submit-container
+    button[type="submit"].think-custom-button {
+    @include buttonOrnamentStyles();
+    background: unset !important;
+    background-color: unset !important;
+    height: auto;
+    position: relative;
+    text-decoration: none;
+    padding: $button--ornament-offset * -1;
+    box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
+    // min-width: 340px;
+    text-align: center;
+    border-radius: 0;
+    //
+    //
+
+    .fusion-button-text {
+      min-width: 140px;
+      // text-transform: uppercase;
+      // font-weight: 300;
+      // letter-spacing: 0.4em;
+      font-size: 1em;
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      color: $button--color-2;
+      padding: 1.5em 2em;
+      padding: 0.5rem 2rem;
+      transition:
+        color 500ms ease,
+        background-color 500ms ease;
+    }
+
+    &:hover,
+    &:focus &:active {
+      background: none;
+
+      .fusion-button-text {
+        color: $button--color-2;
+        background-color: rgba($button--color-1, 0.9);
+      }
+    }
+
+    &:focus:after {
+      border: none;
+    }
+  }
+
+  div.email-toggle {
+    form.fusion-form .fusion-fullwidth,
+    .wpforms-container-full {
+      margin: 0;
+      padding: 0;
+
+      &.wpforms-container {
+        .wpforms-form {
+          .choices__inner,
+          .choices__list,
+          .choices_list {
+            border: 0;
+          }
+        }
+        .wpforms-confirmation-container {
+          background: var(--awb-color7);
+          border: 1px solid var(--awb-color8);
+        }
+      }
+
+      .fusion-form-field,
+      .wpforms-field {
+        input,
+        select,
+        textarea {
+          background-color: transparent;
+          border: 1px solid var(--awb-custom_color_5);
+          border-radius: 0;
+
+          &:hover {
+            border: 1px solid #5a4600;
+            box-shadow: none;
+          }
+
+          &:focus {
+            border: 1px solid var(--awb-custom_color_1);
+            box-shadow: none;
+          }
+        }
+
+        .wpforms-error,
+        .wpforms-required-label {
+          color: var(--awb-color8);
+
+          &:before {
+            background-color: var(--awb-color8);
+          }
+        }
+      }
+    }
+  }
 }
 
 .fusion-post-cards {
