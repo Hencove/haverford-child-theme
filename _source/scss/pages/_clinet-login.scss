@@ -1,0 +1,12 @@
+//? PAGE ID TARGETING FOR PROD
+//* Manual overrides for Client Login Page //*
+body.page-id-507 {
+  //* ***************
+  //* Adjust arrow positioning
+  //* ***************
+  .login-arrow {
+    position: absolute;
+    bottom: 30px;
+    right: 24px;
+  }
+}
