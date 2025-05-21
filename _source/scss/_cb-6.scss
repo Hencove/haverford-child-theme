@@ -3,16 +3,19 @@
 //
 .cb6-interior-banner {
   //
+  //? bottom values are calculated in _cb6.js | specifically for the .no-image use case
   @include gradientBorder();
   @include gradientBorder(after, 90deg, 55%, 2px);
   &::after,
   &::before {
     left: 30px;
-    bottom: 120px;
+    // bottom: 120px;
+    bottom: var(--actual-padding-bottom, 120px);
+    //
     @include media("<small") {
       left: 12px;
-      bottom: 140px;
-      // bottom: 60px;
+      // bottom: 140px;
+      bottom: var(--actual-padding-bottom, 140px);
     }
   }
 
@@ -60,7 +63,7 @@
     //? Enforce vertical stacking
     @include media("<=1080px") {
       //? Add breathing room for section below
-      margin-bottom: 12vw;
+      // margin-bottom: 12vw;
       .fusion-layout-column {
         width: 100%;
         .fusion-column-wrapper {
@@ -158,19 +161,36 @@
     //*
     //* For pages without the images column, unset the body copy max-width
     .fusion-builder-row {
-      @include media("<=1080px") {
-        //? Add breathing room for section below
-        margin-bottom: 50vw !important;
+      // @include media(">1080px") {
+      //   //? Add breathing room for section below
+      //   margin-bottom: 72px;
+      // }
+      // @include media("<=1080px") {
+      //   //? Add breathing room for section below
+      //   margin-bottom: 36px;
+      // }
+
+      // //? Add margin bottom to last direct child inside the first column
+      // //? This will solve for the event where we dont keep the button el, which pushes down the ornament lines
+      .fusion-layout-column:first-of-type {
+        > *:last-child {
+          //* margin reset for no-image hero
+          margin-bottom: unset;
+          //*
+          //? hardcoded solution for whitespae
+          // padding: 0;
+          //
+          // @include media("<=1080px") {
+          //   margin-bottom: 48px;
+          // }
+          // @include media("<=small") {
+          //   margin-bottom: 20px;
+          // }
+        }
       }
 
-      // If there's only one column, adjust the fusion-text
       > .fusion-layout-column:only-child {
-        .fusion-column-wrapper {
-          //?
-          //
-          //
-        }
-
+        // If there's only one column, adjust the fusion-text
         .fusion-title + .fusion-text p {
           padding-right: unset;
         }
