@@ -158,9 +158,19 @@
     //*
     //* For pages without the images column, unset the body copy max-width
     .fusion-builder-row {
+      @include media("<=1080px") {
+        //? Add breathing room for section below
+        margin-bottom: 50vw !important;
+      }
+
       // If there's only one column, adjust the fusion-text
       > .fusion-layout-column:only-child {
-        // width: 100%;
+        .fusion-column-wrapper {
+          //?
+          //
+          //
+        }
+
         .fusion-title + .fusion-text p {
           padding-right: unset;
         }
