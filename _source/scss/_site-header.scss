@@ -164,6 +164,14 @@ html body {
 
   &.single.single-post {
     .fusion-tb-header {
+      //? Header for Wealth Planning posts
+      & .header-on-gold {
+        .menu-item {
+          //? Quality Blue
+          --awb-active-color: var(--awb-color8) !important;
+        }
+      }
+
       .fusion-search-button {
         &::before {
           filter: brightness(100);
@@ -175,13 +183,14 @@ html body {
       }
 
       .fusion-button.think-custom-button.has-white-bg-color {
+        $button--color-1: #ffffff;
         box-shadow: inset 0 0 0 1px $button--color-1 !important; // simulating inset border
         .button__ornament {
           &-top-bottom,
           &-left-right {
             &:before,
             &:after {
-              background-color: var(--awb-custom_color_5);
+              background-color: $button--color-1;
             }
           }
         }
