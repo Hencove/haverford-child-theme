@@ -164,6 +164,14 @@ html body {
 
   &.single.single-post {
     .fusion-tb-header {
+      //? Header for Wealth Planning posts
+      & .header-on-gold {
+        .menu-item {
+          //? Quality Blue
+          --awb-active-color: var(--awb-color8) !important;
+        }
+      }
+
       .fusion-search-button {
         &::before {
           filter: brightness(100);
