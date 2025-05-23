@@ -4,14 +4,48 @@ html body {
     background-size: 30%;
     background-position: 0%;
     background-repeat: no-repeat;
+    //
+    @include media("<=small") {
+      --container_padding_100_right: 40px;
+      --container_padding_100_left: 40px;
+      //
+      &:before {
+        opacity: 0.5;
+        position: absolute;
+      }
+      .fusion-image-element img {
+        outline: 1px solid var(--awb-custom_color_5);
+        outline-offset: -20px;
+      }
+      //? draw the line
+      > .fusion-builder-row {
+        //
+        &:before {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 94%;
+          top: 5%;
+          left: -15px;
+          background-color: var(--awb-custom_color_5);
+        }
 
-    &:before {
-      opacity: 0.5;
-      position: absolute;
-    }
-    .fusion-image-element img {
-      outline: 1px solid var(--awb-custom_color_5);
-      outline-offset: -20px;
+        //
+        .timeline-year {
+          margin: 24px 0 !important;
+          h2 {
+            &:after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 2px;
+              left: -15px;
+              top: calc(28px + 1em);
+              background-color: var(--awb-custom_color_5);
+            }
+          }
+        }
+      }
     }
   }
 }
