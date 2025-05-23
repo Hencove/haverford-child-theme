@@ -46,6 +46,18 @@ $rfs-factor: 80;
 
 //	custom font value
 //
+//? About Page Timeline Year
+*[style*="--awb-font-size: 63px;"],
+*[style*="--awb-font-size:63px;"] {
+  @include rfs(63px !important, font-size);
+}
+//? About Page Timeline Heading
+*[style*="--awb-font-size: 48px;"],
+*[style*="--awb-font-size:48px;"] {
+  @include rfs(48px !important, font-size);
+}
+//	custom font value
+//
 *[style*="--h3_typography-font-size:48px;"] {
   @include rfs(48px !important, --h3_typography-font-size);
   line-height: 1.15 !important;
