@@ -46,24 +46,43 @@ $rfs-factor: 80;
 
 //	custom font value
 //
+//? About Page Timeline Year
+.timeline-year[style*="--awb-font-size: 63px;"],
+.timeline-year[style*="--awb-font-size:63px;"] {
+  @include rfs(63px !important, font-size);
+
+  @include media("<=small") {
+    font-size: 52px !important;
+  }
+}
+//? About Page Timeline Heading
+*[style*="--awb-font-size: 48px;"],
+*[style*="--awb-font-size:48px;"] {
+  @include rfs(48px !important, font-size);
+}
+//	custom font value
+//
 *[style*="--h3_typography-font-size:48px;"] {
   @include rfs(48px !important, --h3_typography-font-size);
   line-height: 1.15 !important;
 }
 //	custom font value
 //
+//? --h6 override was not scaling, so also set this onto the font-size declaration
+//? For some reason not all use cases have a space in the style declaration...
+*[style*="--awb-font-size: 32px;"],
 *[style*="--awb-font-size:32px;"] {
   @include rfs(32px !important, --h6_typography-font-size);
-  // @include media("<=small") {
-  // 	--awb-font-size: 16px !important;
-  // }
+  @include rfs(32px !important, font-size);
 }
-*[style*="--awb-font-size: 24px;"] {
-  // @include rfs(24px !important, --awb-font-size);
-  @include rfs(20px !important, --awb-font-size);
-  @include media("<=small") {
-    --awb-font-size: 16px !important;
-  }
+//
+*[style*="--awb-font-size: 24px;"],
+*[style*="--awb-font-size:24px;"] {
+  @include rfs(24px !important, --awb-font-size);
+  // @include rfs(20px !important, --awb-font-size);
+  // @include media("<=small") {
+  //   --awb-font-size: 16px !important;
+  // }
 }
 //	custom font value
 //
