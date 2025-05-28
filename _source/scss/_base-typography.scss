@@ -47,8 +47,8 @@ $rfs-factor: 80;
 //	custom font value
 //
 //? About Page Timeline Year
-*[style*="--awb-font-size: 63px;"],
-*[style*="--awb-font-size:63px;"] {
+.timeline-year[style*="--awb-font-size: 63px;"],
+.timeline-year[style*="--awb-font-size:63px;"] {
   @include rfs(63px !important, font-size);
 
   @include media("<=small") {
