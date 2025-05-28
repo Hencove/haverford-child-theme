@@ -50,6 +50,10 @@ $rfs-factor: 80;
 *[style*="--awb-font-size: 63px;"],
 *[style*="--awb-font-size:63px;"] {
   @include rfs(63px !important, font-size);
+
+  @include media("<=small") {
+    font-size: 52px !important;
+  }
 }
 //? About Page Timeline Heading
 *[style*="--awb-font-size: 48px;"],
