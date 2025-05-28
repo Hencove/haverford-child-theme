@@ -3,7 +3,7 @@ import { debounce } from "./_debounce-throttle.js";
 
 (function (document, window, $) {
   if (!$) {
-    console.error("jQuery not loaded for adjust-gradient-lines.js");
+    // console.error("jQuery not loaded for adjust-gradient-lines.js");
     return;
   }
 
@@ -32,12 +32,12 @@ import { debounce } from "./_debounce-throttle.js";
 
       // Check if parsing was successful
       if (isNaN(numericPaddingBottom)) {
-        console.warn(
-          "Could not parse padding-bottom value:",
-          paddingBottomString,
-          "for element:",
-          $banner[0],
-        );
+        // console.warn(
+        //   "Could not parse padding-bottom value:",
+        //   paddingBottomString,
+        //   "for element:",
+        //   $banner[0],
+        // );
         return;
       }
 
@@ -64,7 +64,7 @@ import { debounce } from "./_debounce-throttle.js";
 
     // Check if your specific debounce function is available and how to call it
     if (typeof debounce === "function") {
-      console.log("debounce");
+      // console.log("debounce");
       resizeHandler = debounce(adjustGradientLinePosition, 250);
     }
     // Listen for window resize events to re-adjust the line position
