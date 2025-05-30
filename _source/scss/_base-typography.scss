@@ -47,19 +47,21 @@ $rfs-factor: 80;
 //	custom font value
 //
 //? About Page Timeline Year
-.timeline-year[style*="--awb-font-size: 63px;"],
-.timeline-year[style*="--awb-font-size:63px;"] {
-  @include rfs(63px !important, font-size);
+.timeline-year [style*="--awb-font-size: 96px;"],
+.timeline-year [style*="--awb-font-size:96px;"] {
+  @include rfs(96px !important, font-size);
 
   @include media("<=small") {
-    font-size: 52px !important;
+    font-size: 64px !important;
   }
 }
+
 //? About Page Timeline Heading
 *[style*="--awb-font-size: 48px;"],
 *[style*="--awb-font-size:48px;"] {
   @include rfs(48px !important, font-size);
 }
+
 //	custom font value
 //
 *[style*="--h3_typography-font-size:48px;"] {

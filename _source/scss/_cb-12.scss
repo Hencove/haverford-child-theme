@@ -5,6 +5,19 @@ html body {
     background-position: 0%;
     background-repeat: no-repeat;
     //
+
+    > .fusion-builder-row {
+      //
+      .timeline-horizontal-line {
+        @include rfs(115.195px !important, padding-bottom);
+      }
+      .timeline-year h2 {
+        transform: translateY(-50%);
+        //
+      }
+    }
+
+    //? MOBILE
     @include media("<=small") {
       --container_padding_100_right: 40px;
       --container_padding_100_left: 40px;
@@ -34,13 +47,14 @@ html body {
         .timeline-year {
           margin: 24px 0 !important;
           h2 {
+            transform: translateY(0%);
             &:after {
               content: "";
               position: absolute;
               width: 50%;
               height: 2px;
               left: -15px;
-              top: calc(28px + 1em);
+              top: 1.3em;
               background-color: var(--awb-custom_color_5);
             }
           }
