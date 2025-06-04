@@ -1,72 +1,86 @@
-.hav-team-dir {
-  display: inline-flex;
-  flex-flow: column wrap;
-  max-height: 6500px;
-  column-gap: 30px;
-  row-gap: 20px;
-  width: 100%;
-}
+// Variables
+$breakpoint-mobile: 830px;
+$team-dir-max-height: 6500px;
+$team-dir-gap: 20px 30px;
+$image-size: 70px;
+$image-gap: 20px;
 
-@media screen and (max-width: 830px) {
-  .hav-team-dir {
-    max-height: none;
+// Mixins
+@mixin mobile-only {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
   }
 }
 
-.hav-team-dir__link {
-  width: 30%;
-  text-decoration: none;
+@mixin flex-column($wrap: wrap) {
+  display: flex;
+  flex-flow: column $wrap;
 }
 
-@media screen and (max-width: 830px) {
-  .hav-team-dir__link {
+// Main component
+.hav-team-dir {
+  @include flex-column(wrap);
+  max-height: $team-dir-max-height;
+  gap: $team-dir-gap;
+  width: 100%;
+
+  @include mobile-only {
+    max-height: none;
+    flex-flow: column nowrap;
+  }
+
+  // Link element
+  &__link {
+    width: 30%;
+    text-decoration: none;
+
+    @include mobile-only {
+      width: 100%;
+    }
+  }
+
+  // Item container
+  &__item {
+    display: grid;
+    grid-template-columns: $image-size 1fr;
+    column-gap: $image-gap;
     width: 100%;
   }
-}
 
-.hav-team-dir__item {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 70px 1fr;
-  column-gap: 20px;
-}
+  // Image element
+  &__image {
+    aspect-ratio: 1;
+    background: center top / cover no-repeat;
+  }
 
-.hav-team-dir__image {
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
+  // Text container
+  &__text {
+    @include flex-column(wrap);
+    height: 100%;
+    align-content: flex-end;
+  }
 
-.hav-team-dir__text {
-  display: flex;
-  height: 100%;
-  flex-wrap: wrap;
-  align-content: flex-end;
-}
+  // Text elements
+  &__name,
+  &__title {
+    margin-bottom: 0 !important;
+    display: block;
+    width: 100%;
+  }
 
-.hav-team-dir__name {
-  margin-bottom: 0 !important;
-  display: inline-block;
-  align-self: flex-end;
-  width: 100%;
-  font-weight: bold;
-}
+  &__name {
+    font-weight: bold;
+  }
 
-.hav-team-dir__title {
-  margin-bottom: 0 !important;
-  display: inline-block;
-  align-self: flex-end;
-  width: 100%;
-  color: black;
-}
+  &__title {
+    color: black;
+  }
 
-.hav-team-dir__letter {
-  font-family: var(--awb-typography1-font-family);
-  font-size: var(--h6_typography-font-size);
-  color: var(--awb-color8);
-  font-weight: normal;
-  border-bottom: 1px solid var(--awb-custom_color_5);
+  // Letter separator
+  &__letter {
+    font: normal var(--h6_typography-font-size)
+      var(--awb-typography1-font-family);
+    color: var(--awb-color8);
+    border-bottom: 1px solid var(--awb-custom_color_5);
+  }
 }
