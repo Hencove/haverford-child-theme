@@ -9,16 +9,16 @@ body.page-id-515 {
     .team-member-card {
       container-type: inline-size;
       container-name: team-card;
+      //
       > .fusion-column-wrapper {
         flex-direction: row !important;
         gap: 1rem;
         //
         .fusion-classic-product-image-wrapper {
-          width: 33cqw; // 40% of container width (cqw = container query width unit)
-          // width: 40%;
-          // max-width: 175px;
+          width: 33cqw;
           aspect-ratio: 1 / 1;
           flex: 0 0 auto;
+          //
           .fusion-image-wrapper img {
             width: 100%;
             height: 100%;
