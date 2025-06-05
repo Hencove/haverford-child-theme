@@ -80,7 +80,10 @@ $image-gap: 20px;
   &__letter {
     font: normal var(--h6_typography-font-size)
       var(--awb-typography1-font-family);
+    line-height: 1;
     color: var(--awb-color8);
     border-bottom: 1px solid var(--awb-custom_color_5);
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
