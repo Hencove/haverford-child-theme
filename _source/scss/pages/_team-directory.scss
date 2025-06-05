@@ -1,0 +1,79 @@
+// Variables
+$breakpoint-mobile: 830px;
+$team-dir-max-height: 6500px;
+$team-dir-gap: 20px 30px;
+$image-size: 70px;
+$image-gap: 20px;
+
+// Main component
+.hav-team-dir {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: $team-dir-max-height;
+  gap: $team-dir-gap;
+  width: 100%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    max-height: none;
+    flex-flow: column nowrap;
+  }
+
+  // Link element
+  &__link {
+    width: 30%;
+    text-decoration: none;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+  }
+
+  // Item container
+  &__item {
+    display: grid;
+    grid-template-columns: $image-size 1fr;
+    column-gap: $image-gap;
+    width: 100%;
+  }
+
+  // Image element
+  &__image {
+    aspect-ratio: 1;
+    background: center top / cover no-repeat;
+  }
+
+  // Text container
+  &__text {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    align-content: flex-end;
+  }
+
+  // Text elements
+  &__name,
+  &__title {
+    margin-bottom: 0 !important;
+    display: block;
+    width: 100%;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__title {
+    color: black;
+  }
+
+  // Letter separator
+  &__letter {
+    font: normal var(--h6_typography-font-size)
+      var(--awb-typography1-font-family);
+    line-height: 1;
+    color: var(--awb-color8);
+    border-bottom: 1px solid var(--awb-custom_color_5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
