@@ -5,26 +5,15 @@ $team-dir-gap: 20px 30px;
 $image-size: 70px;
 $image-gap: 20px;
 
-// Mixins
-@mixin mobile-only {
-  @media screen and (max-width: $breakpoint-mobile) {
-    @content;
-  }
-}
-
-@mixin flex-column($wrap: wrap) {
-  display: flex;
-  flex-flow: column $wrap;
-}
-
 // Main component
 .hav-team-dir {
-  @include flex-column(wrap);
+  display: flex;
+  flex-flow: column wrap;
   max-height: $team-dir-max-height;
   gap: $team-dir-gap;
   width: 100%;
 
-  @include mobile-only {
+  @media screen and (max-width: $breakpoint-mobile) {
     max-height: none;
     flex-flow: column nowrap;
   }
@@ -34,7 +23,7 @@ $image-gap: 20px;
     width: 30%;
     text-decoration: none;
 
-    @include mobile-only {
+    @media screen and (max-width: $breakpoint-mobile) {
       width: 100%;
     }
   }
@@ -55,7 +44,8 @@ $image-gap: 20px;
 
   // Text container
   &__text {
-    @include flex-column(wrap);
+    display: flex;
+    flex-flow: column wrap;
     height: 100%;
     align-content: flex-end;
   }
