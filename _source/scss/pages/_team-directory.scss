@@ -1,15 +1,16 @@
 // Variables
 $breakpoint-mobile: 830px;
-$team-dir-max-height: 6500px;
+// $team-dir-max-height: 6500px;
 $team-dir-gap: 20px 30px;
 $image-size: 70px;
 $image-gap: 20px;
 
 // Main component
 .hav-team-dir {
+  --team-dir-max-height: none;
   display: flex;
   flex-flow: column wrap;
-  max-height: $team-dir-max-height;
+  max-height: var(--team-dir-max-height);
   gap: $team-dir-gap;
   width: 100%;
 
