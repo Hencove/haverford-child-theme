@@ -57,6 +57,54 @@
 // 	align-items: center;
 // 	border-bottom: 2px solid var(--awb-custom_color_5);
 // }
+
+//? Mobile dropdown filter
+.wpc-filter-set-70507 {
+  $icon-size: 24px;
+  .wpc-filter-content {
+    width: 100%;
+    &::before {
+      content: "\f107";
+      font-family: awb-icons;
+      position: absolute;
+      right: $icon-size;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #000;
+    }
+    select {
+      //
+      margin: 1em 0;
+      white-space: normal;
+      height: auto;
+      min-height: 50px;
+      // padding-right: ($icon-size * 2);
+      background-color: unset;
+      border-radius: unset;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: 2px solid var(--awb-custom_color_5);
+      color: var(--body_typography-color);
+      &::placeholder {
+        color: var(--body_typography-color);
+        opacity: 0.5;
+      }
+    }
+  }
+  @include media(">small") {
+    display: none;
+  }
+}
+
+//? Hide filter list on desktop
+@include media("<=small") {
+  .wpc-filter-set-70233 {
+    display: none;
+  }
+}
+//? Desktop filters
 .wpc-filters-scroll-container {
   //
   .wpc-filters-widget-wrapper {
