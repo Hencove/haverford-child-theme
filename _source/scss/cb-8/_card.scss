@@ -13,6 +13,13 @@
       padding: 50px;
     }
   }
+  // TODO: We may want to revisit adding this so all post grids are consistent i.e News and Insights
+  @include media("<=small") {
+    .fusion-grid-posts-cards {
+      //? matches filter padding in filterset
+      // padding: 28px;
+    }
+  }
 }
 
 //

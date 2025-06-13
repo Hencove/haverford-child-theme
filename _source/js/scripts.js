@@ -10,6 +10,7 @@ import "./_cb17";
 import "./_filter-adjustments.js";
 
 import "./pages/ss4w";
+import "./pages/_team-directory";
 //
 //	? code here will execute before the DOM has fully loaded
 //
