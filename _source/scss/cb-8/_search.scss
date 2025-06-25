@@ -9,13 +9,12 @@
   width: 100%;
   .wpc-filters-section {
     align-items: center;
-    //? Filter categories
+    //? Filter categories (news and insights)
     &[data-fid="69212"] {
       padding: 28px 80px 28px 13px;
       @include media("<=medium") {
         padding-right: 13px;
       }
-      // background-color: red;
       flex: 0 1 66%;
       .wpc-filters-ul-list {
         margin: unset;
@@ -25,14 +24,14 @@
         }
       }
     }
-    //? Search field
+
+    //? Search field (mews and insights)
     &[data-fid="409s"] {
       padding: 28px 80px 28px 13px;
       @include media("<=medium") {
         padding-top: unset;
         padding-right: 13px;
       }
-      // background-color: blue;
       flex-grow: 1;
 
       .wpc-filter-search-form {
