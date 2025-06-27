@@ -8,56 +8,6 @@
 // 	@include displayedInvisible();
 // }
 
-//
-// ?	here we toggle between our select2 dropdown and the standard avada filters based on screen size
-//
-
-// .wpc-filter-content.wpc-filter-category {
-// 	display: none;
-// 	@include media(">medium") {
-// 		display: none;
-// 	}
-// }
-
-//
-// ?	here we toggle between our select2 dropdown and the standard avada filters based on screen size
-//
-
-// @include media(">medium") {
-// 	.select2,
-// 	select.fusion-filters {
-// 		display: none !important;
-// 	}
-// 	ul.fusion-filters {
-// 		display: flex !important;
-// 	}
-// }
-
-//
-// ?	styling for the native avada filters
-//
-
-// @include media(">medium") {
-// 	.fusion-post-cards .fusion-filters {
-// 		border: unset;
-// 		margin: 0;
-// 		padding-left: 80px;
-// 		flex-wrap: nowrap;
-// 	}
-// }
-
-//
-// ?	we need to select the fusion filters parent element to flex it
-//
-
-// div:has(> .fusion-filters) {
-// 	display: flex;
-// 	flex-flow: row nowrap;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	border-bottom: 2px solid var(--awb-custom_color_5);
-// }
-
 //? Mobile dropdown filter
 .wpc-filter-set-70479 /* Dev */,
 .wpc-filter-set-70507 /* Prod */ {

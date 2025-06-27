@@ -5,59 +5,92 @@
 .is-search-reset-button {
   cursor: pointer;
 }
-
-.wpc-filters-section {
-  display: flex;
-  flex: 0 1 50%;
-  // margin: 0 0 0 auto;
-  &:first-child {
-    padding-left: 80px;
-  }
-  padding: 13px;
-  border-left: 2px solid var(--awb-custom_color_5);
-  @include media(">medium") {
-    padding-right: 80px;
-  }
-  //
-  //
-  .wpc-filter-search-form {
-    $icon-size: 24px;
-    // margin: 0 0 0 auto;
-    width: 100%;
-    .wpc-search-field-wrapper {
-      height: 100%;
-      //
-      span.wpc-search-icon {
-        text-align: center;
-
-        width: ($icon-size * 2);
-        justify-content: center;
-        left: 0;
-        &:before {
-          background-image: url("../../_assets/img/icon_search.svg");
-          background-size: $icon-size;
-          width: $icon-size;
-          height: $icon-size;
+.wpc-filters-widget-wrapper {
+  width: 100%;
+  .wpc-filters-section {
+    align-items: center;
+    //? Filter categories (news and insights)
+    &[data-fid="69212"] {
+      padding: 28px 80px 28px 13px;
+      @include media("<=medium") {
+        padding-right: 13px;
+      }
+      flex: 0 1 66%;
+      .wpc-filters-ul-list {
+        margin: unset;
+        padding: unset;
+        .wpc-label-item {
+          margin: unset;
         }
       }
-      //
     }
-    input.wpc-search-field {
-      height: 100%;
-      appearance: none;
-      background-color: unset;
-      border-radius: unset;
-      padding-left: ($icon-size * 2);
+
+    //? Search field (mews and insights)
+    &[data-fid="409s"] {
+      padding: 28px 80px 28px 13px;
       @include media("<=medium") {
-        border: 2px solid var(--awb-custom_color_5);
-        padding: 18px 18px 18px ($icon-size * 2);
+        padding-top: unset;
+        padding-right: 13px;
       }
-      color: var(--body_typography-color);
-      display: block;
-      &::placeholder {
-        color: var(--body_typography-color);
-        opacity: 0.5;
+      flex-grow: 1;
+
+      .wpc-filter-search-form {
+        $icon-size: 24px;
+        // margin: 0 0 0 auto;
+        width: 100%;
+
+        .wpc-search-field-wrapper {
+          height: 100%;
+          height: auto;
+          //
+          span.wpc-search-icon {
+            text-align: center;
+
+            width: ($icon-size * 2);
+            justify-content: center;
+            left: 0;
+            &:before {
+              background-image: url("../../_assets/img/icon_search.svg");
+              background-size: $icon-size;
+              width: $icon-size;
+              height: $icon-size;
+            }
+          }
+          input.wpc-search-field {
+            height: 100%;
+            appearance: none;
+            background-color: unset;
+            border: unset;
+            border-radius: unset;
+            padding: 18px;
+            padding-left: ($icon-size * 2);
+
+            @include media("<=medium") {
+              border: 2px solid var(--awb-custom_color_5);
+              padding: 18px 18px 18px ($icon-size * 2);
+            }
+            color: var(--body_typography-color);
+            display: block;
+            &::placeholder {
+              color: var(--body_typography-color);
+              opacity: 0.5;
+            }
+          }
+        }
       }
     }
+
+    display: flex;
+    // margin: 0 0 0 auto;
+    &:first-child {
+      padding-left: 80px;
+    }
+    padding: 13px;
+    border-left: 2px solid var(--awb-custom_color_5);
+    @include media(">medium") {
+      padding-right: 80px;
+    }
+    //
+    //
   }
 }
