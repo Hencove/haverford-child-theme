@@ -66,11 +66,21 @@ body.page-id-515 {
   .wpc-filters-section {
     display: flex;
     flex: unset;
-    // margin: 0 0 0 auto;
-    &:first-child {
-      padding-left: 80px;
+
+    //? Filters
+    &[data-fid="70234"] {
+      padding: 28px 80px 28px 13px;
+      @include media("<=medium") {
+        padding-right: 13px;
+      }
+      .wpc-filters-ul-list {
+        margin: unset;
+        padding: unset;
+        .wpc-label-item {
+          margin: unset;
+        }
+      }
     }
-    padding: 13px;
   }
   //
   .fusion-post-cards {
