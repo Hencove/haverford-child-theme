@@ -118,6 +118,7 @@ html body {
         }
 
         input[type="radio"] {
+          // input[type="checkbox"] {
           border: none;
 
           &:before {
@@ -139,6 +140,34 @@ html body {
           }
         }
 
+        input[type="checkbox"] {
+          &:checked:after {
+            //? ALT. USE SQUARE FOR CHECKBOX
+            // width: var(--wpforms-field-size-checkbox-size);
+            // height: var(--wpforms-field-size-checkbox-size);
+            // left: calc(-3px + var(--wpforms-field-border-size, 1px));
+            // top: calc(-3px + var(--wpforms-field-border-size, 1px));
+          }
+        }
+        //? USE RADIO STYLES FOR CHECKBOX, BUT KEEP THE CHECK
+        input[type="checkbox"] {
+          border: none;
+
+          &:before {
+            background-color: transparent;
+          }
+
+          &:before,
+          &:checked:before {
+            border: 1px solid var(--awb-custom_color_5);
+            border-radius: 0;
+            box-shadow: none;
+          }
+          &:after {
+            border-color: var(--awb-custom_color_5);
+          }
+        }
+        //
         .wpforms-error,
         .wpforms-required-label {
           color: var(--awb-color8);
