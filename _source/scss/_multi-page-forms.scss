@@ -1,0 +1,109 @@
+.client-survey {
+  //
+  .wpforms-page-indicator-page-progress-wrap {
+    border-radius: unset !important;
+  }
+  .wpforms-clear {
+    //
+    &.wpforms-pagebreak-center {
+      //? Grid layout for Next, Previous, and Save/Resume buttons
+      // display: grid;
+      // grid-template-columns: repeat(2, max-content);
+      // grid-template-rows: auto auto;
+      // gap: 20px;
+      // align-items: center;
+      // justify-content: center;
+      //
+      .wpforms-page-button {
+        //
+        //? button styling to mimic the secondary button text link with underline hover effect
+        &.wpforms-page-next,
+        &.wpforms-page-prev {
+          position: relative;
+          background-color: unset !important;
+          border-radius: unset !important;
+          color: var(--button_accent_color) !important;
+          line-height: var(--button_line_height, 1);
+          font-size: var(--button_font_size, 14px);
+          //
+          &:hover,
+          &:focus {
+            background: unset !important;
+          }
+          &::after {
+            border-color: var(--awb-custom_color_5) !important;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 100%;
+            border-bottom: 1px solid currentColor;
+            transition: transform 0.4s cubic-bezier(0.21, 0.6, 0.35, 1);
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+          &:hover::after {
+            transform-origin: right;
+            transform: scaleX(0);
+          }
+          &:nth-of-type(2) {
+            margin-left: 20px;
+          }
+        }
+        //? positioning the Next and Previous buttons in the grid
+        // &.wpforms-page-next {
+        //   justify-self: end;
+        //   grid-column-start: 2;
+        //   grid-column-end: 2;
+        //   grid-row: 1;
+        // }
+        // &.wpforms-page-prev {
+        //   justify-self: end;
+        //   grid-column-start: 1;
+        //   grid-column-end: 1;
+        //   grid-row: 1;
+        // }
+      }
+
+      // //? If there's ONLY a Next button (no Previous), switch to one column and center it
+      // &:has(.wpforms-page-next):not(:has(.wpforms-page-prev)) {
+      //   grid-template-columns: max-content; // collapse to 1 column
+      //   justify-content: center; // center the single column
+      //   .wpforms-page-next {
+      //     // place the Next button in that sole column
+      //     grid-column: 1 !important;
+      //     justify-self: center;
+      //   }
+      //   .wpforms-save-resume-button {
+      //     // ensure Save/Resume aligns to the single column
+      //     grid-column: 1 !important;
+      //   }
+      // }
+      // //? If there's ONLY a Previous button (no Next), switch to one column and center it
+      // &:has(.wpforms-page-prev):not(:has(.wpforms-page-next)) {
+      //   grid-template-columns: max-content; // collapse to 1 column
+      //   justify-content: center; // center the single column
+      //   .wpforms-page-prev {
+      //     // place the Prev button in that sole column
+      //     grid-column: 1 !important;
+      //     justify-self: center;
+      //   }
+      //   .wpforms-save-resume-button {
+      //     // ensure Save/Resume aligns to the single column
+      //     grid-column: 1 !important;
+      //   }
+      // }
+    }
+    //
+  }
+  .wpforms-submit-container {
+    text-align: center; // center the submit button container
+    margin-top: 2rem;
+  }
+  //? positioning/styling the Save and Resume button in the grid
+  .wpforms-save-resume-button {
+    display: block;
+    text-align: center;
+    margin-top: 2rem !important;
+  }
+}
