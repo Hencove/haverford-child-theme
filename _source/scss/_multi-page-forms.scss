@@ -1,8 +1,39 @@
 .client-survey {
   //
+
+  .wpforms-field-net_promoter_score {
+    table {
+      tr {
+        td {
+          background-color: unset !important;
+          border-radius: unset !important;
+          border-color: var(--awb-custom_color_5) !important;
+
+          input[type="radio"] {
+            &:checked + label {
+              background-color: var(--awb-custom_color_5) !important;
+              // color: var(--awb-color1) !important;
+            }
+          }
+
+          label {
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.03) !important;
+              &:after {
+                box-shadow: 0 0 0 2px var(--awb-custom_color_5) !important;
+                border-radius: unset !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .wpforms-page-indicator-page-progress-wrap {
     border-radius: unset !important;
   }
+
   .wpforms-clear {
     //
     &.wpforms-pagebreak-center {
@@ -106,4 +137,5 @@
     text-align: center;
     margin-top: 2rem !important;
   }
+  //
 }
