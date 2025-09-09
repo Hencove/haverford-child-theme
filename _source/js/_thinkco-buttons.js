@@ -4,6 +4,13 @@
   //
 
   $(window).on("load", function () {
+    // console.log("[_thinkco-buttons.js] button enhancement script running");
+
+    $(".wpforms-save-resume-confirmation")
+      .find('button, input[type="submit"], a.fusion-button')
+      .addClass("think-custom-button");
+
+    //
     var buttons = document.querySelectorAll(".think-custom-button");
     //
     //
