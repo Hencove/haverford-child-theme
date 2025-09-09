@@ -138,4 +138,9 @@
     margin-top: 2rem !important;
   }
   //
+  .wpforms-save-resume-confirmation {
+    .wpforms-save-resume-actions {
+      max-width: unset !important;
+    }
+  }
 }
