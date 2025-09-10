@@ -1,6 +1,8 @@
 .client-survey {
   //
-
+  label {
+    hyphens: unset !important;
+  }
   .wpforms-field-net_promoter_score {
     table {
       tr {
