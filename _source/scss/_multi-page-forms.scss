@@ -1,6 +1,7 @@
 .client-survey {
   //
-  .wpforms-field-label {
+  .wpforms-field-label,
+  .wpforms-form th {
     hyphens: unset !important;
   }
   .wpforms-field-net_promoter_score {
