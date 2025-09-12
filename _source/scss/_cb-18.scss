@@ -118,7 +118,6 @@ html body {
         }
 
         input[type="radio"] {
-          // input[type="checkbox"] {
           border: none;
 
           &:before {
@@ -177,23 +176,6 @@ html body {
           }
         }
       }
-
-      // .wpforms-field-radio {
-      //   @media screen and (min-width: 601px) {
-      //     fieldset {
-      //       display: flex;
-      //       flex-flow: row nowrap;
-      //     }
-
-      //     legend {
-      //       float: left;
-      //     }
-
-      //     ul {
-      //       margin-left: 2rem;
-      //     }
-      //   }
-      // }
     }
   }
 }

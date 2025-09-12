@@ -9,6 +9,8 @@
     $(".wpforms-save-resume-confirmation")
       .find('button, input[type="submit"], a.fusion-button')
       .addClass("think-custom-button");
+    //
+    $(".wpforms-page-1 .wpforms-page-next").addClass("think-custom-button");
 
     //
     var buttons = document.querySelectorAll(".think-custom-button");
@@ -17,6 +19,12 @@
     //
     buttons.forEach(function (button) {
       if ($(button).hasClass("wpforms-submit")) {
+        var buttonText = $(button).text();
+        let ButtonTextHTML =
+          '<div class="fusion-button-text">' + buttonText + "</div>";
+        $(button).html(ButtonTextHTML);
+      }
+      if ($(button).hasClass("wpforms-page-next")) {
         var buttonText = $(button).text();
         let ButtonTextHTML =
           '<div class="fusion-button-text">' + buttonText + "</div>";

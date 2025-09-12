@@ -40,19 +40,11 @@
   .wpforms-clear {
     //
     &.wpforms-pagebreak-center {
-      //? Grid layout for Next, Previous, and Save/Resume buttons
-      // display: grid;
-      // grid-template-columns: repeat(2, max-content);
-      // grid-template-rows: auto auto;
-      // gap: 20px;
-      // align-items: center;
-      // justify-content: center;
-      //
       .wpforms-page-button {
         //
         //? button styling to mimic the secondary button text link with underline hover effect
-        &.wpforms-page-next,
-        &.wpforms-page-prev {
+        &.wpforms-page-next:not(.think-custom-button),
+        &.wpforms-page-prev:not(.think-custom-button) {
           position: relative;
           background-color: unset !important;
           border-radius: unset !important;
@@ -84,49 +76,43 @@
             margin-left: 20px;
           }
         }
-        //? positioning the Next and Previous buttons in the grid
-        // &.wpforms-page-next {
-        //   justify-self: end;
-        //   grid-column-start: 2;
-        //   grid-column-end: 2;
-        //   grid-row: 1;
-        // }
-        // &.wpforms-page-prev {
-        //   justify-self: end;
-        //   grid-column-start: 1;
-        //   grid-column-end: 1;
-        //   grid-row: 1;
-        // }
-      }
 
-      // //? If there's ONLY a Next button (no Previous), switch to one column and center it
-      // &:has(.wpforms-page-next):not(:has(.wpforms-page-prev)) {
-      //   grid-template-columns: max-content; // collapse to 1 column
-      //   justify-content: center; // center the single column
-      //   .wpforms-page-next {
-      //     // place the Next button in that sole column
-      //     grid-column: 1 !important;
-      //     justify-self: center;
-      //   }
-      //   .wpforms-save-resume-button {
-      //     // ensure Save/Resume aligns to the single column
-      //     grid-column: 1 !important;
-      //   }
-      // }
-      // //? If there's ONLY a Previous button (no Next), switch to one column and center it
-      // &:has(.wpforms-page-prev):not(:has(.wpforms-page-next)) {
-      //   grid-template-columns: max-content; // collapse to 1 column
-      //   justify-content: center; // center the single column
-      //   .wpforms-page-prev {
-      //     // place the Prev button in that sole column
-      //     grid-column: 1 !important;
-      //     justify-self: center;
-      //   }
-      //   .wpforms-save-resume-button {
-      //     // ensure Save/Resume aligns to the single column
-      //     grid-column: 1 !important;
-      //   }
-      // }
+        // Main rule for the button, including the mixin
+        &.wpforms-page-next.think-custom-button {
+          $button--ornament-offset: -0.5em;
+          @include buttonOrnamentStyles();
+          position: relative;
+          background-color: unset !important;
+          border-radius: 0;
+          padding: calc($button--ornament-offset * -1);
+          font-weight: 400;
+
+          text-decoration: none;
+          box-shadow: inset 0 0 0 1px #e0c351 !important;
+          text-align: center;
+          color: #000 !important;
+          .fusion-button-text {
+            display: block;
+            width: 100%;
+            background-color: transparent;
+            color: #000 !important;
+            padding: 0.5rem;
+            font-size: var(--button_font_size, 14px);
+            transition:
+              color 500ms ease,
+              background-color 500ms ease;
+          }
+
+          &:hover,
+          &:focus {
+            background: unset !important;
+            .fusion-button-text {
+              color: #000;
+              background-color: rgba(224, 195, 81, 0.9);
+            }
+          }
+        }
+      }
     }
     //
   }
