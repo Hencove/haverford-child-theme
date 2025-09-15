@@ -4,9 +4,16 @@
   //
 
   $(window).on("load", function () {
+    // console.log("[_thinkco-buttons.js] button enhancement script running");
+    //? Target Submit button when using save/resume on multistep form
+    $(".wpforms-save-resume-confirmation")
+      .find('button, input[type="submit"], a.fusion-button')
+      .addClass("think-custom-button");
+    //
+    //? Target first page of multistep form, first next button only
+    $(".wpforms-page-1 .wpforms-page-next").addClass("think-custom-button");
+    //
     var buttons = document.querySelectorAll(".think-custom-button");
-    //
-    //
     //
     buttons.forEach(function (button) {
       if ($(button).hasClass("wpforms-submit")) {
@@ -15,20 +22,11 @@
           '<div class="fusion-button-text">' + buttonText + "</div>";
         $(button).html(ButtonTextHTML);
       }
-
-      //! THIS WORKS FOR STYLING BUT NOT FOR SUBMITTING THE FORM
-      ////! WE NEED THE INPUT VALUE FOR SENDING, OR ANOTHER APPROACH
-      if ($(button).hasClass("wpcf7-submit")) {
-        //? Replace CF7 input[type="submit"] with a <button>
-        const buttonText = button.value;
-        const classes = button.className;
-        const $newButton = $(`
-        <button type="submit" class="${classes}">
-          <div class="fusion-button-text">${buttonText}</div>
-        </button>
-      `);
-        $(button).replaceWith($newButton);
-        button = $newButton[0]; // update reference for ornament injection
+      if ($(button).hasClass("wpforms-page-next")) {
+        var buttonText = $(button).text();
+        let ButtonTextHTML =
+          '<div class="fusion-button-text">' + buttonText + "</div>";
+        $(button).html(ButtonTextHTML);
       }
 
       let verticalOrnament =

@@ -1,0 +1,135 @@
+.client-survey {
+  //
+  .wpforms-field-label,
+  .wpforms-form th {
+    hyphens: unset !important;
+  }
+  .wpforms-field-net_promoter_score {
+    table {
+      tr {
+        td {
+          background-color: unset !important;
+          border-radius: unset !important;
+          border-color: var(--awb-custom_color_5) !important;
+
+          input[type="radio"] {
+            &:checked + label {
+              background-color: var(--awb-custom_color_5) !important;
+              // color: var(--awb-color1) !important;
+            }
+          }
+
+          label {
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.03) !important;
+              &:after {
+                box-shadow: 0 0 0 2px var(--awb-custom_color_5) !important;
+                border-radius: unset !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .wpforms-page-indicator-page-progress-wrap {
+    border-radius: unset !important;
+  }
+
+  .wpforms-clear {
+    //
+    &.wpforms-pagebreak-center {
+      .wpforms-page-button {
+        //
+        //? button styling to mimic the secondary button text link with underline hover effect
+        &.wpforms-page-next:not(.think-custom-button),
+        &.wpforms-page-prev:not(.think-custom-button) {
+          position: relative;
+          background-color: unset !important;
+          border-radius: unset !important;
+          color: var(--button_accent_color) !important;
+          line-height: var(--button_line_height, 1);
+          font-size: var(--button_font_size, 14px);
+          //
+          &:hover,
+          &:focus {
+            background: unset !important;
+          }
+          &::after {
+            border-color: var(--awb-custom_color_5) !important;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 100%;
+            border-bottom: 1px solid currentColor;
+            transition: transform 0.4s cubic-bezier(0.21, 0.6, 0.35, 1);
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+          &:hover::after {
+            transform-origin: right;
+            transform: scaleX(0);
+          }
+          &:nth-of-type(2) {
+            margin-left: 20px;
+          }
+        }
+
+        //? Manually pulling in ornament styles for "Begin Survey" button
+        &.wpforms-page-next.think-custom-button {
+          $button--ornament-offset: -0.5em;
+          @include buttonOrnamentStyles();
+          position: relative;
+          background-color: unset !important;
+          border-radius: 0;
+          padding: calc($button--ornament-offset * -1);
+          font-weight: 400;
+          height: auto;
+          text-decoration: none;
+          box-shadow: inset 0 0 0 1px #e0c351 !important;
+          text-align: center;
+          color: #000 !important;
+          .fusion-button-text {
+            display: block;
+            width: 100%;
+            background-color: transparent;
+            color: #000 !important;
+            padding: 0.5rem;
+            font-size: var(--button_font_size, 14px);
+            transition:
+              color 500ms ease,
+              background-color 500ms ease;
+          }
+
+          &:hover,
+          &:focus {
+            background: unset !important;
+            .fusion-button-text {
+              color: #000;
+              background-color: rgba(224, 195, 81, 0.9);
+            }
+          }
+        }
+      }
+    }
+    //
+  }
+  .wpforms-submit-container {
+    text-align: center; // center the submit button container
+    margin-top: 2rem;
+  }
+  //? positioning/styling the Save and Resume button in the grid
+  .wpforms-save-resume-button {
+    display: block;
+    text-align: center;
+    margin-top: 2rem !important;
+  }
+  //
+  .wpforms-save-resume-confirmation {
+    .wpforms-save-resume-actions {
+      max-width: unset !important;
+    }
+  }
+}

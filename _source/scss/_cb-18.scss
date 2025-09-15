@@ -25,9 +25,6 @@ html body {
 
     .fusion-button-text {
       min-width: 140px;
-      // text-transform: uppercase;
-      // font-weight: 300;
-      // letter-spacing: 0.4em;
       font-size: 1em;
       display: block;
       width: 100%;
@@ -139,29 +136,31 @@ html body {
           }
         }
 
+        //? USE RADIO STYLES FOR CHECKBOX, BUT KEEP THE CHECK
+        input[type="checkbox"] {
+          border: none;
+
+          &:before {
+            background-color: transparent;
+          }
+
+          &:before,
+          &:checked:before {
+            border: 1px solid var(--awb-custom_color_5);
+            border-radius: 0;
+            box-shadow: none;
+          }
+          &:after {
+            border-color: var(--awb-custom_color_5);
+          }
+        }
+        //
         .wpforms-error,
         .wpforms-required-label {
           color: var(--awb-color8);
 
           &:before {
             background-color: var(--awb-color8);
-          }
-        }
-      }
-
-      .wpforms-field-radio {
-        @media screen and (min-width: 601px) {
-          fieldset {
-            display: flex;
-            flex-flow: row nowrap;
-          }
-
-          legend {
-            float: left;
-          }
-
-          ul {
-            margin-left: 2rem;
           }
         }
       }
